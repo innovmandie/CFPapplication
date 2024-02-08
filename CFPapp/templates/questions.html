@@ -1,0 +1,571 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+
+
+<div class="container" style="margin-left:10%">
+  <br>
+  {% if request.user.is_authenticated %}
+  <h4>Votre référentiel {{ request.user.username}}</h4>
+  {% endif %}
+  <h6>Remplir le questionnaire peut prendre 40 minutes, il n'y a pas de pause.</h6>
+  <h4>Les niveaux : </h4>
+  <ul>
+    <li>Degré 1 : sensibilisation</li>
+    <li>Degré 2 : appropriation</li>
+    <li>Degré 3 : maitrise</li>
+    <li>Degré 4 : expertise</li>
+    <li>N S P : ne se prononce pas</li>
+  </ul>
+  <p>Par defaut la liste indique le Degré 1.</p>
+      <div class="col-md-8 col-md-offset-8">
+        <div >
+             <form action="" method="post" class="form-v5-content">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form_post.created_by }}</p>
+              <h4 class= 'text-center'style="font-weight: bold;">Pôle Conseiller-Développer</h4>
+              <h6 class= 'text-center'>A1 : Veille socio-économique, réglementaire, <br>
+                concurrentielle et commerciale</h6>
+              <h6><strong>A1-C1 :</strong> Définir une stratégie de veille afin de collecter des données actuelles et prospectives utiles au positionnement
+                et au développement de l’organisation en s’inscrivant dans les dispositions internes prises par l’organisation.</h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p style=" border: 2px solid blueviolet"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A1_CO_01 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p>Je connais mon environnement proche de travail (antenne, agglomération, bassin d’emploi), les projets, les activités et l’organisation de ma structure, les outils de veille mobilisés par ma structure, les principaux acteurs et organisations internes et externes détenteurs des data.
+                  Je connais les instances et les acteurs qui utilisent la veille au niveau de ma structure et au niveau académique. 
+                  Je connais le système de veille (collecte des informations, traitement, diffusion) adopté par le réseau académique et ma structure.
+                  Je connais le périmètre de la veille que j’ai à mener, mes axes de surveillance et mes finalités, les types de données que je dois collecter, les sources formelles et informelles à exploiter.
+                  </p></li>
+                  <li><p>Je participe aux instances chargées de définir la stratégie de veille. 
+                    Je me documente sur les données actualisées de la formation professionnelle.
+                    Je me forme aux outils et aux techniques de veille prospective.
+                    </p></li>
+                    <li><p>Je suis force de proposition pour mettre en place une stratégie de veille au service du développement de ma structure et du réseau. 
+                      J’alimente l’outil de veille partagé pour le collectif de CFP, voire pour d’autres acteurs internes à ma structure ou pour le réseau académique.
+                      </p></li>
+                    <li><p>Je contribue à l’organisation du système de veille dans les phases de collecte, traitement et diffusion. Je suis membre de la cellule de veille et prospective académique. 
+                      Je transforme une méthodologie de veille en une stratégie prospective. 
+                      </p></li>
+              </ul>
+              <h6><strong>A1-C2 : </strong>Identifier et sélectionner les sources d’informations afin d’opérationnaliser sa stratégie de veille en étant attentif à leur pertinence et leur fiabilité</h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A1_CO_02 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p>J’évalue la fiabilité d’une source (auteur, contenus, actualité et pertinence, crédibilité et réputation).
+                  J’ai identifié les personnes en charge de la veille et prospective du réseau.
+                  Je connais les sources institutionnelles ou publique, les sources professionnelles fournissant de l'information récente, fondée sur des données sérieuses et approuvées par des organismes et des experts reconnus. Je peux nommer ces sources (observatoires des métiers, de branche, études prospectives emploi-compétences…).
+                  </p></li>
+                  <li><p>Je sélectionne les sources les plus pertinentes au regard de mes missions et de la stratégie de ma structure et/ou du réseau. 
+                    J’identifie les actions de terrain à l’interne (rencontre avec DDFPT, formateurs, CESA, inspecteurs, service commercial...) et à l’externe (salon emploi-formation, rencontres entreprises, radios et journaux locaux…) qui me permettent de réaliser une veille locale et territoriale).
+                    </p></li>
+                  <li><p>
+                    J’évalue la complétude de ma veille. Pour compléter ma veille j’identifie de nouveaux acteurs.
+                    Je suis force de proposition pour acquérir une source d’informations nouvelle (abonnement, adhésion à un club employeurs…).
+                    Je contribue à la collecte pour alimenter le collectif.
+                  </p></li>
+                  <li><p>
+                    Je conseille les décideurs sur la recherche de prestataires et d’outils performants de veille.
+                    Je partage et je recommande à mes collègues des sources d’informations que j’utilise ou que j’ai repérées.
+                    Je partage ou croise les éléments clés de la veille avec les acteurs proches en interne.
+                    Je suis un acteur ressource pour le réseau en capacité de conseiller sur les sources les plus pertinentes et d’accompagner sur l’organisation et le classement des documents de veille.
+                    Je suis en capacité de former mes pairs sur les meilleures pratiques en matière de veille.
+                  </p></li>
+              </ul>
+              <h6><strong>A1-C3 :</strong> Exploiter les données collectées afin d’étayer les positions prises et les conseils apportés en mettant en exergue les informations clés</h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A1_CO_03 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+              <ul class="list-group" style="font-size: 17px;">
+              <li>
+                <p>Je consulte les outils et les acteurs ressources au regard de mes besoins et de mes missions.
+                  Je prends connaissance des relevés de conclusion des données collectés.  
+                  </p>
+              </li>
+              <li>
+                <p>
+                  Je classe et j’organise les données collectées en fonction de mes priorités et de la stratégie de ma structure et du réseau. 
+                  Je suis capable de rechercher l’information utiles dans le système d’informations. 
+                  Je trie la veille utile au service de la stratégie de ma structure et du réseau. 
+                </p>
+              </li>
+              <li>
+                <p>J’analyse la veille reçue (analyse des évolutions économiques, technologiques et sociologiques sectorielles) au regard des dossiers dont j’ai la charge et des missions confiées.
+                  Je contextualise les données recensées en fonction de l’organisation de mon environnement professionnel interne et de l’environnement économique et concurrentiel externe. 
+                  J’analyse la diversité des informations recueillies afin de comprendre les transformations présentes et futures de l’organisation ou du territoire. 
+                  J’extrais les informations clés, je les hiérarchise pour orienter mon action.
+                  Je synthétise la veille et j’élabore différents livrables de veille pour faire des recommandations.
+                  Je dégage les potentiels de développement.
+                  </p>
+              </li>
+              <li>
+                <p>
+                  J’évalue la pertinence des données afin d’engager les remédiations nécessaires à la veille. 
+                  Je partage mes analyses au niveau académique, au sein de ma structure (exemple : pôle de développement). 
+                </p>
+              </li>
+            
+            </ul>
+              <h4><strong>A2 : Diagnostic et analyse des besoins territoriaux et/ou sectoriels</strong></h4>
+              <br>
+              <h6><strong>A2-C1 : </strong>Analyser les données collectées afin d’identifier des besoins pouvant se situer à l’échelle d’un territoire dans son ensemble ou d’un secteur d’activités spécifique en mobilisant des démarches et outils d’analyse approprié</h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A2_CO_01 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p>J’ai été sensibilisé en mettant en œuvre la démarche de diagnostic lors de mon année probatoire. Je connais les composantes nécessaires à l’élaboration d’un diagnostic. 
+                  Je connais la nécessité de réaliser un diagnostic de territoire comme point de départ de mon action.
+                  J’ai pris connaissance de la commande émanant de la direction de la DRFPIC, de la direction de ma structure concernant les besoins en compétences de mon territoire et/ou d’un secteur d’activités.                  
+                  </p></li>
+                <li><p>Je planifie et organise ma démarche de diagnostic.
+                  Je repère les enjeux, attentes et besoins du commanditaire. 
+                  J’identifie les éléments et les acteurs utiles à la réalisation de mon diagnostic.
+                  </p></li>
+                                   
+                <li><p>Je conçois le plan d’action : identification des acteurs clés, choix des outils d’investigations (observations, entretiens, questionnaires, études de documents et d’éléments de veille stratégique produits dans le réseau...), calendrier et planification du diagnostic, restitution sous forme orale et écrite.
+                  Je planifie et j’organise ma démarche de diagnostic en produisant un rétroplanning.                   
+                  </p>
+                </li>
+                <li><p>Je suis un acteur ressource pour le réseau en capacité d’accompagner mes pairs sur la structuration et la démarche de diagnostic. Je peux gérer et superviser des projets de diagnostics. 
+                  Je fais évoluer les outils de diagnostic.
+                  Je sollicite les acteurs qualifiés en leur expliquant ma démarche de diagnostic.
+                  </p></li>
+              </ul>
+              
+              <h6><strong>A2-C2 : </strong>Analyser les données collectées afin d’identifier des besoins pouvant se situer à l’échelle d’un territoire dans son ensemble ou d’un secteur d’activités spécifique en mobilisant des démarches et outils d’analyse approprié</h6>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{form_post.A2_CO_02}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p>Je sélectionne et je fais apparaitre les données de mon territoire ou de mes secteurs d’activités. 
+                  Je connais les outils pour analyser l’environnement (SWOT, PESTEL, …), les outils pour élaborer une stratégie prospective, les outils d’aide à la décision. 
+                  Je connais la démarche d’analyse de données qui me permettra de poser un diagnostic. 
+                  </p></li>
+                <li><p>Je contextualise les données à l’échelle de la problématique.
+                  Je contribue à l’analyse des données à l’échelle du territoire et des secteurs dans un collectif de travail.
+                  Je transforme les données en indicateurs pertinents permettant l’aide à la décision. 
+                </p></li>
+                <li><p>J’extraie et j’exploite les données pertinentes afin d’identifier les besoins en compétences. 
+                  Je maitrise les compétences mathématiques et statistiques permettant de transformer les données quantitatives en éléments de mesure et d’analyse pour argumenter mon diagnostic. 
+                  Je classe les données collectées dans des grilles matricielles (type SWOT et PESTEL) pour produire une analyse.                  
+                </p></li>
+                <li><p>Je suis un acteur ressource pour le réseau en capacité d’accompagner un collectif de travail pour produire des analyses concertées.  Je peux former et accompagner mes pairs à l’utilisation des grilles matricielles et à l’analyse des données. 
+                  J’ai un regard critique en croisant les analyses existantes pour en comprendre les écarts, erreurs, contradictions et apporter des correctifs dans le but de produire des diagnostics fiables.
+                  </p></li>
+              </ul>
+         
+              <h6><strong>A2-C3 :</strong>Produire des notes et documents d’analyse afin de partager les conclusions des diagnostics réalisés en choisissant les moyens de communication adaptés</h6>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{form_post.A2_CO_03}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p>Je connais les différents types de note et je connais la structure d’une note ou d’un document d’analyse.
+                  Je sais où me procurer les notes, les documents d’analyse produits par le réseau. 
+                  Je maitrise les techniques rédactionnelles et de communication professionnelle.
+                  </p></li>
+                <li><p>
+                  Je repère les éléments de mon diagnostic à intégrer dans une note d’opportunité ou une note d’analyse en vue de partager les résultats.
+                  Je participe dans un collectif de travail à la production d’une note ou je produis une note d’opportunité en m’appuyant sur un projet similaire.
+                  Je repère les éléments saillants de ma note qui seront à intégrer dans une présentation écrite (diaporama, carte mentale, …).
+                </p></li>
+                <li><p>J’ai produit un écrit lors de mon année probatoire pour présenter les résultats d’un diagnostic. J’ai présenté oralement le diagnostic en m’appuyant sur un diaporama.
+                  Je produis régulièrement des notes et des documents d’analyse en toute autonomie.
+                  J’utilise le canal de communication adapté. 
+                  J’utilise le réseau partagé pour déposer notes et synthèses formalisées.
+                  J’argumente auprès des décideurs mon analyse à partir des points saillants
+                  </p></li>
+                  <li><p>Je suis un acteur ressource pour le réseau en capacité d’accompagner des pairs à la production de notes et de documents d’analyse.
+                    Je produis un document d’analyse et une note sur un sujet complexe à destination d’un acteur académique, national, européen.
+                    Je contribue à la mise à jour des notes et documents d’analyse au profit du réseau régional voire national. 
+                    </p></li>
+              </ul>
+  
+              <br>
+              <h4><strong>A3 : Contribution à la définition de la politique de l'organisation</strong></h4><br>
+              <h6><strong>A3-C1 :</strong> Evaluer le positionnement de l'organisation sur tout ou partie de son marché
+              afin de la situer dans son écosystème en mobilisant des outils d'analyse appropriés.</h6>
+
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A3_C1}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li>Je connais le positionnement de mon organisation dans l’écosystème de la formation professionnelle (concurrence, prix, objectifs, public cible, financeurs, commanditaires, avantage concurrentiel…).
+                  Je compare le cadre réglementaire et législatif de la formation professionnelle et celui de ma structure.
+                  Je connais les évaluations produites sur mon organisation par des acteurs externes.                  
+                </li>
+                <li>
+                  Je contribue à la politique de ma structure avec mes pairs en comparant mon organisation aux structures similaires.
+                  Je contribue à la réalisation de tableaux de bord.
+
+                </li>
+                <li>
+                  Je crée des outils d’analyse (double entrée).
+                  Je m’empare des évaluations existantes (audit, taux de satisfaction, notes externes diverses, enquêtes stagiaires, etc.)
+                  J’évalue l’organisation dans son écosystème et je repère ses forces et faiblesses en mobilisant un outil approprié
+                  (grilles matricielles) au regard des analyses du réseau.
+
+                </li>
+                <li>
+                  Je suis force de propositions, de préconisations et de conseils auprès des décideurs.
+                  J’actualise les outils dans un collectif de travail et je mets à disposition les résultats du positionnement de l’organisation.
+                  Je m’inscris dans un audit de marketing mix pour le réseau (prix, offre de formation, public, communication).                  
+                </li>
+              </ul>
+              <br><br>
+
+              <h6><strong>A3-C2 :</strong> Identifier des axes ou des problématiques de développement afin
+                d'alimenter la politique de l'organisation en étayant les positions exprimées.
+              </h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A3_C2}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li>
+                  J’ai connaissance des résultats des audits réalisés et des analyses produites par le réseau.
+                </li>
+                <li>
+                  Dans un collectif de travail (exemple : cellule de développement), j’identifie les axes de progrès à prioriser ou les freins à prendre en considération.
+                  Je prépare avec mes pairs l’argumentaire à présenter aux décideurs. 
+                </li>
+                <li>
+                  J’opère un diagnostic précis du positionnement de mon organisation et je repère les potentiels de développement à court, moyen et long terme. 
+                  Je propose des axes de développement concrets (apports, moyens et ressources à mobiliser, points de vigilances).
+                  Au regard du positionnement, j’élabore un projet de développement.
+                  
+                </li>
+                <li>
+                  Je mets en perspective les analyses réalisées au regard et par anticipation de l’évaluation du marché.
+                  Je réalise une projection du marché pour étayer une politique à moyen terme.
+                </li>
+              </ul>
+              <br><br>
+
+              <h6><strong>A3-C3 :</strong>Participer à des instances de concertation afin d'échanger sur les orientations possibles 
+                ou souhaitables en faisant valoir ses analyses et positions.
+              </h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A3_C3}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li>
+                  Je connais les instances de concertation, leur fonctionnement, les acteurs, leur rôle. 
+                  Je prends connaissance des comptes-rendus des différentes instances.
+                </li>
+                <li>
+                  Je prépare et participe aux instances de concertation en apportant des éléments à soumettre au collectif. 
+                </li>
+                <li>
+                  Je contribue à l’ordre du jour des instances de concertation.
+                  Je formule des orientations argumentées à l’aide d’outils d’analyse et d’indicateurs objectifs. 
+                  J’apporte des éléments de conseil objectivés.
+                </li>
+                <li>
+                  Je suis consulté sur des orientations précises par rapport à mon champ d’expertise.
+                </li>
+              </ul>
+                 <br><br>
+                 <h4><strong>A4 : Conseil aux décideurs</strong></h4><br>
+              <h6><strong>A4-C1 :</strong> Identifier les situations requérant une activité de conseil (problématique repérée, demande exprimée), afin de permettre leur traitement, en appréciant leur périmètre, leur urgence, leur sensibilité et leur impact</h6>
+
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A4_C1}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li>
+                  Je connais le cahier des charges des commanditaires. Je connais les exigences du référentiel EDUFORM et le système qualité de ma structure, du réseau. Je participe à des bilans avec mon système client.
+                  J’ai identifié les décideurs à partir des organigrammes de l’organisation académique et de ma structure. Je connais le processus décisionnel de ma structure, les instances s’y référant. 
+                </li>
+                <li>
+                  Je repère les éléments observables d’une situation (les demandes exprimées qui ne sont pas traitées, les écarts entre la commande et le réalisé, etc).
+                </li>
+                <li>
+                  J’exploite les bilans de formation, les relevés de conclusions, les rendez-vous entreprises en capitalisant à l’écrit.
+                  Selon la situation, je caractérise le périmètre, le degré d’urgence et l’impact pour ma structure, le réseau et le système client en utilisant les outils méthodologiques adaptés.
+                  J’identifie les décideurs concernés.
+                </li>
+                <li>
+                  J’anticipe des situations qui pourraient être sensibles et impactantes pour le développement de ma structure, du réseau à moyen ou long terme. 
+                  J’identifie les situations et les demandes qui pourraient être prises en compte dans le plan de développement de ma structure, du réseau.
+                </li>
+              </ul>
+                <br>
+                <h6><strong>A4-C2 :</strong>Analyser la situation ou la demande identifiée afin d’envisager les réponses, scénarios, orientations ou solutions possibles en veillant à l’objectivité du raisonnement</h6>
+              <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form_post.A4_C2}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p></br>
+              <ul class="list-group" style="font-size: 17px;">
+                <li>
+                  Je connais des outils de diagnostic en particulier ceux du système qualité de ma structure, du réseau.
+                <li>
+                  Je connais la méthode de résolution de problème et j’utilise les outils d’analyse de l’environnement (grille MOFF, diagramme causes effets, benchmarking, etc.) pour identifier la problématique à résoudre.
+                  Je consulte l’ensemble des parties prenantes. Dans un collectif de travail et à partir de mon diagnostic, j’envisage les pistes de réponses. 
+                </li>
+                <li>
+                  Parmi les hypothèses, j’hiérarchise les solutions en mesurant les effets (risques et bénéfices). J’élabore des préconisations réalisables pour la structure, le réseau en accord avec sa stratégie. 
+                  Je précise l’origine de mes données et de mes sources d’informations sans en détailler les méthodes.
+                </li>
+                <li>
+                  Je contribue aux travaux sur les orientations académiques du réseau.
+                  </li>
+              </ul>
+                <br>
+                <h6><strong>A4-C3 :</strong>Présenter la situation et les options envisagées afin d’aider à la décision en mobilisant les moyens de communication appropriés</h6>
+
+                <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form_post.A4_C3}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p></br>
+                <ul class="list-group" style="font-size: 17px;">
+                  <li>
+                    Je connais les outils de communication adaptés au conseil : synthèse, note d’opportunité, rapport, etc.
+                    Je connais les éléments de langage à utiliser auprès des différents décideurs. 
+                  </li>
+                  <li>
+                    Je choisis les outils de communication adaptés aux décideurs.
+                    Je construis un argumentaire pour réaliser la présentation de la situation avec les options à explorer.
+                  </li>
+                  <li>
+                    Je propose à l’écrit ou à l’oral un contenu synthétique pour être lu ou entendu par les décideurs. 
+                    Si besoin, j’éclaire le décideur par un schéma, un tableau, une infographie. Je rédige une synthèse décisionnelle pour donner un éclairage sur les points clés. 
+                    </li>
+                    <li>
+                      A la demande du DRAFPIC, je rédige et je présente un rapport circonstancié sur une situation complexe.
+                    </li>
+                </ul>
+                <br><br>
+                <h4><strong>A5 : Représentation institutionnelle sur les territoires</strong></h4><br>
+                  <h6><strong>A5-C1 :</strong>Représenter l’institution dans les instances du territoire afin de faire valoir la position du réseau de la formation professionnelle tout au long de la vie de l’Education nationale en étant attentif à son positionnement</h6>
+
+                <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form_post.A5_C1}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p></br>
+                <ul class="list-group" style="font-size: 17px;">
+                  <li>
+                    Je connais les différentes instances de mon territoire, leurs rôles et leur fonctionnement.
+                    Je connais les codes, la chaine hiérarchique et les éléments de langage de l’éducation nationale.
+                    Je connais la position et les orientations stratégiques du GRETA, du réseau académique et de l’éducation nationale que je représente. 
+                    J’identifie le positionnement des acteurs et les interactions entre les parties prenantes. J’interviens si je suis sollicité avec mesure et recul.
+                  </li>
+                  <li>
+                    J’analyse le positionnement des acteurs et les enjeux pour chacune des parties prenantes.
+                    Je participe aux échanges, aux réunions et aux groupes de travail du territoire. 
+                    Je réponds aux questions ou renvoie vers l’interlocuteur expert.                     
+                  </li>
+                  <li>
+                    Je suis capable d’adapter ma posture et mon discours en fonction de mes interlocuteurs et des instances auxquelles je participe et ce, dans l’intérêt du service public en tant que représentant du recteur. 
+                    </li>
+                    <li>
+                      Je suis sollicité en qualité d’expert de la formation professionnelle tout au long de la vie par le DRAFPIC ou par les acteurs de mon territoire (CATEF, SPRO, …).
+                      J’apporte des éléments d’expertise (analyse stratégique départementale, territoriale, …).
+                      Je capitalise et je partage mon expertise auprès des instances de mon territoire. 
+                      
+                    </li>
+                </ul>
+                  <br>
+
+                  <h6><strong>A5-C2 :</strong>Promouvoir l’organisation (ses missions, son offre, ses moyens) afin de contribuer à sa connaissance et à sa reconnaissance en mettant en avant la diversité des voies de formation professionnelle proposées et son maillage territorial</h6>
+
+                <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form_post.A5_C2}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p></br></br>
+                <ul class="list-group" style="font-size: 17px;">
+                  <li>
+                    Je distingue les 3 voies de formation professionnelle. Je m’informe en interne sur les missions, l’offre et les moyens des structures de l’éducation nationale sur mon territoire et sur la région académique. 
+                    Je connais le maillage territorial et l’organisation de la formation professionnelle à l’éducation nationale.
+                    Je connais les valeurs de l’éducation nationale.                     
+                  </li>
+                  <li>
+                    Je connais la carte de la formation professionnelle de l’éducation nationale de mon académie.
+                    Je sais identifier les atouts de mon organisation.                                   
+                  </li>
+                  <li>
+                    Je sais argumenter les spécificités et les atouts de mon organisation, à l’interne comme à l’externe. 
+                    Quel que soit mon interlocuteur, j’explique la mission de service public de l’éducation nationale en matière de formation professionnelle.
+                    Je participe à des réunions, des évènements où je présente les spécificités et les atouts de la formation professionnelle de l’éducation nationale.                     
+                    </li>
+                    <li>
+                      Je suis un acteur ressource pour le réseau en capacité d’analyser et d’harmoniser les pratiques de promotion de l’organisation de la formation professionnelle à l’éducation nationale. Je facilite la production d’outils de promotion et contribue à leur modélisation dans un collectif de travail.
+                      À la demande de l’autorité académique, je promeus l’organisation sur les territoires.                       
+                    </li>
+                </ul>
+                  <br>
+
+                  <h6><strong>A5-C3 :</strong>Nouer et entretenir des relations avec les acteurs socio-économiques du territoire afin de faciliter les dynamiques de coopération en faisant valoir une mission de service public sur un marché concurrentiel</h6>
+
+                <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form_post.A5_C3}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p></br></br>
+                <ul class="list-group" style="font-size: 17px;">
+                  <li>
+                    Je connais les acteurs socio-économiques de mon territoire. 
+                    Je connais l’historique avec les partenaires existants. 
+                    Je connais les techniques de réseautage pour fidéliser mon répertoire de contacts.          
+                  </li>
+                  <li>
+                    En tant qu’agent du service public, je construis un réseau de partenaires socio-économiques actualisé et mobilisable. 
+                    Je participe à des rencontres, des échanges et des réunions de travail.
+                    Je tiens un répertoire des contacts actualisé (classeur de contacts téléphoniques, etc.)                             
+                  </li>
+                  <li>
+                    Je suis un interlocuteur reconnu et sollicité par les acteurs socio-économiques sur un territoire. 
+                    J’enrichis mon réseau partenarial (clubs d’entreprises, etc.)
+                    Je mobilise des partenaires sur des projets où l’éducation nationale est partie prenante. 
+                    Je participe à la rédaction de conventions de partenariat.    
+                    </li>
+                    <li>
+                      Je suis un acteur ressource pour le réseau en capacité de mettre en relation mes pairs avec mes contacts. Je mets à disposition les outils nécessaires et appropriés afin de gérer le partenariat dans la durée, en lien avec la démarche qualité.
+                      Je suis à l’initiative de rencontres partenariales sur un projet donné.
+                      Je mets en place des indicateurs pour évaluer l’efficience d’un partenariat.                 
+                    </li>
+                </ul>
+                <br><br>
+                <h4><strong>A6 : Commercialisation de l’offre de prestations et recherche de marchés</strong></h4><br>
+                  <h6><strong>A6-C1 :</strong>Contribuer à l’élaboration de la politique commerciale de l’organisation afin de maintenir ou renforcer sa présence sur les marchés en tenant compte de la répartition des rôles et responsabilités au sein des équipes en place</h6>
+
+                <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form_post.A6_C1}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p></br>
+                <ul class="list-group" style="font-size: 17px;">
+                  <li>
+                    Je connais les éléments constitutifs d’une politique commerciale d’une organisation (analyse, contexte, objectifs, plan d’action). 
+                    Je connais la politique commerciale de ma structure.
+                    Je connais les acteurs en charge de la définition de la politique commerciale au niveau de ma structure et au niveau académique.
+                  </li>
+                  <li>
+                    Au sein d’un collectif de travail, j’apporte des éléments d’analyse permettant l’évolution de la politique commerciale. 
+                    Je sollicite les services de mon organisation (RH, communication et commercial…) utiles à la définition de la politique commerciale.        
+                  </li>
+                  <li>
+                    J’oriente la définition des objectifs de la politique commerciale, l’identification des cibles prioritaires et l’élaboration du plan d’action commerciale. 
+                    J’évalue les résultats de la politique commerciale. 
+                    </li>
+                    <li>
+                      Je suis un acteur ressource pour le réseau en capacité d’accompagner les équipes en place et transmettre une méthodologie d’élaboration de la politique commerciale. Je pilote un groupe de travail sur l’élaboration de la politique commerciale à l’échelle de ma structure, du réseau.
+                    </li>
+                </ul>
+                  <br>
+
+                  <h6><strong>A6-C2 :</strong> Identifier des opportunités de marché afin de contribuer au développement de prestations nouvelles en prenant appui sur la veille commerciale, une écoute de terrain et le repérage d’appels d’offres</h6>
+
+                  <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                  <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                  </svg>{{ form_post.A6_C2}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                  </svg></p></br>
+                  <ul class="list-group" style="font-size: 17px;">
+                    <li>
+                      Je connais les compétences et les métiers d’avenir et les grands projets de mon territoire. 
+                      J’ai connaissance des appels d’offres diffusés au sein de ma structure, du réseau.
+                      J’ai connaissance des besoins des commanditaires sur le territoire. 
+                      Je rencontre les acteurs de mon territoire dans le cadre de la phase de découverte des besoins.
+                    </li>
+                    <li>
+                      Je rédige un compte-rendu d’entretien et de détection des besoins chez les prospects. 
+                      Je m’approprie une grille d’analyse d’un AO/AMI/AAP et j’en ressors les opportunités de développement pour ma structure, le réseau.
+                      J’analyse la diversité des informations recueillies afin d’identifier les transformations présentes et futures en termes de compétences sur le territoire.
+                      Je fais le lien entre mes investigations, mon analyse et le plan d’action commerciale de ma structure, du réseau.
+                      
+                    </li>
+                    <li>
+                      Je maitrise les techniques de questionnement et d’écoute active pour réaliser une phase de découverte pertinente. 
+                      Je mets en corrélation les besoins détectés avec les ressources de ma structure pour déterminer les opportunités de développement et évaluer la prise de risque.
+                      </li>
+                      <li>
+                        Je partage la méthodologie d’identification des opportunités repérées à l’échelle de mon territoire, de la région académique. 
+                        Je suis référent d’une filière, d’un secteur professionnel au niveau de ma structure, au niveau académique.
+                        Mes travaux contribuent à l’évolution de l’offre de formation professionnelle en région académique.
+                      </li>
+                  </ul>
+                    <br>
+
+                    <h6><strong>A6-C3 :</strong> IConduire des actions commerciales afin de promouvoir l’offre de prestations de l’organisation en mobilisant les techniques commerciales et marketing adaptées, ainsi que les équipes compétentes en place</h6>
+
+                    <p style="text-align: center;"><strong>Descriptif du travail réalisé par le CFP pour :</strong></p>
+                    <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                    </svg>{{ form_post.A6_C3}}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                    </svg></p></br>
+                    <ul class="list-group" style="font-size: 17px;">
+                      <li>
+                        Je connais les types d’action commerciale et l’offre de prestations de ma structure et du réseau. 
+                        J’identifie les acteurs au service de l’action commerciale de ma structure, du réseau.
+                        Je connais les techniques d’argumentation de l’offre commerciale, les techniques de prospection, le site web du réseau académique.  
+
+                      </li>
+                      <li>
+                        Je participe aux évènements emploi-formation de mon territoire pour recueillir des besoins en compétences et réseauter. 
+                        Je présente l’offre de services et de formation de l’éducation nationale en entreprise. 
+                        J’écoute et je recueille les besoins évoqués par les structures que je rencontre.           
+                      </li>
+                      <li>
+                        J’élabore la fiche produit. 
+                        Je cible les prospects prioritaires.
+                        J’organise une campagne de prospection et j’accompagne les équipes pour la mise en œuvre. 
+                        Je maîtrise l’ensemble des phases d’un entretien de vente.
+                        J’organise la vente des produits référencés du catalogue.
+                        </li>
+                        <li>
+                          J’organise des manifestations à l’échelle d’un territoire (table ronde, lancement de marché, salon, opération flash mob, etc.)
+                          J’évalue le plan d’action et analyse les résultats des actions commerciales dans le cadre de l’amélioration continue. 
+                          Je suis un acteur ressource pour le réseau concernant les actions commerciales à mener, en capacité de modéliser un plan d’actions commerciales et de le mettre à disposition du réseau.
+                        </li>
+                    </ul>
+                      <br>
+                  
+                <button type="submit" class="fr-btn">Enregistrer</button>
+                  </div>
+            </form>
+          </div>
+        </div>
+</div>
+
+{% endblock %}

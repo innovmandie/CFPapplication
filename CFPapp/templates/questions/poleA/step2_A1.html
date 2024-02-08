@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Question A2 C1{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+
+
+<div class="container" style="margin-left:10%">
+      <div class="col-md-8 col-md-offset-8">
+        <br>
+        <p class=""><strong>A1-C2 : </strong>Identifier et sélectionner les sources d’informations afin d’opérationnaliser sa stratégie de veille en étant attentif à leur pertinence et leur fiabilité</p>
+             <form action="{% url 'step2_A1' %}" method="post" class="form-v5-content">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form.created_by }}</p>
+              <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form.A1_C2 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="fr-btn">Next</button>
+            </div>    
+            </form>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>J’évalue la fiabilité d’une source (auteur, contenus, actualité et pertinence, crédibilité et réputation).
+                  J’ai identifié les personnes en charge de la veille et prospective du réseau.
+                  Je connais les sources institutionnelles ou publique, les sources professionnelles fournissant de l'information récente, fondée sur des données sérieuses et approuvées par des organismes et des experts reconnus. Je peux nommer ces sources (observatoires des métiers, de branche, études prospectives emploi-compétences…).
+                  </p></li>
+                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je sélectionne les sources les plus pertinentes au regard de mes missions, de la stratégie de ma structure et/ou du réseau. 
+                    J’identifie les actions de terrain à l’interne (rencontre avec DDFPT, formateurs, Chefs d’établissement, inspecteurs, service commercial...) et à l’externe (salon emploi-formation, rencontres entreprises, radios et journaux locaux…) qui me permettent de réaliser une veille locale et territoriale.        
+                    </p></li>
+                  <li><p style="font-size: 12px"><strong>Degré 3 : </strong>
+                    J’évalue la complétude de ma veille. Pour compléter ma veille j’identifie de nouveaux acteurs.
+                    Je suis force de proposition pour acquérir une source d’informations nouvelles (abonnement, adhésion à un club employeurs…).
+                    Je contribue à la collecte pour alimenter le collectif.
+                  </p></li>
+                  <li><p style="font-size: 12px"><strong>Degré 4 : </strong>
+                    Je conseille les décideurs sur la recherche de prestataires et d’outils performants de veille.
+                    Je partage et je recommande à mes collègues des sources d’informations que j’utilise ou que j’ai repérées.
+                    Je partage ou croise les éléments clés de la veille avec les acteurs proches en interne.
+                    Je suis un acteur ressource pour le réseau en capacité de conseiller sur les sources les plus pertinentes et d’accompagner sur l’organisation et le classement des documents de veille.
+                    Je suis en capacité de former mes pairs sur les meilleures pratiques en matière de veille.
+                  </p></li>
+              </ul>
+                      <br>
+          </div>
+        </div>
+</div>
+
+{% endblock %}

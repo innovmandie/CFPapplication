@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Question B4 C3{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+
+
+<div class="container-fluid" style="margin-left:10%">
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <p><strong>B4-C3 :</strong>Présenter et négocier une offre de prestation afin de rendre possible la contractualisation en veillant à préserver les intérêts de l’organisation</p>
+      </div> 
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <form action="{% url 'step3_B4' %}" method="post" class="form-v5-content ">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form.created_by }}</p>
+                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form.B4_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="fr-btn">Enregistrement</button>
+              </div>
+                  </div>
+            </form>
+      </div>
+  </div>
+      
+        <div class="container-fluid">
+          <div class="col-md-8 col-md-offset-8">
+            <br>
+              <ul class="list-group">
+                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les intérêts de l’organisation en matière de stratégie de développement. 
+                  Je connais les différents supports de présentation d’une offre de prestation (réponse à appel d’offres, devis, fiche produit, catalogue, etc.). 
+                  Je connais la politique tarifaire en vigueur au sein de ma structure, du réseau.                              
+                  </p></li>
+                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Au sein d’un collectif de travail, je contribue à la construction d’un argumentaire pour la négociation. 
+                    Je choisis le support de présentation approprié à la modalité de négociation.
+                    Je prépare ma négociation en termes de contenus et d’intervenants, de durée et de tarif en m’appuyant sur les expertises de mes pairs.
+                    
+                                                        
+                    </p></li>
+                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je construis un argumentaire pour préparer la phase de négociation. J’identifie les marges de négociation à partir de l’analyse financière de mon offre de prestation. 
+                      Dans ma présentation, je mets en avant la plus-value de mon offre par rapport à la concurrence.
+                      J’adapte mon offre en fonction des résultats de la négociation.                      
+                      </p></li>
+                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressource pour le réseau en capacité de modéliser les process de négociation. 
+                      Je suis en mesure de mener des négociations avec les grands comptes privés et publics.
+                      
+                      </p></li>
+              </ul>
+          </div>
+        </div>
+</div>
+
+{% endblock %}

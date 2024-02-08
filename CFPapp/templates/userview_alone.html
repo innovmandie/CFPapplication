@@ -1,0 +1,53 @@
+
+  {% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+        <div class="container-fluid">
+          <br />
+          <div style="margin-left:7%">
+           <div class="row">
+               <div class="col-md-8">
+                   <br /><br />
+               <h1 class=fr-h1 >Utilisateur</h1>
+               </div>
+               <br>
+               </div>
+               <div class="row">
+                 <div class="col-md-8">
+   
+                   <table id="utilisateurs">
+                     <tr>
+                       <th>id</th>
+                       <th>Id_createur</th>
+                         <th>Prénom</th>
+                         <th>Nom</th>
+                         <th>Age</th>
+                         <th>Commune</th>
+                         <th>Codepostal</th>
+                         <th>Greta rattachement</th>
+                         <th>Ancienneté</th>
+                     </tr>
+                     {% for x in Utilisateur_liste %}
+                    <tr>
+                      <td>{{x.id}}</td>
+                     <td>{{x.created_by_id}}</td>
+                     <td>{{x.nom }}</td> 
+                     <td>{{x.prenom }}</td>
+                     <td>{{x.age }}</td>
+                     <td>{{x.commune }}</td>
+                     <td>{{x.codepostal}}</td>
+                     <td>{{ x.greta_rattachement}}</td>
+                     <td>{{x.anciennete}}</td>
+                    </tr>
+                     {% endfor %}
+                   </table>
+    
+                     
+                 </div>
+             </div>   
+           </div>
+           </div>
+    </div>
+        
+{% endblock %}
+

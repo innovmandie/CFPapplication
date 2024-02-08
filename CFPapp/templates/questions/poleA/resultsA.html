@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Data A page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Réponses référentiel enregistrées</h4>
+    {{ info }}
+    <div class="row">
+      <div class="col">
+        <h6>Résultats A1 : </h6><p>Veille socio-économique, réglementaire, concurrentielle et commerciale</p>
+        {% if resultsA1 %}
+        {{ resultsA1 | safe}}<br>
+        {{ chart_A1 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+       <br>
+      </div>
+      <div class="col">
+        <h6>Résultats A2 :</h6><p> Diagnostic et analyse des besoins territoriaux et/ou sectoriels</p>
+        {% if resultsA2 %}
+        {{ resultsA2 | safe}}<br>
+        {{ chart_A2 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6>Résultats A3 : </h6><p>Contribution à la définition de la politique de l’organisation</p>
+        {% if resultsA3 %}
+        {{ resultsA3 | safe}}<br>
+        {{ chart_A3 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+        <br>
+      </div>
+      <div class="col">
+        <h6>Résultats A4 : </h6><p> Conseil aux décideurs</p>
+        {% if resultsA4 %}
+        {{ resultsA4 | safe}}<br>
+        {{ chart_A4 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+        
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h6>Résultats A5 : </h6><p>Représentation institutionnelle sur les territoires</p>
+        <br>
+        {% if resultsA5 %}
+        {{ resultsA5 | safe}}<br>
+        {{ chart_A5 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+        <br>
+      </div>
+      <div class="col">
+        <h6>Résultats A6 : </h6><p>Conduire des actions commerciales afin de promouvoir l’offre de prestations de l’organisation en mobilisant les techniques commerciales et marketing adaptées,<br>
+           ainsi que les équipes compétentes en place</p>
+           {% if resultsA6 %}
+        {{ resultsA6 | safe}}<br>
+        {{ chart_A6 | safe}}
+        {% else %}
+        <p>Aucun resultats pour l'instant</p>
+        {% endif %}
+        <br>
+        
+      </div>
+      <div class="row">
+        <h6>Tous les résultats</h6>
+        <div class="col">
+        {{ chart_all | safe }} 
+        </div>
+        <div class="col">
+          {{ chart_All2 | safe }} 
+          </div>
+      </div>
+     
+    </div>
+ 
+        <br>
+     </div>
+
+{% endblock %}

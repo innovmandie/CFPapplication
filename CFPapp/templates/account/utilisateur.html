@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Utilisateur{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+  <div style=" margin-left:40px">
+    <br><br><br>
+    <h1>Utilisateur information</h1>
+    <h4>renseignez vos données</h4>
+  <form method="post" class="form"  style="margin: 40px">
+  {% csrf_token %}
+  Edité par: {{ form_user.created_by}}<br>
+  Nom: {{ form_user.nom}}<br>
+  Prénom: {{ form_user.prenom}}<br>
+  Âge: {{ form_user.age}}<br>
+  Commune : {{ form_user.commune}}<br>
+  Codepostal : {{ form_user.codepostal}}<br>
+  Greta rattachement: {{form_user.greta_rattachement}}<br>
+  Ancienneté: {{form_user.anciennete}}<br>
+  <button class="fr-btn" type="submit">Enregistrer</button>
+  </form>
+</form>
+</div>
+
+
+</div>
+
+       
+    
+{% endblock %}
+
+
+        

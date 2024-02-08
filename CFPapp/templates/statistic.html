@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Statistiques page{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="margin-left : 60px">
+    <br>
+    <h4>Distribution par commune</h4>
+{{ chart_bar|safe }}
+<h4>Distribution par Greta rattachement</h4>
+{{ chart_rattachement|safe }}
+<h4>Distribution ancienneté</h4>
+{{ chart_anciennete|safe }}
+{% endblock %}
+
+
+</div>

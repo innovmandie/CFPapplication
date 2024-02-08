@@ -1,0 +1,81 @@
+from django.urls import include, path
+from django.contrib.auth import views as auth_views
+import urllib3
+from CFPapp import views
+from CFPsite import urls
+from .views import *
+
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('utilisateurs/', views.utilisateurs, name='utilisateurs'),
+    path('userview/', views.userview, name='userview'),
+    path('all_userview/', views.all_userview, name='all_userview'),
+    path('questions/', views.question, name='question'),
+    path('step1_A1/', step1_A1, name='step1_A1'),
+    path('step2_A1/', step2_A1, name='step2_A1'),
+    path('step3_A1/', step3_A1, name='step3_A1'),
+    path('step1_A2/', step1_A2, name='step1_A2'),
+    path('step2_A2/', step2_A2, name='step2_A2'),
+    path('step3_A2/', step3_A2, name='step3_A2'),
+    path('step1_A3/', step1_A3, name='step1_A3'),
+    path('step2_A3/', step2_A3, name='step2_A3'),
+    path('step3_A3/', step3_A3, name='step3_A3'),
+    path('step1_A4/', step1_A4, name='step1_A4'),
+    path('step2_A4/', step2_A4, name='step2_A4'),
+    path('step3_A4/', step3_A4, name='step3_A4'),
+    path('step1_A5/', step1_A5, name='step1_A5'),
+    path('step2_A5/', step2_A5, name='step2_A5'),
+    path('step3_A5/', step3_A5, name='step3_A5'),
+    path('step1_A6/', step1_A6, name='step1_A6'),
+    path('step2_A6/', step2_A6, name='step2_A6'),
+    path('step3_A6/', step3_A6, name='step3_A6'),
+    path('step1_B1/', step1_B1, name='step1_B1'),
+    path('step2_B1/', step2_B1, name='step2_B1'),
+    path('step3_B1/', step3_B1, name='step3_B1'),
+    path('step1_B2/', step1_B2, name='step1_B2'),
+    path('step2_B2/', step2_B2, name='step2_B2'),
+    path('step3_B2/', step3_B2, name='step3_B2'),
+    path('step1_B3/', step1_B3, name='step1_B3'),
+    path('step2_B3/', step2_B3, name='step2_B3'),
+    path('step3_B3/', step3_B3, name='step3_B3'),
+    path('step1_B4/', step1_B4, name='step1_B4'),
+    path('step2_B4/', step2_B4, name='step2_B4'),
+    path('step3_B4/', step3_B4, name='step3_B4'),
+    path('step1_C1/', step1_C1, name='step1_C1'),
+    path('step2_C1/', step2_C1, name='step2_C1'),
+    path('step3_C1/', step3_C1, name='step3_C1'),
+    path('step1_C2/', step1_C2, name='step1_C2'),
+    path('step2_C2/', step2_C2, name='step2_C2'),
+    path('step3_C2/', step3_C2, name='step3_C2'),
+    path('step1_C3/', step1_C3, name='step1_C3'),
+    path('step2_C3/', step2_C3, name='step2_C3'),
+    path('step3_C3/', step3_C3, name='step3_C3'),
+    path('step1_C4/', step1_C4, name='step1_C4'),
+    path('step2_C4/', step2_C4, name='step2_C4'),
+    path('step3_C4/', step3_C4, name='step3_C4'),
+    path('resultsA/', views.resultatsA, name='resultsA'),
+    path('resultsB/', views.resultatsB, name='resultsB'),
+    path('resultsC/', views.resultatsC, name='resultsC'),
+    path('finished/', views.finished, name='finished'),
+    path('reponse/', views.reponse, name='reponse'),
+    path('contact/', views.contact, name='contact'),
+    path('export_excel/', views.export_excel, name='export_excel'),
+    path('utilisateur_excel/', views.utilisateur_excel, name='utilisateur_excel'),
+    path('chart_result/', views.chart_result, name='chart_result'),
+    path('chart_view/', views.chart_view, name='chart_view'),
+    path('chart_view/chart_view_user', views.chart_view_user, name='chart_view_user'),
+
+    path('statistic/', views.statistic, name='statistic'),
+    path('accueil/', views.accueil, name='accueil'),
+    path('terms-of-use/', views.terms_of_use, name='terms_of_use'),
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+
+    
+    #path('index/', views.index, name='index'),
+    
+]
+

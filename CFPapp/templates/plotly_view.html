@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+        <div class="container-fluid">
+            <br><br>
+                <div class="row">
+                  <div class="col-sm">
+                    <h4>Rechercher CFP CFC</h4>
+                    <br><br>
+                    <form action = "" method = "get">
+                        {% csrf_token %}
+                    <input type='text' list="searched_user" placeholder=" Nom CFP" class="form" name="search_u">
+                    <datalist id="searched_user">
+                        {% for user in searched_user %}
+                        <option value="{{ user.last_name}}"></option>
+                        {% endfor %}
+                    </datalist>
+                    <input type="submit" value="rechercher" style="background-color: rgba(0, 133, 138, 0.5);color: white; border : solid rgb(118, 245, 118) 1.2px">
+                </form>
+              </br></br>
+                </div>
+                <div class="col-sm">
+                  <a class="list-group-item list-group-item-action" id="button_graphique" href="{% url 'chart_view_user' %}">Graphique A B C et Toutes compétences</a><br>
+                  </div>
+                </div>
+                <h4>{{ query }}</h4>
+              </br></br>
+              <div class="row">
+                <div class="col-xl">
+                  <table  id="utilisateurs" style="width: 800px;">
+                    <thead >
+                      <th scope="col">id_utilisateur</th>
+                      <th scope="col">A1_C1</th>
+                      <th scope="col">A1_C2</th>
+                      <th scope="col">A1_C3</th>
+                      <th scope="col">A2_C1</th>
+                      <th scope="col">A2_C2</th>
+                      <th scope="col">A2_C3</th>
+                      <th scope="col">A3_C1</th>
+                      <th scope="col">A3_C2</th>
+                      <th scope="col">A3_C3</th>
+                      <th scope="col">A4_C1</th>
+                      <th scope="col">A4_C2</th>
+                      <th scope="col">A4_C3</th>
+                      <th scope="col">A5_C1</th>
+                      <th scope="col">A5_C2</th>
+                      <th scope="col">A5_C3</th>
+                      <th scope="col">A6_C1</th>
+                      <th scope="col">A6_C2</th>
+                      <th scope="col">A6_C3</th>
+                      <th scope="col">Date</th>
+              
+                    </thead>
+                    
+                    <tbody>
+                        <tr>{% for elements in results%}
+                          <td>{{ elements.id }}</td>
+                          <td>{{ elements.A1_CO_01 }}</td>
+                          <td>{{ elements.A1_CO_02 }}</td>
+                          <td>{{ elements.A1_CO_03 }}</td>
+                          <td>{{ elements.A2_CO_01 }}</td>
+                          <td>{{ elements.A2_CO_02 }}</td>
+                          <td>{{ elements.A2_CO_03 }}</td>
+                          <td>{{ elements.A3_C1 }}</td>
+                          <td>{{ elements.A3_C2 }}</td>
+                          <td>{{ elements.A3_C3 }}</td>
+                          <td>{{ elements.A4_C1 }}</td>
+                          <td>{{ elements.A4_C2 }}</td>
+                          <td>{{ elements.A4_C3 }}</td>
+                          <td>{{ elements.A5_C1 }}</td>
+                          <td>{{ elements.A5_C2 }}</td>
+                          <td>{{ elements.A5_C3 }}</td>
+                          <td>{{ elements.A6_C1 }}</td>
+                          <td>{{ elements.A6_C2 }}</td>
+                          <td>{{ elements.A6_C3 }}</td>
+                          <td>{{ elements.time }}</td>
+                            {% endfor %}
+                        </tr>     
+                   </tbody>
+               </table>
+                  </div>
+                  </div>
+               
+                  </div>
+                  <br><br>
+                  <div class="row">
+                    
+                      </div>
+                  <div class="col-sm-8">
+                    
+                  </div>
+                </div>
+        
+</div>
+        
+{% endblock %}

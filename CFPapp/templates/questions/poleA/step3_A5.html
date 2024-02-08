@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Question A5 C3{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+<div class="container" style="margin-left:10%">
+      <div class="col-md-8 col-md-offset-8">
+        <br>
+        <p><strong>A4-C3 :</strong> Nouer et entretenir des relations avec les acteurs socio-économiques du territoire afin de faciliter les dynamiques de coopération en faisant valoir une mission de service public sur un marché concurrentiel</p>
+             <form action="{% url 'step3_A5' %}" method="post" class="form-v5-content">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form.created_by }}</p>
+              <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form.A5_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="fr-btn">Enregistrer</button>
+              </div>  
+            </form>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <ul class="list-group" style="font-size: 17px;">
+            <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les acteurs socio-économiques de mon territoire. 
+              Je connais l’historique avec les partenaires existants. 
+              Je connais les techniques de réseautage pour fidéliser mon répertoire de contacts.
+            </li>
+            <li>
+              <p style="font-size: 12px"><strong>Degré 2 : </strong>Je construis un réseau de partenaires socio-économiques actualisé et mobilisable en tant qu’agent du service public, 
+                Je participe à des rencontres, des échanges et des réunions de travail.
+                Je tiens un répertoire des contacts actualisé.                      
+            </li>
+            <li>
+              <p style="font-size: 12px"><strong>Degré 3 : </strong>
+                Je suis un interlocuteur reconnu et sollicité par les acteurs socio-économiques sur un territoire. 
+                J’enrichis mon réseau partenarial (clubs d’entreprises, etc.)
+                Je mets en relation mes pairs avec mes contacts. Je mets à disposition les outils nécessaires et appropriés afin de gérer le partenariat dans la durée, en lien avec la démarche qualité.
+                Je mobilise des partenaires sur des projets où l’éducation nationale est partie prenante. 
+                Je participe à la rédaction de conventions de partenariat.
+                </p>
+            </li>
+            <li>
+              <p style="font-size: 12px"><strong>Degré 4 : </strong>Je suis à l’initiative de rencontres partenariales sur un projet donné.
+                Je mets en place des indicateurs pour évaluer l’efficience d’un partenariat.
+                
+              </p>
+            </li>
+          </ul>   
+        </div>
+      </div>
+          </div>
+        </div>
+        {% endblock %}

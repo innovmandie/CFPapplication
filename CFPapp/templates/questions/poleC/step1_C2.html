@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Question C2 C1{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+
+
+<div class="container-fluid" style="margin-left:10%">
+  <br>
+  {% if request.user.is_authenticated %}
+  <h4>Votre référentiel {{ request.user.username}}</h4>
+  {% endif %}
+  <p>Remplir le questionnaire peut prendre un certain temps,</p> 
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <h4 class= 'text-center'style="font-weight: bold;">C : PILOTER – ANIMER</h4>
+              <h6 class= 'text-center'>C2 : Animation de collectifs de travail</h6>
+
+              <p><strong>C2-C1 :</strong> Mobiliser des équipes sur des projets afin d’atteindre des objectifs visés en tenant compte<br>
+                 du périmètre d’action et des responsabilités de chacun</p>
+      </div> 
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <form action="{% url 'step1_C2' %}" method="post" class="form-v5-content ">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form.created_by }}</p>
+                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>{{ form.C2_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+                </svg></p>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="fr-btn">Next</button>
+              </div>
+                  </div>
+            </form>
+      </div>
+  </div>
+      
+        <div class="container-fluid">
+          <div class="col-md-8 col-md-offset-8">
+            <ul>
+              <h6>Les niveaux : </h6>
+              <li><strong>Degré 1 :</strong>sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
+              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
+              <li><strong>N S P : </strong>ne se prononce pas</li>
+              <li>Par defaut la liste indique le Degré 1.</li>
+            </ul>
+            <br>
+              <ul class="list-group">
+                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les techniques adaptées d’identification des besoins en compétences individuels ou collectifs. 
+                  Je connais les techniques de conduite d’entretien et d’écoute active pour recueillir toutes les informations utiles à l’analyse de la demande.
+                  Je connais les éléments constitutifs d’une réponse pédagogique ou d’accompagnement.                                     
+                  </p></li>
+                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je recueille les besoins en compétences en mobilisant les techniques adaptées. Dans le cadre d’un appel d’offres, je participe et contribue à la formalisation des besoins dans un collectif de travail.
+                    Je participe et contribue à l’analyse des besoins en compétences, individuels ou collectifs, afin d’orienter la réponse pédagogique ou d’accompagnement.                                  
+                    </p></li>
+                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je conduis un entretien d’analyse de la demande permettant de clarifier et d’identifier les besoins en compétences. 
+                      Je mobilise des outils d’analyse du travail pour croiser les informations recueillies.
+                      Je capitalise dans un document cadre l’ensemble des éléments recueillis permettant la qualification de la demande.                                 
+                      </p></li>
+                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressource du réseau en capacité d’accompagner et de former sur les techniques d’identification des besoins (entretien, analyse du poste de travail, etc.).                   
+                      </p></li>
+              </ul>
+          </div>
+        </div>
+</div>
+
+{% endblock %}

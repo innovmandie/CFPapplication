@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Question A3 C2{% endblock %}
+{% load bootstrap5 %}
+{% block content %}
+
+
+<div class="container" style="margin-left:10%">
+  <br>
+  {% if request.user.is_authenticated %}
+  <h4>Votre référentiel {{ request.user.username}}</h4>
+  {% endif %}
+      <div class="col-md-8 col-md-offset-8">
+        <div >
+          <p><strong>A2-C3 :</strong>Produire des notes et documents d’analyse afin de partager les conclusions des diagnostics réalisés en choisissant les moyens de communication adaptés</p>
+          <br>
+             <form action="" method="post" class="form-v5-content">
+              {%csrf_token %}
+              <p>Utilisateur id : {{ form.created_by }}</p>
+              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+              </svg>{{ form.A2_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
+              </svg></p>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="fr-btn">Enregistrer</button>
+              </div>
+            </form>
+              <ul class="list-group" style="font-size: 17px;">
+                <li><p style="font-size: 12px;"><strong>Degré 1 : </strong>Je connais les différents types de note et je connais la structure d’une note ou d’un document d’analyse.
+                  Je sais où me procurer les notes, les documents d’analyse produits par le réseau. 
+                  Je maitrise les techniques rédactionnelles et de communication professionnelle.
+                  </p></li>
+                <li><p style="font-size: 12px;"><strong>Degré 2 : </strong>
+                  Je repère les éléments de mon diagnostic à intégrer dans une note d’opportunité ou une note d’analyse en vue de partager les résultats.
+                  Je participe dans un collectif de travail à la production d’une note ou je produis une note d’opportunité en m’appuyant sur un projet similaire.
+                  Je repère les éléments saillants de ma note qui seront à intégrer dans une présentation écrite (diaporama, carte mentale, …).
+                </p></li>
+                <li><p style="font-size: 12px;"><strong>Degré 3 : </strong>J’ai produit un écrit lors de mon année probatoire pour présenter les résultats d’un diagnostic. J’ai présenté oralement le diagnostic en m’appuyant sur un diaporama.
+                  Je produis régulièrement des notes et des documents d’analyse en toute autonomie.
+                  J’utilise le canal de communication adapté. 
+                  J’utilise le réseau partagé pour déposer notes et synthèses formalisées.
+                  J’argumente auprès des décideurs mon analyse à partir des points saillants
+                  </p></li>
+                  <li><p style="font-size: 12px;"><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner des pairs à la production de notes et de documents d’analyse.
+                    Je produis un document d’analyse et une note sur un sujet complexe à destination d’un acteur académique, national, européen.
+                    Je contribue à la mise à jour des notes et documents d’analyse au profit du réseau régional voire national. 
+                    </p></li>
+              </ul>
+                  </div>
+           
+          </div>
+        </div>
+</div>
+
+{% endblock %}

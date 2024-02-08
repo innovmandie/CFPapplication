@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+        <div class="container-fluid">
+            <br><br>
+            
+            <h3>Les diagrammes radar du CFP</h3>
+               <div>
+                <h4<strong>Réponses et analyse du pôle A</strong></h4>
+            <br><br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                      <h6>Conseiller-Développer</h6>
+                      <h6>A1 Contribution à la définition de la politique de l’organisation</h6>
+                      {{ chart_A1|safe }}
+                      <br>
+                    </div>
+                    <div class="col">
+                        <br><br>
+                      <h6>A2 Diagnostic et analyse des besoins territoriaux et/ou sectoriels</h6>
+                      {{ chart_A_view|safe }}
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                        <h6>A3 Contribuer à la définition de la politique de l'organisation</h6>
+                        {{ chart_A3|safe }}
+                      <br>
+                    </div>
+                    <div class="col">
+                        <h6>A4 Conseils aux décideurs</h6>
+                        <br>
+                        {{ chart_A4|safe }}
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                        <h6>A5 Représentation institutionnelle sur les territoires</h6>
+                        {{ chart_A5|safe }}
+                      <br>
+                    </div>
+                    <div class="col">
+                        <h6>A6 Commercialisation de l’offre de prestations et recherche de marchés</h6>
+                        {{ chart_A6|safe }}
+                       </div>
+                      <br>
+                    </div>
+                    <h6>Tous les résultats</h6>
+                    {{ chart_all|safe }}
+                  </div>
+            </div>
+                
+           </div>
+              
+        </div>
+        
+{% endblock %}

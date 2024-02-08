@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Data B page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Réponses référentiel enregistrées</h4>
+    {{ info }}
+    <div class="row">
+      <div class="col">
+        <h6>Résultats C1 : </h6><p>Management de projets</p>
+        {{ resultsC1 | safe}}<br>
+        {{ chart_C1 | safe}}
+        <br>
+      </div>
+      <div class="col">
+        <h6>Résultats C2 :</h6><p> Animation de collectifs de travail</p>
+        {{ resultsC2 | safe}}<br>
+        {{ chart_C2 | safe}}
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6>Résultats C3 : </h6><p>Animation de démarches partenariales</p>
+        {{ resultsC3 | safe}}<br>
+        {{ chart_C3 | safe}}
+        <br>
+      </div>
+      <div class="col">
+        <h6>Résultats C4 : </h6><p>Contribution à la démarche qualité</p>
+        {{ resultsC4 | safe}}<br>
+        {{ chart_C4 | safe}}
+        <br>
+        
+      </div>
+
+    </div>
+
+    </div>
+    <div class="row">
+      <h6>Tous les résultats</h6>
+      <div class="col">
+        {{ chart_allC | safe }} 
+      </div>
+      <div class="col">
+        {{ chart_all2 | safe }} 
+        </div>
+    </div>
+ 
+        <br>
+     </div>
+
+{% endblock %}
