@@ -28,9 +28,9 @@ class POSTForm(ModelForm):
         super(POSTForm, self).clean()
 
         return self.cleaned_data
-    
+
 ############A1
-    
+
 class POSTFormA1_C1(ModelForm):
     class Meta:
         model = PostA1_C1
@@ -38,21 +38,21 @@ class POSTFormA1_C1(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A1_C1': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A1_C1': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
         super(POSTFormA1_C1, self).clean()
 
         return self.cleaned_data
-    
+
 class POSTFormA1_C2(ModelForm):
     class Meta:
         model = PostA1_C2
         fields =[ "created_by","A1_C2"]
         widgets ={
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A1_C2': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A1_C2': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
 
         }
 
@@ -60,23 +60,23 @@ class POSTFormA1_C2(ModelForm):
         super(POSTFormA1_C2, self).clean()
 
         return self.cleaned_data
-    
+
 class POSTFormA1_C3(ModelForm):
     class Meta:
         model = PostA1_C3
         fields =[ "created_by","A1_C3"]
         widgets ={
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A1_C3': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A1_C3': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
 
         }
-    
+
     def clean(self):
         super(POSTFormA1_C3, self).clean()
 
         return self.cleaned_data
-    
-    
+
+
 class POSTFormA2_C1(ModelForm):
     class Meta:
         model = PostA2_C1
@@ -84,7 +84,7 @@ class POSTFormA2_C1(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A2_C1': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A2_C1': Select(attrs={'style': 'width:820px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -97,8 +97,7 @@ class POSTFormA2_C2(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A2_C2': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
-
+            'A2_C2': Select(attrs={'style': 'width:840px; display:inline-block;',  'class': 'form-control'}),
         }
     def clean(self):
         super(POSTFormA2_C2, self).clean()
@@ -109,7 +108,7 @@ class POSTFormA2_C3(ModelForm):
         fields =[ "created_by","A2_C3",]
         widgets ={
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A2_C3': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A2_C3': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
         }
     def clean(self):
         super(POSTFormA2_C3, self).clean()
@@ -271,7 +270,7 @@ class POSTFormA6_C3(ModelForm):
         super(POSTFormA6_C3, self).clean()
 
 ###############################################################
-        
+
 class POSTFormB1_C1(ModelForm):
     class Meta:
         model = PostB1_C1
@@ -595,7 +594,7 @@ class POSTFormC4_C3(ModelForm):
 
 
 #######################################################
-    
+
 
 class VilleWidget(s2forms.ModelSelect2Widget):
     search_fields = [
@@ -603,25 +602,21 @@ class VilleWidget(s2forms.ModelSelect2Widget):
     ]
 
 
-    
+
 class UtilisateurForm(ModelForm):
     class Meta:
         model = Utilisateur_infos
-        
-        fields =[ "created_by","prenom", "nom", "commune","codepostal","greta_rattachement", "age", "anciennete"]
+
+        fields =[ "created_by","prenom", "nom","fonction","anciennete"]
         widgets = {
-
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-
             'prenom': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
             'nom': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
-            'commune': Select(attrs={'style': 'width:400px;', 'class': 'fr-input'}),
-            'codepostal': Select(attrs={'style': 'width:400px;', 'class': 'fr-input'}),
-            'greta_rattachement': Select(attrs={'style': 'width:400px;', 'class': 'fr-input'}),
-            'age': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
+            'fonction': Select(attrs={'style': 'width:400px;', 'class': 'fr-input'}),
             'anciennete': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
 
         }
+
     def clean(self):
         super(UtilisateurForm, self).clean()
 

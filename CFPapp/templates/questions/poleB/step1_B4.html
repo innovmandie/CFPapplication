@@ -1,65 +1,55 @@
 {% extends "base.html" %}
 {% block title %}Question B4 C1{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
+<div class="container" style="margin-left:10%">
   <br>
-  {% if request.user.is_authenticated %}
-  <h4>Votre référentiel {{ request.user.username}}</h4>
-  {% endif %}
-  <p>Remplir le questionnaire peut prendre un certain temps,</p> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <h4 class= 'text-center'style="font-weight: bold;">Veille pédagogique et techno-pédagogique</h4>
-              <h6 class= 'text-center'>B4 : Formalisation d’offres de prestation</h6>
+  <h4>Votre référentiel</h4>
 
-              <p><strong>B4-C1 :</strong>Identifier ou définir des règles et conditions de présentation de l’offre de prestation afin de répondre aux attentes du client ou commanditaire en respectant les standards professionnels et les exigences réglementaires</p>
-      </div> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step1_B4' %}" method="post" class="form-v5-content ">
-              {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.B4_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-              </div>
-                  </div>
-            </form>
-      </div>
-  </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <ul>
-              <h6>Les niveaux : </h6>
-              <li><strong>Degré 1 :</strong>sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
+  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>B4 : Formalisation d’offres de prestation</h6></dt>
+                <dd> <p><strong>B4-C1 :</strong> Identifier ou définir des règles et conditions de présentation de l’offre de prestation afin de répondre<br>
+                aux attentes du client ou commanditaire en respectant les standards professionnels et les exigences réglementaires</p></dd>
+              <dd> <div class="col-md-8 col-md-offset-8">
+            <h6>Les niveaux : </h6>
+            <ul class="list-group">
+              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
               <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
               <li><strong>N S P : </strong>ne se prononce pas</li>
               <li>Par defaut la liste indique le Degré 1.</li>
-            </ul>
-            <br>
+            </ul></dd>
+              </dl>
+      </div>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step1_B4' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 800px;">{{ form.B4_C1 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les trames de réponse du client ou du commanditaire. 
-                  Je connais le cadre d’une réponse avec l’existence des règles et des conditions pour présenter l’offre de prestation (nature de l’action, prix, contrat pédagogique, niveau de certification, etc…). 
-                  Je connais les standards professionnels d’une offre de prestation en lien avec la démarche qualité.
-                  
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je contribue à définir les règles et conditions de présentation d’une offre de prestation.                  
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>J’intègre les standards et les exigences réglementaires de présentation de l’offre de prestation que je propose au client ou au commanditaire.          
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>
-                      Je suis un acteur ressource du réseau en capacité de valider la conformité du respect des règles et conditions de présentation d’une offre de prestation. 
-                      </p></li>
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais :<br>
+-	les trames de réponse du client ou du commanditaire.<br>
+-	le cadre d’une réponse avec l’existence des règles et des conditions pour présenter l’offre de prestation (nature de l’action, prix, contrat pédagogique, niveau de certification, etc…).<br>
+-	les standards professionnels d’une offre de prestation en lien avec la démarche qualité.<br>
+</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je contribue à définir les règles et conditions de présentation d’une offre de prestation.</p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>J’intègre les standards et les exigences réglementaires de présentation de l’offre de prestation que je propose au client ou au commanditaire.
+</p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis un acteur ressource du réseau en capacité de valider la conformité du respect des règles et conditions de présentation d’une offre de prestation.</p></li>
               </ul>
           </div>
+
+
+            </div>
         </div>
 </div>
 

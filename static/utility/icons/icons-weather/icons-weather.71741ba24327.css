@@ -1,0 +1,141 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@charset "UTF-8";
+
+/* ¯¯¯¯¯¯¯¯¯ *\
+  ICON COMMUNICATION
+\* ˍˍˍˍˍˍˍˍˍ */
+.fr-icon-cloudy-2-fill::before,
+.fr-icon-cloudy-2-fill::after {
+  -webkit-mask-image: url("../../../icons/weather/cloudy-2-fill.5e337a237937.svg");
+  mask-image: url("../../../icons/weather/cloudy-2-fill.5e337a237937.svg");
+}
+
+.fr-icon-cloudy-2-line::before,
+.fr-icon-cloudy-2-line::after {
+  -webkit-mask-image: url("../../../icons/weather/cloudy-2-line.8c7bd1c6f13d.svg");
+  mask-image: url("../../../icons/weather/cloudy-2-line.8c7bd1c6f13d.svg");
+}
+
+.fr-icon-flashlight-fill::before,
+.fr-icon-flashlight-fill::after {
+  -webkit-mask-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  mask-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+}
+
+.fr-icon-flashlight-line::before,
+.fr-icon-flashlight-line::after {
+  -webkit-mask-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  mask-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+}
+
+.fr-icon-moon-fill::before,
+.fr-icon-moon-fill::after {
+  -webkit-mask-image: url("../../../icons/weather/moon-fill.d210377a78f7.svg");
+  mask-image: url("../../../icons/weather/moon-fill.d210377a78f7.svg");
+}
+
+.fr-icon-moon-line::before,
+.fr-icon-moon-line::after {
+  -webkit-mask-image: url("../../../icons/weather/moon-line.36236eafbb80.svg");
+  mask-image: url("../../../icons/weather/moon-line.36236eafbb80.svg");
+}
+
+.fr-icon-sun-fill::before,
+.fr-icon-sun-fill::after {
+  -webkit-mask-image: url("../../../icons/weather/sun-fill.191a83433e72.svg");
+  mask-image: url("../../../icons/weather/sun-fill.191a83433e72.svg");
+}
+
+.fr-icon-sun-line::before,
+.fr-icon-sun-line::after {
+  -webkit-mask-image: url("../../../icons/weather/sun-line.2741cecc9549.svg");
+  mask-image: url("../../../icons/weather/sun-line.2741cecc9549.svg");
+}
+
+.fr-fi-flashlight-fill::before,
+.fr-fi-flashlight-fill::after {
+  -webkit-mask-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  mask-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+}
+
+.fr-fi-flashlight-line::before,
+.fr-fi-flashlight-line::after {
+  -webkit-mask-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  mask-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+}
+
+@media (min-width: 36em) {
+  /*! media sm */
+
+  /*! media sm */
+}
+
+@media (min-width: 48em) {
+  /*! media md */
+
+  /*! media md */
+}
+
+@media (min-width: 62em) {
+  /*! media lg */
+
+  /*! media lg */
+}
+
+@media (min-width: 78em) {
+  /*! media xl */
+
+  /*! media xl */
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-cloudy-2-fill::before,
+  .fr-icon-cloudy-2-fill::after {
+    background-image: url("../../../icons/weather/cloudy-2-fill.5e337a237937.svg");
+  }
+
+  .fr-icon-cloudy-2-line::before,
+  .fr-icon-cloudy-2-line::after {
+    background-image: url("../../../icons/weather/cloudy-2-line.8c7bd1c6f13d.svg");
+  }
+
+  .fr-icon-flashlight-fill::before,
+  .fr-icon-flashlight-fill::after {
+    background-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  }
+
+  .fr-icon-flashlight-line::before,
+  .fr-icon-flashlight-line::after {
+    background-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  }
+
+  .fr-icon-moon-fill::before,
+  .fr-icon-moon-fill::after {
+    background-image: url("../../../icons/weather/moon-fill.d210377a78f7.svg");
+  }
+
+  .fr-icon-moon-line::before,
+  .fr-icon-moon-line::after {
+    background-image: url("../../../icons/weather/moon-line.36236eafbb80.svg");
+  }
+
+  .fr-icon-sun-fill::before,
+  .fr-icon-sun-fill::after {
+    background-image: url("../../../icons/weather/sun-fill.191a83433e72.svg");
+  }
+
+  .fr-icon-sun-line::before,
+  .fr-icon-sun-line::after {
+    background-image: url("../../../icons/weather/sun-line.2741cecc9549.svg");
+  }
+
+  .fr-fi-flashlight-fill::before {
+    background-image: url("../../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  }
+
+  .fr-fi-flashlight-line::before {
+    background-image: url("../../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  }
+}

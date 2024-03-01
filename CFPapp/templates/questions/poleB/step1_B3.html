@@ -1,67 +1,55 @@
 {% extends "base.html" %}
 {% block title %}Question B3 C1{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
+<div class="container" style="margin-left:10%">
   <br>
-  {% if request.user.is_authenticated %}
-  <h4>Votre référentiel {{ request.user.username}}</h4>
-  {% endif %}
-  <p>Remplir le questionnaire peut prendre un certain temps,</p> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <h4 class= 'text-center'style="font-weight: bold;">Veille pédagogique et techno-pédagogique</h4>
-              <h6 class= 'text-center'>B3 : Conception de dispositifs de développement de compétences et d’accompagnement de parcours</h6>
+  <h4>Votre référentiel</h4>
 
-              <p><strong>B3-C1 :</strong>Organiser le travail de conception afin de s’inscrire dans un calendrier de remise de l’offre en veillant à mobiliser les compétences et les ressources utiles et nécessaires</p>
-      </div> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step1_B3' %}" method="post" class="form-v5-content ">
-              {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.B3_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-              </div>
-                  </div>
-            </form>
-      </div>
-  </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <ul>
-              <h6>Les niveaux : </h6>
-              <li><strong>Degré 1 :</strong>sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
+  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>B3 : Conception de dispositifs de développement de compétences<br>et d’accompagnement de parcours</h6></dt>
+                <dd> <p><strong>B3-C1 :</strong> Organiser le travail de conception afin de s’inscrire dans un calendrier <br>
+                de remise de l’offre en veillant à mobiliser les compétences et les ressources utiles et nécessaires</p></dd>
+              <dd> <div class="col-md-8 col-md-offset-8">
+            <h6>Les niveaux : </h6>
+            <ul class="list-group">
+              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
               <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
               <li><strong>N S P : </strong>ne se prononce pas</li>
               <li>Par defaut la liste indique le Degré 1.</li>
-            </ul>
-            <br>
+            </ul></dd>
+              </dl>
+      </div>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step1_B3' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 800px;">{{ form.B3_C1 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais la demande client.
-                  Je prends connaissance des référentiels en lien avec l’offre à concevoir.
-                  Je repère les domaines de compétences des acteurs internes et externes. J’identifie les services ressources académiques.
-                                   
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je m’approprie la demande client. 
-                    Je participe à une réunion avec les acteurs internes et/ou externes pour organiser le travail (planning, repérage des compétences, outils, méthodes, etc…)                    
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je planifie et je coordonne le travail de conception avec les acteurs concernés (Rôle de chacun échéances, choix des outils de travail collaboratif,
-                      Je suis garant du respect du retro planning.                       
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis acteur ressource du réseau pour prendre en charge l’organisation d’un travail de conception d’une réponse au niveau régional ou national ou dans le cadre d’un groupement partenarial. 
-                      no-pédagogiques significatives en étant attentif à la diversité des sources d’information internes ou externes.                       
-                      </p></li>
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>A partir de la demande client, je prends connaissance des ressources (référentiels, contenus …) utiles et nécessaires à l’offre à concevoir.<br>
+Je repère les domaines de compétences des acteurs internes et externes. J’identifie les services ressources académiques.
+</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>A partir de la demande client, je participe à une réunion avec les acteurs<br>
+                  internes et/ou externes pour organiser le travail de conception (planning, repérage des compétences, outils, méthodes, etc…)
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je planifie et je coordonne le travail de conception avec les acteurs concernés<br>
+                    (rôle de chacun, échéances, choix des outils de travail collaboratif, …) Je suis garant du respect du rétro planning.
+</p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis acteur ressource du réseau pour prendre en charge l’organisation d’un travail de conception d’une réponse au niveau régional ou national ou dans le cadre d’un groupement partenarial.</p></li>
               </ul>
           </div>
+
+
+            </div>
         </div>
 </div>
 

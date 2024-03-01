@@ -1,0 +1,126 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@media (min-width: 36em) {
+  /*! media sm */
+}
+@media (min-width: 48em) {
+  /*! media md */
+}
+@media (min-width: 62em) {
+  /*! media lg */
+}
+@media (min-width: 78em) {
+  /*! media xl */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-chat-2-fill::before,
+  .fr-icon-chat-2-fill::after {
+    background-image: url("../../../icons/communication/chat-2-fill.fbebac0827da.svg");
+  }
+
+  .fr-icon-chat-2-line::before,
+  .fr-icon-chat-2-line::after {
+    background-image: url("../../../icons/communication/chat-2-line.707dbc226694.svg");
+  }
+
+  .fr-icon-chat-3-fill::before,
+  .fr-icon-chat-3-fill::after {
+    background-image: url("../../../icons/communication/chat-3-fill.64b28f496776.svg");
+  }
+
+  .fr-icon-chat-3-line::before,
+  .fr-icon-chat-3-line::after {
+    background-image: url("../../../icons/communication/chat-3-line.63acd4641bfe.svg");
+  }
+
+  .fr-icon-chat-check-fill::before,
+  .fr-icon-chat-check-fill::after {
+    background-image: url("../../../icons/communication/chat-check-fill.b8a415dd50f9.svg");
+  }
+
+  .fr-icon-chat-check-line::before,
+  .fr-icon-chat-check-line::after {
+    background-image: url("../../../icons/communication/chat-check-line.fb4f3b23f81e.svg");
+  }
+
+  .fr-icon-chat-delete-fill::before,
+  .fr-icon-chat-delete-fill::after {
+    background-image: url("../../../icons/communication/chat-delete-fill.948be401f0c6.svg");
+  }
+
+  .fr-icon-chat-delete-line::before,
+  .fr-icon-chat-delete-line::after {
+    background-image: url("../../../icons/communication/chat-delete-line.6c3785ffd2ff.svg");
+  }
+
+  .fr-icon-chat-poll-fill::before,
+  .fr-icon-chat-poll-fill::after {
+    background-image: url("../../../icons/communication/chat-poll-fill.c5a5925758f5.svg");
+  }
+
+  .fr-icon-chat-poll-line::before,
+  .fr-icon-chat-poll-line::after {
+    background-image: url("../../../icons/communication/chat-poll-line.865f4eded169.svg");
+  }
+
+  .fr-icon-discuss-fill::before,
+  .fr-icon-discuss-fill::after {
+    background-image: url("../../../icons/communication/discuss-fill.a80527f33475.svg");
+  }
+
+  .fr-icon-discuss-line::before,
+  .fr-icon-discuss-line::after {
+    background-image: url("../../../icons/communication/discuss-line.6b26d01cca64.svg");
+  }
+
+  .fr-icon-feedback-fill::before,
+  .fr-icon-feedback-fill::after {
+    background-image: url("../../../icons/communication/feedback-fill.df532b12cd7e.svg");
+  }
+
+  .fr-icon-feedback-line::before,
+  .fr-icon-feedback-line::after {
+    background-image: url("../../../icons/communication/feedback-line.1e5daf21f461.svg");
+  }
+
+  .fr-icon-message-2-fill::before,
+  .fr-icon-message-2-fill::after {
+    background-image: url("../../../icons/communication/message-2-fill.922505af93d5.svg");
+  }
+
+  .fr-icon-message-2-line::before,
+  .fr-icon-message-2-line::after {
+    background-image: url("../../../icons/communication/message-2-line.2cee7860afab.svg");
+  }
+
+  .fr-icon-question-answer-fill::before,
+  .fr-icon-question-answer-fill::after {
+    background-image: url("../../../icons/communication/question-answer-fill.91605685a81d.svg");
+  }
+
+  .fr-icon-question-answer-line::before,
+  .fr-icon-question-answer-line::after {
+    background-image: url("../../../icons/communication/question-answer-line.607a4e086200.svg");
+  }
+
+  .fr-icon-questionnaire-fill::before,
+  .fr-icon-questionnaire-fill::after {
+    background-image: url("../../../icons/communication/questionnaire-fill.76d989da62c8.svg");
+  }
+
+  .fr-icon-questionnaire-line::before,
+  .fr-icon-questionnaire-line::after {
+    background-image: url("../../../icons/communication/questionnaire-line.e9d0950ae177.svg");
+  }
+
+  .fr-icon-video-chat-fill::before,
+  .fr-icon-video-chat-fill::after {
+    background-image: url("../../../icons/communication/video-chat-fill.19ab88cba042.svg");
+  }
+
+  .fr-icon-video-chat-line::before,
+  .fr-icon-video-chat-line::after {
+    background-image: url("../../../icons/communication/video-chat-line.473940768ec2.svg");
+  }
+}

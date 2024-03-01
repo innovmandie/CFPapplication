@@ -1,0 +1,273 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@charset "UTF-8";
+
+/* ¯¯¯¯¯¯¯¯¯ *\
+  ICON BUILDINGS
+\* ˍˍˍˍˍˍˍˍˍ */
+.fr-icon-ancient-gate-fill::before,
+.fr-icon-ancient-gate-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/ancient-gate-fill.f93fbff9364b.svg");
+  mask-image: url("../../../icons/buildings/ancient-gate-fill.f93fbff9364b.svg");
+}
+
+.fr-icon-ancient-gate-line::before,
+.fr-icon-ancient-gate-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/ancient-gate-line.689052875dfb.svg");
+  mask-image: url("../../../icons/buildings/ancient-gate-line.689052875dfb.svg");
+}
+
+.fr-icon-ancient-pavilion-fill::before,
+.fr-icon-ancient-pavilion-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/ancient-pavilion-fill.750fc942cd57.svg");
+  mask-image: url("../../../icons/buildings/ancient-pavilion-fill.750fc942cd57.svg");
+}
+
+.fr-icon-ancient-pavilion-line::before,
+.fr-icon-ancient-pavilion-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/ancient-pavilion-line.c95de5ce89e5.svg");
+  mask-image: url("../../../icons/buildings/ancient-pavilion-line.c95de5ce89e5.svg");
+}
+
+.fr-icon-bank-fill::before,
+.fr-icon-bank-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/bank-fill.7cca804d55fc.svg");
+  mask-image: url("../../../icons/buildings/bank-fill.7cca804d55fc.svg");
+}
+
+.fr-icon-bank-line::before,
+.fr-icon-bank-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/bank-line.323f4659e47d.svg");
+  mask-image: url("../../../icons/buildings/bank-line.323f4659e47d.svg");
+}
+
+.fr-icon-building-fill::before,
+.fr-icon-building-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/building-fill.b8fa5ddcaaeb.svg");
+  mask-image: url("../../../icons/buildings/building-fill.b8fa5ddcaaeb.svg");
+}
+
+.fr-icon-building-line::before,
+.fr-icon-building-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/building-line.a183e845c1fc.svg");
+  mask-image: url("../../../icons/buildings/building-line.a183e845c1fc.svg");
+}
+
+.fr-icon-community-fill::before,
+.fr-icon-community-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/community-fill.3fc2fb449cce.svg");
+  mask-image: url("../../../icons/buildings/community-fill.3fc2fb449cce.svg");
+}
+
+.fr-icon-community-line::before,
+.fr-icon-community-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/community-line.72b031850af4.svg");
+  mask-image: url("../../../icons/buildings/community-line.72b031850af4.svg");
+}
+
+.fr-icon-government-fill::before,
+.fr-icon-government-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/government-fill.a4bb2bf545e4.svg");
+  mask-image: url("../../../icons/buildings/government-fill.a4bb2bf545e4.svg");
+}
+
+.fr-icon-government-line::before,
+.fr-icon-government-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/government-line.1f6a48a84841.svg");
+  mask-image: url("../../../icons/buildings/government-line.1f6a48a84841.svg");
+}
+
+.fr-icon-home-4-fill::before,
+.fr-icon-home-4-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  mask-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+}
+
+.fr-icon-home-4-line::before,
+.fr-icon-home-4-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  mask-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+}
+
+.fr-icon-hospital-fill::before,
+.fr-icon-hospital-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/hospital-fill.c031d8435d29.svg");
+  mask-image: url("../../../icons/buildings/hospital-fill.c031d8435d29.svg");
+}
+
+.fr-icon-hospital-line::before,
+.fr-icon-hospital-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/hospital-line.7dfec2d41424.svg");
+  mask-image: url("../../../icons/buildings/hospital-line.7dfec2d41424.svg");
+}
+
+.fr-icon-hotel-fill::before,
+.fr-icon-hotel-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/hotel-fill.ae92d261a0c8.svg");
+  mask-image: url("../../../icons/buildings/hotel-fill.ae92d261a0c8.svg");
+}
+
+.fr-icon-hotel-line::before,
+.fr-icon-hotel-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/hotel-line.b8322c9166d8.svg");
+  mask-image: url("../../../icons/buildings/hotel-line.b8322c9166d8.svg");
+}
+
+.fr-icon-store-fill::before,
+.fr-icon-store-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/store-fill.8c2c6d6ec20f.svg");
+  mask-image: url("../../../icons/buildings/store-fill.8c2c6d6ec20f.svg");
+}
+
+.fr-icon-store-line::before,
+.fr-icon-store-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/store-line.014dec7a778a.svg");
+  mask-image: url("../../../icons/buildings/store-line.014dec7a778a.svg");
+}
+
+.fr-fi-home-4-fill::before,
+.fr-fi-home-4-fill::after {
+  -webkit-mask-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  mask-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+}
+
+.fr-fi-home-4-line::before,
+.fr-fi-home-4-line::after {
+  -webkit-mask-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  mask-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+}
+
+@media (min-width: 36em) {
+  /*! media sm */
+
+  /*! media sm */
+}
+
+@media (min-width: 48em) {
+  /*! media md */
+
+  /*! media md */
+}
+
+@media (min-width: 62em) {
+  /*! media lg */
+
+  /*! media lg */
+}
+
+@media (min-width: 78em) {
+  /*! media xl */
+
+  /*! media xl */
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-ancient-gate-fill::before,
+  .fr-icon-ancient-gate-fill::after {
+    background-image: url("../../../icons/buildings/ancient-gate-fill.f93fbff9364b.svg");
+  }
+
+  .fr-icon-ancient-gate-line::before,
+  .fr-icon-ancient-gate-line::after {
+    background-image: url("../../../icons/buildings/ancient-gate-line.689052875dfb.svg");
+  }
+
+  .fr-icon-ancient-pavilion-fill::before,
+  .fr-icon-ancient-pavilion-fill::after {
+    background-image: url("../../../icons/buildings/ancient-pavilion-fill.750fc942cd57.svg");
+  }
+
+  .fr-icon-ancient-pavilion-line::before,
+  .fr-icon-ancient-pavilion-line::after {
+    background-image: url("../../../icons/buildings/ancient-pavilion-line.c95de5ce89e5.svg");
+  }
+
+  .fr-icon-bank-fill::before,
+  .fr-icon-bank-fill::after {
+    background-image: url("../../../icons/buildings/bank-fill.7cca804d55fc.svg");
+  }
+
+  .fr-icon-bank-line::before,
+  .fr-icon-bank-line::after {
+    background-image: url("../../../icons/buildings/bank-line.323f4659e47d.svg");
+  }
+
+  .fr-icon-building-fill::before,
+  .fr-icon-building-fill::after {
+    background-image: url("../../../icons/buildings/building-fill.b8fa5ddcaaeb.svg");
+  }
+
+  .fr-icon-building-line::before,
+  .fr-icon-building-line::after {
+    background-image: url("../../../icons/buildings/building-line.a183e845c1fc.svg");
+  }
+
+  .fr-icon-community-fill::before,
+  .fr-icon-community-fill::after {
+    background-image: url("../../../icons/buildings/community-fill.3fc2fb449cce.svg");
+  }
+
+  .fr-icon-community-line::before,
+  .fr-icon-community-line::after {
+    background-image: url("../../../icons/buildings/community-line.72b031850af4.svg");
+  }
+
+  .fr-icon-government-fill::before,
+  .fr-icon-government-fill::after {
+    background-image: url("../../../icons/buildings/government-fill.a4bb2bf545e4.svg");
+  }
+
+  .fr-icon-government-line::before,
+  .fr-icon-government-line::after {
+    background-image: url("../../../icons/buildings/government-line.1f6a48a84841.svg");
+  }
+
+  .fr-icon-home-4-fill::before,
+  .fr-icon-home-4-fill::after {
+    background-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  }
+
+  .fr-icon-home-4-line::before,
+  .fr-icon-home-4-line::after {
+    background-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  }
+
+  .fr-icon-hospital-fill::before,
+  .fr-icon-hospital-fill::after {
+    background-image: url("../../../icons/buildings/hospital-fill.c031d8435d29.svg");
+  }
+
+  .fr-icon-hospital-line::before,
+  .fr-icon-hospital-line::after {
+    background-image: url("../../../icons/buildings/hospital-line.7dfec2d41424.svg");
+  }
+
+  .fr-icon-hotel-fill::before,
+  .fr-icon-hotel-fill::after {
+    background-image: url("../../../icons/buildings/hotel-fill.ae92d261a0c8.svg");
+  }
+
+  .fr-icon-hotel-line::before,
+  .fr-icon-hotel-line::after {
+    background-image: url("../../../icons/buildings/hotel-line.b8322c9166d8.svg");
+  }
+
+  .fr-icon-store-fill::before,
+  .fr-icon-store-fill::after {
+    background-image: url("../../../icons/buildings/store-fill.8c2c6d6ec20f.svg");
+  }
+
+  .fr-icon-store-line::before,
+  .fr-icon-store-line::after {
+    background-image: url("../../../icons/buildings/store-line.014dec7a778a.svg");
+  }
+
+  .fr-fi-home-4-fill::before {
+    background-image: url("../../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  }
+
+  .fr-fi-home-4-line::before {
+    background-image: url("../../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  }
+}

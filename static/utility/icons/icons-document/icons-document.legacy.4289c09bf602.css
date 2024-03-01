@@ -1,0 +1,180 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@media (min-width: 36em) {
+  /*! media sm */
+}
+@media (min-width: 48em) {
+  /*! media md */
+}
+@media (min-width: 62em) {
+  /*! media lg */
+}
+@media (min-width: 78em) {
+  /*! media xl */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-article-fill::before,
+  .fr-icon-article-fill::after {
+    background-image: url("../../../icons/document/article-fill.e84e1a6b436a.svg");
+  }
+
+  .fr-icon-article-line::before,
+  .fr-icon-article-line::after {
+    background-image: url("../../../icons/document/article-line.fc88b02189ff.svg");
+  }
+
+  .fr-icon-book-2-fill::before,
+  .fr-icon-book-2-fill::after {
+    background-image: url("../../../icons/document/book-2-fill.c68bc6ea411f.svg");
+  }
+
+  .fr-icon-book-2-line::before,
+  .fr-icon-book-2-line::after {
+    background-image: url("../../../icons/document/book-2-line.13c6923b3522.svg");
+  }
+
+  .fr-icon-booklet-fill::before,
+  .fr-icon-booklet-fill::after {
+    background-image: url("../../../icons/document/booklet-fill.38a7f678a097.svg");
+  }
+
+  .fr-icon-booklet-line::before,
+  .fr-icon-booklet-line::after {
+    background-image: url("../../../icons/document/booklet-line.b1c750bbd409.svg");
+  }
+
+  .fr-icon-clipboard-fill::before,
+  .fr-icon-clipboard-fill::after {
+    background-image: url("../../../icons/document/clipboard-fill.865350b6554f.svg");
+  }
+
+  .fr-icon-clipboard-line::before,
+  .fr-icon-clipboard-line::after {
+    background-image: url("../../../icons/document/clipboard-line.cd7f084e9cff.svg");
+  }
+
+  .fr-icon-draft-fill::before,
+  .fr-icon-draft-fill::after {
+    background-image: url("../../../icons/document/draft-fill.4ec1a6506942.svg");
+  }
+
+  .fr-icon-draft-line::before,
+  .fr-icon-draft-line::after {
+    background-image: url("../../../icons/document/draft-line.353cb527477d.svg");
+  }
+
+  .fr-icon-file-add-fill::before,
+  .fr-icon-file-add-fill::after {
+    background-image: url("../../../icons/document/file-add-fill.591aeaefe577.svg");
+  }
+
+  .fr-icon-file-add-line::before,
+  .fr-icon-file-add-line::after {
+    background-image: url("../../../icons/document/file-add-line.194c8d28537a.svg");
+  }
+
+  .fr-icon-file-download-fill::before,
+  .fr-icon-file-download-fill::after {
+    background-image: url("../../../icons/document/file-download-fill.f96f506fe898.svg");
+  }
+
+  .fr-icon-file-download-line::before,
+  .fr-icon-file-download-line::after {
+    background-image: url("../../../icons/document/file-download-line.50a363a16cdd.svg");
+  }
+
+  .fr-icon-file-fill::before,
+  .fr-icon-file-fill::after {
+    background-image: url("../../../icons/document/file-fill.854971ea0ffc.svg");
+  }
+
+  .fr-icon-file-line::before,
+  .fr-icon-file-line::after {
+    background-image: url("../../../icons/document/file-line.85c3640438b4.svg");
+  }
+
+  .fr-icon-file-pdf-fill::before,
+  .fr-icon-file-pdf-fill::after {
+    background-image: url("../../../icons/document/file-pdf-fill.21036071899f.svg");
+  }
+
+  .fr-icon-file-pdf-line::before,
+  .fr-icon-file-pdf-line::after {
+    background-image: url("../../../icons/document/file-pdf-line.814ee160ef03.svg");
+  }
+
+  .fr-icon-file-text-fill::before,
+  .fr-icon-file-text-fill::after {
+    background-image: url("../../../icons/document/file-text-fill.f8126cdd4089.svg");
+  }
+
+  .fr-icon-file-text-line::before,
+  .fr-icon-file-text-line::after {
+    background-image: url("../../../icons/document/file-text-line.3d5af52e3861.svg");
+  }
+
+  .fr-icon-folder-2-fill::before,
+  .fr-icon-folder-2-fill::after {
+    background-image: url("../../../icons/document/folder-2-fill.2eb0c99a00bf.svg");
+  }
+
+  .fr-icon-folder-2-line::before,
+  .fr-icon-folder-2-line::after {
+    background-image: url("../../../icons/document/folder-2-line.b7f448b7a22b.svg");
+  }
+
+  .fr-icon-newspaper-fill::before,
+  .fr-icon-newspaper-fill::after {
+    background-image: url("../../../icons/document/newspaper-fill.665b4b1a4476.svg");
+  }
+
+  .fr-icon-newspaper-line::before,
+  .fr-icon-newspaper-line::after {
+    background-image: url("../../../icons/document/newspaper-line.e18ea09fcb86.svg");
+  }
+
+  .fr-icon-survey-fill::before,
+  .fr-icon-survey-fill::after {
+    background-image: url("../../../icons/document/survey-fill.b01d8959f5bc.svg");
+  }
+
+  .fr-icon-survey-line::before,
+  .fr-icon-survey-line::after {
+    background-image: url("../../../icons/document/survey-line.01c9b7a4d55e.svg");
+  }
+
+  .fr-icon-todo-fill::before,
+  .fr-icon-todo-fill::after {
+    background-image: url("../../../icons/document/todo-fill.184fe3755860.svg");
+  }
+
+  .fr-icon-todo-line::before,
+  .fr-icon-todo-line::after {
+    background-image: url("../../../icons/document/todo-line.c0cf14a08a3c.svg");
+  }
+
+  .fr-fi-file-download-fill::before {
+    background-image: url("../../../icons/document/file-download-fill.f96f506fe898.svg");
+  }
+
+  .fr-fi-file-download-line::before {
+    background-image: url("../../../icons/document/file-download-line.50a363a16cdd.svg");
+  }
+
+  .fr-fi-file-fill::before {
+    background-image: url("../../../icons/document/file-fill.854971ea0ffc.svg");
+  }
+
+  .fr-fi-file-line::before {
+    background-image: url("../../../icons/document/file-line.85c3640438b4.svg");
+  }
+
+  .fr-fi-file-pdf-fill::before {
+    background-image: url("../../../icons/document/file-pdf-fill.21036071899f.svg");
+  }
+
+  .fr-fi-file-pdf-line::before {
+    background-image: url("../../../icons/document/file-pdf-line.814ee160ef03.svg");
+  }
+}

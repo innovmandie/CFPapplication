@@ -63,19 +63,19 @@ urlpatterns = [
     path('finished/', views.finished, name='finished'),
     path('reponse/', views.reponse, name='reponse'),
     path('contact/', views.contact, name='contact'),
-    path('export_excel/', views.export_excel, name='export_excel'),
-    path('utilisateur_excel/', views.utilisateur_excel, name='utilisateur_excel'),
     path('chart_result/', views.chart_result, name='chart_result'),
     path('chart_view/', views.chart_view, name='chart_view'),
     path('chart_view/chart_view_user', views.chart_view_user, name='chart_view_user'),
+    path('generateB-pdf/', generateB_pdf, name='generateB_pdf'),
+    path('generateC-pdf/', generateC_pdf, name='generateC_pdf'),
 
     path('statistic/', views.statistic, name='statistic'),
     path('accueil/', views.accueil, name='accueil'),
     path('terms-of-use/', views.terms_of_use, name='terms_of_use'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
 
-    
+
     #path('index/', views.index, name='index'),
-    
+
 ]
 

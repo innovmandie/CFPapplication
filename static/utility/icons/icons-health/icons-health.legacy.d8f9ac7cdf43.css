@@ -1,0 +1,211 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@media (min-width: 36em) {
+  /*! media sm */
+}
+@media (min-width: 48em) {
+  /*! media md */
+}
+@media (min-width: 62em) {
+  /*! media lg */
+}
+@media (min-width: 78em) {
+  /*! media xl */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-capsule-fill::before,
+  .fr-icon-capsule-fill::after {
+    background-image: url("../../../icons/health/capsule-fill.a18f12f46e82.svg");
+  }
+
+  .fr-icon-capsule-line::before,
+  .fr-icon-capsule-line::after {
+    background-image: url("../../../icons/health/capsule-line.c3da74cc5d4f.svg");
+  }
+
+  .fr-icon-dislike-fill::before,
+  .fr-icon-dislike-fill::after {
+    background-image: url("../../../icons/health/dislike-fill.7707d73074cc.svg");
+  }
+
+  .fr-icon-dislike-line::before,
+  .fr-icon-dislike-line::after {
+    background-image: url("../../../icons/health/dislike-line.81ab3fff3499.svg");
+  }
+
+  .fr-icon-dossier-fill::before,
+  .fr-icon-dossier-fill::after {
+    background-image: url("../../../icons/health/dossier-fill.a2006743cd0d.svg");
+  }
+
+  .fr-icon-dossier-line::before,
+  .fr-icon-dossier-line::after {
+    background-image: url("../../../icons/health/dossier-line.4632c9fa92f7.svg");
+  }
+
+  .fr-icon-first-aid-kit-fill::before,
+  .fr-icon-first-aid-kit-fill::after {
+    background-image: url("../../../icons/health/first-aid-kit-fill.96be59ca7937.svg");
+  }
+
+  .fr-icon-first-aid-kit-line::before,
+  .fr-icon-first-aid-kit-line::after {
+    background-image: url("../../../icons/health/first-aid-kit-line.485fc8238b05.svg");
+  }
+
+  .fr-icon-hand-sanitizer-fill::before,
+  .fr-icon-hand-sanitizer-fill::after {
+    background-image: url("../../../icons/health/hand-sanitizer-fill.08f1ee5f2a26.svg");
+  }
+
+  .fr-icon-hand-sanitizer-line::before,
+  .fr-icon-hand-sanitizer-line::after {
+    background-image: url("../../../icons/health/hand-sanitizer-line.9265af6715a2.svg");
+  }
+
+  .fr-icon-health-book-fill::before,
+  .fr-icon-health-book-fill::after {
+    background-image: url("../../../icons/health/health-book-fill.b25fd595672d.svg");
+  }
+
+  .fr-icon-health-book-line::before,
+  .fr-icon-health-book-line::after {
+    background-image: url("../../../icons/health/health-book-line.e8e2d8a484c5.svg");
+  }
+
+  .fr-icon-heart-fill::before,
+  .fr-icon-heart-fill::after {
+    background-image: url("../../../icons/health/heart-fill.0207c8695fef.svg");
+  }
+
+  .fr-icon-heart-line::before,
+  .fr-icon-heart-line::after {
+    background-image: url("../../../icons/health/heart-line.780076cf755e.svg");
+  }
+
+  .fr-icon-heart-pulse-fill::before,
+  .fr-icon-heart-pulse-fill::after {
+    background-image: url("../../../icons/health/heart-pulse-fill.f424ef96d562.svg");
+  }
+
+  .fr-icon-heart-pulse-line::before,
+  .fr-icon-heart-pulse-line::after {
+    background-image: url("../../../icons/health/heart-pulse-line.7861685f97a5.svg");
+  }
+
+  .fr-icon-lungs-fill::before,
+  .fr-icon-lungs-fill::after {
+    background-image: url("../../../icons/health/lungs-fill.3230f9151d69.svg");
+  }
+
+  .fr-icon-lungs-line::before,
+  .fr-icon-lungs-line::after {
+    background-image: url("../../../icons/health/lungs-line.81578de7eca6.svg");
+  }
+
+  .fr-icon-medicine-bottle-fill::before,
+  .fr-icon-medicine-bottle-fill::after {
+    background-image: url("../../../icons/health/medicine-bottle-fill.9ef0bbd2abe5.svg");
+  }
+
+  .fr-icon-medicine-bottle-line::before,
+  .fr-icon-medicine-bottle-line::after {
+    background-image: url("../../../icons/health/medicine-bottle-line.5eda130b813b.svg");
+  }
+
+  .fr-icon-mental-health-fill::before,
+  .fr-icon-mental-health-fill::after {
+    background-image: url("../../../icons/health/mental-health-fill.fc4013d1dd03.svg");
+  }
+
+  .fr-icon-mental-health-line::before,
+  .fr-icon-mental-health-line::after {
+    background-image: url("../../../icons/health/mental-health-line.3658810ca8ed.svg");
+  }
+
+  .fr-icon-microscope-fill::before,
+  .fr-icon-microscope-fill::after {
+    background-image: url("../../../icons/health/microscope-fill.485ba5ae9ae2.svg");
+  }
+
+  .fr-icon-microscope-line::before,
+  .fr-icon-microscope-line::after {
+    background-image: url("../../../icons/health/microscope-line.081ff1b3f066.svg");
+  }
+
+  .fr-icon-psychotherapy-fill::before,
+  .fr-icon-psychotherapy-fill::after {
+    background-image: url("../../../icons/health/psychotherapy-fill.80940b0ef806.svg");
+  }
+
+  .fr-icon-psychotherapy-line::before,
+  .fr-icon-psychotherapy-line::after {
+    background-image: url("../../../icons/health/psychotherapy-line.eb303598bfa5.svg");
+  }
+
+  .fr-icon-pulse-line::before,
+  .fr-icon-pulse-line::after {
+    background-image: url("../../../icons/health/pulse-line.d62e2d8a6220.svg");
+  }
+
+  .fr-icon-stethoscope-fill::before,
+  .fr-icon-stethoscope-fill::after {
+    background-image: url("../../../icons/health/stethoscope-fill.42634abd026d.svg");
+  }
+
+  .fr-icon-stethoscope-line::before,
+  .fr-icon-stethoscope-line::after {
+    background-image: url("../../../icons/health/stethoscope-line.75f84ad0cbbd.svg");
+  }
+
+  .fr-icon-surgical-mask-fill::before,
+  .fr-icon-surgical-mask-fill::after {
+    background-image: url("../../../icons/health/surgical-mask-fill.716909272ba9.svg");
+  }
+
+  .fr-icon-surgical-mask-line::before,
+  .fr-icon-surgical-mask-line::after {
+    background-image: url("../../../icons/health/surgical-mask-line.eecd65ddf9ec.svg");
+  }
+
+  .fr-icon-syringe-fill::before,
+  .fr-icon-syringe-fill::after {
+    background-image: url("../../../icons/health/syringe-fill.3a29c6849661.svg");
+  }
+
+  .fr-icon-syringe-line::before,
+  .fr-icon-syringe-line::after {
+    background-image: url("../../../icons/health/syringe-line.fb4efdc25f55.svg");
+  }
+
+  .fr-icon-test-tube-fill::before,
+  .fr-icon-test-tube-fill::after {
+    background-image: url("../../../icons/health/test-tube-fill.9f3bd54405bc.svg");
+  }
+
+  .fr-icon-test-tube-line::before,
+  .fr-icon-test-tube-line::after {
+    background-image: url("../../../icons/health/test-tube-line.9da6c85064bb.svg");
+  }
+
+  .fr-icon-thermometer-fill::before,
+  .fr-icon-thermometer-fill::after {
+    background-image: url("../../../icons/health/thermometer-fill.a45a1329d569.svg");
+  }
+
+  .fr-icon-thermometer-line::before,
+  .fr-icon-thermometer-line::after {
+    background-image: url("../../../icons/health/thermometer-line.683533db327c.svg");
+  }
+
+  .fr-icon-virus-fill::before,
+  .fr-icon-virus-fill::after {
+    background-image: url("../../../icons/health/virus-fill.5eb481040037.svg");
+  }
+
+  .fr-icon-virus-line::before,
+  .fr-icon-virus-line::after {
+    background-image: url("../../../icons/health/virus-line.078621c7050f.svg");
+  }
+}

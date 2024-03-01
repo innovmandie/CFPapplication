@@ -1,64 +1,56 @@
 {% extends "base.html" %}
 {% block title %}Question A6 C1{% endblock %}
-{% load bootstrap5 %}
+
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
+<div class="container" style="margin-left:10%">
   <br>
-    <div class="row justify-content-md-center">
-      <div class="col">
-        {% if request.user.is_authenticated %}
-      <h4>Votre référentiel {{ request.user.username}}</h4>
-      {% endif %}
-      <p>Remplir le questionnaire peut prendre un certain temps</p>  
-        <h4 class= 'text-center'style="font-weight: bold;">Pôle Conseiller-Développer</h4>
-              <h6 class= 'text-center'>A6 : Commercialisation de l’offre de prestations et recherche de marchés</h6>
-              <p><strong>A6-C1 :</strong> Contribuer à l’élaboration de la politique commerciale de l’organisation afin de maintenir ou renforcer sa présence sur les marchés en tenant compte de la répartition des rôles et responsabilités au sein des équipes en place</p>
+  <h4>Votre référentiel</h4>
 
+  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class="text-center">A6 : Commercialisation de l’offre de prestations et recherche de marchés</h6></dt>
+                <dd><strong>A6-C1 :</strong> Contribuer à l’élaboration de la politique commerciale de l’organisation afin de maintenir ou renforcer sa présence<br>
+                sur les marchés en tenant compte de la répartition des rôles et responsabilités au sein des équipes en place</p></dd>
+              <dd><div class="col-md-8 col-md-offset-8">
+
+                <ul>
+                  <h6>Les niveaux : </h6>
+                  <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
+                  <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
+                  <li><strong>N S P : </strong>ne se prononce pas</li>
+                  <li>Par defaut la liste indique le Degré 1.</li>
+                </ul></div></dd>
+              </dl>
       </div>
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step1_A6' %}" method="post" class="form-v5-content ">
-        {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.A6_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-              </div>
-                  </div>
+  <div class="row justify-content-md-center">
+         <div class=".col-md-">
+             <form action="{% url 'step1_A6' %}" method="post" class="form-group">
+                  <div class="d-flex justify-content-center">
+              {%csrf_token %}
+              <div style="display: none;">{{ form.created_by }}</div><br>
+              <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A6_C1 }}</p></div>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
             </form>
+            </div>
       </div>
   </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <ul>
-              <h6>Les niveaux : </h6>
-              <li><strong>Degré 1 :</strong>sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-              <li><strong>N S P : </strong>ne se prononce pas</li>
-              <li>Par defaut la liste indique le Degré 1.</li>
-            </ul>
-            <br>
+   <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les éléments constitutifs d’une politique commerciale d’une organisation (analyse, contexte, objectifs, plan d’action). 
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les éléments constitutifs d’une politique commerciale d’une organisation (analyse, contexte, objectifs, plan d’action).<br>
                   Je connais la politique commerciale de ma structure.
                   Je connais les acteurs en charge de la définition de la politique commerciale au niveau de ma structure et au niveau académique.
                   </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>
                     J’apporte des éléments d’analyse permettant l’évolution de la politique commerciale au sein d’un collectif de travail.
                     Je sollicite les services de mon organisation (RH, communication et commercial…) utiles à la définition de la politique commerciale.
-                    
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>J’oriente la définition des objectifs de la politique commerciale, l’identification des cibles prioritaires et l’élaboration du plan d’action commerciale. 
-                      J’évalue les résultats de la politique commerciale. 
+
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong>J’oriente la définition des objectifs de la politique commerciale, l’identification des cibles prioritaires et l’élaboration du plan d’action commerciale.
+                      J’évalue les résultats de la politique commerciale.
                       </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner les équipes en place et transmettre une méthodologie d’élaboration de la politique commerciale. 
-                      Je pilote un groupe de travail sur l’élaboration de la politique commerciale à l’échelle de ma structure, du réseau. 
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner les équipes en place et transmettre une méthodologie d’élaboration de la politique commerciale.
+                      Je pilote un groupe de travail sur l’élaboration de la politique commerciale à l’échelle de ma structure, du réseau.
                       </p></li>
               </ul>
           </div>

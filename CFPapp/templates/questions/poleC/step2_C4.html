@@ -1,7 +1,58 @@
 {% extends "base.html" %}
 {% block title %}Question C4 C2{% endblock %}
-{% load bootstrap5 %}
+
 {% block content %}
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>C4 : Contribution à la démarche qualité</h6></dt>
+                <dd> <p class= 'text-center'><strong>C4 C2 :</strong> Suivre les engagements qualité pris par l’organisation afin de<br>
+                veiller à leur respect en utilisant les moyens de pilotage adaptés</p></dd>
+              <dd></dl>
+
+</div>
+<br>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step2_C4' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.C4_C2 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je peux décrire le management de la qualité mis en place dans mon organisation.<br>
+Je connais le plan d’action qualité de ma structure et les indicateurs de suivi de la performance mis en place.<br>
+J’identifie les personnes ressources de la qualité.
+
+                  </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’utilise les bons documents du système qualité et je les rapproche des processus.<br>
+Je consulte les données qualitatives et quantitatives collectées, liées aux indicateurs qualité. J’applique les procédures.
+
+                    </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je participe au processus de veille et de respect des engagements de qualité en utilisant les moyens de pilotage de ma structure, du réseau.<br>
+Je mets en place et j’anime des réunions avec les collaborateurs dans l’objectif de mesurer le niveau de conformité des prestations.
+
+
+                      </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis un acteur ressource du réseau pour relayer les engagements qualité de l’académie<br>
+Je réalise des audits internes pour mon académie.<br>
+Je suis auditeur national, le cas échéant.
+
+                      </p></li>
+              </ul>
+          </div>
+            </div>
+        </div>
+        </div>
 
 
 <div class="container-fluid" style="margin-left:10%">
@@ -10,7 +61,7 @@
         <br>
               <h6 class= 'text-center'>C4 : Contribution à la démarche qualité</h6>
               <p><strong>C4-C2 :</strong>Suivre les engagements qualité pris par l’organisation afin de veiller à leur respect en utilisant les moyens de pilotage adaptés</p>
-      </div> 
+      </div>
     <div class="row justify-content-md-center">
       <div class="col">
         <form action="{% url 'step2_C4' %}" method="post" class="form-v5-content ">
@@ -22,31 +73,31 @@
                   <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
                 </svg></p>
               <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
+                <button type="submit" class="fr-btn">Suivant</button>
               </div>
                   </div>
             </form>
       </div>
   </div>
-      
+
         <div class="container-fluid">
           <div class="col-md-8 col-md-offset-8">
             <br>
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong> Je peux décrire le management de la qualité mis en place dans mon organisation. 
+                <li><p style="font-size: 12px"><strong>Degré 1 : </strong> Je peux décrire le management de la qualité mis en place dans mon organisation.
                   Je connais le plan d’action qualité de ma structure et les indicateurs de suivi de la performance mis en place.
-                  J’identifie les personnes ressources de la qualité. 
+                  J’identifie les personnes ressources de la qualité.
                   </p></li>
                   <li><p style="font-size: 12px"><strong>Degré 2 : </strong> Je sais utiliser les bons documents du système qualité et je suis capable de les rapprocher d’un processus.
-                    Je consulte les données qualitatives et quantitatives collectées liées aux indicateurs qualité. J’applique les procédures.                                  
+                    Je consulte les données qualitatives et quantitatives collectées liées aux indicateurs qualité. J’applique les procédures.
                     </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 : </strong>Je participe au processus de veille et de respect des engagements de qualité en utilisant les moyens de pilotage de ma structure, du réseau. 
-                      Je mets en place et j’anime des réunions avec les collaborateurs dans l’objectif de mesurer le niveau de conformité des prestations. 
-                                            
+                    <li><p style="font-size: 12px"><strong>Degré 3 : </strong>Je participe au processus de veille et de respect des engagements de qualité en utilisant les moyens de pilotage de ma structure, du réseau.
+                      Je mets en place et j’anime des réunions avec les collaborateurs dans l’objectif de mesurer le niveau de conformité des prestations.
+
                       </p></li>
                     <li><p style="font-size: 12px"><strong>Degré 4 : </strong>Je suis un acteur ressource du réseau pour relayer les engagements qualité de l’académie
                       Je réalise des audits internes pour mon académie.
-                      Je suis auditeur national, le cas échéant.                       
+                      Je suis auditeur national, le cas échéant.
                       </p></li>
               </ul>
           </div>

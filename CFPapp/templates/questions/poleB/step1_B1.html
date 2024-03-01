@@ -1,68 +1,59 @@
 {% extends "base.html" %}
 {% block title %}Question B1 C1{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
+<div class="container" style="margin-left:10%">
   <br>
-  {% if request.user.is_authenticated %}
-  <h4>Votre référentiel {{ request.user.username}}</h4>
-  {% endif %}
-  <p>Remplir le questionnaire peut prendre un certain temps,</p> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <h4 class= 'text-center'style="font-weight: bold;">Veille pédagogique et techno-pédagogique</h4>
-              <h6 class= 'text-center'>B1 : Identifier des sources d’information internes ou externes afin de recenser des évolutions pédagogiques ou techno-pédagogiques significatives<br> en étant attentif à la diversité de ces sources</h6>
+  <h4>Votre référentiel</h4>
 
-              <p><strong>B1-C1 :</strong> Définir une stratégie de veille afin de collecter des données actuelles et prospectives utiles au positionnement
-                et<br>au développement de l’organisation en s’inscrivant dans les dispositions internes prises par l’organisation.</p>
-      </div> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step1_B1' %}" method="post" class="form-v5-content ">
-              {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.B1_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-              </div>
-                  </div>
-            </form>
-      </div>
-  </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <ul>
-              <h6>Les niveaux : </h6>
-              <li><strong>Degré 1 :</strong>sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
+  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>B1 : Veille pédagogique et techno-pédagogique</h6></dt>
+                <dd> <p><strong>B1-C1 :</strong> Identifier des sources d’information internes ou externes afin de recenser des évolutions pédagogiques<br>
+                ou techno-pédagogiques significatives en étant attentif à la diversité de ces sources</p></dd>
+              <dd> <div class="col-md-8 col-md-offset-8">
+            <h6>Les niveaux : </h6>
+            <ul class="list-group">
+              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
               <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
               <li><strong>N S P : </strong>ne se prononce pas</li>
               <li>Par defaut la liste indique le Degré 1.</li>
-            </ul>
-            <br>
+            </ul></dd>
+              </dl>
+      </div>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step1_B1' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 800px;">{{ form.B1_C1 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les caractéristiques de la pédagogie (méthodes, démarches, outils et techniques pédagogiques). 
-                  Je connais les sources d’informations pédagogiques internes (portails de l’éducation nationale, CAFOC) et les acteurs en interne en capacité de transmettre des ressources sur la veille pédagogique et techno-pédagogique (inspecteurs, CFP experts en région ou au niveau national, etc.). 
-                  Je connais les sources d’informations pédagogiques externes en lien avec la formation professionnelle.                   
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’identifie et je sélectionne, avec l’aide d’un collectif de travail de ma structure, ou du réseau académique, les sources d’informations me permettant de recenser des évolutions pédagogiques ou techno-pédagogiques. 
-                    Je suis abonné à des newsletters spécialisées. Je participe à des webinaires, des conférences ou des formations sur les évolutions pédagogiques ou techno pédagogiques.                     
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je réalise ma veille en fonction de mes domaines d’activités. 
-                      J’enrichis ma veille pédagogique et technico-pédagogique en la partageant et en la complétant dans les collectifs de travail de ma structure, du réseau académique, du réseau national et de mon réseau partenarial.                       
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressources pour le réseau en capacité de croiser différentes sources d’informations internes et externes permettant de recenser les évolutions pédagogiques ou techno-pédagogiques significatives dans mon domaine d’activités. 
-                      Je recense à des fins de diffusion (filière, réseau académique, IAGO, …) des évolutions pédagogiques ou techno-pédagogiques significatives en étant attentif à la diversité des sources d’information internes ou externes.                       
-                      </p></li>
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je repère les sources d’informations pédagogiques :<br>
+-	Internes (portails de l’éducation nationale, CAFOC) et les acteurs en interne en capacité de transmettre des ressources sur la veille pédagogique et techno-pédagogique (inspecteurs, CFP experts en région ou au niveau national, etc.).<br>
+-	Externes en lien avec la formation professionnelle.</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie et je sélectionne, avec l’aide d’un collectif de travail de ma structure, ou du réseau académique, les sources d’informations me permettant de recenser des évolutions pédagogiques ou techno-pédagogiques.
+Je suis abonné à des newsletters spécialisées. Je participe à des webinaires, des conférences ou des formations sur les évolutions pédagogiques ou techno pédagogiques.<br>
+
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je réalise ma veille en fonction de mes domaines d’activités.<br>
+J’enrichis ma veille pédagogique et technico-pédagogique en la partageant et en la complétant dans les collectifs de travail de ma structure, du réseau académique, du réseau national et de mon réseau partenarial.
+                       </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis un acteur ressource pour le réseau en capacité de croiser différentes sources d’informations internes et externes permettant de recenser les évolutions pédagogiques ou techno-pédagogiques significatives dans mon domaine d’activités.<br>
+Je recense à des fins de diffusion (filière, réseau académique, IAGO, …) des évolutions pédagogiques ou techno-pédagogiques significatives en étant attentif à la diversité des sources d’information internes ou externes.</p></li>
               </ul>
           </div>
+
+
+            </div>
         </div>
 </div>
+
 
 {% endblock %}

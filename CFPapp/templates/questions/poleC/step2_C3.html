@@ -1,55 +1,59 @@
 {% extends "base.html" %}
 {% block title %}Question B3 C2{% endblock %}
-{% load bootstrap5 %}
+
 {% block content %}
 
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>C3 : Animation de démarches partenariales</h6></dt>
+                <dd> <p class= 'text-center'><strong>C3 C2 :</strong> Construire des partenariats afin de proposer des solutions innovantes en formalisant<br>
+                les contributions et engagements réciproques</p></dd>
+              <dd></dl>
 
-<div class="container-fluid" style="margin-left:10%">
+</div>
+<br>
     <div class="row justify-content-md-center">
-      <div class="col">
-       <br>
-              <h6 class= 'text-center'>C3 : Animation de démarches partenariales</h6>
-
-              <p><strong>C3-C2 :</strong> Construire des partenariats afin de proposer des solutions innovantes en formalisant les contributions <br>
-                et engagements réciproques</p>
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step2_C3' %}" method="post" class="form-v5-content ">
+      <div class=".col-md-">
+        <form action="{% url 'step2_C3' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
         {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.C3_C2 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-              </div>
-                  </div>
-            </form>
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.C3_C2 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
       </div>
   </div>
-      
         <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <br>
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les différentes formes juridiques des partenariats (consortium, groupement solidaire, cotraitance, sous-traitance...). 
-                  Je connais les projets mis en œuvre dans ma structure, dans le réseau qui ont fait l’objet d’un partenariat et je connais les documents contractuels existants. 
-                </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je participe à un premier temps d’échanges sur l’objet du partenariat à construire. 
-                    Je valorise les champs d’expertises de ma structure, de mon réseau.
-                    Je contribue à la rédaction des supports contractuels d’un projet partenarial.                                        
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais :<br>
+-	les différentes formes juridiques des partenariats (consortium, groupement solidaire, cotraitance, sous-traitance...).<br>
+-	les projets mis en œuvre dans ma structure, dans le réseau qui ont fait l’objet d’un partenariat et je connais les documents contractuels existants.
+
+                  </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je participe à un premier temps d’échanges sur l’objet du partenariat à construire.<br>
+Je valorise les champs d’expertise de ma structure, de mon réseau et j’intègre ceux des partenaires.<br>
+Je fournis les éléments utiles à la rédaction des supports contractuels d’un projet partenarial.
+
                     </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>En accord avec les décideurs de ma structure, du réseau, je négocie avec les partenaires les composantes techniques et pédagogiques du partenariat. 
-                      Je rédige les documents contractuels du partenariat.                      
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je participe à la détection des complémentarités et des économies d’échelle que je présente aux décideurs de ma structure, du réseau.<br>
+En accord avec les décideurs de ma structure, du réseau, je négocie avec les partenaires les composantes techniques et pédagogiques du partenariat.<br>
+Je rédige ou je corédige les documents contractuels du partenariat.
+
+
                       </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Sur sollicitation du DRAFPIC, je rédige et je propose les accords de groupement de consortium pour un AMI, un AAP. 
-                      Je suis un interlocuteur repéré au niveau de ma structure, du réseau pour la construction de nouveaux partenariats d’envergure régionale, nationale et européenne.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Sur sollicitation du DRAFPIC, je propose des accords de groupement de consortium pour un AMI, un AAP et je rédige les documents contractuels afférents.<br>
+Je suis un interlocuteur repéré au niveau de ma structure, du réseau pour la construction de nouveaux partenariats d’envergure régionale, nationale et européenne.
+
                       </p></li>
               </ul>
           </div>
+            </div>
         </div>
-</div>
+        </div>
 
 {% endblock %}

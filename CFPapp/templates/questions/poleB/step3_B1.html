@@ -1,53 +1,52 @@
 {% extends "base.html" %}
 {% block title %}Question B1 C3{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <p><strong>B1-C3 :</strong>Exploiter les données au sein de l’organisation afin d’alimenter une dynamique<br>
-                 d’évolution ou d’adaptation des pratiques pédagogiques en partageant les informations clés avec les équipes</p>
-      </div> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step3_B1' %}" method="post" class="form-v5-content ">
+<div class="container" style="margin-left:10%">
+  <br>
+  <div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dd> <p><strong>B1-C3 :</strong> Exploiter les données au sein de l’organisation afin d’alimenter une dynamique d’évolution<br>
+                ou d’adaptation des pratiques pédagogiques en partageant les informations clés avec les équipes</p></dd>
+              <dd>
+              </dl>
+      </div>
+      </div>
+  <div class="row justify-content-md-center">
+         <div class=".col-md-">
+             <form action="{% url 'step3_B1' %}" method="post" class="form-group">
+                  <div class="d-flex justify-content-center">
               {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.B1_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Enregistrement</button>
-              </div>
-                  </div>
+              <div style="display: none;">{{ form.created_by }}</div><br>
+              <p style="border: 2px solid blueviolet; width : 810px;">{{ form.B1_C3 }}</p></div>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrement</button></div>
             </form>
+            </div>
       </div>
   </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <br>
+        <div class="container">
+            <div class="row justify-content-md-center">
+            <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>J’identifie les acteurs impliqués dans la dynamique d’évolution ou d’adaptation des pratiques pédagogiques. 
-                  Je repère les données clés à transmettre aux équipes pour alimenter une dynamique de changement des pratiques pédagogiques. 
-                                     
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : J’identifie les acteurs impliqués dans la dynamique d’évolution ou d’adaptation des pratiques pédagogiques.<br>
+Je repère les données clés à transmettre aux équipes pour alimenter une dynamique de changement des pratiques pédagogiques.
+
+
                   </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’identifie les tendances d’évolution ou d’adaptation, j’extraie des données utiles et nécessaires au changement de pratiques pédagogiques.
-                    Je les formalise en vue d’une transmission aux équipes concernées.                   
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je présente les informations clés et les évolutions à engager aux équipes impliquées, lors de réunions.
-                      Je rédige une analyse sur les changements de pratiques pédagogiques à opérer, à partir de l’exploitation des données. 
-                      Je communique mon analyse en l’adaptant au public cible (direction d’un GRETA, équipes pédagogiques, inspecteurs, etc.). 
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressource pour le réseau en capacité de mutualiser ses analyses avec les acteurs concernés du réseau.           
-                      </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie les tendances d’évolution ou d’adaptation.<br>
+J’extrais des données utiles et nécessaires au changement de pratiques pédagogiques.<br>
+Je les formalise en vue d’une transmission aux équipes concernées.
+
+</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong> Je partage les informations clés et les évolutions à engager avec les équipes impliquées, lors de réunions.<br>
+Je rédige une analyse sur les changements de pratiques pédagogiques à opérer, à partir de l’exploitation des données.<br>
+Je communique mon analyse en l’adaptant au public cible (direction d’un GRETA, équipes pédagogiques, inspecteurs, etc.).
+
+                  </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong> Je suis un acteur ressource pour le réseau en capacité de mutualiser ses analyses avec les acteurs concernés du réseau.
+                  </p></li>
               </ul>
-          </div>
         </div>
+    </div>
 </div>
 
 {% endblock %}

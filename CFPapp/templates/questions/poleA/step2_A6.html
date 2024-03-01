@@ -1,47 +1,47 @@
 {% extends "base.html" %}
 {% block title %}Question A6 C2{% endblock %}
-{% load bootstrap5 %}
+
 {% block content %}
 
 
 <div class="container" style="margin-left:10%">
-      <div class="col-md-8 col-md-offset-8">
-        <br>
-        <p class=""><strong>A6-C2 : </strong>Identifier des opportunités de marché afin de contribuer au développement de prestations nouvelles en prenant appui sur la veille commerciale, une écoute de terrain et le repérage d’appels d’offres</p>
-             <form action="{% url 'step2_A6' %}" method="post" class="form-v5-content">
+    <br>
+    <div class="row">
+      <div class=".col-md">
+        <p class=""><strong>A6-C2 : </strong>Identifier des opportunités de marché afin de contribuer au développement de prestations nouvelles<br>
+        en prenant appui sur la veille commerciale, une écoute de terrain et le repérage d’appels d’offres</p>
+             <form action="{% url 'step2_A6' %}" method="post" class="form-group">
               {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-              <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-              </svg>{{ form.A6_C2 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-              </svg></p>
+              <div style="display: none;">{{ form.created_by }}</div>
+              <p style="border: 2px solid blueviolet;width : 820px;">{{ form.A6_C2 }}</p><br>
+              <div class=" row d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
             </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="fr-btn">Next</button>
-            </div>    
             </form>
-              <ul class="list-group" style="font-size: 17px;">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les compétences et les métiers d’avenir et les grands projets de mon territoire. 
+             </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les compétences et les métiers d’avenir et les grands projets de mon territoire.
                   J’ai connaissance des appels d’offres diffusés au sein de ma structure, du réseau.
-                  J’ai connaissance des besoins des commanditaires sur le territoire. 
-                  Je rencontre les acteurs de mon territoire dans le cadre de la phase de découverte des besoins.
-                  
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>Je rédige un compte-rendu d’entretien et de détection des besoins chez les prospects. 
+                  J’ai connaissance des besoins des commanditaires sur le territoire.
+                  Je rencontre les acteurs de mon territoire dans le cadre de la phase de découverte des besoins.</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je rédige un compte-rendu d’entretien et de détection des besoins chez les prospects.
                     Je m’approprie une grille d’analyse d’un AO/AMI/AAP et j’en ressors les opportunités de développement pour ma structure, le réseau.
                     J’analyse la diversité des informations recueillies afin d’identifier les transformations présentes et futures en termes de compétences sur le territoire.
-                    Je fais le lien entre mes investigations, mon analyse et le plan d’action commerciale de ma structure, du réseau.                                        
+                    Je fais le lien entre mes investigations, mon analyse et le plan d’action commerciale de ma structure, du réseau.
                     </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 3 : </strong>
-                    Je maitrise les techniques de questionnement et d’écoute active pour réaliser une phase de découverte pertinente. 
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>
+                    Je maitrise les techniques de questionnement et d’écoute active pour réaliser une phase de découverte pertinente.
                     Je mets en corrélation les besoins détectés avec les ressources de ma structure pour déterminer les opportunités de développement et évaluer la prise de risque.
-
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 4 : </strong>
-                    Je partage la méthodologie d’identification des opportunités repérées à l’échelle de mon territoire, de la région académique. 
+                      </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>
+                    Je partage la méthodologie d’identification des opportunités repérées à l’échelle de mon territoire, de la région académique.
                     Je suis référent d’une filière, d’un secteur professionnel au niveau de ma structure, au niveau académique.
                     Mes travaux contribuent à l’évolution de l’offre de formation professionnelle en région académique.
+                      </p></li>
               </ul>
                       <br>
           </div>

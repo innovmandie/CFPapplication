@@ -1,6 +1,6 @@
 from audioop import reverse
 import datetime
-from msilib.schema import ListView
+
 from multiprocessing import context
 from pyexpat.errors import messages
 import time
@@ -21,8 +21,8 @@ from django.db.models import Count
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.contrib.staticfiles import finders
-from .utils import render_to_pdf 
-from django.db.models import Q 
+from .utils import render_to_pdf
+from django.db.models import Q
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -65,15 +65,15 @@ def user_login(request):
     else:
          form = LoginForm()
          return render(request, 'account/login.html', {'form': form})
-    
 
-    
+
+
 def index(request):
      return render(request, 'index.html')
 
 
 
-@login_required 
+@login_required
 def accueil(request):
      current_user = request.user
      user_id = current_user.id
@@ -84,8 +84,8 @@ def accueil(request):
 def administrateur(request):
      return render(request, 'administrateur.html')
 
-     
-@login_required 
+
+@login_required
 def logout_view(request):
      logout(request)
      return render(request, 'account/logout.html')
@@ -95,8 +95,8 @@ def finished(request):
 
 def contact(request):
      return render(request, 'contact.html')
-     
-@login_required 
+
+@login_required
 def question(request):
      if request.method == 'POST':
             details = POSTForm(request.POST)
@@ -112,24 +112,24 @@ def question(request):
             else :
                    #return HttpResponse("choose the right user")
                    return render(request, "questions.html", {'form':details})
-               
+
      else:
         form_post =POSTForm(None)
         return render(request, 'questions.html', {'form_post': form_post})
      return render(request, 'questions.html')
 
-@login_required  
+@login_required
 def userview(request):
      user_connected=request.user.id
      if Post.objects.filter(created_by_id=user_connected).all().exists():
-          userdata = Utilisateur_infos.objects.filter(created_by_id=user_connected).values()
+          userdata = Utilisateur_infos.objects.filter(created_by_id=user_connected).values().order_by('-id').reverse()[:1]
           template = loader.get_template('userview_alone.html')
           context = { 'Utilisateur_liste' : userdata,}
           return HttpResponse(template.render(context,request))
-     userdata = Utilisateur_infos.objects.filter(created_by_id=user_connected).values()
+     userdata = Utilisateur_infos.objects.filter(created_by_id=user_connected).values().order_by('-id').reverse()[:1]
      return render(request, 'userview_alone.html',{'Utilisateur_liste': userdata})
 
-@user_passes_test(lambda u: u.is_superuser) 
+@user_passes_test(lambda u: u.is_superuser)
 def all_userview(request):
     userdata = Utilisateur_infos.objects.all().values()
     villes = Villes.objects.all()
@@ -145,7 +145,7 @@ def reponse(request):
     print(mydata)
     return render(request, "data_A.html", { 'question_A' : mydata})
 
-@login_required  
+@login_required
 def dashboard(request):
     if request.method == 'POST':
             details = POSTForm(request.POST)
@@ -161,14 +161,14 @@ def dashboard(request):
             else :
                    #return HttpResponse("choose the right user")
                    return render(request, "account/dasboard.html", {'form':details})
-               
+
     else:
         form_post =POSTForm(None)
         return render(request, 'account/dashboard.html', {'form_post': form_post})
     return render(request, 'account/dashboard.html', {'section': 'dashboard'})
 
-     
-@login_required      
+
+@login_required
 def utilisateurs(request):
      if request.method == 'POST':
         details = UtilisateurForm(request.POST)
@@ -179,97 +179,20 @@ def utilisateurs(request):
                  user_result =Utilisateur_infos.objects.filter(created_by_id=user_connected).values()[:1]
                  template = loader.get_template('userview.html')
                  context = { 'Utilisateur_liste' : user_result,}
-                 return HttpResponse(template.render(context,request,))
+                 return render(request, 'userview_alone.html',context)
         else :
                return HttpResponse('Les données utilisateur ne sont pas conformes')
-                 #return render(request, "dashboard.html", {'form':details})
      else:
         form_user =UtilisateurForm(None)
         return render(request, 'account/utilisateur.html', {'form_user': form_user})
-     
-
-@login_required
-def export_excel(request):
-     response = HttpResponse(content_type = 'application/ms-excel')
-     response['Content-Disposition'] = 'attachement; filename=Referentiel'+ \
-        str(datetime.datetime.now()) + '.xls'
-     wb = xlwt.Workbook(encoding='utf-8')
-     ws = wb.add_sheet('Questions')
-     row_num=0
-     font_style = xlwt.XFStyle()
-     font_style.font.bold = True
-     columns  = ["created_by","A1_C1", "A1_C2", "A1_C3","A2_C1", "A2_C2", "A2_C3", "A3_C1", "A3_C2","A3_C3", "A4_C1", "A4_C2","A4_C3", "A5_C1", "A5_C2","A5_C3","time"]
-     for col_num in range(len(columns)):
-            ws.write(row_num, col_num, columns[col_num], font_style)
-
-     font_style = xlwt.XFStyle()
-
-     resA1_C1 = PostA1_C1.objects.values_list("created_by",'A1_C1')
-     resA1_C2 = PostA1_C2.objects.values_list('A1_C2')
-     resA1_C3 = PostA1_C3.objects.values_list('A1_C3')
-
-     resA2_C1 = PostA2_C1.objects.values_list('A2_C1')
-     resA2_C2 = PostA2_C2.objects.values_list('A2_C2')
-     resA2_C3 = PostA2_C3.objects.values_list('A2_C3')
-
-     resA3_C1 = PostA3_C1.objects.values_list('A3_C1')
-     resA3_C2 = PostA3_C2.objects.values_list('A3_C2')
-     resA3_C3 = PostA3_C3.objects.values_list('A3_C3')
-
-     resA4_C1 = PostA4_C1.objects.values_list('A4_C1')
-     resA4_C2 = PostA4_C2.objects.values_list('A4_C2')
-     resA4_C3 = PostA4_C3.objects.values_list('A4_C3')
-
-     resA5_C1 = PostA5_C1.objects.values_list('A5_C1')
-     resA5_C2 = PostA5_C2.objects.values_list('A5_C2')
-     resA5_C3 = PostA5_C3.objects.values_list('A5_C3')
-
-     resA6_C1 = PostA6_C1.objects.values_list('A6_C1')
-     resA6_C2 = PostA6_C2.objects.values_list('A6_C2')
-     resA6_C3 = PostA6_C3.objects.values_list('A6_C3', "time")
-
-     combined_A= list(chain(resA1_C1, resA1_C2, resA1_C3, resA2_C1, resA2_C2, resA2_C3, resA3_C1, resA3_C2, resA3_C3,
-                            resA4_C1, resA4_C2, resA4_C3, resA5_C1, resA5_C2, resA5_C3, resA6_C1, resA6_C2, resA6_C3))
-     result_A = np.array(combined_A).T
-     print(result_A)
-     rows = result_A
-     for row in rows:
-          row_num += 1
-          for col_num in range(len(row)):
-               ws.write(row_num, col_num, str(row[col_num]), font_style)
-     wb.save(response)
-
-     return response
 
 
-@login_required
-def utilisateur_excel(request):
-     response = HttpResponse(content_type = 'application/ms-excel')
-     response['Content-Disposition'] = 'attachement; filename=Utilisateur'+ \
-        str(datetime.datetime.now()) + '.xls'
-     wb = xlwt.Workbook(encoding='utf-8')
-     ws = wb.add_sheet('Utilisateurs')
-     row_num=0
-     font_style = xlwt.XFStyle()
-     font_style.font.bold = True
-     columns  = ["created_by","prenom", "nom", "commune", "codepostal","greta_rattachement", "age", "anciennete"]
-     for col_num in range(len(columns)):
-            ws.write(row_num, col_num, columns[col_num], font_style)
 
-     font_style = xlwt.XFStyle()
 
-     rows = Utilisateur_infos.objects.all().values_list("created_by","prenom", "nom", "commune", "codepostal","greta_rattachement", "age", "anciennete")
-     for row in rows:
-          row_num += 1
-          for col_num in range(len(row)):
-               ws.write(row_num, col_num, str(row[col_num]), font_style)
-     wb.save(response)
-
-     return response
 
 @login_required
 def chart_result(request):
-    
+
      ###########for All get response########################################
      user_connected=request.user.id
      if Post.objects.filter(created_by_id=user_connected).all().exists():
@@ -308,7 +231,7 @@ def chart_result(request):
           fig_A4= px.line_polar(df_result_A,r=r, theta=["A4_C1", "A4_C2", "A4_C3"], direction='clockwise', start_angle=70, line_close=True,width=360, height=360, color_discrete_sequence=["#21AB8E","#98585f6", "#1a2624"])
           fig_A4.update_traces(fill='toself')
           chart_A4 = fig_A4.to_html()
-         
+
           #####################################
           df_result_A5=df_result[["A5_C1", "A5_C2", "A5_C3",]]
           df_result_A5.columns=["A5_C1", "A5_C2", "A5_C3"]
@@ -328,43 +251,39 @@ def chart_result(request):
           chart_A6 = fig_A6.to_html()
 
 
-          df_result=df_result[["A1_CO_01", "A1_CO_02", "A1_CO_03", "A2_CO_01", "A2_CO_02", "A2_CO_03", "A3_C1", "A3_C2", "A3_C3", "A4_C1", "A4_C2", "A4_C3", "A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"]]
-          df_result_all = df_result.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          r_all=df_result_all.iloc[0]
-     
-          fig_all= px.line_polar(df_result_A,r=r_all, theta=["A1_CO_01", "A1_CO_02", "A1_CO_03","A2_CO_01", "A2_CO_02", "A2_CO_03","A3_C1 ", "A3_C2", "A3_C3","A4_C1", "A4_C2", "A4_C3","A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"], template='plotly_white')
+
+          resultallA=pd.concat([df_result_A1, df_result_A2, df_result_A3, df_result_A4, df_result_A5, df_result_A6], axis=1)
+          df_result_all = resultallA.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+          r_all=df_result_All.iloc[0]
+
+          fig_all= px.line_polar(df_result_all,r=r_all,theta=["A1_C1", "A1_C2", "A1_C3","A2_C1", "A2_C2", "A2_C3","A3_C1", "A3_C2", "A3_C3","A4_C1", "A4_C2", "A4_C3","A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline', width=420, height=420)
           fig_all.update_traces(fill='toself')
           chart_all = fig_all.to_html()
 
-
           A1 = go.Scatterpolar(
-               r = df_result_A.iloc[0], theta = ["A2_CO_01", "A2_CO_02", "A2_CO_03",], mode = 'lines',   name = 'A1')
+               r = df_result_all[["A2_C1", "A2_C2", "A2_C3",]].iloc[0], theta = ["A2_C1", "A2_C2", "A2_C3",], mode = 'lines',   name = 'A1')
           A2 = go.Scatterpolar(
-               r =df_result_A1.iloc[0], theta = ["A1_CO_01", "A1_CO_02", "A1_CO_03",], mode = 'lines', name = 'A2')
+               r =df_result_all[["A1_C1", "A1_C2", "A1_C3",]].iloc[0], theta = ["A1_C1", "A1_C2", "A1_C3",], mode = 'lines', name = 'A2')
           A3 = go.Scatterpolar(
-               r = df_result_A3.iloc[0], theta = ["A3_C1 ", "A3_C2", "A3_C3",], mode = 'lines',  name = 'A3')
+               r = df_result_all[["A3_C1", "A3_C2", "A3_C3",]].iloc[0], theta = ["A3_C1", "A3_C2", "A3_C3",], mode = 'lines',  name = 'A3')
           A4 = go.Scatterpolar(
-                r =df_result_A4.iloc[0], theta = ["A4_C1 ", "A4_C2", "A4_C3",], mode = 'lines', name = 'A4')
+               r =df_result_all[["A4_C1", "A4_C2", "A4_C3",]].iloc[0], theta = ["A4_C1", "A4_C2", "A4_C3",], mode = 'lines', name = 'A4')
           A5 = go.Scatterpolar(
-               r =df_result_A4.iloc[0], theta = ["A5_C1 ", "A5_C2", "A5_C3",], mode = 'lines', name = 'A5')
+               r =df_result_all[["A5_C1", "A5_C2", "A5_C3",]].iloc[0], theta = ["A5_C1", "A5_C2", "A5_C3",], mode = 'lines', name = 'A5')
           A6 = go.Scatterpolar(
-               r =df_result_A6.iloc[0], theta = ["A6_C1 ", "A6_C2", "A6_C3",], mode = 'lines', name = 'A6')
+               r =df_result_all[["A6_C1", "A6_C2", "A6_C3",]].iloc[0], theta = ["A6_C1", "A6_C2", "A6_C3",], mode = 'lines', name = 'A6')
           data = [A1,A2,A3,A4,A5,A6]
           fig = go.Figure(data = data)
-          chart_test = fig.to_html()
+          chart_all2 = fig.to_html()
 
-          
-
-     
-          result_user=Post.objects.filter(created_by_id=user_connected).values()
-          result_user=result_user.order_by('time').reverse()[0]
-          context = {'chart_A1': chart_A1,'chart_A_view': chart_A, 'chart_A3': chart_A3, 'chart_A4': chart_A4,'chart_A5': chart_A5, 'chart_A6': chart_A6, 'chart_all': chart_all,'chart_test': chart_test,'result_user' : result_user}
+          return render(request, 'questions/poleA/resultsA.html', { 'resultsA1' : resultsA1, 'chart_A1' : chart_A1, 'resultsA2' : resultsA2, 'chart_A2' : chart_A2, 'resultsA3' : resultsA3, 'chart_A3' : chart_A3,
+                                                              'resultsA4' : resultsA4, 'chart_A4' : chart_A4, 'resultsA5' : resultsA5, 'chart_A5' : chart_A5, 'resultsA6' : resultsA6, 'chart_A6' : chart_A6, 'chart_all' : chart_all, 'chart_all2' : chart_all2,})
 
           ####################################################################
           return render(request, 'chart_result.html', context)
      else:
           return render(request, 'empty_data.html')
-     
+
 def error_404_view(request, exception):
      return render(request, '404.html')
 
@@ -412,7 +331,7 @@ def statistic(request):
 
 @user_passes_test(lambda u: u.is_superuser)
 def test_view(request):
-     
+
      user=Utilisateur_infos.objects.all().values()
 
      user_search=request.GET.get('nom')
@@ -423,10 +342,10 @@ def test_view(request):
 
 
 @user_passes_test(lambda u: u.is_superuser)
-def chart_view(request):   
+def chart_view(request):
     searched_user=User.objects.all().values()
-   
-    
+
+
     #########
     user_search=request.GET
     query=str(user_search.get("search_u"))
@@ -480,7 +399,7 @@ def chart_view_user(request):
           fig_A4= px.line_polar(df_result_A,r=r, theta=["A4_C1", "A4_C2", "A4_C3"], direction='clockwise', start_angle=70, line_close=True,width=360, height=360)
           fig_A4.update_traces(fill='toself')
           chart_A4 = fig_A4.to_html()
-         
+
           #####################################
           df_result_A5=df_result[["A5_C1", "A5_C2", "A5_C3",]]
           df_result_A5.columns=["A5_C1", "A5_C2", "A5_C3"]
@@ -500,23 +419,15 @@ def chart_view_user(request):
           chart_A6 = fig_A6.to_html()
 
 
-          df_result=df_result[["A1_CO_01", "A1_CO_02", "A1_CO_03", "A2_CO_01", "A2_CO_02", "A2_CO_03", "A3_C1", "A3_C2", "A3_C3", "A4_C1", "A4_C2", "A4_C3", "A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"]]
-          df_result_all = df_result.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          r_all=df_result_all.iloc[0]
-     
-          fig_all= px.line_polar(df_result_A,r=r_all,theta=["A1_CO_01", "A1_CO_02", "A1_CO_03","A2_CO_01", "A2_CO_02", "A2_CO_03","A3_C1 ", "A3_C2", "A3_C3","A4_C1", "A4_C2", "A4_C3","A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline')
-          fig_all.update_traces(fill='toself')
-          chart_all = fig_all.to_html()
 
 
 
 
+          return render(request, 'result_view.html', {'chart_A1': chart_A1,'chart_A_view': chart_A, 'chart_A3': chart_A3, 'chart_A4': chart_A4,'chart_A5': chart_A5, 'chart_A6': chart_A6})
 
-          return render(request, 'result_view.html', {'chart_A1': chart_A1,'chart_A_view': chart_A, 'chart_A3': chart_A3, 'chart_A4': chart_A4,'chart_A5': chart_A5, 'chart_A6': chart_A6, 'chart_all': chart_all,})
-      
       else:
            return render(request, 'plotly_view.html')
-      
+
 
 
 
@@ -537,7 +448,7 @@ def step1_A1(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_A1')
-     else:       
+     else:
           form = POSTFormA1_C1()
      return render(request, 'questions/poleA/step1_A1.html', {'form': form})
 @login_required
@@ -568,17 +479,17 @@ def step3_A1(request):
 
 @login_required
 def step1_A2(request):
-     initial={'B2_C1' :request.session.get('B2_C1', None)}
+     initial={'A2_C1' :request.session.get('A2_C1', None)}
      if request.method == 'POST':
           form = POSTFormA2_C1(request.POST or None, initial=initial)
           if form.is_valid():
-               request.session[ "B2_C1"]= form.cleaned_data["B2_C1"]
+               request.session[ "A2_C1"]= form.cleaned_data["A2_C1"]
                post = form.save(commit=False)
                post.save()
-               return redirect('step2_B2')
-     else:       
-          form = POSTFormB2_C1()
-     return render(request, 'questions/poleB/step1_B2.html', {'form': form})
+               return redirect('step2_A2')
+     else:
+          form = POSTFormA2_C1()
+     return render(request, 'questions/poleA/step1_A2.html', {'form': form})
 
 @login_required
 def step2_A2(request):
@@ -616,7 +527,7 @@ def step1_A3(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_A3')
-     else:       
+     else:
           form = POSTFormA3_C1()
      return render(request, 'questions/poleA/step1_A3.html', {'form': form})
 
@@ -655,7 +566,7 @@ def step1_A4(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_A4')
-     else:       
+     else:
           form = POSTFormA4_C1()
      return render(request, 'questions/poleA/step1_A4.html', {'form': form})
 
@@ -695,7 +606,7 @@ def step1_A5(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_A5')
-     else:       
+     else:
           form = POSTFormA5_C1()
      return render(request, 'questions/poleA/step1_A5.html', {'form': form})
 
@@ -735,7 +646,7 @@ def step1_A6(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_A6')
-     else:       
+     else:
           form = POSTFormA6_C1()
      return render(request, 'questions/poleA/step1_A6.html', {'form': form})
 
@@ -777,7 +688,7 @@ def step1_B1(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_B1')
-     else:       
+     else:
           form = POSTFormB1_C1()
      return render(request, 'questions/poleB/step1_B1.html', {'form': form})
 
@@ -817,7 +728,7 @@ def step1_B2(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_B2')
-     else:       
+     else:
           form = POSTFormB2_C1()
      return render(request, 'questions/poleB/step1_B2.html', {'form': form})
 
@@ -858,7 +769,7 @@ def step1_B3(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_B3')
-     else:       
+     else:
           form = POSTFormB3_C1()
      return render(request, 'questions/poleB/step1_B3.html', {'form': form})
 
@@ -898,7 +809,7 @@ def step1_B4(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_B4')
-     else:       
+     else:
           form = POSTFormB4_C1()
      return render(request, 'questions/poleB/step1_B4.html', {'form': form})
 
@@ -939,7 +850,7 @@ def step1_C1(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_C1')
-     else:       
+     else:
           form = POSTFormC1_C1()
      return render(request, 'questions/poleC/step1_C1.html', {'form': form})
 
@@ -979,7 +890,7 @@ def step1_C2(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_C2')
-     else:       
+     else:
           form = POSTFormC2_C1()
      return render(request, 'questions/poleC/step1_C2.html', {'form': form})
 
@@ -1020,7 +931,7 @@ def step1_C3(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_C3')
-     else:       
+     else:
           form = POSTFormC3_C1()
      return render(request, 'questions/poleC/step1_C3.html', {'form': form})
 
@@ -1060,7 +971,7 @@ def step1_C4(request):
                post = form.save(commit=False)
                post.save()
                return redirect('step2_C4')
-     else:       
+     else:
           form = POSTFormC4_C1()
      return render(request, 'questions/poleC/step1_C4.html', {'form': form})
 
@@ -1110,59 +1021,155 @@ def resultatsA(request):
           resA1_C1 = pd.DataFrame(list(PostA1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A1_C1').order_by('id').reverse()[:1]))
           resA1_C2 = pd.DataFrame(list(PostA1_C2.objects.filter(created_by_id=user_connected).values('A1_C2').order_by('id').reverse()[:1]))
           resA1_C3 = pd.DataFrame(list(PostA1_C3.objects.filter(created_by_id=user_connected).values('A1_C3', 'time').order_by('id').reverse()[:1]))
-          resA1_C3['time'] = resA1_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA1_C3['time'] = resA1_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA1 = pd.merge(resA1_C1, resA1_C2, how='cross')
           resultsA1 = pd.merge(resultsA1, resA1_C3, how='cross')
           df_result_A1=resultsA1[["A1_C1", "A1_C2", "A1_C3",]]
           df_result_A1.columns=["A1_C1", "A1_C2", "A1_C3"]
           df_result_A1 = df_result_A1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          
+          rA1=df_result_A1.iloc[0]
+          fig_A1= px.line_polar(df_result_A1,r=rA1, theta=["A1_C1", "A1_C2", "A1_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360,)
+          fig_A1.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A1.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
 
-     
+          chart_A1 = fig_A1.to_html(config = {'displayModeBar': False})
+          resultsA1 = resultsA1.to_dict(orient='records')
+
           resA2_C1 = pd.DataFrame(list(PostA2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A2_C1').order_by('id').reverse()[:1]))
           resA2_C2 = pd.DataFrame(list(PostA2_C2.objects.filter(created_by_id=user_connected).values('A2_C2').order_by('id').reverse()[:1]))
           resA2_C3 = pd.DataFrame(list(PostA2_C3.objects.filter(created_by_id=user_connected).values('A2_C3', 'time').order_by('id').reverse()[:1]))
-          resA2_C3['time'] = resA2_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA2_C3['time'] = resA2_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA2 = pd.merge(resA2_C1, resA2_C2, how='cross')
           resultsA2 = pd.merge(resultsA2, resA2_C3, how='cross')
           df_result_A2=resultsA2[["A2_C1", "A2_C2", "A2_C3",]]
           df_result_A2.columns=["A2_C1", "A2_C2", "A2_C3"]
           df_result_A2 = df_result_A2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-     
+          rA2=df_result_A2.iloc[0]
+          fig_A2= px.line_polar(df_result_A2,r=rA2, theta=["A2_C1", "A2_C2", "A2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_A2.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A2.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+
+          chart_A2 = fig_A2.to_html(config = {'displayModeBar': False})
+          resultsA2 = resultsA2.to_dict(orient='records')
+
           resA3_C1 = pd.DataFrame(list(PostA3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A3_C1').order_by('id').reverse()[:1]))
           resA3_C2 = pd.DataFrame(list(PostA3_C2.objects.filter(created_by_id=user_connected).values('A3_C2').order_by('id').reverse()[:1]))
           resA3_C3 = pd.DataFrame(list(PostA3_C3.objects.filter(created_by_id=user_connected).values('A3_C3','time').order_by('id').reverse()[:1]))
-          resA3_C3['time'] = resA3_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA3_C3['time'] = resA3_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA3 = pd.merge(resA3_C1, resA3_C2, how='cross')
           resultsA3 = pd.merge(resultsA3, resA3_C3, how='cross')
           df_result_A3=resultsA3[["A3_C1", "A3_C2", "A3_C3",]]
           df_result_A3.columns=["A3_C1", "A3_C2", "A3_C3"]
           df_result_A3 = df_result_A3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-     
+          rA3=df_result_A3.iloc[0]
+          fig_A3= px.line_polar(df_result_A3,r=rA3, theta=["A3_C1", "A3_C2", "A3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_A3.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A3.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+
+          chart_A3 = fig_A3.to_html(config = {'displayModeBar': False})
+          resultsA3 = resultsA3.to_dict(orient='records')
+
+
+
+
           resA4_C1 = pd.DataFrame(list(PostA4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A4_C1').order_by('id').reverse()[:1]))
           resA4_C2 = pd.DataFrame(list(PostA4_C2.objects.filter(created_by_id=user_connected).values('A4_C2').order_by('id').reverse()[:1]))
           resA4_C3 = pd.DataFrame(list(PostA4_C3.objects.filter(created_by_id=user_connected).values('A4_C3', 'time').order_by('id').reverse()[:1]))
-          resA4_C3['time'] = resA4_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA4_C3['time'] = resA4_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA4 = pd.merge(resA4_C1, resA4_C2, how='cross')
           resultsA4 = pd.merge(resultsA4, resA4_C3, how='cross')
           df_result_A4=resultsA4[["A4_C1", "A4_C2", "A4_C3",]]
           df_result_A4.columns=["A4_C1", "A4_C2", "A4_C3"]
           df_result_A4 = df_result_A4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+          rA4=df_result_A4.iloc[0]
+          fig_A4= px.line_polar(df_result_A4,r=rA4, theta=["A4_C1", "A4_C2", "A4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_A4.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A4.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+
+          chart_A4 = fig_A4.to_html(config = {'displayModeBar': False})
+          resultsA4 = resultsA4.to_dict(orient='records')
 
           resA5_C1 = pd.DataFrame(list(PostA5_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A5_C1').order_by('id').reverse()[:1]))
           resA5_C2 = pd.DataFrame(list(PostA5_C2.objects.filter(created_by_id=user_connected).values('A5_C2').order_by('id').reverse()[:1]))
           resA5_C3 = pd.DataFrame(list(PostA5_C3.objects.filter(created_by_id=user_connected).values('A5_C3', 'time').order_by('id').reverse()[:1]))
-          resA5_C3['time'] = resA5_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA5_C3['time'] = resA5_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA5 = pd.merge(resA5_C1, resA5_C2, how='cross')
           resultsA5 = pd.merge(resultsA5, resA5_C3, how='cross')
           df_result_A5=resultsA5[["A5_C1", "A5_C2", "A5_C3",]]
           df_result_A5.columns=["A5_C1", "A5_C2", "A5_C3"]
           df_result_A5 = df_result_A5.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+          rA5=df_result_A5.iloc[0]
+          fig_A5= px.line_polar(df_result_A5,r=rA5, theta=["A5_C1", "A5_C2", "A5_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_A5.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A5.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+
+          chart_A5 = fig_A5.to_html(config = {'displayModeBar': False})
+          resultsA5 = resultsA5.to_dict(orient='records')
 
           resA6_C1 = pd.DataFrame(list(PostA6_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'A6_C1').order_by('id').reverse()[:1]))
           resA6_C2 = pd.DataFrame(list(PostA6_C2.objects.filter(created_by_id=user_connected).values('A6_C2').order_by('id').reverse()[:1]))
           resA6_C3 = pd.DataFrame(list(PostA6_C3.objects.filter(created_by_id=user_connected).values('A6_C3', 'time').order_by('id').reverse()[:1]))
-          resA6_C3['time'] = resA6_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resA6_C3['time'] = resA6_C3['time'].dt.strftime('%d/%m/%Y %H:%M:%S')
           resultsA6 = pd.merge(resA6_C1, resA6_C2, how='cross')
           resultsA6 = pd.merge(resultsA6, resA6_C3, how='cross')
           df_result_A6=resultsA6[["A6_C1", "A6_C2", "A6_C3",]]
@@ -1172,85 +1179,445 @@ def resultatsA(request):
           fig_A6= px.line_polar(df_result_A6,r=rA6, theta=["A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
           fig_A6.update_traces(fill='toself')
 
-          chart_A1 = fig_A6.to_html()
-          resultsA1 = resultsA1.to_html()
-
-          rA2=df_result_A2.iloc[0]
-          fig_A2= px.line_polar(df_result_A2,r=rA2, theta=["A2_C1", "A2_C2", "A2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-          fig_A2.update_traces(fill='toself')
-
-          chart_A2 = fig_A2.to_html()
-          resultsA2 = resultsA2.to_html()
-
-          rA3=df_result_A3.iloc[0]
-          fig_A3= px.line_polar(df_result_A3,r=rA3, theta=["A3_C1", "A3_C2", "A3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-          fig_A3.update_traces(fill='toself')
-
-          chart_A3 = fig_A3.to_html()
-          resultsA3 = resultsA3.to_html()
-
-          rA4=df_result_A4.iloc[0]
-          fig_A4= px.line_polar(df_result_A4,r=rA4, theta=["A4_C1", "A4_C2", "A4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-          fig_A4.update_traces(fill='toself')
-
-          chart_A4 = fig_A4.to_html()
-          resultsA4 = resultsA4.to_html()
-
-          rA5=df_result_A5.iloc[0]
-          fig_A5= px.line_polar(df_result_A5,r=rA5, theta=["A5_C1", "A5_C2", "A5_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-          fig_A5.update_traces(fill='toself')
-
-          chart_A5 = fig_A5.to_html()
-          resultsA5 = resultsA5.to_html()
-
           rA6=df_result_A6.iloc[0]
           fig_A6= px.line_polar(df_result_A6,r=rA6, theta=["A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
           fig_A6.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_A6.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
 
-          chart_A6 = fig_A6.to_html()
-          resultsA6 = resultsA6.to_html()
+          chart_A6 = fig_A6.to_html(config = {'displayModeBar': False})
+          resultsA6 = resultsA6.to_dict(orient='records')
 
+          resultallA=pd.concat([df_result_A1, df_result_A2, df_result_A3, df_result_A4, df_result_A5, df_result_A6], axis=1)
+          df_result_all = resultallA.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+          r_all=df_result_all.iloc[0]
 
-          resultAllA=pd.concat([df_result_A1, df_result_A2, df_result_A3, df_result_A4, df_result_A5, df_result_A6], axis=1)
-          df_result_All = resultAllA.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          r_all=df_result_All.iloc[0]
-          
-          fig_all= px.line_polar(df_result_All,r=r_all,theta=["A1_C1", "A1_C2", "A1_C3","A2_C1", "A2_C2", "A2_C3","A3_C1", "A3_C2", "A3_C3","A4_C1", "A4_C2", "A4_C3","A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline', width=420, height=420)
+          fig_all= px.line_polar(df_result_all,r=r_all,theta=["A1_C1", "A1_C2", "A1_C3","A2_C1", "A2_C2", "A2_C3","A3_C1", "A3_C2", "A3_C3","A4_C1", "A4_C2", "A4_C3","A5_C1", "A5_C2", "A5_C3","A6_C1", "A6_C2", "A6_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline', width=420, height=420)
           fig_all.update_traces(fill='toself')
-          chart_all = fig_all.to_html()
+          fig_all.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+
+          chart_all = fig_all.to_html(config = {'displayModeBar': False})
+
 
           A1 = go.Scatterpolar(
-               r = df_result_All[["A2_C1", "A2_C2", "A2_C3",]].iloc[0], theta = ["A2_C1", "A2_C2", "A2_C3",], mode = 'lines',   name = 'A1')
+              r = df_result_all[["A2_C1", "A2_C2", "A2_C3",]].iloc[0], theta = ["A2_C1", "A2_C2", "A2_C3",], mode = 'lines',   name = 'A1')
           A2 = go.Scatterpolar(
-               r =df_result_All[["A1_C1", "A1_C2", "A1_C3",]].iloc[0], theta = ["A1_C1", "A1_C2", "A1_C3",], mode = 'lines', name = 'A2')
+               r =df_result_all[["A1_C1", "A1_C2", "A1_C3",]].iloc[0], theta = ["A1_C1", "A1_C2", "A1_C3",], mode = 'lines', name = 'A2')
           A3 = go.Scatterpolar(
-               r = df_result_All[["A3_C1", "A3_C2", "A3_C3",]].iloc[0], theta = ["A3_C1", "A3_C2", "A3_C3",], mode = 'lines',  name = 'A3')
+               r = df_result_all[["A3_C1", "A3_C2", "A3_C3",]].iloc[0], theta = ["A3_C1", "A3_C2", "A3_C3",], mode = 'lines',  name = 'A3')
           A4 = go.Scatterpolar(
-               r =df_result_All[["A4_C1", "A4_C2", "A4_C3",]].iloc[0], theta = ["A4_C1", "A4_C2", "A4_C3",], mode = 'lines', name = 'A4')
+               r =df_result_all[["A4_C1", "A4_C2", "A4_C3",]].iloc[0], theta = ["A4_C1", "A4_C2", "A4_C3",], mode = 'lines', name = 'A4')
           A5 = go.Scatterpolar(
-               r =df_result_All[["A5_C1", "A5_C2", "A5_C3",]].iloc[0], theta = ["A5_C1", "A5_C2", "A5_C3",], mode = 'lines', name = 'A5')
+               r =df_result_all[["A5_C1", "A5_C2", "A5_C3",]].iloc[0], theta = ["A5_C1", "A5_C2", "A5_C3",], mode = 'lines', name = 'A5')
           A6 = go.Scatterpolar(
-               r =df_result_All[["A6_C1", "A6_C2", "A6_C3",]].iloc[0], theta = ["A6_C1", "A6_C2", "A6_C3",], mode = 'lines', name = 'A6')
+               r =df_result_all[["A6_C1", "A6_C2", "A6_C3",]].iloc[0], theta = ["A6_C1", "A6_C2", "A6_C3",], mode = 'lines', name = 'A6')
           data = [A1,A2,A3,A4,A5,A6]
-          fig = go.Figure(data = data, )
-          chart_All2 = fig.to_html()
-          
+          fig = go.Figure(data = data)
+          fig.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+          chart_all2 = fig.to_html(config = {'responsive': True,'displayModeBar': False})
+
+
+
           return render(request, 'questions/poleA/resultsA.html', { 'resultsA1' : resultsA1, 'chart_A1' : chart_A1, 'resultsA2' : resultsA2, 'chart_A2' : chart_A2, 'resultsA3' : resultsA3, 'chart_A3' : chart_A3,
-                                                              'resultsA4' : resultsA4, 'chart_A4' : chart_A4, 'resultsA5' : resultsA5, 'chart_A5' : chart_A5, 'resultsA6' : resultsA6, 'chart_A6' : chart_A6, 'chart_all' : chart_all, 'chart_All2' : chart_All2,})
+                                                              'resultsA4' : resultsA4, 'chart_A4' : chart_A4, 'resultsA5' : resultsA5, 'chart_A5' : chart_A5, 'resultsA6' : resultsA6, 'chart_A6' : chart_A6, 'chart_all' : chart_all, 'chart_all2' : chart_all2,})
 
      else :
           info = "Les résultats seront disponible après avoir remplie la section A"
           return render(request, 'questions/poleA/resultsA.html', {'info' : info})
 
-     
-
-
-    
-
 @login_required
 def resultatsB(request):
-       user_connected=request.user.id
-       if PostB1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C3.objects.filter(created_by_id=user_connected).all().exists() \
+    user_connected=request.user.id
+    if PostB1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C3.objects.filter(created_by_id=user_connected).all().exists() \
+    and PostB3_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB3_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB3_C3.objects.filter(created_by_id=user_connected).all().exists() and \
+    PostB4_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB4_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB4_C3.objects.filter(created_by_id=user_connected).all().exists():
+        resB1_C1 = pd.DataFrame(list(PostB1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B1_C1').order_by('id').reverse()[:1]))
+        resB1_C2 = pd.DataFrame(list(PostB1_C2.objects.filter(created_by_id=user_connected).values('B1_C2').order_by('id').reverse()[:1]))
+        resB1_C3 = pd.DataFrame(list(PostB1_C3.objects.filter(created_by_id=user_connected).values('B1_C3', 'time').order_by('id').reverse()[:1]))
+        resB1_C3['time'] = resB1_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsB1 = pd.merge(resB1_C1, resB1_C2, how='cross')
+        resultsB1 = pd.merge(resultsB1, resB1_C3, how='cross')
+        df_result_B1=resultsB1[["B1_C1", "B1_C2", "B1_C3",]]
+        df_result_B1.columns=["B1_C1", "B1_C2", "B1_C3"]
+        df_result_B1 = df_result_B1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+        rB1=df_result_B1.iloc[0]
+        fig_B1= px.line_polar(df_result_B1,r=rB1, theta=["B1_C1", "B1_C2", "B1_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
+        fig_B1.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_B1.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_B1 = fig_B1.to_html(config = {'displayModeBar': False})
+        resultsB1 = resultsB1.to_dict(orient='records')
+
+        resB2_C1 = pd.DataFrame(list(PostB2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B2_C1').order_by('id').reverse()[:1]))
+        resB2_C2 = pd.DataFrame(list(PostB2_C2.objects.filter(created_by_id=user_connected).values('B2_C2').order_by('id').reverse()[:1]))
+        resB2_C3 = pd.DataFrame(list(PostB2_C3.objects.filter(created_by_id=user_connected).values('B2_C3', 'time').order_by('id').reverse()[:1]))
+        resB2_C3['time'] = resB2_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsB2 = pd.merge(resB2_C1, resB2_C2, how='cross')
+        resultsB2 = pd.merge(resultsB2, resB2_C3, how='cross')
+        df_result_B2=resultsB2[["B2_C1", "B2_C2", "B2_C3",]]
+        df_result_B2.columns=["B2_C1", "B2_C2", "B2_C3"]
+        df_result_B2 = df_result_B2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rB2=df_result_B2.iloc[0]
+        fig_B2= px.line_polar(df_result_B2,r=rB2, theta=["B2_C1", "B2_C2", "B2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
+        fig_B2.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_B2.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_B2 = fig_B2.to_html(config = {'displayModeBar': False})
+        resultsB2 = resultsB2.to_dict(orient='records')
+
+        resB3_C1 = pd.DataFrame(list(PostB3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B3_C1').order_by('id').reverse()[:1]))
+        resB3_C2 = pd.DataFrame(list(PostB3_C2.objects.filter(created_by_id=user_connected).values('B3_C2').order_by('id').reverse()[:1]))
+        resB3_C3 = pd.DataFrame(list(PostB3_C3.objects.filter(created_by_id=user_connected).values('B3_C3','time').order_by('id').reverse()[:1]))
+        resB3_C3['time'] = resB3_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsB3 = pd.merge(resB3_C1, resB3_C2, how='cross')
+        resultsB3 = pd.merge(resultsB3, resB3_C3, how='cross')
+        df_result_B3=resultsB3[["B3_C1", "B3_C2", "B3_C3",]]
+        df_result_B3.columns=["B3_C1", "B3_C2", "B3_C3"]
+        df_result_B3 = df_result_B3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rB3=df_result_B3.iloc[0]
+        fig_B3= px.line_polar(df_result_B3,r=rB3, theta=["B3_C1", "B3_C2", "B3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"])
+        fig_B3.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_B3.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_B3 = fig_B3.to_html(config = {'displayModeBar': False})
+        resultsB3 = resultsB3.to_dict(orient='records')
+
+        resB4_C1 = pd.DataFrame(list(PostB4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B4_C1').order_by('id').reverse()[:1]))
+        resB4_C2 = pd.DataFrame(list(PostB4_C2.objects.filter(created_by_id=user_connected).values('B4_C2').order_by('id').reverse()[:1]))
+        resB4_C3 = pd.DataFrame(list(PostB4_C3.objects.filter(created_by_id=user_connected).values('B4_C3', 'time').order_by('id').reverse()[:1]))
+        resB4_C3['time'] = resB4_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsB4 = pd.merge(resB4_C1, resB4_C2, how='cross')
+        resultsB4 = pd.merge(resultsB4, resB4_C3, how='cross')
+        df_result_B4=resultsB4[["B4_C1", "B4_C2", "B4_C3",]]
+        df_result_B4.columns=["B4_C1", "B4_C2", "B4_C3"]
+        df_result_B4 = df_result_B4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rB4=df_result_B4.iloc[0]
+        fig_B4= px.line_polar(df_result_B4,r=rB4, theta=["B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
+        fig_B4.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_B4.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_B4 = fig_B4.to_html(config = {'displayModeBar': False})
+        resultsB4 = resultsB4.to_dict(orient='records')
+
+        resultallB=pd.concat([df_result_B1, df_result_B2, df_result_B3, df_result_B4], axis=1)
+        df_result_all = resultallB.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+        r_all=df_result_all.iloc[0]
+
+        fig_all= px.line_polar(df_result_all,r=r_all,theta=["B1_C1", "B1_C2", "B1_C3","B2_C1", "B2_C2", "B2_C3","B3_C1", "B3_C2", "B3_C3","B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True, line_shape='spline', width=420, height=420, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
+        fig_all.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_all.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_all = fig_all.to_html()
+
+        B1 = go.Scatterpolar(
+            r = df_result_all[["B2_C1", "B2_C2", "B2_C3",]].iloc[0], theta = ["B2_C1", "B2_C2", "B2_C3",], mode = 'lines',   name = 'B1')
+        B2 = go.Scatterpolar(
+            r =df_result_all[["B1_C1", "B1_C2", "B1_C3",]].iloc[0], theta = ["B1_C1", "B1_C2", "B1_C3",], mode = 'lines', name = 'B2')
+        B3 = go.Scatterpolar(
+            r = df_result_all[["B3_C1", "B3_C2", "B3_C3",]].iloc[0], theta = ["B3_C1", "B3_C2", "B3_C3",], mode = 'lines',  name = 'B3')
+        B4 = go.Scatterpolar(
+            r =df_result_all[["B4_C1", "B4_C2", "B4_C3",]].iloc[0], theta = ["B4_C1", "B4_C2", "B4_C3",], mode = 'lines', name = 'B4')
+        data = [B1,B2,B3,B4]
+        fig = go.Figure(data = data, )
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_all2 = fig.to_html()
+
+        return render(request, 'questions/poleB/resultsB.html', { 'resultsB1' : resultsB1, 'chart_B1' : chart_B1, 'resultsB2' : resultsB2,'chart_B2' : chart_B2,
+        'resultsB3' : resultsB3,'chart_B3' : chart_B3, 'resultsB4' : resultsB4,'chart_B4' : chart_B4,'chart_all' : chart_all, 'chart_all2' : chart_all2})
+
+    else :
+        info = "Les résultats seront disponible après avoir remplie la section B"
+        return render(request, 'questions/poleB/resultsB.html', {'info' : info})
+
+
+@login_required
+def resultatsC(request):
+    user_connected=request.user.id
+    if PostC1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C3.objects.filter(created_by_id=user_connected).all().exists() \
+    and PostC3_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC3_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC3_C3.objects.filter(created_by_id=user_connected).all().exists() and \
+    PostC4_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC4_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC4_C3.objects.filter(created_by_id=user_connected).all().exists():
+        resC1_C1 = pd.DataFrame(list(PostC1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C1_C1').order_by('id').reverse()[:1]))
+        resC1_C2 = pd.DataFrame(list(PostC1_C2.objects.filter(created_by_id=user_connected).values('C1_C2').order_by('id').reverse()[:1]))
+        resC1_C3 = pd.DataFrame(list(PostC1_C3.objects.filter(created_by_id=user_connected).values('C1_C3', 'time').order_by('id').reverse()[:1]))
+        resC1_C3['time'] = resC1_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsC1 = pd.merge(resC1_C1, resC1_C2, how='cross')
+        resultsC1 = pd.merge(resultsC1, resC1_C3, how='cross')
+        df_result_C1=resultsC1[["C1_C1", "C1_C2", "C1_C3",]]
+        df_result_C1.columns=["C1_C1", "C1_C2", "C1_C3"]
+        df_result_C1 = df_result_C1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+        rC1=df_result_C1.iloc[0]
+        fig_C1= px.line_polar(df_result_C1,r=rC1, theta=["C1_C1", "C1_C2", "C1_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"],)
+        fig_C1.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_C1.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_C1 = fig_C1.to_html(config = {'displayModeCar': False})
+        resultsC1 = resultsC1.to_dict(orient='records')
+
+        resC2_C1 = pd.DataFrame(list(PostC2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C2_C1').order_by('id').reverse()[:1]))
+        resC2_C2 = pd.DataFrame(list(PostC2_C2.objects.filter(created_by_id=user_connected).values('C2_C2').order_by('id').reverse()[:1]))
+        resC2_C3 = pd.DataFrame(list(PostC2_C3.objects.filter(created_by_id=user_connected).values('C2_C3', 'time').order_by('id').reverse()[:1]))
+        resC2_C3['time'] = resC2_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsC2 = pd.merge(resC2_C1, resC2_C2, how='cross')
+        resultsC2 = pd.merge(resultsC2, resC2_C3, how='cross')
+        df_result_C2=resultsC2[["C2_C1", "C2_C2", "C2_C3",]]
+        df_result_C2.columns=["C2_C1", "C2_C2", "C2_C3"]
+        df_result_C2 = df_result_C2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rC2=df_result_C2.iloc[0]
+        fig_C2= px.line_polar(df_result_C2,r=rC2, theta=["C2_C1", "C2_C2", "C2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"],)
+        fig_C2.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_C2.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_C2 = fig_C2.to_html(config = {'displayModeCar': False})
+        resultsC2 = resultsC2.to_dict(orient='records')
+
+        resC3_C1 = pd.DataFrame(list(PostC3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C3_C1').order_by('id').reverse()[:1]))
+        resC3_C2 = pd.DataFrame(list(PostC3_C2.objects.filter(created_by_id=user_connected).values('C3_C2').order_by('id').reverse()[:1]))
+        resC3_C3 = pd.DataFrame(list(PostC3_C3.objects.filter(created_by_id=user_connected).values('C3_C3','time').order_by('id').reverse()[:1]))
+        resC3_C3['time'] = resC3_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsC3 = pd.merge(resC3_C1, resC3_C2, how='cross')
+        resultsC3 = pd.merge(resultsC3, resC3_C3, how='cross')
+        df_result_C3=resultsC3[["C3_C1", "C3_C2", "C3_C3",]]
+        df_result_C3.columns=["C3_C1", "C3_C2", "C3_C3"]
+        df_result_C3 = df_result_C3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rC3=df_result_C3.iloc[0]
+        fig_C3= px.line_polar(df_result_C3,r=rC3, theta=["C3_C1", "C3_C2", "C3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"])
+        fig_C3.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_C3.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_C3 = fig_C3.to_html(config = {'displayModeCar': False})
+        resultsC3 = resultsC3.to_dict(orient='records')
+
+        resC4_C1 = pd.DataFrame(list(PostC4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C4_C1').order_by('id').reverse()[:1]))
+        resC4_C2 = pd.DataFrame(list(PostC4_C2.objects.filter(created_by_id=user_connected).values('C4_C2').order_by('id').reverse()[:1]))
+        resC4_C3 = pd.DataFrame(list(PostC4_C3.objects.filter(created_by_id=user_connected).values('C4_C3', 'time').order_by('id').reverse()[:1]))
+        resC4_C3['time'] = resC4_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+        resultsC4 = pd.merge(resC4_C1, resC4_C2, how='cross')
+        resultsC4 = pd.merge(resultsC4, resC4_C3, how='cross')
+        df_result_C4=resultsC4[["C4_C1", "C4_C2", "C4_C3",]]
+        df_result_C4.columns=["C4_C1", "C4_C2", "C4_C3"]
+        df_result_C4 = df_result_C4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+        rC4=df_result_C4.iloc[0]
+        fig_C4= px.line_polar(df_result_C4,r=rC4, theta=["C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"],)
+        fig_C4.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_C4.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_C4 = fig_C4.to_html(config = {'displayModeCar': False})
+        resultsC4 = resultsC4.to_dict(orient='records')
+
+        resultallC=pd.concat([df_result_C1, df_result_C2, df_result_C3, df_result_C4], axis=1)
+        df_result_all = resultallC.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+        r_all=df_result_all.iloc[0]
+
+        fig_all= px.line_polar(df_result_all,r=r_all,theta=["C1_C1", "C1_C2", "C1_C3","C2_C1", "C2_C2", "C2_C3","C3_C1", "C3_C2", "C3_C3","C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True, line_shape='spline', width=420, height=420, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"],)
+        fig_all.update_traces(fill='toself')
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig_all.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_all = fig_all.to_html()
+
+        C1 = go.Scatterpolar(
+            r = df_result_all[["C2_C1", "C2_C2", "C2_C3",]].iloc[0], theta = ["C2_C1", "C2_C2", "C2_C3",], mode = 'lines',   name = 'C1')
+        C2 = go.Scatterpolar(
+            r =df_result_all[["C1_C1", "C1_C2", "C1_C3",]].iloc[0], theta = ["C1_C1", "C1_C2", "C1_C3",], mode = 'lines', name = 'C2')
+        C3 = go.Scatterpolar(
+            r = df_result_all[["C3_C1", "C3_C2", "C3_C3",]].iloc[0], theta = ["C3_C1", "C3_C2", "C3_C3",], mode = 'lines',  name = 'C3')
+        C4 = go.Scatterpolar(
+            r =df_result_all[["C4_C1", "C4_C2", "C4_C3",]].iloc[0], theta = ["C4_C1", "C4_C2", "C4_C3",], mode = 'lines', name = 'C4')
+        data = [C1,C2,C3,C4]
+        fig = go.Figure(data = data, )
+        value=[1,2,3,4,]
+        max_value = max(value)
+        fixed_axis_values = np.linspace(0, max_value, 5)
+        fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+        fig.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)
+                         ))
+        chart_all2 = fig.to_html()
+
+        return render(request, 'questions/poleC/resultsC.html', { 'resultsC1' : resultsC1, 'chart_C1' : chart_C1, 'resultsC2' : resultsC2,'chart_C2' : chart_C2,
+        'resultsC3' : resultsC3,'chart_C3' : chart_C3, 'resultsC4' : resultsC4,'chart_C4' : chart_C4,'chart_all' : chart_all, 'chart_all2' : chart_all2})
+
+    else :
+        info = "Les résultats seront disponible après avoir remplie la section C"
+        return render(request, 'questions/poleC/resultsC.html', {'info' : info})
+
+##################################################################################
+
+from io import BytesIO
+import plotly.graph_objs as go
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+from reportlab.platypus import Image
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import mm, cm
+
+
+
+def generateB_pdf(request):
+      user_connected=request.user.id
+      if PostB1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB2_C3.objects.filter(created_by_id=user_connected).all().exists() \
           and PostB3_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB3_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB3_C3.objects.filter(created_by_id=user_connected).all().exists() and \
           PostB4_C1.objects.filter(created_by_id=user_connected).all().exists() and PostB4_C2.objects.filter(created_by_id=user_connected).all().exists() and PostB4_C3.objects.filter(created_by_id=user_connected).all().exists():
           resB1_C1 = pd.DataFrame(list(PostB1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B1_C1').order_by('id').reverse()[:1]))
@@ -1262,9 +1629,9 @@ def resultatsB(request):
           df_result_B1=resultsB1[["B1_C1", "B1_C2", "B1_C3",]]
           df_result_B1.columns=["B1_C1", "B1_C2", "B1_C3"]
           df_result_B1 = df_result_B1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          
 
-     
+
+
           resB2_C1 = pd.DataFrame(list(PostB2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B2_C1').order_by('id').reverse()[:1]))
           resB2_C2 = pd.DataFrame(list(PostB2_C2.objects.filter(created_by_id=user_connected).values('B2_C2').order_by('id').reverse()[:1]))
           resB2_C3 = pd.DataFrame(list(PostB2_C3.objects.filter(created_by_id=user_connected).values('B2_C3', 'time').order_by('id').reverse()[:1]))
@@ -1274,7 +1641,7 @@ def resultatsB(request):
           df_result_B2=resultsB2[["B2_C1", "B2_C2", "B2_C3",]]
           df_result_B2.columns=["B2_C1", "B2_C2", "B2_C3"]
           df_result_B2 = df_result_B2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-     
+
           resB3_C1 = pd.DataFrame(list(PostB3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B3_C1').order_by('id').reverse()[:1]))
           resB3_C2 = pd.DataFrame(list(PostB3_C2.objects.filter(created_by_id=user_connected).values('B3_C2').order_by('id').reverse()[:1]))
           resB3_C3 = pd.DataFrame(list(PostB3_C3.objects.filter(created_by_id=user_connected).values('B3_C3','time').order_by('id').reverse()[:1]))
@@ -1284,7 +1651,7 @@ def resultatsB(request):
           df_result_B3=resultsB3[["B3_C1", "B3_C2", "B3_C3",]]
           df_result_B3.columns=["B3_C1", "B3_C2", "B3_C3"]
           df_result_B3 = df_result_B3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-     
+
           resB4_C1 = pd.DataFrame(list(PostB4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'B4_C1').order_by('id').reverse()[:1]))
           resB4_C2 = pd.DataFrame(list(PostB4_C2.objects.filter(created_by_id=user_connected).values('B4_C2').order_by('id').reverse()[:1]))
           resB4_C3 = pd.DataFrame(list(PostB4_C3.objects.filter(created_by_id=user_connected).values('B4_C3', 'time').order_by('id').reverse()[:1]))
@@ -1294,173 +1661,450 @@ def resultatsB(request):
           df_result_B4=resultsB4[["B4_C1", "B4_C2", "B4_C3",]]
           df_result_B4.columns=["B4_C1", "B4_C2", "B4_C3"]
           df_result_B4 = df_result_B4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          
-          rB1=df_result_B1.iloc[0]
-          fig_B1= px.line_polar(df_result_B1,r=rB1, theta=["B1_C1", "B1_C2", "B1_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-          fig_B1.update_traces(fill='toself')
 
-          chart_B1 = fig_B1.to_html()
-          resultsB1 = resultsB1.to_html()
+          rB1=df_result_B1.iloc[0]
+          fig_B1= px.line_polar(df_result_B1,r=rB1, theta=["B1_C1", "B1_C2", "B1_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
+          fig_B1.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_B1.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats B1",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
+
+            )
+        ))
 
           rB2=df_result_B2.iloc[0]
-          fig_B2= px.line_polar(df_result_B2,r=rB2, theta=["B2_C1", "B2_C2", "B2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_B2= px.line_polar(df_result_B2,r=rB2, theta=["B2_C1", "B2_C2", "B2_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
           fig_B2.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_B2.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats B2",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
 
-          chart_B2 = fig_B2.to_html()
-          resultsB2 = resultsB2.to_html()
+            )
+        ))
 
           rB3=df_result_B3.iloc[0]
-          fig_B3= px.line_polar(df_result_B3,r=rB3, theta=["B3_C1", "B3_C2", "B3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_B3= px.line_polar(df_result_B3,r=rB3, theta=["B3_C1", "B3_C2", "B3_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
           fig_B3.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_B3.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats B3",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
 
-          chart_B3 = fig_B3.to_html()
-          resultsB3 = resultsB3.to_html()
+            )
+        ))
 
           rB4=df_result_B4.iloc[0]
-          fig_B4= px.line_polar(df_result_B4,r=rB4, theta=["B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
+          fig_B4= px.line_polar(df_result_B4,r=rB4, theta=["B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
           fig_B4.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_B4.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats B4",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
 
-          chart_B4 = fig_B4.to_html()
-          resultsB4 = resultsB4.to_html()
+            )
+        ))
+
+
 
 
           resultallB=pd.concat([df_result_B1, df_result_B2, df_result_B3, df_result_B4], axis=1)
           df_result_all = resultallB.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
           r_all=df_result_all.iloc[0]
-          
-          fig_all= px.line_polar(df_result_all,r=r_all,theta=["B1_C1", "B1_C2", "B1_C3","B2_C1", "B2_C2", "B2_C3","B3_C1", "B3_C2", "B3_C3","B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline', width=420, height=420)
+          fig_all= px.line_polar(df_result_all,r=r_all,theta=["B1_C1", "B1_C2", "B1_C3","B2_C1", "B2_C2", "B2_C3","B3_C1", "B3_C2", "B3_C3","B4_C1", "B4_C2", "B4_C3"], direction='clockwise', start_angle=70, line_close=True,line_shape='spline', color_discrete_sequence=["orange", "green", "blue", "goldenrod", "magenta"],)
           fig_all.update_traces(fill='toself')
-          chart_all = fig_all.to_html()
-
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_all.update_layout(
+               xaxis_range=[0,4],
+               title="tous les Résultats",
+               font=dict(
+               family="Courier New, monospace",size=24,color="black"),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)))
           B1 = go.Scatterpolar(
-               r = df_result_all[["B2_C1", "B2_C2", "B2_C3",]].iloc[0], theta = ["B2_C1", "B2_C2", "B2_C3",], mode = 'lines',   name = 'B1')
+          r = df_result_all[["B2_C1", "B2_C2", "B2_C3",]].iloc[0], theta = ["B2_C1", "B2_C2", "B2_C3",], mode = 'lines',   name = 'B1')
           B2 = go.Scatterpolar(
-               r =df_result_all[["B1_C1", "B1_C2", "B1_C3",]].iloc[0], theta = ["B1_C1", "B1_C2", "B1_C3",], mode = 'lines', name = 'B2')
+          r =df_result_all[["B1_C1", "B1_C2", "B1_C3",]].iloc[0], theta = ["B1_C1", "B1_C2", "B1_C3",], mode = 'lines', name = 'B2')
           B3 = go.Scatterpolar(
-               r = df_result_all[["B3_C1", "B3_C2", "B3_C3",]].iloc[0], theta = ["B3_C1", "B3_C2", "B3_C3",], mode = 'lines',  name = 'B3')
+          r = df_result_all[["B3_C1", "B3_C2", "B3_C3",]].iloc[0], theta = ["B3_C1", "B3_C2", "B3_C3",], mode = 'lines',  name = 'B3')
           B4 = go.Scatterpolar(
-               r =df_result_all[["B4_C1", "B4_C2", "B4_C3",]].iloc[0], theta = ["B4_C1", "B4_C2", "B4_C3",], mode = 'lines', name = 'B4')
-       
+          r =df_result_all[["B4_C1", "B4_C2", "B4_C3",]].iloc[0], theta = ["B4_C1", "B4_C2", "B4_C3",], mode = 'lines', name = 'B4')
           data = [B1,B2,B3,B4]
           fig = go.Figure(data = data, )
-          chart_Bll2 = fig.to_html()
-          
-          return render(request, 'questions/poleB/resultsB.html', { 'resultsB1' : resultsB1, 'chart_B1' : chart_B1, 'resultsB2' : resultsB2, 'chart_B2' : chart_B2, 'resultsB3' : resultsB3, 'chart_B3' : chart_B3,
-                                                              'resultsB4' : resultsB4, 'chart_B4' : chart_B4, 'chart_all' : chart_all, 'chart_Bll2' : chart_Bll2,})
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)))
+          polar_charts = []
+    # Add your Plotly polar charts here
+          polar_charts.append(fig_B1)
+          polar_charts.append(fig_B2)
+          polar_charts.append(fig_B3)
+          polar_charts.append(fig_B4)
+          polar_charts.append(fig_all)
+          polar_charts.append(fig)
 
-       else :
-          info = "Les résultats seront disponible après avoir remplie la section B"
-          return render(request, 'questions/poleB/resultsB.html', {'info' : info})
+           # Create a buffer to store the PDF
+          buffer = BytesIO()
+          height, width = A4
+          # Create a PDF document
+          doc = SimpleDocTemplate(buffer, pagesize=A4)
+          styles = getSampleStyleSheet()
+          elements = []
 
-@login_required
-def resultatsC(request):
-          user_connected=request.user.id
-          if PostC1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C3.objects.filter(created_by_id=user_connected).all().exists() \
+          elements.append(Paragraph("Les résultats enregistrés pour le Pôle B", styles['Title']))
+
+          elements.append(Spacer(1, 10))  # Add some space
+
+          cm_to_inches = 1 / 2.54  # 1 cm = 1/2.54 inches
+          cm_to_pixels = 72 / 2.54  # 1 inch = 72 pixels
+          width_in_pixels = int(10 * cm_to_pixels)
+          height_in_pixels = int(7* cm_to_pixels)
+
+
+          for chart in polar_charts:
+               chart_bytes = chart.to_image(format="png")
+               img = BytesIO(chart_bytes)
+               elements.append(Image(img,  width=width_in_pixels, height=height_in_pixels))
+
+
+          dataframes = [resultsB1,resultsB2, resultsB3, resultsB4]
+          for df in dataframes:
+               table_data = [df.columns.tolist()] + df.values.tolist()
+               table = Table(table_data)
+               table.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.lightcoral),
+                                             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                                             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                                             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                                             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                                             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+                                             ('GRID', (0, 0), (-1, -1), 1, colors.black)]))
+               elements.append(table)
+          doc.build(elements)
+
+          # Close the PDF buffer and return the response with PDF content
+          pdf = buffer.getvalue()
+          buffer.close()
+          response = HttpResponse(content_type='application/pdf')
+          response['Content-Disposition'] = 'attachment; filename="exportpoleB.pdf"'
+          response.write(pdf)
+          return response
+
+def generateC_pdf(request):
+      user_connected=request.user.id
+      if PostC1_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC1_C3.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC2_C3.objects.filter(created_by_id=user_connected).all().exists() \
           and PostC3_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC3_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC3_C3.objects.filter(created_by_id=user_connected).all().exists() and \
           PostC4_C1.objects.filter(created_by_id=user_connected).all().exists() and PostC4_C2.objects.filter(created_by_id=user_connected).all().exists() and PostC4_C3.objects.filter(created_by_id=user_connected).all().exists():
-               resC1_C1 = pd.DataFrame(list(PostC1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C1_C1').order_by('id').reverse()[:1]))
-               resC1_C2 = pd.DataFrame(list(PostC1_C2.objects.filter(created_by_id=user_connected).values('C1_C2').order_by('id').reverse()[:1]))
-               resC1_C3 = pd.DataFrame(list(PostC1_C3.objects.filter(created_by_id=user_connected).values('C1_C3', 'time').order_by('id').reverse()[:1]))
-               resC1_C3['time'] = resC1_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-               resultsC1 = pd.merge(resC1_C1, resC1_C2, how='cross')
-               resultsC1 = pd.merge(resultsC1, resC1_C3, how='cross')
-               df_result_C1=resultsC1[["C1_C1", "C1_C2", "C1_C3",]]
-               df_result_C1.columns=["C1_C1", "C1_C2", "C1_C3"]
-               df_result_C1 = df_result_C1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-               
-
-          
-               resC2_C1 = pd.DataFrame(list(PostC2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C2_C1').order_by('id').reverse()[:1]))
-               resC2_C2 = pd.DataFrame(list(PostC2_C2.objects.filter(created_by_id=user_connected).values('C2_C2').order_by('id').reverse()[:1]))
-               resC2_C3 = pd.DataFrame(list(PostC2_C3.objects.filter(created_by_id=user_connected).values('C2_C3', 'time').order_by('id').reverse()[:1]))
-               resC2_C3['time'] = resC2_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-               resultsC2 = pd.merge(resC2_C1, resC2_C2, how='cross')
-               resultsC2 = pd.merge(resultsC2, resC2_C3, how='cross')
-               df_result_C2=resultsC2[["C2_C1", "C2_C2", "C2_C3",]]
-               df_result_C2.columns=["C2_C1", "C2_C2", "C2_C3"]
-               df_result_C2 = df_result_C2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          
-               resC3_C1 = pd.DataFrame(list(PostC3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C3_C1').order_by('id').reverse()[:1]))
-               resC3_C2 = pd.DataFrame(list(PostC3_C2.objects.filter(created_by_id=user_connected).values('C3_C2').order_by('id').reverse()[:1]))
-               resC3_C3 = pd.DataFrame(list(PostC3_C3.objects.filter(created_by_id=user_connected).values('C3_C3','time').order_by('id').reverse()[:1]))
-               resC3_C3['time'] = resC3_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-               resultsC3 = pd.merge(resC3_C1, resC3_C2, how='cross')
-               resultsC3 = pd.merge(resultsC3, resC3_C3, how='cross')
-               df_result_C3=resultsC3[["C3_C1", "C3_C2", "C3_C3",]]
-               df_result_C3.columns=["C3_C1", "C3_C2", "C3_C3"]
-               df_result_C3 = df_result_C3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-          
-               resC4_C1 = pd.DataFrame(list(PostC4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C4_C1').order_by('id').reverse()[:1]))
-               resC4_C2 = pd.DataFrame(list(PostC4_C2.objects.filter(created_by_id=user_connected).values('C4_C2').order_by('id').reverse()[:1]))
-               resC4_C3 = pd.DataFrame(list(PostC4_C3.objects.filter(created_by_id=user_connected).values('C4_C3', 'time').order_by('id').reverse()[:1]))
-               resC4_C3['time'] = resC4_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-               resultsC4 = pd.merge(resC4_C1, resC4_C2, how='cross')
-               resultsC4 = pd.merge(resultsC4, resC4_C3, how='cross')
-               df_result_C4=resultsC4[["C4_C1", "C4_C2", "C4_C3",]]
-               df_result_C4.columns=["C4_C1", "C4_C2", "C4_C3"]
-               df_result_C4 = df_result_C4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-               
-               rC1=df_result_C1.iloc[0]
-               fig_C1= px.line_polar(df_result_C1,r=rC1, theta=["C1_C1", "C1_C2", "C1_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-               fig_C1.update_traces(fill='toself')
-
-               chart_C1 = fig_C1.to_html()
-               resultsC1 = resultsC1.to_html()
-
-               rC2=df_result_C2.iloc[0]
-               fig_C2= px.line_polar(df_result_C2,r=rC2, theta=["C2_C1", "C2_C2", "C2_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-               fig_C2.update_traces(fill='toself')
-
-               chart_C2 = fig_C2.to_html()
-               resultsC2 = resultsC2.to_html()
-
-               rC3=df_result_C3.iloc[0]
-               fig_C3= px.line_polar(df_result_C3,r=rC3, theta=["C3_C1", "C3_C2", "C3_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-               fig_C3.update_traces(fill='toself')
-
-               chart_C3 = fig_C3.to_html()
-               resultsC3 = resultsC3.to_html()
-
-               rC4=df_result_C4.iloc[0]
-               fig_C4= px.line_polar(df_result_C4,r=rC4, theta=["C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True, width=360, height=360)
-               fig_C4.update_traces(fill='toself')
-
-               chart_C4 = fig_C4.to_html()
-               resultsC4 = resultsC4.to_html()
-
-
-               resultallC=pd.concat([df_result_C1, df_result_C2, df_result_C3, df_result_C4], axis=1)
-               df_result_all = resultallC.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
-               r_all=df_result_all.iloc[0]
-               
-               fig_all= px.line_polar(df_result_all,r=r_all,theta=["C1_C1", "C1_C2", "C1_C3","C2_C1", "C2_C2", "C2_C3","C3_C1", "C3_C2", "C3_C3","C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["#000091","#9898f8", "#e3e3fd"],line_shape='spline', width=420, height=420)
-               fig_all.update_traces(fill='toself')
-               chart_all = fig_all.to_html()
-
-               C1 = go.Scatterpolar(
-                    r = df_result_all[["C2_C1", "C2_C2", "C2_C3",]].iloc[0], theta = ["C2_C1", "C2_C2", "C2_C3",], mode = 'lines',   name = 'C1')
-               C2 = go.Scatterpolar(
-                    r =df_result_all[["C1_C1", "C1_C2", "C1_C3",]].iloc[0], theta = ["C1_C1", "C1_C2", "C1_C3",], mode = 'lines', name = 'C2')
-               C3 = go.Scatterpolar(
-                    r = df_result_all[["C3_C1", "C3_C2", "C3_C3",]].iloc[0], theta = ["C3_C1", "C3_C2", "C3_C3",], mode = 'lines',  name = 'C3')
-               C4 = go.Scatterpolar(
-                    r =df_result_all[["C4_C1", "C4_C2", "C4_C3",]].iloc[0], theta = ["C4_C1", "C4_C2", "C4_C3",], mode = 'lines', name = 'C4')
-          
-               data = [C1,C2,C3,C4]
-               fig = go.Figure(data = data, )
-               chart_Cll2 = fig.to_html()
-               
-               return render(request, 'questions/poleC/resultsC.html', { 'resultsC1' : resultsC1, 'chart_C1' : chart_C1, 'resultsC2' : resultsC2, 'chart_C2' : chart_C2, 'resultsC3' : resultsC3, 'chart_C3' : chart_C3,
-                                                                 'resultsC4' : resultsC4, 'chart_C4' : chart_C4, 'chart_all' : chart_all, 'chart_Cll2' : chart_Cll2,})
-
-          else :
-               info = "Les résultats seront disponible après avoir remplie la section C"
-               return render(request, 'questions/poleC/resultsC.html', {'info' : info})
+          resC1_C1 = pd.DataFrame(list(PostC1_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C1_C1').order_by('id').reverse()[:1]))
+          resC1_C2 = pd.DataFrame(list(PostC1_C2.objects.filter(created_by_id=user_connected).values('C1_C2').order_by('id').reverse()[:1]))
+          resC1_C3 = pd.DataFrame(list(PostC1_C3.objects.filter(created_by_id=user_connected).values('C1_C3', 'time').order_by('id').reverse()[:1]))
+          resC1_C3['time'] = resC1_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resultsC1 = pd.merge(resC1_C1, resC1_C2, how='cross')
+          resultsC1 = pd.merge(resultsC1, resC1_C3, how='cross')
+          df_result_C1=resultsC1[["C1_C1", "C1_C2", "C1_C3",]]
+          df_result_C1.columns=["C1_C1", "C1_C2", "C1_C3"]
+          df_result_C1 = df_result_C1.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
 
 
 
+          resC2_C1 = pd.DataFrame(list(PostC2_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C2_C1').order_by('id').reverse()[:1]))
+          resC2_C2 = pd.DataFrame(list(PostC2_C2.objects.filter(created_by_id=user_connected).values('C2_C2').order_by('id').reverse()[:1]))
+          resC2_C3 = pd.DataFrame(list(PostC2_C3.objects.filter(created_by_id=user_connected).values('C2_C3', 'time').order_by('id').reverse()[:1]))
+          resC2_C3['time'] = resC2_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resultsC2 = pd.merge(resC2_C1, resC2_C2, how='cross')
+          resultsC2 = pd.merge(resultsC2, resC2_C3, how='cross')
+          df_result_C2=resultsC2[["C2_C1", "C2_C2", "C2_C3",]]
+          df_result_C2.columns=["C2_C1", "C2_C2", "C2_C3"]
+          df_result_C2 = df_result_C2.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+          resC3_C1 = pd.DataFrame(list(PostC3_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C3_C1').order_by('id').reverse()[:1]))
+          resC3_C2 = pd.DataFrame(list(PostC3_C2.objects.filter(created_by_id=user_connected).values('C3_C2').order_by('id').reverse()[:1]))
+          resC3_C3 = pd.DataFrame(list(PostC3_C3.objects.filter(created_by_id=user_connected).values('C3_C3','time').order_by('id').reverse()[:1]))
+          resC3_C3['time'] = resC3_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resultsC3 = pd.merge(resC3_C1, resC3_C2, how='cross')
+          resultsC3 = pd.merge(resultsC3, resC3_C3, how='cross')
+          df_result_C3=resultsC3[["C3_C1", "C3_C2", "C3_C3",]]
+          df_result_C3.columns=["C3_C1", "C3_C2", "C3_C3"]
+          df_result_C3 = df_result_C3.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+          resC4_C1 = pd.DataFrame(list(PostC4_C1.objects.filter(created_by_id=user_connected).values('created_by_id', 'C4_C1').order_by('id').reverse()[:1]))
+          resC4_C2 = pd.DataFrame(list(PostC4_C2.objects.filter(created_by_id=user_connected).values('C4_C2').order_by('id').reverse()[:1]))
+          resC4_C3 = pd.DataFrame(list(PostC4_C3.objects.filter(created_by_id=user_connected).values('C4_C3', 'time').order_by('id').reverse()[:1]))
+          resC4_C3['time'] = resC4_C3['time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+          resultsC4 = pd.merge(resC4_C1, resC4_C2, how='cross')
+          resultsC4 = pd.merge(resultsC4, resC4_C3, how='cross')
+          df_result_C4=resultsC4[["C4_C1", "C4_C2", "C4_C3",]]
+          df_result_C4.columns=["C4_C1", "C4_C2", "C4_C3"]
+          df_result_C4 = df_result_C4.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+
+          rC1=df_result_C1.iloc[0]
+          fig_C1= px.line_polar(df_result_C1,r=rC1, theta=["C1_C1", "C1_C2", "C1_C3"], direction='clockwise', start_angle=70, line_close=True,  color_discrete_sequence=["green", "blue", "goldenrod", "magenta"])
+          fig_C1.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_C1.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats C1",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
+
+            )
+        ))
+
+          rC2=df_result_C2.iloc[0]
+          fig_C2= px.line_polar(df_result_C2,r=rC2, theta=["C2_C1", "C2_C2", "C2_C3"], direction='clockwise', start_angle=70, line_close=True,  color_discrete_sequence=["green", "blue", "goldenrod", "magenta"])
+          fig_C2.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_C2.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats C2",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
+
+            )
+        ))
+
+          rC3=df_result_C3.iloc[0]
+          fig_C3= px.line_polar(df_result_C3,r=rC3, theta=["C3_C1", "C3_C2", "C3_C3"], direction='clockwise', start_angle=70, line_close=True,  color_discrete_sequence=["green", "blue", "goldenrod", "magenta"])
+          fig_C3.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_C3.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats C3",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
+
+            )
+        ))
+
+          rC4=df_result_C4.iloc[0]
+          fig_C4= px.line_polar(df_result_C4,r=rC4, theta=["C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True,  color_discrete_sequence=["green", "blue", "goldenrod", "magenta"])
+          fig_C4.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_C4.update_layout(
+               xaxis_range=[0,4],
+               title="Résultats C4",
+               font=dict(
+        family="Courier New, monospace",
+        size=24,
+        color="black"
+    ),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None
+
+            )
+        ))
 
 
 
 
+          resultallC=pd.concat([df_result_C1, df_result_C2, df_result_C3, df_result_C4], axis=1)
+          df_result_all = resultallC.replace(["N_S_P","Degre_1","Degre_2","Degre_3", "Degre_4"], [0, 1, 2, 3, 4])
+          r_all=df_result_all.iloc[0]
+          fig_all= px.line_polar(df_result_all,r=r_all,theta=["C1_C1", "C1_C2", "C1_C3","C2_C1", "C2_C2", "C2_C3","C3_C1", "C3_C2", "C3_C3","C4_C1", "C4_C2", "C4_C3"], direction='clockwise', start_angle=70, line_close=True, color_discrete_sequence=["green", "blue", "goldenrod", "magenta"],line_shape='spline')
+          fig_all.update_traces(fill='toself')
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)  # Adjust 5 to change the number of ticks
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig_all.update_layout(
+               xaxis_range=[0,4],
+               title="tous les Résultats",
+               font=dict(
+               family="Courier New, monospace",size=24,color="black"),
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)))
+          C1 = go.Scatterpolar(
+          r = df_result_all[["C2_C1", "C2_C2", "C2_C3",]].iloc[0], theta = ["C2_C1", "C2_C2", "C2_C3",], mode = 'lines',   name = 'C1')
+          C2 = go.Scatterpolar(
+          r =df_result_all[["C1_C1", "C1_C2", "C1_C3",]].iloc[0], theta = ["C1_C1", "C1_C2", "C1_C3",], mode = 'lines', name = 'C2')
+          C3 = go.Scatterpolar(
+          r = df_result_all[["C3_C1", "C3_C2", "C3_C3",]].iloc[0], theta = ["C3_C1", "C3_C2", "C3_C3",], mode = 'lines',  name = 'C3')
+          C4 = go.Scatterpolar(
+          r =df_result_all[["C4_C1", "C4_C2", "C4_C3",]].iloc[0], theta = ["C4_C1", "C4_C2", "C4_C3",], mode = 'lines', name = 'C4')
+          data = [C1,C2,C3,C4]
+          fig = go.Figure(data = data, )
+          value=[1,2,3,4,]
+          max_value = max(value)
+          fixed_axis_values = np.linspace(0, max_value, 5)
+          fixed_axis_labels = [f'{val:.0f}' for val in fixed_axis_values]
+          fig.update_layout(
+               xaxis_range=[0,4],
+               polar=dict(
+                    radialaxis=dict(range=[0, 4],
+                         visible=True,
+                         tickvals=fixed_axis_values,
+                         ticktext=fixed_axis_labels,
+                         autorange = None)))
+          polar_charts = []
+    # Add your Plotly polar charts here
+          polar_charts.append(fig_C1)
+          polar_charts.append(fig_C2)
+          polar_charts.append(fig_C3)
+          polar_charts.append(fig_C4)
+          polar_charts.append(fig_all)
+          polar_charts.append(fig)
 
+           # Create a buffer to store the PDF
+          buffer = BytesIO()
+          height, width = A4
+          # Create a PDF document
+          doc = SimpleDocTemplate(buffer, pagesize=A4)
+          styles = getSampleStyleSheet()
+          elements = []
+
+          elements.append(Paragraph("Les résultats enregistrés pour le Pôle C", styles['Title']))
+
+          elements.append(Spacer(1, 10))  # Add some space
+
+          cm_to_inches = 1 / 2.54  # 1 cm = 1/2.54 inches
+          cm_to_pixels = 72 / 2.54  # 1 inch = 72 pixels
+          width_in_pixels = int(10 * cm_to_pixels)
+          height_in_pixels = int(7* cm_to_pixels)
+
+
+          for chart in polar_charts:
+               chart_bytes = chart.to_image(format="png")
+               img = BytesIO(chart_bytes)
+               elements.append(Image(img,  width=width_in_pixels, height=height_in_pixels))
+
+
+          dataframes = [resultsC1,resultsC2, resultsC3, resultsC4]
+          for df in dataframes:
+               table_data = [df.columns.tolist()] + df.values.tolist()
+               table = Table(table_data)
+               table.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, 0), colors.lawngreen),
+                                             ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+                                             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                                             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                                             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                                             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+                                             ('GRID', (0, 0), (-1, -1), 1, colors.black)]))
+               elements.append(table)
+          doc.build(elements)
+
+          # Close the PDF buffer and return the response with PDF content
+          pdf = buffer.getvalue()
+          buffer.close()
+          response = HttpResponse(content_type='application/pdf')
+          response['Content-Disposition'] = 'attachment; filename="exportpoleC.pdf"'
+          response.write(pdf)
+          return response

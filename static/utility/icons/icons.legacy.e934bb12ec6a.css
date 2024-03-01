@@ -1,0 +1,3766 @@
+/*!
+ * DSFR v1.7.2 | SPDX-License-Identifier: MIT | License-Filename: LICENSE.md | restricted use (see terms and conditions)
+ */
+@media (min-width: 36em) {
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+
+  /*! media sm */
+}
+@media (min-width: 48em) {
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+
+  /*! media md */
+}
+@media (min-width: 62em) {
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+
+  /*! media lg */
+}
+@media (min-width: 78em) {
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+
+  /*! media xl */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fr-icon-ancient-gate-fill::before,
+  .fr-icon-ancient-gate-fill::after {
+    background-image: url("../../icons/buildings/ancient-gate-fill.f93fbff9364b.svg");
+  }
+
+  .fr-icon-ancient-gate-line::before,
+  .fr-icon-ancient-gate-line::after {
+    background-image: url("../../icons/buildings/ancient-gate-line.689052875dfb.svg");
+  }
+
+  .fr-icon-ancient-pavilion-fill::before,
+  .fr-icon-ancient-pavilion-fill::after {
+    background-image: url("../../icons/buildings/ancient-pavilion-fill.750fc942cd57.svg");
+  }
+
+  .fr-icon-ancient-pavilion-line::before,
+  .fr-icon-ancient-pavilion-line::after {
+    background-image: url("../../icons/buildings/ancient-pavilion-line.c95de5ce89e5.svg");
+  }
+
+  .fr-icon-bank-fill::before,
+  .fr-icon-bank-fill::after {
+    background-image: url("../../icons/buildings/bank-fill.7cca804d55fc.svg");
+  }
+
+  .fr-icon-bank-line::before,
+  .fr-icon-bank-line::after {
+    background-image: url("../../icons/buildings/bank-line.323f4659e47d.svg");
+  }
+
+  .fr-icon-building-fill::before,
+  .fr-icon-building-fill::after {
+    background-image: url("../../icons/buildings/building-fill.b8fa5ddcaaeb.svg");
+  }
+
+  .fr-icon-building-line::before,
+  .fr-icon-building-line::after {
+    background-image: url("../../icons/buildings/building-line.a183e845c1fc.svg");
+  }
+
+  .fr-icon-community-fill::before,
+  .fr-icon-community-fill::after {
+    background-image: url("../../icons/buildings/community-fill.3fc2fb449cce.svg");
+  }
+
+  .fr-icon-community-line::before,
+  .fr-icon-community-line::after {
+    background-image: url("../../icons/buildings/community-line.72b031850af4.svg");
+  }
+
+  .fr-icon-government-fill::before,
+  .fr-icon-government-fill::after {
+    background-image: url("../../icons/buildings/government-fill.a4bb2bf545e4.svg");
+  }
+
+  .fr-icon-government-line::before,
+  .fr-icon-government-line::after {
+    background-image: url("../../icons/buildings/government-line.1f6a48a84841.svg");
+  }
+
+  .fr-icon-home-4-fill::before,
+  .fr-icon-home-4-fill::after {
+    background-image: url("../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  }
+
+  .fr-icon-home-4-line::before,
+  .fr-icon-home-4-line::after {
+    background-image: url("../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  }
+
+  .fr-icon-hospital-fill::before,
+  .fr-icon-hospital-fill::after {
+    background-image: url("../../icons/buildings/hospital-fill.c031d8435d29.svg");
+  }
+
+  .fr-icon-hospital-line::before,
+  .fr-icon-hospital-line::after {
+    background-image: url("../../icons/buildings/hospital-line.7dfec2d41424.svg");
+  }
+
+  .fr-icon-hotel-fill::before,
+  .fr-icon-hotel-fill::after {
+    background-image: url("../../icons/buildings/hotel-fill.ae92d261a0c8.svg");
+  }
+
+  .fr-icon-hotel-line::before,
+  .fr-icon-hotel-line::after {
+    background-image: url("../../icons/buildings/hotel-line.b8322c9166d8.svg");
+  }
+
+  .fr-icon-store-fill::before,
+  .fr-icon-store-fill::after {
+    background-image: url("../../icons/buildings/store-fill.8c2c6d6ec20f.svg");
+  }
+
+  .fr-icon-store-line::before,
+  .fr-icon-store-line::after {
+    background-image: url("../../icons/buildings/store-line.014dec7a778a.svg");
+  }
+
+  .fr-fi-home-4-fill::before {
+    background-image: url("../../icons/buildings/home-4-fill.5b160d641c48.svg");
+  }
+
+  .fr-fi-home-4-line::before {
+    background-image: url("../../icons/buildings/home-4-line.d55fa0562cc5.svg");
+  }
+
+  .fr-icon-archive-fill::before,
+  .fr-icon-archive-fill::after {
+    background-image: url("../../icons/business/archive-fill.e283abd213b2.svg");
+  }
+
+  .fr-icon-archive-line::before,
+  .fr-icon-archive-line::after {
+    background-image: url("../../icons/business/archive-line.0f36e379433e.svg");
+  }
+
+  .fr-icon-attachment-fill::before,
+  .fr-icon-attachment-fill::after {
+    background-image: url("../../icons/business/attachment-fill.009772f82022.svg");
+  }
+
+  .fr-icon-attachment-line::before,
+  .fr-icon-attachment-line::after {
+    background-image: url("../../icons/business/attachment-line.46ec77b7229e.svg");
+  }
+
+  .fr-icon-award-fill::before,
+  .fr-icon-award-fill::after {
+    background-image: url("../../icons/business/award-fill.cb5d2388419f.svg");
+  }
+
+  .fr-icon-award-line::before,
+  .fr-icon-award-line::after {
+    background-image: url("../../icons/business/award-line.ab4d9cae73f9.svg");
+  }
+
+  .fr-icon-bar-chart-box-fill::before,
+  .fr-icon-bar-chart-box-fill::after {
+    background-image: url("../../icons/business/bar-chart-box-fill.a9a1100dcef6.svg");
+  }
+
+  .fr-icon-bar-chart-box-line::before,
+  .fr-icon-bar-chart-box-line::after {
+    background-image: url("../../icons/business/bar-chart-box-line.2ac9cce5a058.svg");
+  }
+
+  .fr-icon-bookmark-fill::before,
+  .fr-icon-bookmark-fill::after {
+    background-image: url("../../icons/business/bookmark-fill.41cd447d969e.svg");
+  }
+
+  .fr-icon-bookmark-line::before,
+  .fr-icon-bookmark-line::after {
+    background-image: url("../../icons/business/bookmark-line.829375fd562d.svg");
+  }
+
+  .fr-icon-briefcase-fill::before,
+  .fr-icon-briefcase-fill::after {
+    background-image: url("../../icons/business/briefcase-fill.597c68ce255b.svg");
+  }
+
+  .fr-icon-briefcase-line::before,
+  .fr-icon-briefcase-line::after {
+    background-image: url("../../icons/business/briefcase-line.a68258aa3ac4.svg");
+  }
+
+  .fr-icon-calendar-2-fill::before,
+  .fr-icon-calendar-2-fill::after {
+    background-image: url("../../icons/business/calendar-2-fill.0b1e0a02426c.svg");
+  }
+
+  .fr-icon-calendar-2-line::before,
+  .fr-icon-calendar-2-line::after {
+    background-image: url("../../icons/business/calendar-2-line.14087bf1ce79.svg");
+  }
+
+  .fr-icon-calendar-event-fill::before,
+  .fr-icon-calendar-event-fill::after {
+    background-image: url("../../icons/business/calendar-event-fill.7234a7a3c53d.svg");
+  }
+
+  .fr-icon-calendar-event-line::before,
+  .fr-icon-calendar-event-line::after {
+    background-image: url("../../icons/business/calendar-event-line.cfad736a8f66.svg");
+  }
+
+  .fr-icon-calendar-fill::before,
+  .fr-icon-calendar-fill::after {
+    background-image: url("../../icons/business/calendar-fill.4b499a09332d.svg");
+  }
+
+  .fr-icon-calendar-line::before,
+  .fr-icon-calendar-line::after {
+    background-image: url("../../icons/business/calendar-line.829ba12b884a.svg");
+  }
+
+  .fr-icon-cloud-fill::before,
+  .fr-icon-cloud-fill::after {
+    background-image: url("../../icons/business/cloud-fill.caee930fdc4b.svg");
+  }
+
+  .fr-icon-cloud-line::before,
+  .fr-icon-cloud-line::after {
+    background-image: url("../../icons/business/cloud-line.927079b81987.svg");
+  }
+
+  .fr-icon-copyright-fill::before,
+  .fr-icon-copyright-fill::after {
+    background-image: url("../../icons/business/copyright-fill.2aa8cb83e56a.svg");
+  }
+
+  .fr-icon-copyright-line::before,
+  .fr-icon-copyright-line::after {
+    background-image: url("../../icons/business/copyright-line.431e49709b16.svg");
+  }
+
+  .fr-icon-customer-service-fill::before,
+  .fr-icon-customer-service-fill::after {
+    background-image: url("../../icons/business/customer-service-fill.81dc43d775f9.svg");
+  }
+
+  .fr-icon-customer-service-line::before,
+  .fr-icon-customer-service-line::after {
+    background-image: url("../../icons/business/customer-service-line.a442dc43c7a1.svg");
+  }
+
+  .fr-icon-flag-fill::before,
+  .fr-icon-flag-fill::after {
+    background-image: url("../../icons/business/flag-fill.756e1eb16ccb.svg");
+  }
+
+  .fr-icon-flag-line::before,
+  .fr-icon-flag-line::after {
+    background-image: url("../../icons/business/flag-line.f8df8f61429e.svg");
+  }
+
+  .fr-icon-global-fill::before,
+  .fr-icon-global-fill::after {
+    background-image: url("../../icons/business/global-fill.48bf7c164d9a.svg");
+  }
+
+  .fr-icon-global-line::before,
+  .fr-icon-global-line::after {
+    background-image: url("../../icons/business/global-line.b8d96d48d479.svg");
+  }
+
+  .fr-icon-line-chart-fill::before,
+  .fr-icon-line-chart-fill::after {
+    background-image: url("../../icons/business/line-chart-fill.4d3161f451f8.svg");
+  }
+
+  .fr-icon-line-chart-line::before,
+  .fr-icon-line-chart-line::after {
+    background-image: url("../../icons/business/line-chart-line.f04d5b796cd7.svg");
+  }
+
+  .fr-icon-links-fill::before,
+  .fr-icon-links-fill::after {
+    background-image: url("../../icons/business/links-fill.69f36d5827de.svg");
+  }
+
+  .fr-icon-links-line::before,
+  .fr-icon-links-line::after {
+    background-image: url("../../icons/business/links-line.82f1d9a13648.svg");
+  }
+
+  .fr-icon-mail-fill::before,
+  .fr-icon-mail-fill::after {
+    background-image: url("../../icons/business/mail-fill.4b38b171dedf.svg");
+  }
+
+  .fr-icon-mail-line::before,
+  .fr-icon-mail-line::after {
+    background-image: url("../../icons/business/mail-line.f568b1118031.svg");
+  }
+
+  .fr-icon-mail-open-fill::before,
+  .fr-icon-mail-open-fill::after {
+    background-image: url("../../icons/business/mail-open-fill.fb9a24f69e51.svg");
+  }
+
+  .fr-icon-mail-open-line::before,
+  .fr-icon-mail-open-line::after {
+    background-image: url("../../icons/business/mail-open-line.3be97b1326f1.svg");
+  }
+
+  .fr-icon-medal-fill::before,
+  .fr-icon-medal-fill::after {
+    background-image: url("../../icons/business/medal-fill.df85263e6379.svg");
+  }
+
+  .fr-icon-medal-line::before,
+  .fr-icon-medal-line::after {
+    background-image: url("../../icons/business/medal-line.a1a13595cf0c.svg");
+  }
+
+  .fr-icon-pie-chart-2-fill::before,
+  .fr-icon-pie-chart-2-fill::after {
+    background-image: url("../../icons/business/pie-chart-2-fill.4889a8547123.svg");
+  }
+
+  .fr-icon-pie-chart-2-line::before,
+  .fr-icon-pie-chart-2-line::after {
+    background-image: url("../../icons/business/pie-chart-2-line.e21681b2ed68.svg");
+  }
+
+  .fr-icon-pie-chart-box-fill::before,
+  .fr-icon-pie-chart-box-fill::after {
+    background-image: url("../../icons/business/pie-chart-box-fill.b3c4d0893633.svg");
+  }
+
+  .fr-icon-pie-chart-box-line::before,
+  .fr-icon-pie-chart-box-line::after {
+    background-image: url("../../icons/business/pie-chart-box-line.9a7088e566c1.svg");
+  }
+
+  .fr-icon-printer-fill::before,
+  .fr-icon-printer-fill::after {
+    background-image: url("../../icons/business/printer-fill.605b19f02751.svg");
+  }
+
+  .fr-icon-printer-line::before,
+  .fr-icon-printer-line::after {
+    background-image: url("../../icons/business/printer-line.30cf097d4391.svg");
+  }
+
+  .fr-icon-profil-fill::before,
+  .fr-icon-profil-fill::after {
+    background-image: url("../../icons/business/profil-fill.7b01390b9a9d.svg");
+  }
+
+  .fr-icon-profil-line::before,
+  .fr-icon-profil-line::after {
+    background-image: url("../../icons/business/profil-line.29c3d86e9953.svg");
+  }
+
+  .fr-icon-projector-2-fill::before,
+  .fr-icon-projector-2-fill::after {
+    background-image: url("../../icons/business/projector-2-fill.fa15c3dfc654.svg");
+  }
+
+  .fr-icon-projector-2-line::before,
+  .fr-icon-projector-2-line::after {
+    background-image: url("../../icons/business/projector-2-line.db064b6c641d.svg");
+  }
+
+  .fr-icon-send-plane-fill::before,
+  .fr-icon-send-plane-fill::after {
+    background-image: url("../../icons/business/send-plane-fill.990b4ecd0574.svg");
+  }
+
+  .fr-icon-send-plane-line::before,
+  .fr-icon-send-plane-line::after {
+    background-image: url("../../icons/business/send-plane-line.628ad6988cf9.svg");
+  }
+
+  .fr-icon-slideshow-fill::before,
+  .fr-icon-slideshow-fill::after {
+    background-image: url("../../icons/business/slideshow-fill.1d4ab5aba2a9.svg");
+  }
+
+  .fr-icon-slideshow-line::before,
+  .fr-icon-slideshow-line::after {
+    background-image: url("../../icons/business/slideshow-line.709a359d9547.svg");
+  }
+
+  .fr-icon-window-fill::before,
+  .fr-icon-window-fill::after {
+    background-image: url("../../icons/business/window-fill.63d31d77801b.svg");
+  }
+
+  .fr-icon-window-line::before,
+  .fr-icon-window-line::after {
+    background-image: url("../../icons/business/window-line.cdde2765d3a2.svg");
+  }
+
+  .fr-fi-attachment-fill::before {
+    background-image: url("../../icons/business/attachment-fill.009772f82022.svg");
+  }
+
+  .fr-fi-attachment-line::before {
+    background-image: url("../../icons/business/attachment-line.46ec77b7229e.svg");
+  }
+
+  .fr-fi-calendar-fill::before {
+    background-image: url("../../icons/business/calendar-fill.4b499a09332d.svg");
+  }
+
+  .fr-fi-calendar-line::before {
+    background-image: url("../../icons/business/calendar-line.829ba12b884a.svg");
+  }
+
+  .fr-fi-line-chart-fill::before {
+    background-image: url("../../icons/business/line-chart-fill.4d3161f451f8.svg");
+  }
+
+  .fr-fi-line-chart-line::before {
+    background-image: url("../../icons/business/line-chart-line.f04d5b796cd7.svg");
+  }
+
+  .fr-fi-links-fill::before {
+    background-image: url("../../icons/business/links-fill.69f36d5827de.svg");
+  }
+
+  .fr-fi-mail-fill::before {
+    background-image: url("../../icons/business/mail-fill.4b38b171dedf.svg");
+  }
+
+  .fr-fi-mail-line::before {
+    background-image: url("../../icons/business/mail-line.f568b1118031.svg");
+  }
+
+  .fr-fi-printer-fill::before {
+    background-image: url("../../icons/business/printer-fill.605b19f02751.svg");
+  }
+
+  .fr-fi-printer-line::before {
+    background-image: url("../../icons/business/printer-line.30cf097d4391.svg");
+  }
+
+  .fr-icon-chat-2-fill::before,
+  .fr-icon-chat-2-fill::after {
+    background-image: url("../../icons/communication/chat-2-fill.fbebac0827da.svg");
+  }
+
+  .fr-icon-chat-2-line::before,
+  .fr-icon-chat-2-line::after {
+    background-image: url("../../icons/communication/chat-2-line.707dbc226694.svg");
+  }
+
+  .fr-icon-chat-3-fill::before,
+  .fr-icon-chat-3-fill::after {
+    background-image: url("../../icons/communication/chat-3-fill.64b28f496776.svg");
+  }
+
+  .fr-icon-chat-3-line::before,
+  .fr-icon-chat-3-line::after {
+    background-image: url("../../icons/communication/chat-3-line.63acd4641bfe.svg");
+  }
+
+  .fr-icon-chat-check-fill::before,
+  .fr-icon-chat-check-fill::after {
+    background-image: url("../../icons/communication/chat-check-fill.b8a415dd50f9.svg");
+  }
+
+  .fr-icon-chat-check-line::before,
+  .fr-icon-chat-check-line::after {
+    background-image: url("../../icons/communication/chat-check-line.fb4f3b23f81e.svg");
+  }
+
+  .fr-icon-chat-delete-fill::before,
+  .fr-icon-chat-delete-fill::after {
+    background-image: url("../../icons/communication/chat-delete-fill.948be401f0c6.svg");
+  }
+
+  .fr-icon-chat-delete-line::before,
+  .fr-icon-chat-delete-line::after {
+    background-image: url("../../icons/communication/chat-delete-line.6c3785ffd2ff.svg");
+  }
+
+  .fr-icon-chat-poll-fill::before,
+  .fr-icon-chat-poll-fill::after {
+    background-image: url("../../icons/communication/chat-poll-fill.c5a5925758f5.svg");
+  }
+
+  .fr-icon-chat-poll-line::before,
+  .fr-icon-chat-poll-line::after {
+    background-image: url("../../icons/communication/chat-poll-line.865f4eded169.svg");
+  }
+
+  .fr-icon-discuss-fill::before,
+  .fr-icon-discuss-fill::after {
+    background-image: url("../../icons/communication/discuss-fill.a80527f33475.svg");
+  }
+
+  .fr-icon-discuss-line::before,
+  .fr-icon-discuss-line::after {
+    background-image: url("../../icons/communication/discuss-line.6b26d01cca64.svg");
+  }
+
+  .fr-icon-feedback-fill::before,
+  .fr-icon-feedback-fill::after {
+    background-image: url("../../icons/communication/feedback-fill.df532b12cd7e.svg");
+  }
+
+  .fr-icon-feedback-line::before,
+  .fr-icon-feedback-line::after {
+    background-image: url("../../icons/communication/feedback-line.1e5daf21f461.svg");
+  }
+
+  .fr-icon-message-2-fill::before,
+  .fr-icon-message-2-fill::after {
+    background-image: url("../../icons/communication/message-2-fill.922505af93d5.svg");
+  }
+
+  .fr-icon-message-2-line::before,
+  .fr-icon-message-2-line::after {
+    background-image: url("../../icons/communication/message-2-line.2cee7860afab.svg");
+  }
+
+  .fr-icon-question-answer-fill::before,
+  .fr-icon-question-answer-fill::after {
+    background-image: url("../../icons/communication/question-answer-fill.91605685a81d.svg");
+  }
+
+  .fr-icon-question-answer-line::before,
+  .fr-icon-question-answer-line::after {
+    background-image: url("../../icons/communication/question-answer-line.607a4e086200.svg");
+  }
+
+  .fr-icon-questionnaire-fill::before,
+  .fr-icon-questionnaire-fill::after {
+    background-image: url("../../icons/communication/questionnaire-fill.76d989da62c8.svg");
+  }
+
+  .fr-icon-questionnaire-line::before,
+  .fr-icon-questionnaire-line::after {
+    background-image: url("../../icons/communication/questionnaire-line.e9d0950ae177.svg");
+  }
+
+  .fr-icon-video-chat-fill::before,
+  .fr-icon-video-chat-fill::after {
+    background-image: url("../../icons/communication/video-chat-fill.19ab88cba042.svg");
+  }
+
+  .fr-icon-video-chat-line::before,
+  .fr-icon-video-chat-line::after {
+    background-image: url("../../icons/communication/video-chat-line.473940768ec2.svg");
+  }
+
+  .fr-icon-ball-pen-fill::before,
+  .fr-icon-ball-pen-fill::after {
+    background-image: url("../../icons/design/ball-pen-fill.422ea0b68b85.svg");
+  }
+
+  .fr-icon-ball-pen-line::before,
+  .fr-icon-ball-pen-line::after {
+    background-image: url("../../icons/design/ball-pen-line.68bc8531dbb2.svg");
+  }
+
+  .fr-icon-brush-3-fill::before,
+  .fr-icon-brush-3-fill::after {
+    background-image: url("../../icons/design/brush-3-fill.2ae80352c0c2.svg");
+  }
+
+  .fr-icon-brush-3-line::before,
+  .fr-icon-brush-3-line::after {
+    background-image: url("../../icons/design/brush-3-line.780ff30b5514.svg");
+  }
+
+  .fr-icon-brush-fill::before,
+  .fr-icon-brush-fill::after {
+    background-image: url("../../icons/design/brush-fill.55c36b3a42ae.svg");
+  }
+
+  .fr-icon-brush-line::before,
+  .fr-icon-brush-line::after {
+    background-image: url("../../icons/design/brush-line.24d9a3eb446d.svg");
+  }
+
+  .fr-icon-contrast-fill::before,
+  .fr-icon-contrast-fill::after {
+    background-image: url("../../icons/design/contrast-fill.fb58a205bbb2.svg");
+  }
+
+  .fr-icon-contrast-line::before,
+  .fr-icon-contrast-line::after {
+    background-image: url("../../icons/design/contrast-line.667a3384d8e6.svg");
+  }
+
+  .fr-icon-crop-fill::before,
+  .fr-icon-crop-fill::after {
+    background-image: url("../../icons/design/crop-fill.dded35f9e582.svg");
+  }
+
+  .fr-icon-crop-line::before,
+  .fr-icon-crop-line::after {
+    background-image: url("../../icons/design/crop-line.eef303c6ca06.svg");
+  }
+
+  .fr-icon-drag-move-2-fill::before,
+  .fr-icon-drag-move-2-fill::after {
+    background-image: url("../../icons/design/drag-move-2-fill.94c882cfa54f.svg");
+  }
+
+  .fr-icon-drag-move-2-line::before,
+  .fr-icon-drag-move-2-line::after {
+    background-image: url("../../icons/design/drag-move-2-line.17bce43eab0b.svg");
+  }
+
+  .fr-icon-drop-fill::before,
+  .fr-icon-drop-fill::after {
+    background-image: url("../../icons/design/drop-fill.c29ff2f7175e.svg");
+  }
+
+  .fr-icon-drop-line::before,
+  .fr-icon-drop-line::after {
+    background-image: url("../../icons/design/drop-line.f4347367f243.svg");
+  }
+
+  .fr-icon-edit-box-fill::before,
+  .fr-icon-edit-box-fill::after {
+    background-image: url("../../icons/design/edit-box-fill.a0253eb4168c.svg");
+  }
+
+  .fr-icon-edit-box-line::before,
+  .fr-icon-edit-box-line::after {
+    background-image: url("../../icons/design/edit-box-line.3c8dd594d999.svg");
+  }
+
+  .fr-icon-edit-fill::before,
+  .fr-icon-edit-fill::after {
+    background-image: url("../../icons/design/edit-fill.02bd78b7a0df.svg");
+  }
+
+  .fr-icon-edit-line::before,
+  .fr-icon-edit-line::after {
+    background-image: url("../../icons/design/edit-line.5da419b51b90.svg");
+  }
+
+  .fr-icon-ink-bottle-fill::before,
+  .fr-icon-ink-bottle-fill::after {
+    background-image: url("../../icons/design/ink-bottle-fill.f113076b545d.svg");
+  }
+
+  .fr-icon-ink-bottle-line::before,
+  .fr-icon-ink-bottle-line::after {
+    background-image: url("../../icons/design/ink-bottle-line.0d65ce535429.svg");
+  }
+
+  .fr-icon-layout-grid-fill::before,
+  .fr-icon-layout-grid-fill::after {
+    background-image: url("../../icons/design/layout-grid-fill.e55fdbb6f7d1.svg");
+  }
+
+  .fr-icon-layout-grid-line::before,
+  .fr-icon-layout-grid-line::after {
+    background-image: url("../../icons/design/layout-grid-line.31c217d52aff.svg");
+  }
+
+  .fr-icon-mark-pen-fill::before,
+  .fr-icon-mark-pen-fill::after {
+    background-image: url("../../icons/design/mark-pen-fill.9f9035005fe5.svg");
+  }
+
+  .fr-icon-mark-pen-line::before,
+  .fr-icon-mark-pen-line::after {
+    background-image: url("../../icons/design/mark-pen-line.24c5663824d1.svg");
+  }
+
+  .fr-icon-paint-brush-fill::before,
+  .fr-icon-paint-brush-fill::after {
+    background-image: url("../../icons/design/paint-brush-fill.4e49c54d1fee.svg");
+  }
+
+  .fr-icon-paint-brush-line::before,
+  .fr-icon-paint-brush-line::after {
+    background-image: url("../../icons/design/paint-brush-line.f4031f8b7879.svg");
+  }
+
+  .fr-icon-paint-fill::before,
+  .fr-icon-paint-fill::after {
+    background-image: url("../../icons/design/paint-fill.8cd0be0fed8a.svg");
+  }
+
+  .fr-icon-paint-line::before,
+  .fr-icon-paint-line::after {
+    background-image: url("../../icons/design/paint-line.705f4e81e66f.svg");
+  }
+
+  .fr-icon-palette-fill::before,
+  .fr-icon-palette-fill::after {
+    background-image: url("../../icons/design/palette-fill.b668016437b6.svg");
+  }
+
+  .fr-icon-palette-line::before,
+  .fr-icon-palette-line::after {
+    background-image: url("../../icons/design/palette-line.72bf5d8230fc.svg");
+  }
+
+  .fr-icon-pantone-fill::before,
+  .fr-icon-pantone-fill::after {
+    background-image: url("../../icons/design/pantone-fill.6753dab33535.svg");
+  }
+
+  .fr-icon-pantone-line::before,
+  .fr-icon-pantone-line::after {
+    background-image: url("../../icons/design/pantone-line.28589ee1a5b8.svg");
+  }
+
+  .fr-icon-pen-nib-fill::before,
+  .fr-icon-pen-nib-fill::after {
+    background-image: url("../../icons/design/pen-nib-fill.a172dab0c7b6.svg");
+  }
+
+  .fr-icon-pen-nib-line::before,
+  .fr-icon-pen-nib-line::after {
+    background-image: url("../../icons/design/pen-nib-line.ef5bf7a063c5.svg");
+  }
+
+  .fr-icon-pencil-fill::before,
+  .fr-icon-pencil-fill::after {
+    background-image: url("../../icons/design/pencil-fill.c62543426f28.svg");
+  }
+
+  .fr-icon-pencil-line::before,
+  .fr-icon-pencil-line::after {
+    background-image: url("../../icons/design/pencil-line.e7cfc145cb75.svg");
+  }
+
+  .fr-icon-pencil-ruler-fill::before,
+  .fr-icon-pencil-ruler-fill::after {
+    background-image: url("../../icons/design/pencil-ruler-fill.3e692efa0dd6.svg");
+  }
+
+  .fr-icon-pencil-ruler-line::before,
+  .fr-icon-pencil-ruler-line::after {
+    background-image: url("../../icons/design/pencil-ruler-line.987a642a3d65.svg");
+  }
+
+  .fr-icon-sip-fill::before,
+  .fr-icon-sip-fill::after {
+    background-image: url("../../icons/design/sip-fill.c4894a3b9025.svg");
+  }
+
+  .fr-icon-sip-line::before,
+  .fr-icon-sip-line::after {
+    background-image: url("../../icons/design/sip-line.b9c9988e5db8.svg");
+  }
+
+  .fr-icon-table-fill::before,
+  .fr-icon-table-fill::after {
+    background-image: url("../../icons/design/table-fill.a33fbde22943.svg");
+  }
+
+  .fr-icon-table-line::before,
+  .fr-icon-table-line::after {
+    background-image: url("../../icons/design/table-line.4896d3ca37de.svg");
+  }
+
+  .fr-fi-edit-fill::before {
+    background-image: url("../../icons/design/edit-fill.02bd78b7a0df.svg");
+  }
+
+  .fr-fi-edit-line::before {
+    background-image: url("../../icons/design/edit-line.5da419b51b90.svg");
+  }
+
+  .fr-icon-bug-fill::before,
+  .fr-icon-bug-fill::after {
+    background-image: url("../../icons/development/bug-fill.6691cf5247f7.svg");
+  }
+
+  .fr-icon-bug-line::before,
+  .fr-icon-bug-line::after {
+    background-image: url("../../icons/development/bug-line.4fc6ea720586.svg");
+  }
+
+  .fr-icon-code-box-fill::before,
+  .fr-icon-code-box-fill::after {
+    background-image: url("../../icons/development/code-box-fill.77f83be89805.svg");
+  }
+
+  .fr-icon-code-box-line::before,
+  .fr-icon-code-box-line::after {
+    background-image: url("../../icons/development/code-box-line.2f7af50d0f04.svg");
+  }
+
+  .fr-icon-code-s-slash-line::before,
+  .fr-icon-code-s-slash-line::after {
+    background-image: url("../../icons/development/code-s-slash-line.7257b28aa765.svg");
+  }
+
+  .fr-icon-cursor-fill::before,
+  .fr-icon-cursor-fill::after {
+    background-image: url("../../icons/development/cursor-fill.4e0ea884ac61.svg");
+  }
+
+  .fr-icon-cursor-line::before,
+  .fr-icon-cursor-line::after {
+    background-image: url("../../icons/development/cursor-line.af3a372546e2.svg");
+  }
+
+  .fr-icon-git-branch-fill::before,
+  .fr-icon-git-branch-fill::after {
+    background-image: url("../../icons/development/git-branch-fill.82f5ad27e749.svg");
+  }
+
+  .fr-icon-git-branch-line::before,
+  .fr-icon-git-branch-line::after {
+    background-image: url("../../icons/development/git-branch-line.2c14cd1dc18c.svg");
+  }
+
+  .fr-icon-git-commit-fill::before,
+  .fr-icon-git-commit-fill::after {
+    background-image: url("../../icons/development/git-commit-fill.49f9b93cd3bb.svg");
+  }
+
+  .fr-icon-git-commit-line::before,
+  .fr-icon-git-commit-line::after {
+    background-image: url("../../icons/development/git-commit-line.213c3b96cb39.svg");
+  }
+
+  .fr-icon-git-merge-fill::before,
+  .fr-icon-git-merge-fill::after {
+    background-image: url("../../icons/development/git-merge-fill.bcc7cfdddb77.svg");
+  }
+
+  .fr-icon-git-merge-line::before,
+  .fr-icon-git-merge-line::after {
+    background-image: url("../../icons/development/git-merge-line.e0a412bdf2ca.svg");
+  }
+
+  .fr-icon-git-pull-request-fill::before,
+  .fr-icon-git-pull-request-fill::after {
+    background-image: url("../../icons/development/git-pull-request-fill.d9da67c81f86.svg");
+  }
+
+  .fr-icon-git-pull-request-line::before,
+  .fr-icon-git-pull-request-line::after {
+    background-image: url("../../icons/development/git-pull-request-line.eac3b79c95b5.svg");
+  }
+
+  .fr-icon-git-repository-commits-fill::before,
+  .fr-icon-git-repository-commits-fill::after {
+    background-image: url("../../icons/development/git-repository-commits-fill.e4de472c6b8d.svg");
+  }
+
+  .fr-icon-git-repository-commits-line::before,
+  .fr-icon-git-repository-commits-line::after {
+    background-image: url("../../icons/development/git-repository-commits-line.9a492a3cdc07.svg");
+  }
+
+  .fr-icon-git-repository-fill::before,
+  .fr-icon-git-repository-fill::after {
+    background-image: url("../../icons/development/git-repository-fill.04d46adc5072.svg");
+  }
+
+  .fr-icon-git-repository-line::before,
+  .fr-icon-git-repository-line::after {
+    background-image: url("../../icons/development/git-repository-line.cc10ccc0f409.svg");
+  }
+
+  .fr-icon-git-repository-private-fill::before,
+  .fr-icon-git-repository-private-fill::after {
+    background-image: url("../../icons/development/git-repository-private-fill.7c290a9f8224.svg");
+  }
+
+  .fr-icon-git-repository-private-line::before,
+  .fr-icon-git-repository-private-line::after {
+    background-image: url("../../icons/development/git-repository-private-line.644b4759346a.svg");
+  }
+
+  .fr-icon-terminal-box-fill::before,
+  .fr-icon-terminal-box-fill::after {
+    background-image: url("../../icons/development/terminal-box-fill.9ec4b642f73f.svg");
+  }
+
+  .fr-icon-terminal-box-line::before,
+  .fr-icon-terminal-box-line::after {
+    background-image: url("../../icons/development/terminal-box-line.a3dd971b99ca.svg");
+  }
+
+  .fr-icon-terminal-line::before,
+  .fr-icon-terminal-line::after {
+    background-image: url("../../icons/development/terminal-line.57f3947652b6.svg");
+  }
+
+  .fr-icon-terminal-window-fill::before,
+  .fr-icon-terminal-window-fill::after {
+    background-image: url("../../icons/development/terminal-window-fill.80a5d46584f1.svg");
+  }
+
+  .fr-icon-terminal-window-line::before,
+  .fr-icon-terminal-window-line::after {
+    background-image: url("../../icons/development/terminal-window-line.f81baef66f4e.svg");
+  }
+
+  .fr-icon-bluetooth-fill::before,
+  .fr-icon-bluetooth-fill::after {
+    background-image: url("../../icons/device/bluetooth-fill.3ec40ed8a270.svg");
+  }
+
+  .fr-icon-bluetooth-line::before,
+  .fr-icon-bluetooth-line::after {
+    background-image: url("../../icons/device/bluetooth-line.3ec40ed8a270.svg");
+  }
+
+  .fr-icon-computer-fill::before,
+  .fr-icon-computer-fill::after {
+    background-image: url("../../icons/device/computer-fill.206cbf56dfac.svg");
+  }
+
+  .fr-icon-computer-line::before,
+  .fr-icon-computer-line::after {
+    background-image: url("../../icons/device/computer-line.c74f196b8b1b.svg");
+  }
+
+  .fr-icon-dashboard-3-fill::before,
+  .fr-icon-dashboard-3-fill::after {
+    background-image: url("../../icons/device/dashboard-3-fill.6d2468e63fa5.svg");
+  }
+
+  .fr-icon-dashboard-3-line::before,
+  .fr-icon-dashboard-3-line::after {
+    background-image: url("../../icons/device/dashboard-3-line.7910b6ed4d6e.svg");
+  }
+
+  .fr-icon-database-fill::before,
+  .fr-icon-database-fill::after {
+    background-image: url("../../icons/device/database-fill.6ee4051fd689.svg");
+  }
+
+  .fr-icon-database-line::before,
+  .fr-icon-database-line::after {
+    background-image: url("../../icons/device/database-line.c54a089492c7.svg");
+  }
+
+  .fr-icon-device-fill::before,
+  .fr-icon-device-fill::after {
+    background-image: url("../../icons/device/device-fill.47e6bedc3f98.svg");
+  }
+
+  .fr-icon-device-line::before,
+  .fr-icon-device-line::after {
+    background-image: url("../../icons/device/device-line.368311b3e8b4.svg");
+  }
+
+  .fr-icon-hard-drive-2-fill::before,
+  .fr-icon-hard-drive-2-fill::after {
+    background-image: url("../../icons/device/hard-drive-2-fill.483003f86f61.svg");
+  }
+
+  .fr-icon-hard-drive-2-line::before,
+  .fr-icon-hard-drive-2-line::after {
+    background-image: url("../../icons/device/hard-drive-2-line.9417ff508699.svg");
+  }
+
+  .fr-icon-mac-fill::before,
+  .fr-icon-mac-fill::after {
+    background-image: url("../../icons/device/mac-fill.aef9c726268c.svg");
+  }
+
+  .fr-icon-mac-line::before,
+  .fr-icon-mac-line::after {
+    background-image: url("../../icons/device/mac-line.ebc50826e337.svg");
+  }
+
+  .fr-icon-phone-fill::before,
+  .fr-icon-phone-fill::after {
+    background-image: url("../../icons/device/phone-fill.036e13ffd027.svg");
+  }
+
+  .fr-icon-phone-line::before,
+  .fr-icon-phone-line::after {
+    background-image: url("../../icons/device/phone-line.99baefb549ea.svg");
+  }
+
+  .fr-icon-qr-code-fill::before,
+  .fr-icon-qr-code-fill::after {
+    background-image: url("../../icons/device/qr-code-fill.ec62694a6383.svg");
+  }
+
+  .fr-icon-qr-code-line::before,
+  .fr-icon-qr-code-line::after {
+    background-image: url("../../icons/device/qr-code-line.bb5cf0aef3b3.svg");
+  }
+
+  .fr-icon-rss-fill::before,
+  .fr-icon-rss-fill::after {
+    background-image: url("../../icons/device/rss-fill.4c8cf2a2b41e.svg");
+  }
+
+  .fr-icon-rss-line::before,
+  .fr-icon-rss-line::after {
+    background-image: url("../../icons/device/rss-line.9c18cfbcf676.svg");
+  }
+
+  .fr-icon-save-3-fill::before,
+  .fr-icon-save-3-fill::after {
+    background-image: url("../../icons/device/save-3-fill.990074ac7989.svg");
+  }
+
+  .fr-icon-save-3-line::before,
+  .fr-icon-save-3-line::after {
+    background-image: url("../../icons/device/save-3-line.b7a52811b81a.svg");
+  }
+
+  .fr-icon-save-fill::before,
+  .fr-icon-save-fill::after {
+    background-image: url("../../icons/device/save-fill.ca8561284fe9.svg");
+  }
+
+  .fr-icon-save-line::before,
+  .fr-icon-save-line::after {
+    background-image: url("../../icons/device/save-line.a8b189cb34a9.svg");
+  }
+
+  .fr-icon-server-fill::before,
+  .fr-icon-server-fill::after {
+    background-image: url("../../icons/device/server-fill.bb67efe22f74.svg");
+  }
+
+  .fr-icon-server-line::before,
+  .fr-icon-server-line::after {
+    background-image: url("../../icons/device/server-line.0235d559c05b.svg");
+  }
+
+  .fr-icon-smartphone-fill::before,
+  .fr-icon-smartphone-fill::after {
+    background-image: url("../../icons/device/smartphone-fill.f39838599fa9.svg");
+  }
+
+  .fr-icon-smartphone-line::before,
+  .fr-icon-smartphone-line::after {
+    background-image: url("../../icons/device/smartphone-line.78e1f3f40a49.svg");
+  }
+
+  .fr-icon-tablet-fill::before,
+  .fr-icon-tablet-fill::after {
+    background-image: url("../../icons/device/tablet-fill.4c221acbe5b4.svg");
+  }
+
+  .fr-icon-tablet-line::before,
+  .fr-icon-tablet-line::after {
+    background-image: url("../../icons/device/tablet-line.31a43e23c823.svg");
+  }
+
+  .fr-icon-tv-fill::before,
+  .fr-icon-tv-fill::after {
+    background-image: url("../../icons/device/tv-fill.813168efe711.svg");
+  }
+
+  .fr-icon-tv-line::before,
+  .fr-icon-tv-line::after {
+    background-image: url("../../icons/device/tv-line.c873d4a6ce4a.svg");
+  }
+
+  .fr-icon-wifi-fill::before,
+  .fr-icon-wifi-fill::after {
+    background-image: url("../../icons/device/wifi-fill.3890ca04dd14.svg");
+  }
+
+  .fr-icon-wifi-line::before,
+  .fr-icon-wifi-line::after {
+    background-image: url("../../icons/device/wifi-line.e1a464b1f610.svg");
+  }
+
+  .fr-fi-phone-fill::before {
+    background-image: url("../../icons/device/phone-fill.036e13ffd027.svg");
+  }
+
+  .fr-fi-phone-line::before {
+    background-image: url("../../icons/device/phone-line.99baefb549ea.svg");
+  }
+
+  .fr-fi-rss-fill::before {
+    background-image: url("../../icons/device/rss-fill.4c8cf2a2b41e.svg");
+  }
+
+  .fr-fi-rss-line::before {
+    background-image: url("../../icons/device/rss-line.9c18cfbcf676.svg");
+  }
+
+  .fr-fi-save-fill::before {
+    background-image: url("../../icons/device/save-fill.ca8561284fe9.svg");
+  }
+
+  .fr-fi-save-line::before {
+    background-image: url("../../icons/device/save-line.a8b189cb34a9.svg");
+  }
+
+  .fr-icon-article-fill::before,
+  .fr-icon-article-fill::after {
+    background-image: url("../../icons/document/article-fill.e84e1a6b436a.svg");
+  }
+
+  .fr-icon-article-line::before,
+  .fr-icon-article-line::after {
+    background-image: url("../../icons/document/article-line.fc88b02189ff.svg");
+  }
+
+  .fr-icon-book-2-fill::before,
+  .fr-icon-book-2-fill::after {
+    background-image: url("../../icons/document/book-2-fill.c68bc6ea411f.svg");
+  }
+
+  .fr-icon-book-2-line::before,
+  .fr-icon-book-2-line::after {
+    background-image: url("../../icons/document/book-2-line.13c6923b3522.svg");
+  }
+
+  .fr-icon-booklet-fill::before,
+  .fr-icon-booklet-fill::after {
+    background-image: url("../../icons/document/booklet-fill.38a7f678a097.svg");
+  }
+
+  .fr-icon-booklet-line::before,
+  .fr-icon-booklet-line::after {
+    background-image: url("../../icons/document/booklet-line.b1c750bbd409.svg");
+  }
+
+  .fr-icon-clipboard-fill::before,
+  .fr-icon-clipboard-fill::after {
+    background-image: url("../../icons/document/clipboard-fill.865350b6554f.svg");
+  }
+
+  .fr-icon-clipboard-line::before,
+  .fr-icon-clipboard-line::after {
+    background-image: url("../../icons/document/clipboard-line.cd7f084e9cff.svg");
+  }
+
+  .fr-icon-draft-fill::before,
+  .fr-icon-draft-fill::after {
+    background-image: url("../../icons/document/draft-fill.4ec1a6506942.svg");
+  }
+
+  .fr-icon-draft-line::before,
+  .fr-icon-draft-line::after {
+    background-image: url("../../icons/document/draft-line.353cb527477d.svg");
+  }
+
+  .fr-icon-file-add-fill::before,
+  .fr-icon-file-add-fill::after {
+    background-image: url("../../icons/document/file-add-fill.591aeaefe577.svg");
+  }
+
+  .fr-icon-file-add-line::before,
+  .fr-icon-file-add-line::after {
+    background-image: url("../../icons/document/file-add-line.194c8d28537a.svg");
+  }
+
+  .fr-icon-file-download-fill::before,
+  .fr-icon-file-download-fill::after {
+    background-image: url("../../icons/document/file-download-fill.f96f506fe898.svg");
+  }
+
+  .fr-icon-file-download-line::before,
+  .fr-icon-file-download-line::after {
+    background-image: url("../../icons/document/file-download-line.50a363a16cdd.svg");
+  }
+
+  .fr-icon-file-fill::before,
+  .fr-icon-file-fill::after {
+    background-image: url("../../icons/document/file-fill.854971ea0ffc.svg");
+  }
+
+  .fr-icon-file-line::before,
+  .fr-icon-file-line::after {
+    background-image: url("../../icons/document/file-line.85c3640438b4.svg");
+  }
+
+  .fr-icon-file-pdf-fill::before,
+  .fr-icon-file-pdf-fill::after {
+    background-image: url("../../icons/document/file-pdf-fill.21036071899f.svg");
+  }
+
+  .fr-icon-file-pdf-line::before,
+  .fr-icon-file-pdf-line::after {
+    background-image: url("../../icons/document/file-pdf-line.814ee160ef03.svg");
+  }
+
+  .fr-icon-file-text-fill::before,
+  .fr-icon-file-text-fill::after {
+    background-image: url("../../icons/document/file-text-fill.f8126cdd4089.svg");
+  }
+
+  .fr-icon-file-text-line::before,
+  .fr-icon-file-text-line::after {
+    background-image: url("../../icons/document/file-text-line.3d5af52e3861.svg");
+  }
+
+  .fr-icon-folder-2-fill::before,
+  .fr-icon-folder-2-fill::after {
+    background-image: url("../../icons/document/folder-2-fill.2eb0c99a00bf.svg");
+  }
+
+  .fr-icon-folder-2-line::before,
+  .fr-icon-folder-2-line::after {
+    background-image: url("../../icons/document/folder-2-line.b7f448b7a22b.svg");
+  }
+
+  .fr-icon-newspaper-fill::before,
+  .fr-icon-newspaper-fill::after {
+    background-image: url("../../icons/document/newspaper-fill.665b4b1a4476.svg");
+  }
+
+  .fr-icon-newspaper-line::before,
+  .fr-icon-newspaper-line::after {
+    background-image: url("../../icons/document/newspaper-line.e18ea09fcb86.svg");
+  }
+
+  .fr-icon-survey-fill::before,
+  .fr-icon-survey-fill::after {
+    background-image: url("../../icons/document/survey-fill.b01d8959f5bc.svg");
+  }
+
+  .fr-icon-survey-line::before,
+  .fr-icon-survey-line::after {
+    background-image: url("../../icons/document/survey-line.01c9b7a4d55e.svg");
+  }
+
+  .fr-icon-todo-fill::before,
+  .fr-icon-todo-fill::after {
+    background-image: url("../../icons/document/todo-fill.184fe3755860.svg");
+  }
+
+  .fr-icon-todo-line::before,
+  .fr-icon-todo-line::after {
+    background-image: url("../../icons/document/todo-line.c0cf14a08a3c.svg");
+  }
+
+  .fr-fi-file-download-fill::before {
+    background-image: url("../../icons/document/file-download-fill.f96f506fe898.svg");
+  }
+
+  .fr-fi-file-download-line::before {
+    background-image: url("../../icons/document/file-download-line.50a363a16cdd.svg");
+  }
+
+  .fr-fi-file-fill::before {
+    background-image: url("../../icons/document/file-fill.854971ea0ffc.svg");
+  }
+
+  .fr-fi-file-line::before {
+    background-image: url("../../icons/document/file-line.85c3640438b4.svg");
+  }
+
+  .fr-fi-file-pdf-fill::before {
+    background-image: url("../../icons/document/file-pdf-fill.21036071899f.svg");
+  }
+
+  .fr-fi-file-pdf-line::before {
+    background-image: url("../../icons/document/file-pdf-line.814ee160ef03.svg");
+  }
+
+  .fr-icon-code-view::before,
+  .fr-icon-code-view::after {
+    background-image: url("../../icons/editor/code-view.e9cc9882b5c8.svg");
+  }
+
+  .fr-icon-font-size::before,
+  .fr-icon-font-size::after {
+    background-image: url("../../icons/editor/font-size.85701dc848b2.svg");
+  }
+
+  .fr-icon-bold::before,
+  .fr-icon-bold::after {
+    background-image: url("../../icons/editor/fr--bold.dff1213e4381.svg");
+  }
+
+  .fr-icon-highlight::before,
+  .fr-icon-highlight::after {
+    background-image: url("../../icons/editor/fr--highlight.c2d422af10b1.svg");
+  }
+
+  .fr-icon-quote-fill::before,
+  .fr-icon-quote-fill::after {
+    background-image: url("../../icons/editor/fr--quote-fill.af6e960742a8.svg");
+  }
+
+  .fr-icon-quote-line::before,
+  .fr-icon-quote-line::after {
+    background-image: url("../../icons/editor/fr--quote-line.4b494d811ca1.svg");
+  }
+
+  .fr-icon-h-1::before,
+  .fr-icon-h-1::after {
+    background-image: url("../../icons/editor/h-1.a277176492e8.svg");
+  }
+
+  .fr-icon-h-2::before,
+  .fr-icon-h-2::after {
+    background-image: url("../../icons/editor/h-2.e82e6dff16f9.svg");
+  }
+
+  .fr-icon-h-3::before,
+  .fr-icon-h-3::after {
+    background-image: url("../../icons/editor/h-3.a11934b15e9a.svg");
+  }
+
+  .fr-icon-h-4::before,
+  .fr-icon-h-4::after {
+    background-image: url("../../icons/editor/h-4.9e61d435611d.svg");
+  }
+
+  .fr-icon-h-5::before,
+  .fr-icon-h-5::after {
+    background-image: url("../../icons/editor/h-5.36dbbafdbeae.svg");
+  }
+
+  .fr-icon-h-6::before,
+  .fr-icon-h-6::after {
+    background-image: url("../../icons/editor/h-6.ff8f452dbf9c.svg");
+  }
+
+  .fr-icon-hashtag::before,
+  .fr-icon-hashtag::after {
+    background-image: url("../../icons/editor/hashtag.8f657ba6b74b.svg");
+  }
+
+  .fr-icon-italic::before,
+  .fr-icon-italic::after {
+    background-image: url("../../icons/editor/italic.070ddda94773.svg");
+  }
+
+  .fr-icon-link-unlink::before,
+  .fr-icon-link-unlink::after {
+    background-image: url("../../icons/editor/link-unlink.4dae86e32848.svg");
+  }
+
+  .fr-icon-link::before,
+  .fr-icon-link::after {
+    background-image: url("../../icons/editor/link.3196ed5737c2.svg");
+  }
+
+  .fr-icon-list-ordered::before,
+  .fr-icon-list-ordered::after {
+    background-image: url("../../icons/editor/list-ordered.81ddda87654b.svg");
+  }
+
+  .fr-icon-list-unordered::before,
+  .fr-icon-list-unordered::after {
+    background-image: url("../../icons/editor/list-unordered.be79c192a556.svg");
+  }
+
+  .fr-icon-question-mark::before,
+  .fr-icon-question-mark::after {
+    background-image: url("../../icons/editor/question-mark.a1ea21c9755b.svg");
+  }
+
+  .fr-icon-separator::before,
+  .fr-icon-separator::after {
+    background-image: url("../../icons/editor/separator.6bf6ea8a8c7f.svg");
+  }
+
+  .fr-icon-space::before,
+  .fr-icon-space::after {
+    background-image: url("../../icons/editor/space.5ef7f59bc3bb.svg");
+  }
+
+  .fr-icon-subscript::before,
+  .fr-icon-subscript::after {
+    background-image: url("../../icons/editor/subscript.73b9fe2aca7d.svg");
+  }
+
+  .fr-icon-superscript::before,
+  .fr-icon-superscript::after {
+    background-image: url("../../icons/editor/superscript.f4d05fc60b3b.svg");
+  }
+
+  .fr-icon-table-2::before,
+  .fr-icon-table-2::after {
+    background-image: url("../../icons/editor/table-2.e4d77f94597d.svg");
+  }
+
+  .fr-icon-translate-2::before,
+  .fr-icon-translate-2::after {
+    background-image: url("../../icons/editor/translate-2.22ea8fbff16a.svg");
+  }
+
+  .fr-fi-font-size::before {
+    background-image: url("../../icons/editor/font-size.85701dc848b2.svg");
+  }
+
+  .fr-fi-bold::before {
+    background-image: url("../../icons/editor/fr--bold.dff1213e4381.svg");
+  }
+
+  .fr-fi-highlight::before {
+    background-image: url("../../icons/editor/fr--highlight.c2d422af10b1.svg");
+  }
+
+  .fr-fi-italic::before {
+    background-image: url("../../icons/editor/italic.070ddda94773.svg");
+  }
+
+  .fr-fi-link-unlink::before {
+    background-image: url("../../icons/editor/link-unlink.4dae86e32848.svg");
+  }
+
+  .fr-fi-list-ordered::before {
+    background-image: url("../../icons/editor/list-ordered.81ddda87654b.svg");
+  }
+
+  .fr-fi-list-unordered::before {
+    background-image: url("../../icons/editor/list-unordered.be79c192a556.svg");
+  }
+
+  .fr-icon-bank-card-fill::before,
+  .fr-icon-bank-card-fill::after {
+    background-image: url("../../icons/finance/bank-card-fill.8386c21797f0.svg");
+  }
+
+  .fr-icon-bank-card-line::before,
+  .fr-icon-bank-card-line::after {
+    background-image: url("../../icons/finance/bank-card-line.8a43ae4ab84e.svg");
+  }
+
+  .fr-icon-coin-fill::before,
+  .fr-icon-coin-fill::after {
+    background-image: url("../../icons/finance/coin-fill.21576adbbd8f.svg");
+  }
+
+  .fr-icon-gift-fill::before,
+  .fr-icon-gift-fill::after {
+    background-image: url("../../icons/finance/gift-fill.99922022434a.svg");
+  }
+
+  .fr-icon-gift-line::before,
+  .fr-icon-gift-line::after {
+    background-image: url("../../icons/finance/gift-line.1206c85e8d9b.svg");
+  }
+
+  .fr-icon-money-euro-box-fill::before,
+  .fr-icon-money-euro-box-fill::after {
+    background-image: url("../../icons/finance/money-euro-box-fill.7300be3acc1c.svg");
+  }
+
+  .fr-icon-money-euro-box-line::before,
+  .fr-icon-money-euro-box-line::after {
+    background-image: url("../../icons/finance/money-euro-box-line.69817b7f3b9c.svg");
+  }
+
+  .fr-icon-money-euro-circle-fill::before,
+  .fr-icon-money-euro-circle-fill::after {
+    background-image: url("../../icons/finance/money-euro-circle-fill.9b6dde53555d.svg");
+  }
+
+  .fr-icon-money-euro-circle-line::before,
+  .fr-icon-money-euro-circle-line::after {
+    background-image: url("../../icons/finance/money-euro-circle-line.036630dcd614.svg");
+  }
+
+  .fr-icon-secure-payment-fill::before,
+  .fr-icon-secure-payment-fill::after {
+    background-image: url("../../icons/finance/secure-payment-fill.30f9ee47ad17.svg");
+  }
+
+  .fr-icon-secure-payment-line::before,
+  .fr-icon-secure-payment-line::after {
+    background-image: url("../../icons/finance/secure-payment-line.0b3b357eb6d8.svg");
+  }
+
+  .fr-icon-shopping-bag-fill::before,
+  .fr-icon-shopping-bag-fill::after {
+    background-image: url("../../icons/finance/shopping-bag-fill.0aa3f6b45edd.svg");
+  }
+
+  .fr-icon-shopping-bag-line::before,
+  .fr-icon-shopping-bag-line::after {
+    background-image: url("../../icons/finance/shopping-bag-line.fde85a8cb7fe.svg");
+  }
+
+  .fr-icon-shopping-cart-2-fill::before,
+  .fr-icon-shopping-cart-2-fill::after {
+    background-image: url("../../icons/finance/shopping-cart-2-fill.df309b0912c2.svg");
+  }
+
+  .fr-icon-shopping-cart-2-line::before,
+  .fr-icon-shopping-cart-2-line::after {
+    background-image: url("../../icons/finance/shopping-cart-2-line.e0baf68b7f5f.svg");
+  }
+
+  .fr-icon-trophy-fill::before,
+  .fr-icon-trophy-fill::after {
+    background-image: url("../../icons/finance/trophy-fill.81efc89f7ce1.svg");
+  }
+
+  .fr-icon-trophy-line::before,
+  .fr-icon-trophy-line::after {
+    background-image: url("../../icons/finance/trophy-line.3fa4c3266629.svg");
+  }
+
+  .fr-icon-capsule-fill::before,
+  .fr-icon-capsule-fill::after {
+    background-image: url("../../icons/health/capsule-fill.a18f12f46e82.svg");
+  }
+
+  .fr-icon-capsule-line::before,
+  .fr-icon-capsule-line::after {
+    background-image: url("../../icons/health/capsule-line.c3da74cc5d4f.svg");
+  }
+
+  .fr-icon-dislike-fill::before,
+  .fr-icon-dislike-fill::after {
+    background-image: url("../../icons/health/dislike-fill.7707d73074cc.svg");
+  }
+
+  .fr-icon-dislike-line::before,
+  .fr-icon-dislike-line::after {
+    background-image: url("../../icons/health/dislike-line.81ab3fff3499.svg");
+  }
+
+  .fr-icon-dossier-fill::before,
+  .fr-icon-dossier-fill::after {
+    background-image: url("../../icons/health/dossier-fill.a2006743cd0d.svg");
+  }
+
+  .fr-icon-dossier-line::before,
+  .fr-icon-dossier-line::after {
+    background-image: url("../../icons/health/dossier-line.4632c9fa92f7.svg");
+  }
+
+  .fr-icon-first-aid-kit-fill::before,
+  .fr-icon-first-aid-kit-fill::after {
+    background-image: url("../../icons/health/first-aid-kit-fill.96be59ca7937.svg");
+  }
+
+  .fr-icon-first-aid-kit-line::before,
+  .fr-icon-first-aid-kit-line::after {
+    background-image: url("../../icons/health/first-aid-kit-line.485fc8238b05.svg");
+  }
+
+  .fr-icon-hand-sanitizer-fill::before,
+  .fr-icon-hand-sanitizer-fill::after {
+    background-image: url("../../icons/health/hand-sanitizer-fill.08f1ee5f2a26.svg");
+  }
+
+  .fr-icon-hand-sanitizer-line::before,
+  .fr-icon-hand-sanitizer-line::after {
+    background-image: url("../../icons/health/hand-sanitizer-line.9265af6715a2.svg");
+  }
+
+  .fr-icon-health-book-fill::before,
+  .fr-icon-health-book-fill::after {
+    background-image: url("../../icons/health/health-book-fill.b25fd595672d.svg");
+  }
+
+  .fr-icon-health-book-line::before,
+  .fr-icon-health-book-line::after {
+    background-image: url("../../icons/health/health-book-line.e8e2d8a484c5.svg");
+  }
+
+  .fr-icon-heart-fill::before,
+  .fr-icon-heart-fill::after {
+    background-image: url("../../icons/health/heart-fill.0207c8695fef.svg");
+  }
+
+  .fr-icon-heart-line::before,
+  .fr-icon-heart-line::after {
+    background-image: url("../../icons/health/heart-line.780076cf755e.svg");
+  }
+
+  .fr-icon-heart-pulse-fill::before,
+  .fr-icon-heart-pulse-fill::after {
+    background-image: url("../../icons/health/heart-pulse-fill.f424ef96d562.svg");
+  }
+
+  .fr-icon-heart-pulse-line::before,
+  .fr-icon-heart-pulse-line::after {
+    background-image: url("../../icons/health/heart-pulse-line.7861685f97a5.svg");
+  }
+
+  .fr-icon-lungs-fill::before,
+  .fr-icon-lungs-fill::after {
+    background-image: url("../../icons/health/lungs-fill.3230f9151d69.svg");
+  }
+
+  .fr-icon-lungs-line::before,
+  .fr-icon-lungs-line::after {
+    background-image: url("../../icons/health/lungs-line.81578de7eca6.svg");
+  }
+
+  .fr-icon-medicine-bottle-fill::before,
+  .fr-icon-medicine-bottle-fill::after {
+    background-image: url("../../icons/health/medicine-bottle-fill.9ef0bbd2abe5.svg");
+  }
+
+  .fr-icon-medicine-bottle-line::before,
+  .fr-icon-medicine-bottle-line::after {
+    background-image: url("../../icons/health/medicine-bottle-line.5eda130b813b.svg");
+  }
+
+  .fr-icon-mental-health-fill::before,
+  .fr-icon-mental-health-fill::after {
+    background-image: url("../../icons/health/mental-health-fill.fc4013d1dd03.svg");
+  }
+
+  .fr-icon-mental-health-line::before,
+  .fr-icon-mental-health-line::after {
+    background-image: url("../../icons/health/mental-health-line.3658810ca8ed.svg");
+  }
+
+  .fr-icon-microscope-fill::before,
+  .fr-icon-microscope-fill::after {
+    background-image: url("../../icons/health/microscope-fill.485ba5ae9ae2.svg");
+  }
+
+  .fr-icon-microscope-line::before,
+  .fr-icon-microscope-line::after {
+    background-image: url("../../icons/health/microscope-line.081ff1b3f066.svg");
+  }
+
+  .fr-icon-psychotherapy-fill::before,
+  .fr-icon-psychotherapy-fill::after {
+    background-image: url("../../icons/health/psychotherapy-fill.80940b0ef806.svg");
+  }
+
+  .fr-icon-psychotherapy-line::before,
+  .fr-icon-psychotherapy-line::after {
+    background-image: url("../../icons/health/psychotherapy-line.eb303598bfa5.svg");
+  }
+
+  .fr-icon-pulse-line::before,
+  .fr-icon-pulse-line::after {
+    background-image: url("../../icons/health/pulse-line.d62e2d8a6220.svg");
+  }
+
+  .fr-icon-stethoscope-fill::before,
+  .fr-icon-stethoscope-fill::after {
+    background-image: url("../../icons/health/stethoscope-fill.42634abd026d.svg");
+  }
+
+  .fr-icon-stethoscope-line::before,
+  .fr-icon-stethoscope-line::after {
+    background-image: url("../../icons/health/stethoscope-line.75f84ad0cbbd.svg");
+  }
+
+  .fr-icon-surgical-mask-fill::before,
+  .fr-icon-surgical-mask-fill::after {
+    background-image: url("../../icons/health/surgical-mask-fill.716909272ba9.svg");
+  }
+
+  .fr-icon-surgical-mask-line::before,
+  .fr-icon-surgical-mask-line::after {
+    background-image: url("../../icons/health/surgical-mask-line.eecd65ddf9ec.svg");
+  }
+
+  .fr-icon-syringe-fill::before,
+  .fr-icon-syringe-fill::after {
+    background-image: url("../../icons/health/syringe-fill.3a29c6849661.svg");
+  }
+
+  .fr-icon-syringe-line::before,
+  .fr-icon-syringe-line::after {
+    background-image: url("../../icons/health/syringe-line.fb4efdc25f55.svg");
+  }
+
+  .fr-icon-test-tube-fill::before,
+  .fr-icon-test-tube-fill::after {
+    background-image: url("../../icons/health/test-tube-fill.9f3bd54405bc.svg");
+  }
+
+  .fr-icon-test-tube-line::before,
+  .fr-icon-test-tube-line::after {
+    background-image: url("../../icons/health/test-tube-line.9da6c85064bb.svg");
+  }
+
+  .fr-icon-thermometer-fill::before,
+  .fr-icon-thermometer-fill::after {
+    background-image: url("../../icons/health/thermometer-fill.a45a1329d569.svg");
+  }
+
+  .fr-icon-thermometer-line::before,
+  .fr-icon-thermometer-line::after {
+    background-image: url("../../icons/health/thermometer-line.683533db327c.svg");
+  }
+
+  .fr-icon-virus-fill::before,
+  .fr-icon-virus-fill::after {
+    background-image: url("../../icons/health/virus-fill.5eb481040037.svg");
+  }
+
+  .fr-icon-virus-line::before,
+  .fr-icon-virus-line::after {
+    background-image: url("../../icons/health/virus-line.078621c7050f.svg");
+  }
+
+  .fr-icon-chrome-fill::before,
+  .fr-icon-chrome-fill::after {
+    background-image: url("../../icons/logo/chrome-fill.b164a6375a5e.svg");
+  }
+
+  .fr-icon-chrome-line::before,
+  .fr-icon-chrome-line::after {
+    background-image: url("../../icons/logo/chrome-line.e452b50d355d.svg");
+  }
+
+  .fr-icon-edge-fill::before,
+  .fr-icon-edge-fill::after {
+    background-image: url("../../icons/logo/edge-fill.bc7b8e83fa39.svg");
+  }
+
+  .fr-icon-edge-line::before,
+  .fr-icon-edge-line::after {
+    background-image: url("../../icons/logo/edge-line.3a087626a827.svg");
+  }
+
+  .fr-icon-facebook-circle-fill::before,
+  .fr-icon-facebook-circle-fill::after {
+    background-image: url("../../icons/logo/facebook-circle-fill.1794f7c8cfab.svg");
+  }
+
+  .fr-icon-facebook-circle-line::before,
+  .fr-icon-facebook-circle-line::after {
+    background-image: url("../../icons/logo/facebook-circle-line.acaddffecc4f.svg");
+  }
+
+  .fr-icon-firefox-fill::before,
+  .fr-icon-firefox-fill::after {
+    background-image: url("../../icons/logo/firefox-fill.ed2c4d64b544.svg");
+  }
+
+  .fr-icon-firefox-line::before,
+  .fr-icon-firefox-line::after {
+    background-image: url("../../icons/logo/firefox-line.296ffa2a40c9.svg");
+  }
+
+  .fr-icon-dailymotion-fill::before,
+  .fr-icon-dailymotion-fill::after {
+    background-image: url("../../icons/logo/fr--dailymotion-fill.de05ad96e94b.svg");
+  }
+
+  .fr-icon-dailymotion-line::before,
+  .fr-icon-dailymotion-line::after {
+    background-image: url("../../icons/logo/fr--dailymotion-line.a0865c0633ba.svg");
+  }
+
+  .fr-icon-tiktok-fill::before,
+  .fr-icon-tiktok-fill::after {
+    background-image: url("../../icons/logo/fr--tiktok-fill.38b84e0c1fdb.svg");
+  }
+
+  .fr-icon-tiktok-line::before,
+  .fr-icon-tiktok-line::after {
+    background-image: url("../../icons/logo/fr--tiktok-line.13d04a201238.svg");
+  }
+
+  .fr-icon-github-fill::before,
+  .fr-icon-github-fill::after {
+    background-image: url("../../icons/logo/github-fill.d8db33b40952.svg");
+  }
+
+  .fr-icon-github-line::before,
+  .fr-icon-github-line::after {
+    background-image: url("../../icons/logo/github-line.5e42e09638ff.svg");
+  }
+
+  .fr-icon-google-fill::before,
+  .fr-icon-google-fill::after {
+    background-image: url("../../icons/logo/google-fill.cb5122007fc5.svg");
+  }
+
+  .fr-icon-google-line::before,
+  .fr-icon-google-line::after {
+    background-image: url("../../icons/logo/google-line.4de3b5ba8bc3.svg");
+  }
+
+  .fr-icon-ie-fill::before,
+  .fr-icon-ie-fill::after {
+    background-image: url("../../icons/logo/ie-fill.d32c6fe5b932.svg");
+  }
+
+  .fr-icon-ie-line::before,
+  .fr-icon-ie-line::after {
+    background-image: url("../../icons/logo/ie-line.88d1d5c203f2.svg");
+  }
+
+  .fr-icon-instagram-fill::before,
+  .fr-icon-instagram-fill::after {
+    background-image: url("../../icons/logo/instagram-fill.c00a6162747a.svg");
+  }
+
+  .fr-icon-instagram-line::before,
+  .fr-icon-instagram-line::after {
+    background-image: url("../../icons/logo/instagram-line.865eb077848f.svg");
+  }
+
+  .fr-icon-linkedin-box-fill::before,
+  .fr-icon-linkedin-box-fill::after {
+    background-image: url("../../icons/logo/linkedin-box-fill.bbcdc6796901.svg");
+  }
+
+  .fr-icon-linkedin-box-line::before,
+  .fr-icon-linkedin-box-line::after {
+    background-image: url("../../icons/logo/linkedin-box-line.9718f6f58f99.svg");
+  }
+
+  .fr-icon-mastodon-fill::before,
+  .fr-icon-mastodon-fill::after {
+    background-image: url("../../icons/logo/mastodon-fill.1de5d0e499ea.svg");
+  }
+
+  .fr-icon-mastodon-line::before,
+  .fr-icon-mastodon-line::after {
+    background-image: url("../../icons/logo/mastodon-line.9441e2501983.svg");
+  }
+
+  .fr-icon-npmjs-fill::before,
+  .fr-icon-npmjs-fill::after {
+    background-image: url("../../icons/logo/npmjs-fill.c2d2e8c16998.svg");
+  }
+
+  .fr-icon-npmjs-line::before,
+  .fr-icon-npmjs-line::after {
+    background-image: url("../../icons/logo/npmjs-line.107d5e109017.svg");
+  }
+
+  .fr-icon-remixicon-fill::before,
+  .fr-icon-remixicon-fill::after {
+    background-image: url("../../icons/logo/remixicon-fill.b726a6de3b7a.svg");
+  }
+
+  .fr-icon-remixicon-line::before,
+  .fr-icon-remixicon-line::after {
+    background-image: url("../../icons/logo/remixicon-line.3c1404a10252.svg");
+  }
+
+  .fr-icon-safari-fill::before,
+  .fr-icon-safari-fill::after {
+    background-image: url("../../icons/logo/safari-fill.d24bcd1386f8.svg");
+  }
+
+  .fr-icon-safari-line::before,
+  .fr-icon-safari-line::after {
+    background-image: url("../../icons/logo/safari-line.0a3a4b4d14ec.svg");
+  }
+
+  .fr-icon-slack-fill::before,
+  .fr-icon-slack-fill::after {
+    background-image: url("../../icons/logo/slack-fill.b496ad7c066a.svg");
+  }
+
+  .fr-icon-slack-line::before,
+  .fr-icon-slack-line::after {
+    background-image: url("../../icons/logo/slack-line.b7e466fb7d3e.svg");
+  }
+
+  .fr-icon-snapchat-fill::before,
+  .fr-icon-snapchat-fill::after {
+    background-image: url("../../icons/logo/snapchat-fill.a224d7ec9939.svg");
+  }
+
+  .fr-icon-snapchat-line::before,
+  .fr-icon-snapchat-line::after {
+    background-image: url("../../icons/logo/snapchat-line.608dce762cb0.svg");
+  }
+
+  .fr-icon-telegram-fill::before,
+  .fr-icon-telegram-fill::after {
+    background-image: url("../../icons/logo/telegram-fill.f3fb6bc954ca.svg");
+  }
+
+  .fr-icon-telegram-line::before,
+  .fr-icon-telegram-line::after {
+    background-image: url("../../icons/logo/telegram-line.6c476e52d279.svg");
+  }
+
+  .fr-icon-twitch-fill::before,
+  .fr-icon-twitch-fill::after {
+    background-image: url("../../icons/logo/twitch-fill.875feb4f3fad.svg");
+  }
+
+  .fr-icon-twitch-line::before,
+  .fr-icon-twitch-line::after {
+    background-image: url("../../icons/logo/twitch-line.032a53e9bb5d.svg");
+  }
+
+  .fr-icon-twitter-fill::before,
+  .fr-icon-twitter-fill::after {
+    background-image: url("../../icons/logo/twitter-fill.7bc61c901778.svg");
+  }
+
+  .fr-icon-twitter-line::before,
+  .fr-icon-twitter-line::after {
+    background-image: url("../../icons/logo/twitter-line.cf73298bdefb.svg");
+  }
+
+  .fr-icon-vimeo-fill::before,
+  .fr-icon-vimeo-fill::after {
+    background-image: url("../../icons/logo/vimeo-fill.e3dc7f9b56f5.svg");
+  }
+
+  .fr-icon-vimeo-line::before,
+  .fr-icon-vimeo-line::after {
+    background-image: url("../../icons/logo/vimeo-line.6ccdad9e86f8.svg");
+  }
+
+  .fr-icon-vuejs-fill::before,
+  .fr-icon-vuejs-fill::after {
+    background-image: url("../../icons/logo/vuejs-fill.0de4883c3088.svg");
+  }
+
+  .fr-icon-vuejs-line::before,
+  .fr-icon-vuejs-line::after {
+    background-image: url("../../icons/logo/vuejs-line.09559958e770.svg");
+  }
+
+  .fr-icon-youtube-fill::before,
+  .fr-icon-youtube-fill::after {
+    background-image: url("../../icons/logo/youtube-fill.8aa6c2efb31d.svg");
+  }
+
+  .fr-icon-youtube-line::before,
+  .fr-icon-youtube-line::after {
+    background-image: url("../../icons/logo/youtube-line.7b20150153c4.svg");
+  }
+
+  .fr-fi-facebook-circle-fill::before {
+    background-image: url("../../icons/logo/facebook-circle-fill.1794f7c8cfab.svg");
+  }
+
+  .fr-fi-facebook-circle-line::before {
+    background-image: url("../../icons/logo/facebook-circle-line.acaddffecc4f.svg");
+  }
+
+  .fr-fi-dailymotion-fill::before {
+    background-image: url("../../icons/logo/fr--dailymotion-fill.de05ad96e94b.svg");
+  }
+
+  .fr-fi-dailymotion-line::before {
+    background-image: url("../../icons/logo/fr--dailymotion-line.a0865c0633ba.svg");
+  }
+
+  .fr-fi-github-fill::before {
+    background-image: url("../../icons/logo/github-fill.d8db33b40952.svg");
+  }
+
+  .fr-fi-github-line::before {
+    background-image: url("../../icons/logo/github-line.5e42e09638ff.svg");
+  }
+
+  .fr-fi-instagram-fill::before {
+    background-image: url("../../icons/logo/instagram-fill.c00a6162747a.svg");
+  }
+
+  .fr-fi-instagram-line::before {
+    background-image: url("../../icons/logo/instagram-line.865eb077848f.svg");
+  }
+
+  .fr-fi-linkedin-box-fill::before {
+    background-image: url("../../icons/logo/linkedin-box-fill.bbcdc6796901.svg");
+  }
+
+  .fr-fi-linkedin-box-line::before {
+    background-image: url("../../icons/logo/linkedin-box-line.9718f6f58f99.svg");
+  }
+
+  .fr-fi-npmjs-fill::before {
+    background-image: url("../../icons/logo/npmjs-fill.c2d2e8c16998.svg");
+  }
+
+  .fr-fi-npmjs-line::before {
+    background-image: url("../../icons/logo/npmjs-line.107d5e109017.svg");
+  }
+
+  .fr-fi-remixicon-fill::before {
+    background-image: url("../../icons/logo/remixicon-fill.b726a6de3b7a.svg");
+  }
+
+  .fr-fi-remixicon-line::before {
+    background-image: url("../../icons/logo/remixicon-line.3c1404a10252.svg");
+  }
+
+  .fr-fi-slack-fill::before {
+    background-image: url("../../icons/logo/slack-fill.b496ad7c066a.svg");
+  }
+
+  .fr-fi-slack-line::before {
+    background-image: url("../../icons/logo/slack-line.b7e466fb7d3e.svg");
+  }
+
+  .fr-fi-snapchat-fill::before {
+    background-image: url("../../icons/logo/snapchat-fill.a224d7ec9939.svg");
+  }
+
+  .fr-fi-snapchat-line::before {
+    background-image: url("../../icons/logo/snapchat-line.608dce762cb0.svg");
+  }
+
+  .fr-fi-telegram-fill::before {
+    background-image: url("../../icons/logo/telegram-fill.f3fb6bc954ca.svg");
+  }
+
+  .fr-fi-telegram-line::before {
+    background-image: url("../../icons/logo/telegram-line.6c476e52d279.svg");
+  }
+
+  .fr-fi-twitch-fill::before {
+    background-image: url("../../icons/logo/twitch-fill.875feb4f3fad.svg");
+  }
+
+  .fr-fi-twitch-line::before {
+    background-image: url("../../icons/logo/twitch-line.032a53e9bb5d.svg");
+  }
+
+  .fr-fi-twitter-fill::before {
+    background-image: url("../../icons/logo/twitter-fill.7bc61c901778.svg");
+  }
+
+  .fr-fi-twitter-line::before {
+    background-image: url("../../icons/logo/twitter-line.cf73298bdefb.svg");
+  }
+
+  .fr-fi-vimeo-fill::before {
+    background-image: url("../../icons/logo/vimeo-fill.e3dc7f9b56f5.svg");
+  }
+
+  .fr-fi-vimeo-line::before {
+    background-image: url("../../icons/logo/vimeo-line.6ccdad9e86f8.svg");
+  }
+
+  .fr-fi-youtube-fill::before {
+    background-image: url("../../icons/logo/youtube-fill.8aa6c2efb31d.svg");
+  }
+
+  .fr-fi-youtube-line::before {
+    background-image: url("../../icons/logo/youtube-line.7b20150153c4.svg");
+  }
+
+  .fr-icon-anchor-fill::before,
+  .fr-icon-anchor-fill::after {
+    background-image: url("../../icons/map/anchor-fill.391e3aa6a849.svg");
+  }
+
+  .fr-icon-anchor-line::before,
+  .fr-icon-anchor-line::after {
+    background-image: url("../../icons/map/anchor-line.5bdcaa115319.svg");
+  }
+
+  .fr-icon-bike-fill::before,
+  .fr-icon-bike-fill::after {
+    background-image: url("../../icons/map/bike-fill.46d08b4678fc.svg");
+  }
+
+  .fr-icon-bike-line::before,
+  .fr-icon-bike-line::after {
+    background-image: url("../../icons/map/bike-line.3b80bca40c24.svg");
+  }
+
+  .fr-icon-bus-fill::before,
+  .fr-icon-bus-fill::after {
+    background-image: url("../../icons/map/bus-fill.9b7da7dc5cbd.svg");
+  }
+
+  .fr-icon-bus-line::before,
+  .fr-icon-bus-line::after {
+    background-image: url("../../icons/map/bus-line.da8d11ad6e2f.svg");
+  }
+
+  .fr-icon-car-fill::before,
+  .fr-icon-car-fill::after {
+    background-image: url("../../icons/map/car-fill.86c9e1041aca.svg");
+  }
+
+  .fr-icon-car-line::before,
+  .fr-icon-car-line::after {
+    background-image: url("../../icons/map/car-line.0610ea4ad329.svg");
+  }
+
+  .fr-icon-caravan-fill::before,
+  .fr-icon-caravan-fill::after {
+    background-image: url("../../icons/map/caravan-fill.ab600c80934a.svg");
+  }
+
+  .fr-icon-caravan-line::before,
+  .fr-icon-caravan-line::after {
+    background-image: url("../../icons/map/caravan-line.cca58213b34e.svg");
+  }
+
+  .fr-icon-charging-pile-2-fill::before,
+  .fr-icon-charging-pile-2-fill::after {
+    background-image: url("../../icons/map/charging-pile-2-fill.89cd15fe448a.svg");
+  }
+
+  .fr-icon-charging-pile-2-line::before,
+  .fr-icon-charging-pile-2-line::after {
+    background-image: url("../../icons/map/charging-pile-2-line.5bbdff061a60.svg");
+  }
+
+  .fr-icon-compass-3-fill::before,
+  .fr-icon-compass-3-fill::after {
+    background-image: url("../../icons/map/compass-3-fill.0ad69b549019.svg");
+  }
+
+  .fr-icon-compass-3-line::before,
+  .fr-icon-compass-3-line::after {
+    background-image: url("../../icons/map/compass-3-line.9ff2574d5bed.svg");
+  }
+
+  .fr-icon-cup-fill::before,
+  .fr-icon-cup-fill::after {
+    background-image: url("../../icons/map/cup-fill.ba9f1962b2f2.svg");
+  }
+
+  .fr-icon-cup-line::before,
+  .fr-icon-cup-line::after {
+    background-image: url("../../icons/map/cup-line.3dfdd216c7ee.svg");
+  }
+
+  .fr-icon-earth-fill::before,
+  .fr-icon-earth-fill::after {
+    background-image: url("../../icons/map/earth-fill.81e08ecc8ac0.svg");
+  }
+
+  .fr-icon-earth-line::before,
+  .fr-icon-earth-line::after {
+    background-image: url("../../icons/map/earth-line.30e4369640ca.svg");
+  }
+
+  .fr-icon-france-fill::before,
+  .fr-icon-france-fill::after {
+    background-image: url("../../icons/map/france-fill.ef9ccadc5e48.svg");
+  }
+
+  .fr-icon-france-line::before,
+  .fr-icon-france-line::after {
+    background-image: url("../../icons/map/france-line.8bbfaacb0878.svg");
+  }
+
+  .fr-icon-gas-station-fill::before,
+  .fr-icon-gas-station-fill::after {
+    background-image: url("../../icons/map/gas-station-fill.7883e233c008.svg");
+  }
+
+  .fr-icon-gas-station-line::before,
+  .fr-icon-gas-station-line::after {
+    background-image: url("../../icons/map/gas-station-line.aff541f2fc7a.svg");
+  }
+
+  .fr-icon-goblet-fill::before,
+  .fr-icon-goblet-fill::after {
+    background-image: url("../../icons/map/goblet-fill.d827addf9990.svg");
+  }
+
+  .fr-icon-goblet-line::before,
+  .fr-icon-goblet-line::after {
+    background-image: url("../../icons/map/goblet-line.d76d40a7915d.svg");
+  }
+
+  .fr-icon-map-pin-2-fill::before,
+  .fr-icon-map-pin-2-fill::after {
+    background-image: url("../../icons/map/map-pin-2-fill.78e7750be839.svg");
+  }
+
+  .fr-icon-map-pin-2-line::before,
+  .fr-icon-map-pin-2-line::after {
+    background-image: url("../../icons/map/map-pin-2-line.4ab6acb7f117.svg");
+  }
+
+  .fr-icon-map-pin-user-fill::before,
+  .fr-icon-map-pin-user-fill::after {
+    background-image: url("../../icons/map/map-pin-user-fill.c92301a130cc.svg");
+  }
+
+  .fr-icon-map-pin-user-line::before,
+  .fr-icon-map-pin-user-line::after {
+    background-image: url("../../icons/map/map-pin-user-line.aab7481c36a6.svg");
+  }
+
+  .fr-icon-motorbike-fill::before,
+  .fr-icon-motorbike-fill::after {
+    background-image: url("../../icons/map/motorbike-fill.b367b1752dbc.svg");
+  }
+
+  .fr-icon-motorbike-line::before,
+  .fr-icon-motorbike-line::after {
+    background-image: url("../../icons/map/motorbike-line.f16f3e0628fc.svg");
+  }
+
+  .fr-icon-passport-fill::before,
+  .fr-icon-passport-fill::after {
+    background-image: url("../../icons/map/passport-fill.6161f66f2d4c.svg");
+  }
+
+  .fr-icon-passport-line::before,
+  .fr-icon-passport-line::after {
+    background-image: url("../../icons/map/passport-line.93daeb5e96a4.svg");
+  }
+
+  .fr-icon-restaurant-fill::before,
+  .fr-icon-restaurant-fill::after {
+    background-image: url("../../icons/map/restaurant-fill.2da53d598c58.svg");
+  }
+
+  .fr-icon-restaurant-line::before,
+  .fr-icon-restaurant-line::after {
+    background-image: url("../../icons/map/restaurant-line.f5622c641e53.svg");
+  }
+
+  .fr-icon-road-map-fill::before,
+  .fr-icon-road-map-fill::after {
+    background-image: url("../../icons/map/road-map-fill.1e830f664cd0.svg");
+  }
+
+  .fr-icon-road-map-line::before,
+  .fr-icon-road-map-line::after {
+    background-image: url("../../icons/map/road-map-line.4eacbcb31c86.svg");
+  }
+
+  .fr-icon-sailboat-fill::before,
+  .fr-icon-sailboat-fill::after {
+    background-image: url("../../icons/map/sailboat-fill.3bd7caac3412.svg");
+  }
+
+  .fr-icon-sailboat-line::before,
+  .fr-icon-sailboat-line::after {
+    background-image: url("../../icons/map/sailboat-line.4678bda113dd.svg");
+  }
+
+  .fr-icon-ship-2-fill::before,
+  .fr-icon-ship-2-fill::after {
+    background-image: url("../../icons/map/ship-2-fill.72e16d553e7d.svg");
+  }
+
+  .fr-icon-ship-2-line::before,
+  .fr-icon-ship-2-line::after {
+    background-image: url("../../icons/map/ship-2-line.02c62ada5ccf.svg");
+  }
+
+  .fr-icon-signal-tower-fill::before,
+  .fr-icon-signal-tower-fill::after {
+    background-image: url("../../icons/map/signal-tower-fill.b1ea1383106d.svg");
+  }
+
+  .fr-icon-signal-tower-line::before,
+  .fr-icon-signal-tower-line::after {
+    background-image: url("../../icons/map/signal-tower-line.a3761b89342e.svg");
+  }
+
+  .fr-icon-suitcase-2-fill::before,
+  .fr-icon-suitcase-2-fill::after {
+    background-image: url("../../icons/map/suitcase-2-fill.6d18b262fea7.svg");
+  }
+
+  .fr-icon-suitcase-2-line::before,
+  .fr-icon-suitcase-2-line::after {
+    background-image: url("../../icons/map/suitcase-2-line.c217e911e000.svg");
+  }
+
+  .fr-icon-taxi-fill::before,
+  .fr-icon-taxi-fill::after {
+    background-image: url("../../icons/map/taxi-fill.3785bc46bc9c.svg");
+  }
+
+  .fr-icon-taxi-line::before,
+  .fr-icon-taxi-line::after {
+    background-image: url("../../icons/map/taxi-line.71732a6b2531.svg");
+  }
+
+  .fr-icon-train-fill::before,
+  .fr-icon-train-fill::after {
+    background-image: url("../../icons/map/train-fill.23caf996fa32.svg");
+  }
+
+  .fr-icon-train-line::before,
+  .fr-icon-train-line::after {
+    background-image: url("../../icons/map/train-line.35463d411aa3.svg");
+  }
+
+  .fr-fi-map-pin-2-fill::before {
+    background-image: url("../../icons/map/map-pin-2-fill.78e7750be839.svg");
+  }
+
+  .fr-fi-map-pin-2-line::before {
+    background-image: url("../../icons/map/map-pin-2-line.4ab6acb7f117.svg");
+  }
+
+  .fr-fi-road-map-fill::before {
+    background-image: url("../../icons/map/road-map-fill.1e830f664cd0.svg");
+  }
+
+  .fr-fi-road-map-line::before {
+    background-image: url("../../icons/map/road-map-line.4eacbcb31c86.svg");
+  }
+
+  .fr-icon-camera-fill::before,
+  .fr-icon-camera-fill::after {
+    background-image: url("../../icons/media/camera-fill.5a277638d2fd.svg");
+  }
+
+  .fr-icon-camera-line::before,
+  .fr-icon-camera-line::after {
+    background-image: url("../../icons/media/camera-line.31e8e262458d.svg");
+  }
+
+  .fr-icon-clapperboard-fill::before,
+  .fr-icon-clapperboard-fill::after {
+    background-image: url("../../icons/media/clapperboard-fill.54cec5a50ce0.svg");
+  }
+
+  .fr-icon-clapperboard-line::before,
+  .fr-icon-clapperboard-line::after {
+    background-image: url("../../icons/media/clapperboard-line.8f9acdd9dcf2.svg");
+  }
+
+  .fr-icon-equalizer-fill::before,
+  .fr-icon-equalizer-fill::after {
+    background-image: url("../../icons/media/equalizer-fill.68ecf2b3ad45.svg");
+  }
+
+  .fr-icon-equalizer-line::before,
+  .fr-icon-equalizer-line::after {
+    background-image: url("../../icons/media/equalizer-line.7317d42b0aa9.svg");
+  }
+
+  .fr-icon-film-fill::before,
+  .fr-icon-film-fill::after {
+    background-image: url("../../icons/media/film-fill.91e162f68757.svg");
+  }
+
+  .fr-icon-film-line::before,
+  .fr-icon-film-line::after {
+    background-image: url("../../icons/media/film-line.f66f6c56802d.svg");
+  }
+
+  .fr-icon-gallery-fill::before,
+  .fr-icon-gallery-fill::after {
+    background-image: url("../../icons/media/gallery-fill.482b53e863e1.svg");
+  }
+
+  .fr-icon-gallery-line::before,
+  .fr-icon-gallery-line::after {
+    background-image: url("../../icons/media/gallery-line.3d83ae2a5737.svg");
+  }
+
+  .fr-icon-headphone-fill::before,
+  .fr-icon-headphone-fill::after {
+    background-image: url("../../icons/media/headphone-fill.ecad3daa0034.svg");
+  }
+
+  .fr-icon-headphone-line::before,
+  .fr-icon-headphone-line::after {
+    background-image: url("../../icons/media/headphone-line.110f871f9edf.svg");
+  }
+
+  .fr-icon-image-add-fill::before,
+  .fr-icon-image-add-fill::after {
+    background-image: url("../../icons/media/image-add-fill.597f6b2005f9.svg");
+  }
+
+  .fr-icon-image-add-line::before,
+  .fr-icon-image-add-line::after {
+    background-image: url("../../icons/media/image-add-line.ce4c08cbbb53.svg");
+  }
+
+  .fr-icon-image-edit-fill::before,
+  .fr-icon-image-edit-fill::after {
+    background-image: url("../../icons/media/image-edit-fill.ef0fe888283e.svg");
+  }
+
+  .fr-icon-image-edit-line::before,
+  .fr-icon-image-edit-line::after {
+    background-image: url("../../icons/media/image-edit-line.66ef2286ded8.svg");
+  }
+
+  .fr-icon-image-fill::before,
+  .fr-icon-image-fill::after {
+    background-image: url("../../icons/media/image-fill.5788558eb474.svg");
+  }
+
+  .fr-icon-image-line::before,
+  .fr-icon-image-line::after {
+    background-image: url("../../icons/media/image-line.318f4dd488b0.svg");
+  }
+
+  .fr-icon-live-fill::before,
+  .fr-icon-live-fill::after {
+    background-image: url("../../icons/media/live-fill.e982cde22c0e.svg");
+  }
+
+  .fr-icon-live-line::before,
+  .fr-icon-live-line::after {
+    background-image: url("../../icons/media/live-line.4353943b2107.svg");
+  }
+
+  .fr-icon-mic-fill::before,
+  .fr-icon-mic-fill::after {
+    background-image: url("../../icons/media/mic-fill.0fec9242b459.svg");
+  }
+
+  .fr-icon-mic-line::before,
+  .fr-icon-mic-line::after {
+    background-image: url("../../icons/media/mic-line.8579366188c9.svg");
+  }
+
+  .fr-icon-music-2-fill::before,
+  .fr-icon-music-2-fill::after {
+    background-image: url("../../icons/media/music-2-fill.c1ea4f211661.svg");
+  }
+
+  .fr-icon-music-2-line::before,
+  .fr-icon-music-2-line::after {
+    background-image: url("../../icons/media/music-2-line.bb023c25bbfd.svg");
+  }
+
+  .fr-icon-notification-3-fill::before,
+  .fr-icon-notification-3-fill::after {
+    background-image: url("../../icons/media/notification-3-fill.8a2a498f1e2c.svg");
+  }
+
+  .fr-icon-notification-3-line::before,
+  .fr-icon-notification-3-line::after {
+    background-image: url("../../icons/media/notification-3-line.e6687e9695d2.svg");
+  }
+
+  .fr-icon-pause-circle-fill::before,
+  .fr-icon-pause-circle-fill::after {
+    background-image: url("../../icons/media/pause-circle-fill.80193e626259.svg");
+  }
+
+  .fr-icon-pause-circle-line::before,
+  .fr-icon-pause-circle-line::after {
+    background-image: url("../../icons/media/pause-circle-line.f6bd86b2c1ab.svg");
+  }
+
+  .fr-icon-play-circle-fill::before,
+  .fr-icon-play-circle-fill::after {
+    background-image: url("../../icons/media/play-circle-fill.1916bb19f538.svg");
+  }
+
+  .fr-icon-play-circle-line::before,
+  .fr-icon-play-circle-line::after {
+    background-image: url("../../icons/media/play-circle-line.8106cb7bb420.svg");
+  }
+
+  .fr-icon-stop-circle-fill::before,
+  .fr-icon-stop-circle-fill::after {
+    background-image: url("../../icons/media/stop-circle-fill.84b192639bbd.svg");
+  }
+
+  .fr-icon-stop-circle-line::before,
+  .fr-icon-stop-circle-line::after {
+    background-image: url("../../icons/media/stop-circle-line.8ebc9873591f.svg");
+  }
+
+  .fr-icon-transcription::before,
+  .fr-icon-transcription::after {
+    background-image: url("../../icons/media/transcription.00ee360ce182.svg");
+  }
+
+  .fr-icon-volume-down-fill::before,
+  .fr-icon-volume-down-fill::after {
+    background-image: url("../../icons/media/volume-down-fill.272b5b7af802.svg");
+  }
+
+  .fr-icon-volume-down-line::before,
+  .fr-icon-volume-down-line::after {
+    background-image: url("../../icons/media/volume-down-line.0985848195bd.svg");
+  }
+
+  .fr-icon-volume-mute-fill::before,
+  .fr-icon-volume-mute-fill::after {
+    background-image: url("../../icons/media/volume-mute-fill.e5f3e40cbca9.svg");
+  }
+
+  .fr-icon-volume-mute-line::before,
+  .fr-icon-volume-mute-line::after {
+    background-image: url("../../icons/media/volume-mute-line.1483eb28a17d.svg");
+  }
+
+  .fr-icon-volume-up-fill::before,
+  .fr-icon-volume-up-fill::after {
+    background-image: url("../../icons/media/volume-up-fill.f0c99a353d09.svg");
+  }
+
+  .fr-icon-volume-up-line::before,
+  .fr-icon-volume-up-line::after {
+    background-image: url("../../icons/media/volume-up-line.e75e11229cf9.svg");
+  }
+
+  .fr-fi-equalizer-fill::before {
+    background-image: url("../../icons/media/equalizer-fill.68ecf2b3ad45.svg");
+  }
+
+  .fr-fi-equalizer-line::before {
+    background-image: url("../../icons/media/equalizer-line.7317d42b0aa9.svg");
+  }
+
+  .fr-fi-image-fill::before {
+    background-image: url("../../icons/media/image-fill.5788558eb474.svg");
+  }
+
+  .fr-fi-image-line::before {
+    background-image: url("../../icons/media/image-line.318f4dd488b0.svg");
+  }
+
+  .fr-fi-pause-circle-fill::before {
+    background-image: url("../../icons/media/pause-circle-fill.80193e626259.svg");
+  }
+
+  .fr-fi-pause-circle-line::before {
+    background-image: url("../../icons/media/pause-circle-line.f6bd86b2c1ab.svg");
+  }
+
+  .fr-fi-volume-down-fill::before {
+    background-image: url("../../icons/media/volume-down-fill.272b5b7af802.svg");
+  }
+
+  .fr-fi-volume-down-line::before {
+    background-image: url("../../icons/media/volume-down-line.0985848195bd.svg");
+  }
+
+  .fr-fi-volume-mute-fill::before {
+    background-image: url("../../icons/media/volume-mute-fill.e5f3e40cbca9.svg");
+  }
+
+  .fr-fi-volume-mute-line::before {
+    background-image: url("../../icons/media/volume-mute-line.1483eb28a17d.svg");
+  }
+
+  .fr-fi-volume-up-fill::before {
+    background-image: url("../../icons/media/volume-up-fill.f0c99a353d09.svg");
+  }
+
+  .fr-fi-volume-up-line::before {
+    background-image: url("../../icons/media/volume-up-line.e75e11229cf9.svg");
+  }
+
+  .fr-fi-play-line::before,
+  .fr-fi-play-line::after {
+    background-image: url("../../icons/media/play-circle-line.8106cb7bb420.svg");
+  }
+
+  .fr-fi-play-fill::before,
+  .fr-fi-play-fill::after {
+    background-image: url("../../icons/media/play-circle-fill.1916bb19f538.svg");
+  }
+
+  .fr-icon-play-line::before,
+  .fr-icon-play-line::after {
+    background-image: url("../../icons/media/play-circle-line.8106cb7bb420.svg");
+  }
+
+  .fr-icon-play-fill::before,
+  .fr-icon-play-fill::after {
+    background-image: url("../../icons/media/play-circle-fill.1916bb19f538.svg");
+  }
+
+  .fr-icon-leaf-fill::before,
+  .fr-icon-leaf-fill::after {
+    background-image: url("../../icons/others/leaf-fill.9f9b58e9653d.svg");
+  }
+
+  .fr-icon-leaf-line::before,
+  .fr-icon-leaf-line::after {
+    background-image: url("../../icons/others/leaf-line.c1adc34f7db4.svg");
+  }
+
+  .fr-icon-lightbulb-fill::before,
+  .fr-icon-lightbulb-fill::after {
+    background-image: url("../../icons/others/lightbulb-fill.b63356aff57e.svg");
+  }
+
+  .fr-icon-lightbulb-line::before,
+  .fr-icon-lightbulb-line::after {
+    background-image: url("../../icons/others/lightbulb-line.f4b9fe13c789.svg");
+  }
+
+  .fr-icon-plant-fill::before,
+  .fr-icon-plant-fill::after {
+    background-image: url("../../icons/others/plant-fill.0299b1f8c543.svg");
+  }
+
+  .fr-icon-plant-line::before,
+  .fr-icon-plant-line::after {
+    background-image: url("../../icons/others/plant-line.266c2f8243fa.svg");
+  }
+
+  .fr-icon-recycle-fill::before,
+  .fr-icon-recycle-fill::after {
+    background-image: url("../../icons/others/recycle-fill.694c14e69578.svg");
+  }
+
+  .fr-icon-recycle-line::before,
+  .fr-icon-recycle-line::after {
+    background-image: url("../../icons/others/recycle-line.28c98bf22b0e.svg");
+  }
+
+  .fr-icon-scales-3-fill::before,
+  .fr-icon-scales-3-fill::after {
+    background-image: url("../../icons/others/scales-3-fill.aa7b777c24ce.svg");
+  }
+
+  .fr-icon-scales-3-line::before,
+  .fr-icon-scales-3-line::after {
+    background-image: url("../../icons/others/scales-3-line.1d403d91c6de.svg");
+  }
+
+  .fr-icon-seedling-fill::before,
+  .fr-icon-seedling-fill::after {
+    background-image: url("../../icons/others/seedling-fill.c82426300e2b.svg");
+  }
+
+  .fr-icon-seedling-line::before,
+  .fr-icon-seedling-line::after {
+    background-image: url("../../icons/others/seedling-line.ff2a45af1a4a.svg");
+  }
+
+  .fr-icon-umbrella-fill::before,
+  .fr-icon-umbrella-fill::after {
+    background-image: url("../../icons/others/umbrella-fill.ea2c8bab33a4.svg");
+  }
+
+  .fr-icon-umbrella-line::before,
+  .fr-icon-umbrella-line::after {
+    background-image: url("../../icons/others/umbrella-line.83ae799ccf66.svg");
+  }
+
+  .fr-icon-add-circle-fill::before,
+  .fr-icon-add-circle-fill::after {
+    background-image: url("../../icons/system/add-circle-fill.6486e787e3ec.svg");
+  }
+
+  .fr-icon-add-circle-line::before,
+  .fr-icon-add-circle-line::after {
+    background-image: url("../../icons/system/add-circle-line.285bc9907910.svg");
+  }
+
+  .fr-icon-add-line::before,
+  .fr-icon-add-line::after {
+    background-image: url("../../icons/system/add-line.f59d35b996e1.svg");
+  }
+
+  .fr-icon-alarm-warning-fill::before,
+  .fr-icon-alarm-warning-fill::after {
+    background-image: url("../../icons/system/alarm-warning-fill.d5533555b596.svg");
+  }
+
+  .fr-icon-alarm-warning-line::before,
+  .fr-icon-alarm-warning-line::after {
+    background-image: url("../../icons/system/alarm-warning-line.3a5f69271351.svg");
+  }
+
+  .fr-icon-alert-fill::before,
+  .fr-icon-alert-fill::after {
+    background-image: url("../../icons/system/alert-fill.ccf51c82392a.svg");
+  }
+
+  .fr-icon-alert-line::before,
+  .fr-icon-alert-line::after {
+    background-image: url("../../icons/system/alert-line.3ed3b63a1861.svg");
+  }
+
+  .fr-icon-arrow-down-fill::before,
+  .fr-icon-arrow-down-fill::after {
+    background-image: url("../../icons/system/arrow-down-fill.b50b719bddbf.svg");
+  }
+
+  .fr-icon-arrow-down-line::before,
+  .fr-icon-arrow-down-line::after {
+    background-image: url("../../icons/system/arrow-down-line.cdcbe20cde3e.svg");
+  }
+
+  .fr-icon-arrow-down-s-fill::before,
+  .fr-icon-arrow-down-s-fill::after {
+    background-image: url("../../icons/system/arrow-down-s-fill.9c599238a363.svg");
+  }
+
+  .fr-icon-arrow-down-s-line::before,
+  .fr-icon-arrow-down-s-line::after {
+    background-image: url("../../icons/system/arrow-down-s-line.4ac4f4c7f991.svg");
+  }
+
+  .fr-icon-arrow-go-back-fill::before,
+  .fr-icon-arrow-go-back-fill::after {
+    background-image: url("../../icons/system/arrow-go-back-fill.58dcaa705a4f.svg");
+  }
+
+  .fr-icon-arrow-go-back-line::before,
+  .fr-icon-arrow-go-back-line::after {
+    background-image: url("../../icons/system/arrow-go-back-line.52e23c19d525.svg");
+  }
+
+  .fr-icon-arrow-go-forward-fill::before,
+  .fr-icon-arrow-go-forward-fill::after {
+    background-image: url("../../icons/system/arrow-go-forward-fill.96d16ec21077.svg");
+  }
+
+  .fr-icon-arrow-go-forward-line::before,
+  .fr-icon-arrow-go-forward-line::after {
+    background-image: url("../../icons/system/arrow-go-forward-line.c2bdd2932745.svg");
+  }
+
+  .fr-icon-arrow-left-fill::before,
+  .fr-icon-arrow-left-fill::after {
+    background-image: url("../../icons/system/arrow-left-fill.3c387e2f9359.svg");
+  }
+
+  .fr-icon-arrow-left-line::before,
+  .fr-icon-arrow-left-line::after {
+    background-image: url("../../icons/system/arrow-left-line.fc03672e912e.svg");
+  }
+
+  .fr-icon-arrow-left-s-fill::before,
+  .fr-icon-arrow-left-s-fill::after {
+    background-image: url("../../icons/system/arrow-left-s-fill.bebea89b9a88.svg");
+  }
+
+  .fr-icon-arrow-left-s-line::before,
+  .fr-icon-arrow-left-s-line::after {
+    background-image: url("../../icons/system/arrow-left-s-line.663154e3caa6.svg");
+  }
+
+  .fr-icon-arrow-right-fill::before,
+  .fr-icon-arrow-right-fill::after {
+    background-image: url("../../icons/system/arrow-right-fill.e5992505cf98.svg");
+  }
+
+  .fr-icon-arrow-right-line::before,
+  .fr-icon-arrow-right-line::after {
+    background-image: url("../../icons/system/arrow-right-line.3e4843104c8e.svg");
+  }
+
+  .fr-icon-arrow-right-s-fill::before,
+  .fr-icon-arrow-right-s-fill::after {
+    background-image: url("../../icons/system/arrow-right-s-fill.b725f0d7b9d3.svg");
+  }
+
+  .fr-icon-arrow-right-s-line::before,
+  .fr-icon-arrow-right-s-line::after {
+    background-image: url("../../icons/system/arrow-right-s-line.1c854101c370.svg");
+  }
+
+  .fr-icon-arrow-right-up-line::before,
+  .fr-icon-arrow-right-up-line::after {
+    background-image: url("../../icons/system/arrow-right-up-line.ab18cd729dcf.svg");
+  }
+
+  .fr-icon-arrow-up-fill::before,
+  .fr-icon-arrow-up-fill::after {
+    background-image: url("../../icons/system/arrow-up-fill.e3dc3dc5c310.svg");
+  }
+
+  .fr-icon-arrow-up-line::before,
+  .fr-icon-arrow-up-line::after {
+    background-image: url("../../icons/system/arrow-up-line.97bcc6898f8e.svg");
+  }
+
+  .fr-icon-arrow-up-s-fill::before,
+  .fr-icon-arrow-up-s-fill::after {
+    background-image: url("../../icons/system/arrow-up-s-fill.db9012e17c56.svg");
+  }
+
+  .fr-icon-arrow-up-s-line::before,
+  .fr-icon-arrow-up-s-line::after {
+    background-image: url("../../icons/system/arrow-up-s-line.a669c939a057.svg");
+  }
+
+  .fr-icon-check-line::before,
+  .fr-icon-check-line::after {
+    background-image: url("../../icons/system/check-line.fdd955d1e98b.svg");
+  }
+
+  .fr-icon-checkbox-circle-fill::before,
+  .fr-icon-checkbox-circle-fill::after {
+    background-image: url("../../icons/system/checkbox-circle-fill.eea18db64ea8.svg");
+  }
+
+  .fr-icon-checkbox-circle-line::before,
+  .fr-icon-checkbox-circle-line::after {
+    background-image: url("../../icons/system/checkbox-circle-line.acf370157e8d.svg");
+  }
+
+  .fr-icon-checkbox-fill::before,
+  .fr-icon-checkbox-fill::after {
+    background-image: url("../../icons/system/checkbox-fill.3be597923e6a.svg");
+  }
+
+  .fr-icon-checkbox-line::before,
+  .fr-icon-checkbox-line::after {
+    background-image: url("../../icons/system/checkbox-line.4eebf3e8cccb.svg");
+  }
+
+  .fr-icon-close-circle-fill::before,
+  .fr-icon-close-circle-fill::after {
+    background-image: url("../../icons/system/close-circle-fill.069eca840fed.svg");
+  }
+
+  .fr-icon-close-circle-line::before,
+  .fr-icon-close-circle-line::after {
+    background-image: url("../../icons/system/close-circle-line.86abddc1a2ec.svg");
+  }
+
+  .fr-icon-close-line::before,
+  .fr-icon-close-line::after {
+    background-image: url("../../icons/system/close-line.2e149b4b2753.svg");
+  }
+
+  .fr-icon-delete-bin-fill::before,
+  .fr-icon-delete-bin-fill::after {
+    background-image: url("../../icons/system/delete-bin-fill.671e1d7f94b7.svg");
+  }
+
+  .fr-icon-delete-bin-line::before,
+  .fr-icon-delete-bin-line::after {
+    background-image: url("../../icons/system/delete-bin-line.6e7d6ba3f7f1.svg");
+  }
+
+  .fr-icon-download-fill::before,
+  .fr-icon-download-fill::after {
+    background-image: url("../../icons/system/download-fill.bd5d500ca280.svg");
+  }
+
+  .fr-icon-download-line::before,
+  .fr-icon-download-line::after {
+    background-image: url("../../icons/system/download-line.3a5fd93268ff.svg");
+  }
+
+  .fr-icon-error-warning-fill::before,
+  .fr-icon-error-warning-fill::after {
+    background-image: url("../../icons/system/error-warning-fill.b1ab0d014050.svg");
+  }
+
+  .fr-icon-error-warning-line::before,
+  .fr-icon-error-warning-line::after {
+    background-image: url("../../icons/system/error-warning-line.22efcca209e6.svg");
+  }
+
+  .fr-icon-external-link-fill::before,
+  .fr-icon-external-link-fill::after {
+    background-image: url("../../icons/system/external-link-fill.d218e5da083a.svg");
+  }
+
+  .fr-icon-external-link-line::before,
+  .fr-icon-external-link-line::after {
+    background-image: url("../../icons/system/external-link-line.8c203f4f8465.svg");
+  }
+
+  .fr-icon-eye-fill::before,
+  .fr-icon-eye-fill::after {
+    background-image: url("../../icons/system/eye-fill.c127f863a886.svg");
+  }
+
+  .fr-icon-eye-line::before,
+  .fr-icon-eye-line::after {
+    background-image: url("../../icons/system/eye-line.b851753d2914.svg");
+  }
+
+  .fr-icon-eye-off-fill::before,
+  .fr-icon-eye-off-fill::after {
+    background-image: url("../../icons/system/eye-off-fill.4566bc925c38.svg");
+  }
+
+  .fr-icon-eye-off-line::before,
+  .fr-icon-eye-off-line::after {
+    background-image: url("../../icons/system/eye-off-line.7a2cbbaba231.svg");
+  }
+
+  .fr-icon-filter-fill::before,
+  .fr-icon-filter-fill::after {
+    background-image: url("../../icons/system/filter-fill.100d3073570b.svg");
+  }
+
+  .fr-icon-filter-line::before,
+  .fr-icon-filter-line::after {
+    background-image: url("../../icons/system/filter-line.0d30f9be142a.svg");
+  }
+
+  .fr-icon-arrow-left-s-first-line::before,
+  .fr-icon-arrow-left-s-first-line::after {
+    background-image: url("../../icons/system/fr--arrow-left-s-first-line.875b9dd80224.svg");
+  }
+
+  .fr-icon-arrow-left-s-line-double::before,
+  .fr-icon-arrow-left-s-line-double::after {
+    background-image: url("../../icons/system/fr--arrow-left-s-line-double.e7c1004f4837.svg");
+  }
+
+  .fr-icon-arrow-right-s-last-line::before,
+  .fr-icon-arrow-right-s-last-line::after {
+    background-image: url("../../icons/system/fr--arrow-right-s-last-line.a8a338cc0c28.svg");
+  }
+
+  .fr-icon-arrow-right-s-line-double::before,
+  .fr-icon-arrow-right-s-line-double::after {
+    background-image: url("../../icons/system/fr--arrow-right-s-line-double.46a2b34eb453.svg");
+  }
+
+  .fr-icon-error-fill::before,
+  .fr-icon-error-fill::after {
+    background-image: url("../../icons/system/fr--error-fill.6110e9af751a.svg");
+  }
+
+  .fr-icon-error-line::before,
+  .fr-icon-error-line::after {
+    background-image: url("../../icons/system/fr--error-line.98022880cb83.svg");
+  }
+
+  .fr-icon-info-fill::before,
+  .fr-icon-info-fill::after {
+    background-image: url("../../icons/system/fr--info-fill.4ee3c1a496d8.svg");
+  }
+
+  .fr-icon-info-line::before,
+  .fr-icon-info-line::after {
+    background-image: url("../../icons/system/fr--info-line.f1d1afe5164e.svg");
+  }
+
+  .fr-icon-success-fill::before,
+  .fr-icon-success-fill::after {
+    background-image: url("../../icons/system/fr--success-fill.527ddccc0e38.svg");
+  }
+
+  .fr-icon-success-line::before,
+  .fr-icon-success-line::after {
+    background-image: url("../../icons/system/fr--success-line.1e070098f7b4.svg");
+  }
+
+  .fr-icon-theme-fill::before,
+  .fr-icon-theme-fill::after {
+    background-image: url("../../icons/system/fr--theme-fill.59b095c1198b.svg");
+  }
+
+  .fr-icon-warning-fill::before,
+  .fr-icon-warning-fill::after {
+    background-image: url("../../icons/system/fr--warning-fill.2c93f3c4eace.svg");
+  }
+
+  .fr-icon-warning-line::before,
+  .fr-icon-warning-line::after {
+    background-image: url("../../icons/system/fr--warning-line.35d3ef5238e1.svg");
+  }
+
+  .fr-icon-information-fill::before,
+  .fr-icon-information-fill::after {
+    background-image: url("../../icons/system/information-fill.3cf245880328.svg");
+  }
+
+  .fr-icon-information-line::before,
+  .fr-icon-information-line::after {
+    background-image: url("../../icons/system/information-line.acd16f6d6c58.svg");
+  }
+
+  .fr-icon-lock-fill::before,
+  .fr-icon-lock-fill::after {
+    background-image: url("../../icons/system/lock-fill.f7abcf0fb060.svg");
+  }
+
+  .fr-icon-lock-line::before,
+  .fr-icon-lock-line::after {
+    background-image: url("../../icons/system/lock-line.11d179c5ecd3.svg");
+  }
+
+  .fr-icon-lock-unlock-fill::before,
+  .fr-icon-lock-unlock-fill::after {
+    background-image: url("../../icons/system/lock-unlock-fill.dad693980651.svg");
+  }
+
+  .fr-icon-lock-unlock-line::before,
+  .fr-icon-lock-unlock-line::after {
+    background-image: url("../../icons/system/lock-unlock-line.78b519e68970.svg");
+  }
+
+  .fr-icon-logout-box-r-fill::before,
+  .fr-icon-logout-box-r-fill::after {
+    background-image: url("../../icons/system/logout-box-r-fill.ce74558ff181.svg");
+  }
+
+  .fr-icon-logout-box-r-line::before,
+  .fr-icon-logout-box-r-line::after {
+    background-image: url("../../icons/system/logout-box-r-line.c43253f3f5f7.svg");
+  }
+
+  .fr-icon-menu-2-fill::before,
+  .fr-icon-menu-2-fill::after {
+    background-image: url("../../icons/system/menu-2-fill.e8817899939b.svg");
+  }
+
+  .fr-icon-menu-fill::before,
+  .fr-icon-menu-fill::after {
+    background-image: url("../../icons/system/menu-fill.eb9376ac67ca.svg");
+  }
+
+  .fr-icon-more-fill::before,
+  .fr-icon-more-fill::after {
+    background-image: url("../../icons/system/more-fill.919233cd1ab0.svg");
+  }
+
+  .fr-icon-more-line::before,
+  .fr-icon-more-line::after {
+    background-image: url("../../icons/system/more-line.b44c60f31862.svg");
+  }
+
+  .fr-icon-notification-badge-fill::before,
+  .fr-icon-notification-badge-fill::after {
+    background-image: url("../../icons/system/notification-badge-fill.8aeabffae351.svg");
+  }
+
+  .fr-icon-notification-badge-line::before,
+  .fr-icon-notification-badge-line::after {
+    background-image: url("../../icons/system/notification-badge-line.9724886577da.svg");
+  }
+
+  .fr-icon-question-fill::before,
+  .fr-icon-question-fill::after {
+    background-image: url("../../icons/system/question-fill.59ad6b9a12e1.svg");
+  }
+
+  .fr-icon-question-line::before,
+  .fr-icon-question-line::after {
+    background-image: url("../../icons/system/question-line.d91afc3052a8.svg");
+  }
+
+  .fr-icon-refresh-fill::before,
+  .fr-icon-refresh-fill::after {
+    background-image: url("../../icons/system/refresh-fill.cbf617de098b.svg");
+  }
+
+  .fr-icon-refresh-line::before,
+  .fr-icon-refresh-line::after {
+    background-image: url("../../icons/system/refresh-line.a597cfaa3fd9.svg");
+  }
+
+  .fr-icon-search-fill::before,
+  .fr-icon-search-fill::after {
+    background-image: url("../../icons/system/search-fill.5927d10668be.svg");
+  }
+
+  .fr-icon-search-line::before,
+  .fr-icon-search-line::after {
+    background-image: url("../../icons/system/search-line.b8fd95d87014.svg");
+  }
+
+  .fr-icon-settings-5-fill::before,
+  .fr-icon-settings-5-fill::after {
+    background-image: url("../../icons/system/settings-5-fill.accf313eeb78.svg");
+  }
+
+  .fr-icon-settings-5-line::before,
+  .fr-icon-settings-5-line::after {
+    background-image: url("../../icons/system/settings-5-line.98208d255283.svg");
+  }
+
+  .fr-icon-shield-fill::before,
+  .fr-icon-shield-fill::after {
+    background-image: url("../../icons/system/shield-fill.093358035c4c.svg");
+  }
+
+  .fr-icon-shield-line::before,
+  .fr-icon-shield-line::after {
+    background-image: url("../../icons/system/shield-line.b87a10b2cbec.svg");
+  }
+
+  .fr-icon-star-fill::before,
+  .fr-icon-star-fill::after {
+    background-image: url("../../icons/system/star-fill.81ed500c4446.svg");
+  }
+
+  .fr-icon-star-line::before,
+  .fr-icon-star-line::after {
+    background-image: url("../../icons/system/star-line.d02425cd1d16.svg");
+  }
+
+  .fr-icon-star-s-fill::before,
+  .fr-icon-star-s-fill::after {
+    background-image: url("../../icons/system/star-s-fill.53e4d5a3cc6e.svg");
+  }
+
+  .fr-icon-star-s-line::before,
+  .fr-icon-star-s-line::after {
+    background-image: url("../../icons/system/star-s-line.75820458d330.svg");
+  }
+
+  .fr-icon-subtract-line::before,
+  .fr-icon-subtract-line::after {
+    background-image: url("../../icons/system/subtract-line.269096772a33.svg");
+  }
+
+  .fr-icon-thumb-down-fill::before,
+  .fr-icon-thumb-down-fill::after {
+    background-image: url("../../icons/system/thumb-down-fill.fb28b7856077.svg");
+  }
+
+  .fr-icon-thumb-down-line::before,
+  .fr-icon-thumb-down-line::after {
+    background-image: url("../../icons/system/thumb-down-line.4dcb38842612.svg");
+  }
+
+  .fr-icon-thumb-up-fill::before,
+  .fr-icon-thumb-up-fill::after {
+    background-image: url("../../icons/system/thumb-up-fill.15d596894fd8.svg");
+  }
+
+  .fr-icon-thumb-up-line::before,
+  .fr-icon-thumb-up-line::after {
+    background-image: url("../../icons/system/thumb-up-line.fdba6c686a76.svg");
+  }
+
+  .fr-icon-time-fill::before,
+  .fr-icon-time-fill::after {
+    background-image: url("../../icons/system/time-fill.1a07f34dd80e.svg");
+  }
+
+  .fr-icon-time-line::before,
+  .fr-icon-time-line::after {
+    background-image: url("../../icons/system/time-line.21795daf8f91.svg");
+  }
+
+  .fr-icon-timer-fill::before,
+  .fr-icon-timer-fill::after {
+    background-image: url("../../icons/system/timer-fill.38da5372d960.svg");
+  }
+
+  .fr-icon-timer-line::before,
+  .fr-icon-timer-line::after {
+    background-image: url("../../icons/system/timer-line.d042d558f8e0.svg");
+  }
+
+  .fr-icon-upload-2-fill::before,
+  .fr-icon-upload-2-fill::after {
+    background-image: url("../../icons/system/upload-2-fill.d9464c7ddd7d.svg");
+  }
+
+  .fr-icon-upload-2-line::before,
+  .fr-icon-upload-2-line::after {
+    background-image: url("../../icons/system/upload-2-line.7d30216776ad.svg");
+  }
+
+  .fr-icon-upload-fill::before,
+  .fr-icon-upload-fill::after {
+    background-image: url("../../icons/system/upload-fill.62c758528c20.svg");
+  }
+
+  .fr-icon-upload-line::before,
+  .fr-icon-upload-line::after {
+    background-image: url("../../icons/system/upload-line.a640d9ab3e86.svg");
+  }
+
+  .fr-icon-zoom-in-fill::before,
+  .fr-icon-zoom-in-fill::after {
+    background-image: url("../../icons/system/zoom-in-fill.6c52195c084e.svg");
+  }
+
+  .fr-icon-zoom-in-line::before,
+  .fr-icon-zoom-in-line::after {
+    background-image: url("../../icons/system/zoom-in-line.49ee021162b9.svg");
+  }
+
+  .fr-icon-zoom-out-fill::before,
+  .fr-icon-zoom-out-fill::after {
+    background-image: url("../../icons/system/zoom-out-fill.328fdcecd52f.svg");
+  }
+
+  .fr-icon-zoom-out-line::before,
+  .fr-icon-zoom-out-line::after {
+    background-image: url("../../icons/system/zoom-out-line.11658e48d7bb.svg");
+  }
+
+  .fr-fi-add-circle-fill::before {
+    background-image: url("../../icons/system/add-circle-fill.6486e787e3ec.svg");
+  }
+
+  .fr-fi-add-circle-line::before {
+    background-image: url("../../icons/system/add-circle-line.285bc9907910.svg");
+  }
+
+  .fr-fi-add-line::before {
+    background-image: url("../../icons/system/add-line.f59d35b996e1.svg");
+  }
+
+  .fr-fi-arrow-down-line::before {
+    background-image: url("../../icons/system/arrow-down-line.cdcbe20cde3e.svg");
+  }
+
+  .fr-fi-arrow-down-s-line::before {
+    background-image: url("../../icons/system/arrow-down-s-line.4ac4f4c7f991.svg");
+  }
+
+  .fr-fi-arrow-go-back-fill::before {
+    background-image: url("../../icons/system/arrow-go-back-fill.58dcaa705a4f.svg");
+  }
+
+  .fr-fi-arrow-go-back-line::before {
+    background-image: url("../../icons/system/arrow-go-back-line.52e23c19d525.svg");
+  }
+
+  .fr-fi-arrow-left-line::before {
+    background-image: url("../../icons/system/arrow-left-line.fc03672e912e.svg");
+  }
+
+  .fr-fi-arrow-left-s-line::before {
+    background-image: url("../../icons/system/arrow-left-s-line.663154e3caa6.svg");
+  }
+
+  .fr-fi-arrow-right-line::before {
+    background-image: url("../../icons/system/arrow-right-line.3e4843104c8e.svg");
+  }
+
+  .fr-fi-arrow-right-s-line::before {
+    background-image: url("../../icons/system/arrow-right-s-line.1c854101c370.svg");
+  }
+
+  .fr-fi-arrow-right-up-line::before {
+    background-image: url("../../icons/system/arrow-right-up-line.ab18cd729dcf.svg");
+  }
+
+  .fr-fi-arrow-up-fill::before {
+    background-image: url("../../icons/system/arrow-up-fill.e3dc3dc5c310.svg");
+  }
+
+  .fr-fi-arrow-up-line::before {
+    background-image: url("../../icons/system/arrow-up-line.97bcc6898f8e.svg");
+  }
+
+  .fr-fi-arrow-up-s-line::before {
+    background-image: url("../../icons/system/arrow-up-s-line.a669c939a057.svg");
+  }
+
+  .fr-fi-check-line::before {
+    background-image: url("../../icons/system/check-line.fdd955d1e98b.svg");
+  }
+
+  .fr-fi-checkbox-circle-line::before {
+    background-image: url("../../icons/system/checkbox-circle-line.acf370157e8d.svg");
+  }
+
+  .fr-fi-close-line::before {
+    background-image: url("../../icons/system/close-line.2e149b4b2753.svg");
+  }
+
+  .fr-fi-download-line::before {
+    background-image: url("../../icons/system/download-line.3a5fd93268ff.svg");
+  }
+
+  .fr-fi-error-warning-fill::before {
+    background-image: url("../../icons/system/error-warning-fill.b1ab0d014050.svg");
+  }
+
+  .fr-fi-error-warning-line::before {
+    background-image: url("../../icons/system/error-warning-line.22efcca209e6.svg");
+  }
+
+  .fr-fi-external-link-line::before {
+    background-image: url("../../icons/system/external-link-line.8c203f4f8465.svg");
+  }
+
+  .fr-fi-eye-fill::before {
+    background-image: url("../../icons/system/eye-fill.c127f863a886.svg");
+  }
+
+  .fr-fi-eye-line::before {
+    background-image: url("../../icons/system/eye-line.b851753d2914.svg");
+  }
+
+  .fr-fi-eye-off-fill::before {
+    background-image: url("../../icons/system/eye-off-fill.4566bc925c38.svg");
+  }
+
+  .fr-fi-eye-off-line::before {
+    background-image: url("../../icons/system/eye-off-line.7a2cbbaba231.svg");
+  }
+
+  .fr-fi-filter-fill::before {
+    background-image: url("../../icons/system/filter-fill.100d3073570b.svg");
+  }
+
+  .fr-fi-filter-line::before {
+    background-image: url("../../icons/system/filter-line.0d30f9be142a.svg");
+  }
+
+  .fr-fi-arrow-left-s-first-line::before {
+    background-image: url("../../icons/system/fr--arrow-left-s-first-line.875b9dd80224.svg");
+  }
+
+  .fr-fi-arrow-left-s-line-double::before {
+    background-image: url("../../icons/system/fr--arrow-left-s-line-double.e7c1004f4837.svg");
+  }
+
+  .fr-fi-arrow-right-s-last-line::before {
+    background-image: url("../../icons/system/fr--arrow-right-s-last-line.a8a338cc0c28.svg");
+  }
+
+  .fr-fi-arrow-right-s-line-double::before {
+    background-image: url("../../icons/system/fr--arrow-right-s-line-double.46a2b34eb453.svg");
+  }
+
+  .fr-fi-error-fill::before {
+    background-image: url("../../icons/system/fr--error-fill.6110e9af751a.svg");
+  }
+
+  .fr-fi-error-line::before {
+    background-image: url("../../icons/system/fr--error-line.98022880cb83.svg");
+  }
+
+  .fr-fi-info-fill::before {
+    background-image: url("../../icons/system/fr--info-fill.4ee3c1a496d8.svg");
+  }
+
+  .fr-fi-info-line::before {
+    background-image: url("../../icons/system/fr--info-line.f1d1afe5164e.svg");
+  }
+
+  .fr-fi-success-fill::before {
+    background-image: url("../../icons/system/fr--success-fill.527ddccc0e38.svg");
+  }
+
+  .fr-fi-success-line::before {
+    background-image: url("../../icons/system/fr--success-line.1e070098f7b4.svg");
+  }
+
+  .fr-fi-theme-fill::before {
+    background-image: url("../../icons/system/fr--theme-fill.59b095c1198b.svg");
+  }
+
+  .fr-fi-warning-fill::before {
+    background-image: url("../../icons/system/fr--warning-fill.2c93f3c4eace.svg");
+  }
+
+  .fr-fi-warning-line::before {
+    background-image: url("../../icons/system/fr--warning-line.35d3ef5238e1.svg");
+  }
+
+  .fr-fi-information-fill::before {
+    background-image: url("../../icons/system/information-fill.3cf245880328.svg");
+  }
+
+  .fr-fi-information-line::before {
+    background-image: url("../../icons/system/information-line.acd16f6d6c58.svg");
+  }
+
+  .fr-fi-lock-fill::before {
+    background-image: url("../../icons/system/lock-fill.f7abcf0fb060.svg");
+  }
+
+  .fr-fi-lock-line::before {
+    background-image: url("../../icons/system/lock-line.11d179c5ecd3.svg");
+  }
+
+  .fr-fi-logout-box-r-fill::before {
+    background-image: url("../../icons/system/logout-box-r-fill.ce74558ff181.svg");
+  }
+
+  .fr-fi-logout-box-r-line::before {
+    background-image: url("../../icons/system/logout-box-r-line.c43253f3f5f7.svg");
+  }
+
+  .fr-fi-menu-2-fill::before {
+    background-image: url("../../icons/system/menu-2-fill.e8817899939b.svg");
+  }
+
+  .fr-fi-menu-fill::before {
+    background-image: url("../../icons/system/menu-fill.eb9376ac67ca.svg");
+  }
+
+  .fr-fi-question-fill::before {
+    background-image: url("../../icons/system/question-fill.59ad6b9a12e1.svg");
+  }
+
+  .fr-fi-question-line::before {
+    background-image: url("../../icons/system/question-line.d91afc3052a8.svg");
+  }
+
+  .fr-fi-refresh-fill::before {
+    background-image: url("../../icons/system/refresh-fill.cbf617de098b.svg");
+  }
+
+  .fr-fi-refresh-line::before {
+    background-image: url("../../icons/system/refresh-line.a597cfaa3fd9.svg");
+  }
+
+  .fr-fi-search-fill::before {
+    background-image: url("../../icons/system/search-fill.5927d10668be.svg");
+  }
+
+  .fr-fi-search-line::before {
+    background-image: url("../../icons/system/search-line.b8fd95d87014.svg");
+  }
+
+  .fr-fi-subtract-line::before {
+    background-image: url("../../icons/system/subtract-line.269096772a33.svg");
+  }
+
+  .fr-fi-timer-fill::before {
+    background-image: url("../../icons/system/timer-fill.38da5372d960.svg");
+  }
+
+  .fr-fi-timer-line::before {
+    background-image: url("../../icons/system/timer-line.d042d558f8e0.svg");
+  }
+
+  .fr-fi-upload-2-fill::before {
+    background-image: url("../../icons/system/upload-2-fill.d9464c7ddd7d.svg");
+  }
+
+  .fr-fi-upload-2-line::before {
+    background-image: url("../../icons/system/upload-2-line.7d30216776ad.svg");
+  }
+
+  .fr-fi-zoom-in-fill::before {
+    background-image: url("../../icons/system/zoom-in-fill.6c52195c084e.svg");
+  }
+
+  .fr-fi-zoom-in-line::before {
+    background-image: url("../../icons/system/zoom-in-line.49ee021162b9.svg");
+  }
+
+  .fr-fi-zoom-out-fill::before {
+    background-image: url("../../icons/system/zoom-out-fill.328fdcecd52f.svg");
+  }
+
+  .fr-fi-zoom-out-line::before {
+    background-image: url("../../icons/system/zoom-out-line.11658e48d7bb.svg");
+  }
+
+  .fr-fi-delete-line::before,
+  .fr-fi-delete-line::after {
+    background-image: url("../../icons/system/delete-bin-line.6e7d6ba3f7f1.svg");
+  }
+
+  .fr-fi-delete-fill::before,
+  .fr-fi-delete-fill::after {
+    background-image: url("../../icons/system/delete-bin-fill.671e1d7f94b7.svg");
+  }
+
+  .fr-icon-delete-line::before,
+  .fr-icon-delete-line::after {
+    background-image: url("../../icons/system/delete-bin-line.6e7d6ba3f7f1.svg");
+  }
+
+  .fr-icon-delete-fill::before,
+  .fr-icon-delete-fill::after {
+    background-image: url("../../icons/system/delete-bin-fill.671e1d7f94b7.svg");
+  }
+
+  .fr-icon-account-circle-fill::before,
+  .fr-icon-account-circle-fill::after {
+    background-image: url("../../icons/user/account-circle-fill.6b68faf5c956.svg");
+  }
+
+  .fr-icon-account-circle-line::before,
+  .fr-icon-account-circle-line::after {
+    background-image: url("../../icons/user/account-circle-line.c78e2006173a.svg");
+  }
+
+  .fr-icon-account-pin-circle-fill::before,
+  .fr-icon-account-pin-circle-fill::after {
+    background-image: url("../../icons/user/account-pin-circle-fill.97b71cade7dc.svg");
+  }
+
+  .fr-icon-account-pin-circle-line::before,
+  .fr-icon-account-pin-circle-line::after {
+    background-image: url("../../icons/user/account-pin-circle-line.f4d2911558f8.svg");
+  }
+
+  .fr-icon-admin-fill::before,
+  .fr-icon-admin-fill::after {
+    background-image: url("../../icons/user/admin-fill.38876fbcee5d.svg");
+  }
+
+  .fr-icon-admin-line::before,
+  .fr-icon-admin-line::after {
+    background-image: url("../../icons/user/admin-line.e619e778b8a1.svg");
+  }
+
+  .fr-icon-group-fill::before,
+  .fr-icon-group-fill::after {
+    background-image: url("../../icons/user/group-fill.d121679056a0.svg");
+  }
+
+  .fr-icon-group-line::before,
+  .fr-icon-group-line::after {
+    background-image: url("../../icons/user/group-line.f6a9a88db754.svg");
+  }
+
+  .fr-icon-parent-fill::before,
+  .fr-icon-parent-fill::after {
+    background-image: url("../../icons/user/parent-fill.3d9baa523738.svg");
+  }
+
+  .fr-icon-parent-line::before,
+  .fr-icon-parent-line::after {
+    background-image: url("../../icons/user/parent-line.4e8bf5232b23.svg");
+  }
+
+  .fr-icon-team-fill::before,
+  .fr-icon-team-fill::after {
+    background-image: url("../../icons/user/team-fill.008d9406f192.svg");
+  }
+
+  .fr-icon-team-line::before,
+  .fr-icon-team-line::after {
+    background-image: url("../../icons/user/team-line.84c4c2f0d49c.svg");
+  }
+
+  .fr-icon-user-add-fill::before,
+  .fr-icon-user-add-fill::after {
+    background-image: url("../../icons/user/user-add-fill.cc95e28a4006.svg");
+  }
+
+  .fr-icon-user-add-line::before,
+  .fr-icon-user-add-line::after {
+    background-image: url("../../icons/user/user-add-line.100643d53e29.svg");
+  }
+
+  .fr-icon-user-fill::before,
+  .fr-icon-user-fill::after {
+    background-image: url("../../icons/user/user-fill.66fab1019801.svg");
+  }
+
+  .fr-icon-user-heart-fill::before,
+  .fr-icon-user-heart-fill::after {
+    background-image: url("../../icons/user/user-heart-fill.3757d27ead04.svg");
+  }
+
+  .fr-icon-user-heart-line::before,
+  .fr-icon-user-heart-line::after {
+    background-image: url("../../icons/user/user-heart-line.5e57d2b87f6e.svg");
+  }
+
+  .fr-icon-user-line::before,
+  .fr-icon-user-line::after {
+    background-image: url("../../icons/user/user-line.e2353c55ffc3.svg");
+  }
+
+  .fr-icon-user-search-fill::before,
+  .fr-icon-user-search-fill::after {
+    background-image: url("../../icons/user/user-search-fill.1869e146f51a.svg");
+  }
+
+  .fr-icon-user-search-line::before,
+  .fr-icon-user-search-line::after {
+    background-image: url("../../icons/user/user-search-line.caea03049192.svg");
+  }
+
+  .fr-icon-user-setting-fill::before,
+  .fr-icon-user-setting-fill::after {
+    background-image: url("../../icons/user/user-setting-fill.9a7a7a961590.svg");
+  }
+
+  .fr-icon-user-setting-line::before,
+  .fr-icon-user-setting-line::after {
+    background-image: url("../../icons/user/user-setting-line.c78e2006173a.svg");
+  }
+
+  .fr-icon-user-star-fill::before,
+  .fr-icon-user-star-fill::after {
+    background-image: url("../../icons/user/user-star-fill.bafb6d749a4e.svg");
+  }
+
+  .fr-icon-user-star-line::before,
+  .fr-icon-user-star-line::after {
+    background-image: url("../../icons/user/user-star-line.34521c4d0f4d.svg");
+  }
+
+  .fr-fi-user-fill::before {
+    background-image: url("../../icons/user/user-fill.66fab1019801.svg");
+  }
+
+  .fr-fi-user-line::before {
+    background-image: url("../../icons/user/user-line.e2353c55ffc3.svg");
+  }
+
+  .fr-fi-account-line::before,
+  .fr-fi-account-line::after {
+    background-image: url("../../icons/user/account-circle-line.c78e2006173a.svg");
+  }
+
+  .fr-fi-account-fill::before,
+  .fr-fi-account-fill::after {
+    background-image: url("../../icons/user/account-circle-fill.6b68faf5c956.svg");
+  }
+
+  .fr-icon-account-line::before,
+  .fr-icon-account-line::after {
+    background-image: url("../../icons/user/account-circle-line.c78e2006173a.svg");
+  }
+
+  .fr-icon-account-fill::before,
+  .fr-icon-account-fill::after {
+    background-image: url("../../icons/user/account-circle-fill.6b68faf5c956.svg");
+  }
+
+  .fr-icon-cloudy-2-fill::before,
+  .fr-icon-cloudy-2-fill::after {
+    background-image: url("../../icons/weather/cloudy-2-fill.5e337a237937.svg");
+  }
+
+  .fr-icon-cloudy-2-line::before,
+  .fr-icon-cloudy-2-line::after {
+    background-image: url("../../icons/weather/cloudy-2-line.8c7bd1c6f13d.svg");
+  }
+
+  .fr-icon-flashlight-fill::before,
+  .fr-icon-flashlight-fill::after {
+    background-image: url("../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  }
+
+  .fr-icon-flashlight-line::before,
+  .fr-icon-flashlight-line::after {
+    background-image: url("../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  }
+
+  .fr-icon-moon-fill::before,
+  .fr-icon-moon-fill::after {
+    background-image: url("../../icons/weather/moon-fill.d210377a78f7.svg");
+  }
+
+  .fr-icon-moon-line::before,
+  .fr-icon-moon-line::after {
+    background-image: url("../../icons/weather/moon-line.36236eafbb80.svg");
+  }
+
+  .fr-icon-sun-fill::before,
+  .fr-icon-sun-fill::after {
+    background-image: url("../../icons/weather/sun-fill.191a83433e72.svg");
+  }
+
+  .fr-icon-sun-line::before,
+  .fr-icon-sun-line::after {
+    background-image: url("../../icons/weather/sun-line.2741cecc9549.svg");
+  }
+
+  .fr-fi-flashlight-fill::before {
+    background-image: url("../../icons/weather/flashlight-fill.90d35c1cad83.svg");
+  }
+
+  .fr-fi-flashlight-line::before {
+    background-image: url("../../icons/weather/flashlight-line.ab755ad3121f.svg");
+  }
+}

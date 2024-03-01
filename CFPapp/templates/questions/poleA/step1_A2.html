@@ -1,63 +1,63 @@
 {% extends "base.html" %}
-{% block title %}Question A2 2{% endblock %}
-{% load bootstrap5 %}
+{% block title %}Question A2 C1{% endblock %}
 {% block content %}
-
 
 <div class="container" style="margin-left:10%">
   <br>
-  {% if request.user.is_authenticated %}
-  <h4>Votre référentiel {{ request.user.username}}</h4>
-  {% endif %}
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle Conseiller-Développer</h4>
-  <h6><strong>A2 : Diagnostic et analyse des besoins territoriaux et/ou sectoriels</strong></h6>
-  <br>
-  <p><strong>A2-C1 : </strong>Analyser les données collectées afin d’identifier des besoins pouvant se situer à l’échelle d’un territoire<br>dans son ensemble ou d’un secteur d’activités spécifique en mobilisant des démarches et outils d’analyse approprié</p>
-  <p>Remplir le questionnaire peut prendre 40 minutes, il n'y a pas de pause.</p>
-      <div class="col-md-8 col-md-offset-8">
-             <form action="{% url 'step2_A3' %}" method="post" class="form-v5-content">
-              {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-              <p id="texteliste"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-              </svg>{{ form.A2_C1 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-              </svg></p></br>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Next</button>
-            </div>
-            </form>
-            <div class="container-fluid">
-              <div class="col-xl-">
+  <h4>Votre référentiel</h4>
+
+  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class="text-center">A2 : Diagnostic et analyse des besoins territoriaux et/ou sectoriels</h6></dt>
+                <dd> <strong>A2-C1 : </strong>Structurer une démarche de diagnostic afin d’étudier rigoureusement des besoins en<br>
+                compétences, qu’ils soient territoriaux ou spécifiques à un secteur d’activités en prenant<br>
+                appui sur des sources et des acteurs qualifiés</p></dd>
+              <dd><div class="col-md-8 col-md-offset-8">
+
                 <ul>
                   <h6>Les niveaux : </h6>
                   <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
                   <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
                   <li><strong>N S P : </strong>ne se prononce pas</li>
                   <li>Par defaut la liste indique le Degré 1.</li>
-                </ul>
-                <br>
-            <ul class="list-group">
-              <li><p style="font-size: 12px;"><strong>Degré 1 : </strong>J’ai été sensibilisé en mettant en œuvre la démarche de diagnostic lors de mon année probatoire. Je connais les composantes nécessaires à l’élaboration d’un diagnostic. 
-                Je connais la nécessité de réaliser un diagnostic de territoire comme point de départ de mon action.
-                J’ai pris connaissance de la commande émanant de la direction de la DRFPIC, de la direction de ma structure concernant les besoins en compétences de mon territoire et/ou d’un secteur d’activités.                  
-                </p></li>
-              <li><p style="font-size: 12px;"><strong>Degré 2 : </strong>Je planifie et organise ma démarche de diagnostic.
-                Je repère les enjeux, attentes et besoins du commanditaire. 
-                J’identifie les éléments et les acteurs utiles à la réalisation de mon diagnostic.
-                </p></li>
-                                 
-              <li><p style="font-size: 12px;"><strong>Degré 3 : </strong>Je conçois le plan d’action : identification des acteurs clés, choix des outils d’investigations (observations, entretiens, questionnaires, études de documents et d’éléments de veille stratégique produits dans le réseau...), calendrier et planification du diagnostic, restitution sous forme orale et écrite.
-                Je planifie et j’organise ma démarche de diagnostic en produisant un rétroplanning.                   
-                </p>
+                </ul></div></dd>
+              </dl>
+      </div>
+  <div class="row justify-content-md-center">
+         <div class=".col-md-">
+             <form action="{% url 'step1_A2' %}" method="post" class="form-group">
+                  <div class="d-flex justify-content-center">
+              {%csrf_token %}
+              <div style="display: none;">{{ form.created_by }}</div><br>
+              <p style="border: 2px solid blueviolet; width : 830px;">{{ form.A2_C1 }}</p></div>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+            </form>
+            </div>
+      </div>
+  </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
+             <ul class="list-group">
+              <li class="list-group-item list-group-item-info"><p id="textCompetences"><strong>Degré 1 : </strong>Je mets en œuvre la démarche de diagnostic lors de mon année probatoire. Je connais les composantes nécessaires à l’élaboration d’un diagnostic.<br>
+Je connais la nécessité de réaliser un diagnostic de territoire comme point de départ de mon action.<br>
+J’ai pris connaissance de la commande émanant des décideurs concernant les besoins en compétences de mon territoire et/ou d’un secteur d’activités.</p></li>
+              <li class="list-group-item list-group-item-info"><p id="textCompetences"><strong>Degré 2 : </strong>Je repère les enjeux, attentes et besoins du commanditaire.<br>
+J’identifie les éléments et les acteurs utiles à la réalisation de mon diagnostic.</p></li>
+              <li class="list-group-item list-group-item-info"><p id="textCompetences"><strong>Degré 3 : </strong>J’organise ma démarche de diagnostic : identification des acteurs clés, choix des outils d’investigations (observations, entretiens, questionnaires, études de documents et d’éléments de veille stratégique produits dans le réseau...), calendrier et planification du diagnostic, restitution sous forme orale et écrite.
               </li>
-              <li><p style="font-size: 12px;"><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner mes pairs sur la structuration et la démarche de diagnostic. Je peux gérer et superviser des projets de diagnostics. 
-                Je fais évoluer les outils de diagnostic.
-                Je sollicite les acteurs qualifiés en leur expliquant ma démarche de diagnostic.
+              <li class="list-group-item list-group-item-info"><p id="textCompetences"><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner mes pairs sur la structuration et la démarche de diagnostic.<br>
+Je peux gérer et superviser des projets de diagnostics.<br>
+Je fais évoluer les outils de diagnostic.<br>
+
                 </p></li>
             </ul>
-          </div>
+            </div>
+
+
+            </div>
         </div>
 </div>
 
-{% endblock %}
+{% endblock %}</body></html>

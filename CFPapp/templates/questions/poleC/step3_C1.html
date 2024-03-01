@@ -1,7 +1,55 @@
 {% extends "base.html" %}
 {% block title %}Question C1 C3{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
+
+
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>C1 : Management de projets</h6></dt>
+                <dd> <p class= 'text-center'><strong>C1 C3 :</strong> Évaluer la mise en œuvre des projets afin de pouvoir en rendre compte régulièrement et opérer les régulations<br>
+                nécessaires le cas échant en utilisant des critères et indicateurs prédéfinis</p></dd>
+              <dd></dl>
+
+</div>
+<br>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step3_C1' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.C1_C3 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrement</button></div>
+        </form>
+        </div>
+      </div>
+  </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les acteurs et les moyens existants de mon organisation (plateaux techniques, offre de formation de l’éducation nationale sur mon territoire…).<br>
+Je connais les partenaires externes mobilisables.
+
+                  </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je repère les acteurs de mon organisation et les partenaires externes mobilisables pour le projet à partir de l’étude de faisabilité du projet.
+                    </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>J’estime les moyens humains, matériels, financiers et techniques nécessaires au projet et je m’assure de leur disponibilité.<br>
+Je propose des solutions si possibles innovantes, pour rendre le projet viable.<br>
+Je sollicite les acteurs experts de ma structure et du réseau académique (inspecteurs…).
+Je construis une annexe financière du projet en mobilisant le(s) financement(s) approprié(s).
+
+                      </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis un acteur ressource pour ma structure, le réseau académique en capacité
+                    d’estimer les moyens disponibles et nécessaires d’un projet d’envergure régionale, nationale, européenne, d’un projet impliquant des partenaires.
+                      </p></li>
+              </ul>
+          </div>
+            </div>
+        </div>
+        </div>
 
 
 <div class="container-fluid" style="margin-left:10%">
@@ -10,7 +58,7 @@
       <div class="col">
         <p><strong>C1-C3 :</strong> Exploiter les données au sein de l’organisation afin d’alimenter une dynamique<br>
                  d’évolution ou d’adaptation des pratiques pédagogiques en partageant les informations clés avec les équipes</p>
-      </div> 
+      </div>
     <div class="row justify-content-md-center">
       <div class="col">
         <form action="{% url 'step3_C1' %}" method="post" class="form-v5-content ">
@@ -28,20 +76,20 @@
             </form>
       </div>
   </div>
-      
+
         <div class="container-fluid">
           <div class="col-md-8 col-md-offset-8">
             <br>
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les modalités et les indicateurs d’évaluation de projets déjà mis en œuvre. 
-                  Je connais les acteurs internes et externes, les instances pour rendre compte du suivi du projet.                                      
+                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les modalités et les indicateurs d’évaluation de projets déjà mis en œuvre.
+                  Je connais les acteurs internes et externes, les instances pour rendre compte du suivi du projet.
                   </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’utilise les outils d’évaluation et de suivi mis à disposition par ma structure, le réseau académique et le cas échéant par les commanditaires.  
-                    Je participe aux réunions de suivi et je contribue à la régulation du projet.                                    
+                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’utilise les outils d’évaluation et de suivi mis à disposition par ma structure, le réseau académique et le cas échéant par les commanditaires.
+                    Je participe aux réunions de suivi et je contribue à la régulation du projet.
                     </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>J’anime des points d’étape de réalisation du projet afin de mesurer l’état d’avancement, les écarts éventuels et les actions correctives. 
+                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>J’anime des points d’étape de réalisation du projet afin de mesurer l’état d’avancement, les écarts éventuels et les actions correctives.
                       J’utilise des outils d’évaluation pour reporter à l’interne et à l’externe. Si besoin, j’ajuste les indicateurs permettant de suivre et d’évaluer le projet.
-                      J’analyse les résultats et je les communique à l’interne et à l’externe. Je suis en capacité de conseiller sur l’adaptation des moyens en fonction de l’évolution d’un projet.                        
+                      J’analyse les résultats et je les communique à l’interne et à l’externe. Je suis en capacité de conseiller sur l’adaptation des moyens en fonction de l’évolution d’un projet.
                       </p></li>
                     <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressources pour le réseau en capacité de suivre et d’évaluer des projets d’envergure régionale, nationale, européenne, des projets impliquant des partenaires.
                       </p></li>

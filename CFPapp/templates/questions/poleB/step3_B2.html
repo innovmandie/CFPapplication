@@ -1,53 +1,49 @@
 {% extends "base.html" %}
 {% block title %}Question B2 C3{% endblock %}
-{% load bootstrap5 %}
 {% block content %}
-
-
-<div class="container-fluid" style="margin-left:10%">
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <p><strong>B2-C3 :</strong>Étudier la faisabilité de la prestation afin d’apprécier l’opportunité d’une offre en tenant compte des ressources humaines, techniques, financières, le cas échéant partenariales, requises ou mobilisables</p>
-      </div> 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step3_B2' %}" method="post" class="form-v5-content ">
+<div class="container" style="margin-left:10%">
+  <br>
+      <dl class="dl-horizontal">
+                <dd> <p><strong>B2-C3 :</strong> SÉtudier la faisabilité de la prestation afin d’apprécier l’opportunité d’une offre en tenant compte<br>
+                des ressources humaines, techniques, financières, le cas échéant partenariales, requises ou mobilisabless</p></dd>
+              <dd>
+              </dl>
+      </div>
+  <div class="row justify-content-md-center">
+         <div class=".col-md-">
+             <form action="{% url 'step3_B2' %}" method="post" class="form-group">
+                  <div class="d-flex justify-content-center">
               {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.B2_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Enregistrement</button>
-              </div>
-                  </div>
+              <div style="display: none;">{{ form.created_by }}</div><br>
+              <p style="border: 2px solid blueviolet; width : 810px;">{{ form.B2_C3 }}</p></div>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
             </form>
+            </div>
       </div>
   </div>
-      
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <br>
+        <div class="container">
+            <div class="row justify-content-md-center">
+            <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les éléments constitutifs d’une étude de faisabilité.
-                  J’identifie les interlocuteurs facilitateurs et les parties prenantes internes et externes (inspecteurs, chefs d’établissements, DDFPT, CESUP, partenaires externes).                  
-                                     
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : Je connais les éléments constitutifs d’une étude de faisabilité.<br>
+J’identifie les interlocuteurs facilitateurs et les parties prenantes internes et externes (inspecteurs, chefs d’établissements, DDFPT, CESUP, partenaires externes).
+
                   </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>JJe recueille les données nécessaires à l’étude de faisabilité du projet en termes de ressources humaines, techniques et financières à mobiliser. 
-                    Je contribue à l’étude de faisabilité d’une prestation dans un collectif de travail.                                     
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>Je produis une étude de faisabilité à partir de l’analyse des éléments financiers, humains, pédagogiques et techniques recueillis.
-                      Je rédige une note d’opportunité. Je présente les éléments de l’offre et je conseille les décideurs sur les enjeux et la faisabilité. 
-                      
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>J’adapte mon étude de faisabilité à différents contextes, projets et acteurs. 
-                      Je suis un acteur ressource du réseau pour transmettre mes compétences et une méthode structurée pour l’étude de faisabilité d’une prestation.                       
-                      </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je recueille les données nécessaires à l’étude de faisabilité du projet en termes de ressources humaines, techniques, financières et partenariales à mobiliser.<br>
+Je contribue à l’étude de faisabilité d’une prestation dans un collectif de travail.
+
+</p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je produis une étude de faisabilité à partir de l’analyse des éléments financiers, humains, pédagogiques et techniques recueillis.<br>
+Je rédige une note d’opportunité. Je présente les éléments de l’offre et je conseille les décideurs sur les enjeux et la faisabilité.
+
+                  </p></li>
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>
+                    J’adapte mon étude de faisabilité à différents contextes, projets et acteurs.<br>
+Je suis un acteur ressource du réseau pour transmettre mes compétences et une méthode structurée pour l’étude de faisabilité d’une prestation.
+                  </p></li>
               </ul>
-          </div>
         </div>
+    </div>
 </div>
 
 {% endblock %}

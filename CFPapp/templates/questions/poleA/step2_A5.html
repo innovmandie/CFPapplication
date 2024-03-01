@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Question A5 C2{% endblock %}
-{% load bootstrap5 %}
+
 {% block content %}
 
 
@@ -10,36 +10,34 @@
         <p class=""><strong>A5-C2 : </strong>Promouvoir l’organisation (ses missions, son offre, ses moyens) afin de contribuer à sa connaissance et à sa reconnaissance en mettant en avant la diversité des voies de formation professionnelle proposées et son maillage territorial</p>
              <form action="{% url 'step2_A5' %}" method="post" class="form-v5-content">
               {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-              <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-              </svg>{{ form.A5_C2 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-              </svg></p>
+               <div style="display: none;">{{ form.created_by }}</div>
+              <p style="border: 2px solid blueviolet;">{{ form.A5_C2 }}</p>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
             </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="fr-btn">Next</button>
-            </div>    
-            </form>
-              <ul class="list-group" style="font-size: 17px;">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je distingue les 3 voies de formation professionnelle. Je m’informe en interne sur les missions, l’offre et les moyens des structures de l’éducation nationale sur mon territoire et sur la région académique. 
-                  Je connais la mission de service public de l’éducation nationale en matière de formation professionnelle. 
+        </div>
+    </div>
+    <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je distingue les 3 voies de formation professionnelle. Je m’informe en interne sur les missions, l’offre et les moyens des structures de l’éducation nationale sur mon territoire et sur la région académique.
+                  Je connais la mission de service public de l’éducation nationale en matière de formation professionnelle.
                   </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’identifie sur mon territoire l’offre de formations en m’aidant de la carte des formations professionnelle de l’éducation nationale de mon académie.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie sur mon territoire l’offre de formations en m’aidant de la carte des formations professionnelle de l’éducation nationale de mon académie.
                     Je sais identifier les atouts de mon organisation.
                     </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 3 : </strong>
-                    Je sais argumenter sur les spécificités et les atouts de mon organisation, à l’interne comme à l’externe. 
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>
+                    Je sais argumenter sur les spécificités et les atouts de mon organisation, à l’interne comme à l’externe.
                     J’explique la mission de service public de l’éducation nationale en matière de formation professionnelle, quel que soit mon interlocuteur,
-                    Je participe à des réunions, des évènements où je présente les spécificités et les atouts de la formation professionnelle de l’éducation nationale. 
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 4 : </strong>
+                    Je participe à des réunions, des évènements où je présente les spécificités et les atouts de la formation professionnelle de l’éducation nationale.
+                      </p></li>
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>
                     Je suis un acteur ressource pour le réseau en capacité d’analyser et d’harmoniser les pratiques de promotion de l’organisation de la formation professionnelle à l’éducation nationale. Je facilite la production d’outils de promotion et contribue à leur modélisation dans un collectif de travail.
-                    À la demande de l’autorité académique, je promeus l’organisation sur les territoires. 
+                    À la demande de l’autorité académique, je promeus l’organisation sur les territoires.
+                      </p></li>
               </ul>
-                      <br>
           </div>
+            </div>
         </div>
-</div>
 
 {% endblock %}
