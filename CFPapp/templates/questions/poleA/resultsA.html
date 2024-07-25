@@ -4,16 +4,30 @@
 {% block content %}
 <div class="container-fluid">
     <br>
-    <h4>Réponses référentiel enregistrées</h4>
+    <h4>Réponses enregistrées</h4>
     {{ info }}
-    <div class="row">
+     <div class="row">
+        <div class="col-md.">
+             <ul>
+            <li><strong>Degré 1 : </strong>Sensibilisation</li>
+            <li><strong>Degré 2 : </strong>Appropriation</li>
+            <li><strong>Degré 3 : </strong>Maitrise</li>
+            <li><strong>Degré 4 : </strong>Expertise</li>
+            <li><strong>Degré 0 : </strong>Ne se prononce pas</li>
+        </ul>
+            </div>
+        <div class='col'> <div style="margin-left:800px;"><button type="submit" class="fr-btn"><h6><a href="{% url 'generateA_pdf' %}" target="_blank" style="color:white">Créer un PDF</a></h6></button></div></div>
+    </div>
+
+        <div class="row">
       <div class="col">
         <h6>Résultats A1 : </h6><p>Veille socio-économique, réglementaire, concurrentielle et commerciale</p>
         {% if resultsA1 %}
+
         <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A1_C1</th>
                 <th scope="col">A1_C2</th>
                 <th scope="col">A1_C3</th>
@@ -23,7 +37,7 @@
         <tbody>
             {% for row in resultsA1 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A1_C1 }}</td>
                     <td>{{ row.A1_C2 }}</td>
                     <td>{{ row.A1_C3 }}</td>
@@ -45,7 +59,7 @@
              <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A2_C1</th>
                 <th scope="col">A2_C2</th>
                 <th scope="col">A2_C3</th>
@@ -55,7 +69,7 @@
         <tbody>
             {% for row in resultsA2 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A2_C1 }}</td>
                     <td>{{ row.A2_C2 }}</td>
                     <td>{{ row.A2_C3 }}</td>
@@ -78,7 +92,7 @@
              <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A3_C1</th>
                 <th scope="col">A3_C2</th>
                 <th scope="col">A3_C3</th>
@@ -88,7 +102,7 @@
         <tbody>
             {% for row in resultsA3 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A3_C1 }}</td>
                     <td>{{ row.A3_C2 }}</td>
                     <td>{{ row.A3_C3 }}</td>
@@ -109,7 +123,7 @@
              <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A4_C1</th>
                 <th scope="col">A4_C2</th>
                 <th scope="col">A4_C3</th>
@@ -119,7 +133,7 @@
         <tbody>
             {% for row in resultsA4 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A4_C1 }}</td>
                     <td>{{ row.A4_C2 }}</td>
                     <td>{{ row.A4_C3 }}</td>
@@ -145,7 +159,7 @@
              <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A5_C1</th>
                 <th scope="col">A5_C2</th>
                 <th scope="col">A5_C3</th>
@@ -155,7 +169,7 @@
         <tbody>
             {% for row in resultsA5 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A5_C1 }}</td>
                     <td>{{ row.A5_C2 }}</td>
                     <td>{{ row.A5_C3 }}</td>
@@ -176,7 +190,7 @@
              <table  class="table table-bordered table-hover">
         <thead class="table-primary">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">A6_C1</th>
                 <th scope="col">A6_C2</th>
                 <th scope="col">A6_C3</th>
@@ -186,7 +200,7 @@
         <tbody>
             {% for row in resultsA6 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.A6_C1 }}</td>
                     <td>{{ row.A6_C2 }}</td>
                     <td>{{ row.A6_C3 }}</td>

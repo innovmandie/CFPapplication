@@ -2,13 +2,6 @@ from django.forms import ChoiceField, ModelForm, MultipleChoiceField, Select, Te
 from django import forms
 from CFPapp.models import *
 
-from dal import autocomplete
-
-from django_select2 import forms as s2forms
-
-
-
-
 
 class LoginForm(forms.Form):
     nom = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder': '', 'style': 'width:300px;', 'class': 'fr-input'}))
@@ -120,7 +113,7 @@ class POSTFormA3_C1(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A3_C1': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A3_C1': Select(attrs={'style': 'width:744px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -185,7 +178,7 @@ class POSTFormA4_C3(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'A4_C3': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'A4_C3': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -558,7 +551,7 @@ class POSTFormC4_C1(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'C4_C1': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'C4_C1': Select(attrs={'style': 'width:790px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -571,7 +564,7 @@ class POSTFormC4_C2(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'C4_C2': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'C4_C2': Select(attrs={'style': 'width:790px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -585,7 +578,7 @@ class POSTFormC4_C3(ModelForm):
         widgets ={
 
             'created_by': TextInput(attrs={'readonly': 'readonly'}),
-            'C4_C3': Select(attrs={'style': 'width:700px; display:inline-block;',  'class': 'form-control'}),
+            'C4_C3': Select(attrs={'style': 'width:800px; display:inline-block;',  'class': 'form-control'}),
 
         }
     def clean(self):
@@ -594,13 +587,6 @@ class POSTFormC4_C3(ModelForm):
 
 
 #######################################################
-
-
-class VilleWidget(s2forms.ModelSelect2Widget):
-    search_fields = [
-        "nom__icontains",
-    ]
-
 
 
 class UtilisateurForm(ModelForm):
@@ -615,9 +601,48 @@ class UtilisateurForm(ModelForm):
             'fonction': Select(attrs={'style': 'width:400px;', 'class': 'fr-input'}),
             'anciennete': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
 
+
         }
 
     def clean(self):
         super(UtilisateurForm, self).clean()
+
+        return self.cleaned_data
+
+class UserForm(ModelForm):
+    class Meta:
+        model = User_infos
+
+        fields =[ "created_by","fonction","anciennete_annee", "anciennete_mois"]
+        widgets = {
+            'created_by': TextInput(attrs={'readonly': 'readonly'}),
+            'fonction': Select(attrs={'initial': 'Choisir votre fonction actuelle','style': 'width:400px;', 'class': 'fr-input'}),
+            'anciennete_annee': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
+            'anciennete_mois': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
+
+
+        }
+
+    def clean(self):
+        super(UserForm, self).clean()
+
+        return self.cleaned_data
+    
+class CFPForm(ModelForm):
+    class Meta:
+        model = CFP_infos
+
+        fields =[ "created_by","fonction","anciennete_annee", "anciennete_mois"]
+        widgets = {
+            'created_by': TextInput(attrs={'readonly': 'readonly'}),
+            'fonction': Select(attrs={'initial': 'Choisir votre fonction actuelle','style': 'width:400px;', 'class': 'fr-input'}),
+            'anciennete_annee': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
+            'anciennete_mois': TextInput(attrs={'placeholder': '', 'style': 'width:400px;', 'class': 'fr-input'}),
+
+
+        }
+
+    def clean(self):
+        super(CFPForm, self).clean()
 
         return self.cleaned_data

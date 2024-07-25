@@ -2,10 +2,14 @@
 {% block title %}Question A4 C3{% endblock %}
 
 {% block content %}
-<div class="container" style="margin-left:10%">
-      <div class="col-md-8 col-md-offset-8">
+ <div class="row justify-content-md-center">
+      <div class=".col-md-">
+                <dl class="dl-horizontal">
+          <dt><h6 class= 'text-center'>A4 : Conseil aux décideurs</h6></dt>
+          <div class="container" style="margin-left:10%">
         <br>
-        <p><strong>A4-C3 :</strong> Présenter la situation et les options envisagées afin d’aider à la décision en mobilisant les moyens de communication appropriés</p>
+        <dd><p><strong>A4-C3 :</strong> Présenter la situation et les options envisagées afin d’aider à la décision en mobilisant<br>
+        les moyens de communication appropriés</p></dd>
              <form action="{% url 'step3_A4' %}" method="post" class="form-v5-content">
               {%csrf_token %}
               <div style="display: none;">{{ form.created_by }}</div><br>
@@ -21,10 +25,10 @@
     <div class="row justify-content-md-center">
         <div class="col-md-8 col-md-offset-8">
              <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les outils de communication adaptés au conseil : synthèse, note d’opportunité, rapport, etc.
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les outils de communication adaptés au conseil : synthèse, note d’opportunité, rapport, etc.<br>
               Je connais les éléments de langage à utiliser auprès des différents décideurs.
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je choisis les outils de communication adaptés aux décideurs.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je choisis les outils de communication adaptés aux décideurs.<br>
                 Je construis un argumentaire pour réaliser la présentation de la situation avec les options à explorer.
                     </p></li>
                   <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>
@@ -38,6 +42,6 @@
 
             </div>
         </div>
-
+</div>
 
         {% endblock %}

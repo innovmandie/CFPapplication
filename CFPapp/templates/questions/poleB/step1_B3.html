@@ -1,27 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Question B3 C1{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+ <div class="row justify-content-md-center">
+      <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
       <dl class="dl-horizontal">
                 <dt><h6 class= 'text-center'>B3 : Conception de dispositifs de développement de compétences<br>et d’accompagnement de parcours</h6></dt>
-                <dd> <p><strong>B3-C1 :</strong> Organiser le travail de conception afin de s’inscrire dans un calendrier <br>
-                de remise de l’offre en veillant à mobiliser les compétences et les ressources utiles et nécessaires</p></dd>
-              <dd> <div class="col-md-8 col-md-offset-8">
-            <h6>Les niveaux : </h6>
-            <ul class="list-group">
-              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-              <li><strong>N S P : </strong>ne se prononce pas</li>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>B3-C1 :</strong> Organiser le travail de conception afin de s’inscrire dans un calendrier <br>
+                de remise de l’offre en veillant à mobiliser les compétences et les ressources utiles et nécessaires</p>
+              <ul class="list-group">
               <li>Par defaut la liste indique le Degré 1.</li>
-            </ul></dd>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
               </dl>
-      </div>
-    <div class="row justify-content-md-center">
-      <div class=".col-md-">
         <form action="{% url 'step1_B3' %}" method="post" class="form-group">
         <div class="d-flex justify-content-center">
         {%csrf_token %}
@@ -41,8 +34,8 @@ Je repère les domaines de compétences des acteurs internes et externes. J’id
 </p></li>
                   <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>A partir de la demande client, je participe à une réunion avec les acteurs<br>
                   internes et/ou externes pour organiser le travail de conception (planning, repérage des compétences, outils, méthodes, etc…)
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je planifie et je coordonne le travail de conception avec les acteurs concernés<br>
-                    (rôle de chacun, échéances, choix des outils de travail collaboratif, …) Je suis garant du respect du rétro planning.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je planifie et je coordonne le travail de conception avec les acteurs concernés
+                    (rôle de chacun, échéances, choix des outils de travail collaboratif, …)<br>Je suis garant du respect du rétro planning.
 </p></li>
                     <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis acteur ressource du réseau pour prendre en charge l’organisation d’un travail de conception d’une réponse au niveau régional ou national ou dans le cadre d’un groupement partenarial.</p></li>
               </ul>

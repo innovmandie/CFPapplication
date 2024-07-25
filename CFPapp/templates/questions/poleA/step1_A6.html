@@ -2,28 +2,20 @@
 {% block title %}Question A6 C1{% endblock %}
 
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
       <dl class="dl-horizontal">
-                <dt><h6 class="text-center">A6 : Commercialisation de l’offre de prestations et recherche de marchés</h6></dt>
-                <dd><strong>A6-C1 :</strong> Contribuer à l’élaboration de la politique commerciale de l’organisation afin de maintenir ou renforcer sa présence<br>
-                sur les marchés en tenant compte de la répartition des rôles et responsabilités au sein des équipes en place</p></dd>
-              <dd><div class="col-md-8 col-md-offset-8">
-
-                <ul>
-                  <h6>Les niveaux : </h6>
-                  <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-                  <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-                  <li><strong>N S P : </strong>ne se prononce pas</li>
-                  <li>Par defaut la liste indique le Degré 1.</li>
-                </ul></div></dd>
+                <dt><h6 class= 'text-center'>A6 : Commercialisation de l’offre de prestations et recherche de marchés</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>A6-C1 :</strong> Contribuer à l’élaboration de la politique commerciale de l’organisation afin de maintenir ou renforcer sa présence<br>
+                sur les marchés en tenant compte de la répartition des rôles et responsabilités au sein des équipes en place</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
               </dl>
-      </div>
-  <div class="row justify-content-md-center">
-         <div class=".col-md-">
              <form action="{% url 'step1_A6' %}" method="post" class="form-group">
                   <div class="d-flex justify-content-center">
               {%csrf_token %}
@@ -39,17 +31,20 @@
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
                 <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les éléments constitutifs d’une politique commerciale d’une organisation (analyse, contexte, objectifs, plan d’action).<br>
-                  Je connais la politique commerciale de ma structure.
-                  Je connais les acteurs en charge de la définition de la politique commerciale au niveau de ma structure et au niveau académique.
+Je connais les acteurs en charge de la définition de la politique commerciale au niveau de ma structure et au niveau.<br>
+Je m’informe sur la politique commerciale de ma structure, du réseau académique en sollicitant les acteurs concernés.
+
                   </p></li>
                   <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>
-                    J’apporte des éléments d’analyse permettant l’évolution de la politique commerciale au sein d’un collectif de travail.
-                    Je sollicite les services de mon organisation (RH, communication et commercial…) utiles à la définition de la politique commerciale.
+                    J’apporte des éléments d’analyse permettant l’évolution de la politique commerciale au sein d’un collectif de travail.<br>
+Je transmets aux services de mon organisation (RH, communication et commercial…) en charge de la mise en œuvre de la politique commerciale, les éléments issus de ma prospection.
 
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong>J’oriente la définition des objectifs de la politique commerciale, l’identification des cibles prioritaires et l’élaboration du plan d’action commerciale.
-                      J’évalue les résultats de la politique commerciale.
+
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je contribue à la définition des objectifs de la politique commerciale, à l’identification des cibles prioritaires et à l’élaboration du plan d’action commerciale.<br>
+J’évalue les résultats de la politique commerciale.
+
                       </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner les équipes en place et transmettre une méthodologie d’élaboration de la politique commerciale.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner les équipes en place et transmettre une méthodologie d’élaboration de la politique commerciale.<br>
                       Je pilote un groupe de travail sur l’élaboration de la politique commerciale à l’échelle de ma structure, du réseau.
                       </p></li>
               </ul>

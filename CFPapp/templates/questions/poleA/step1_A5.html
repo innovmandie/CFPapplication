@@ -1,27 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Question A5 C1{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
       <dl class="dl-horizontal">
-                <dt><h6 class="text-center">A5 : Représentation institutionnelle sur les territoires</h6></dt>
-                <dd><strong>A5-C1 :</strong>Représenter l’institution dans les instances du territoire afin de faire valoir la position du réseau
-                de la formation<br>professionnelle tout au long de la vie de l’Education nationale en étant attentif à son positionnement</p></dd>
-              <dd><div class="col-md-8 col-md-offset-8">
-                <ul>
-                  <h6>Les niveaux : </h6>
-                  <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-                  <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-                  <li><strong>N S P : </strong>ne se prononce pas</li>
-                  <li>Par defaut la liste indique le Degré 1.</li>
-                </ul></div></dd>
+                <dt><h6 class= 'text-center'>A5 : Représentation institutionnelle sur les territoires</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>A5-C1 : </strong>Représenter l’institution dans les instances du territoire afin de faire valoir la position du réseau
+                de la formation<br>professionnelle tout au long de la vie de l’Education nationale en étant attentif à son positionnement</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
               </dl>
-      </div>
-  <div class="row justify-content-md-center">
-         <div class=".col-md-">
              <form action="{% url 'step1_A5' %}" method="post" class="form-group">
                   <div class="d-flex justify-content-center">
               {%csrf_token %}
@@ -36,20 +29,21 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais:<br>
-                -les différentes instances de mon territoire, leurs rôles et leur fonctionnement.<br>
-                -les codes, la chaine hiérarchique et les éléments de langage de l’éducation nationale.<br>
-                 -la position et les orientations stratégiques du GRETA, du réseau académique et de l’éducation nationale que je représente.<br>
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais : <br>
+                - les différentes instances de mon territoire, leurs rôles et leur fonctionnement.<br>
+                - les codes, la chaine hiérarchique et les éléments de langage de l’éducation nationale.<br>
+                 - la position et les orientations stratégiques du GRETA, du réseau académique et de l’éducation nationale que je représente.<br>
                 J’interviens si je suis sollicité avec mesure et recul.
                   </p></li>
                   <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>
-                    J’analyse le positionnement des acteurs et les enjeux pour chacune des parties prenantes.
-                    Je participe aux échanges, aux réunions et aux groupes de travail du territoire.
-                    Je réponds aux questions ou renvoie vers l’interlocuteur expertise.
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong>Je suis capable d’adapter ma posture et mes propos en fonction de mes interlocuteurs et des instances auxquelles je participe et ce, dans l’intérêt du service public en tant que représentant du recteur.
+                    Je participe aux échanges, aux réunions et aux groupes de travail du territoire.<br>
+J’analyse le positionnement des acteurs dans les instances.<br>
+Je réponds aux questions ou renvoie vers l’interlocuteur expert.
+
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>J’adapte ma posture et mes propos en fonction de mes interlocuteurs et des instances auxquelles je participe et ce, dans l’intérêt du service public en tant que représentant du recteur.
                       </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis sollicité en qualité d’expert de la formation professionnelle tout au long de la vie par les décideurs ou par les acteurs de mon territoire.
-                      J’apporte des éléments d’expertise (analyse stratégique départementale, territoriale, …).
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis sollicité en qualité d’expert de la formation professionnelle tout au long de la vie par les décideurs ou par les acteurs de mon territoire.<br>
+                      J’apporte des éléments d’expertise (analyse stratégique départementale, territoriale, …).<br>
                       Je capitalise et je partage mon expertise auprès des instances de mon territoire.
 
                       </p></li>

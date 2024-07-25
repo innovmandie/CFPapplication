@@ -1,0 +1,51 @@
+
+<!-- saved from url=(0137)https://www.pythonanywhere.com/user/lastshadow/files/home/lastshadow/CFPapplication/CFPapp/templates/questions/poleA/resultsAdetails.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base.html" %}
+{% load static %}
+{% block title %}Data A page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Réponses référentiel enregistrées</h4>
+     <p>Pour le pôle C</p>
+    <p>Si aucun résultat ne s'affiche vous n'avez pas rempli</p>
+    <p>la section correspondante</p>
+    <div class="row">
+      <div class="col">
+        {% if resultsC1 %}
+        {{ resultsC1 | safe}}<br>
+        {{ chart_C1 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsC2 %}
+        {{ resultsC2 | safe}}<br>
+        {{ chart_C2 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsC3 %}
+        {{ resultsC3 | safe}}<br>
+        {{ chart_C3 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsC4 %}
+        {{ resultsC4 | safe}}<br>
+        {{ chart_C4 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsC5 %}
+        {{ resultsC5 | safe}}<br>
+        {{ chart_C5 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsC6 %}
+        {{ resultsC6 | safe}}<br>
+        {{ chart_C6 | safe}}
+        {% else %}
+        {% endif %}
+
+       <br>
+      </div>
+
+
+{% endblock %}

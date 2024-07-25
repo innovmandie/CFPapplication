@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Data A page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Cartographie de votre parcours d'auto-positionnement</h4>
+    <table class="table table-bordered table-hover">
+  <thead class="table-primary">
+    <tr>
+      <th scope="col">A1C1</th>
+      <th scope="col">A1C2</th>
+      <th scope="col">A1C3</th>
+      <th scope="col">A2C1</th>
+      <th scope="col">A2C2</th>
+      <th scope="col">A2C3</th>
+      <th scope="col">A3C1</th>
+      <th scope="col">A3C2</th>
+      <th scope="col">A3C3</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% if A1_C1 %}
+    <tr>
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+    <td>
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A1_C2 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+    <td>
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A1_C3 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+    <td>
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A2_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if A2_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if A2_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+        {% if A3_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if A3_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if A3_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<table class="table table-bordered table-hover">
+  <thead class="table-primary">
+    <tr>
+      <th scope="col">A4C1</th>
+      <th scope="col">A4C2</th>
+      <th scope="col">A4C3</th>
+      <th scope="col">A5C1</th>
+      <th scope="col">A5C2</th>
+      <th scope="col">A5C3</th>
+      <th scope="col">A6C1</th>
+      <th scope="col">A6C2</th>
+      <th scope="col">A6C3</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% if A4_C1 %}
+    <tr>
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A4_C2 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A4_C3 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if A5_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if A5_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if A5_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+        {% if A6_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if A6_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if A6_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+    </tr>
+
+  </tbody>
+</table>
+ <table class="table table-bordered table-hover">
+  <thead class="table-warning">
+    <tr>
+      <th scope="col">B1C1</th>
+      <th scope="col">B1C2</th>
+      <th scope="col">B1C3</th>
+      <th scope="col">B2C1</th>
+      <th scope="col">B2C2</th>
+      <th scope="col">B2C3</th>
+      <th scope="col">B3C1</th>
+      <th scope="col">B3C2</th>
+      <th scope="col">B3C3</th>
+      <th scope="col">B4C1</th>
+      <th scope="col">B4C2</th>
+      <th scope="col">B4C3</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      {% if B1_C1 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+    <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+      {% if B1_C2 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+      {% if B1_C3 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B2_C1 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B2_C2 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B2_C3 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B3_C1 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B3_C2 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B3_C3 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}</td>
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B4_C1 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B4_C2 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+      {% if B4_C3 %}
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white">Non</p>
+      {% endif %}</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+
+<table class="table table-bordered table-hover">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">C1C1</th>
+      <th scope="col">C1C2</th>
+      <th scope="col">C1C3</th>
+      <th scope="col">C2C1</th>
+      <th scope="col">C2C2</th>
+      <th scope="col">C2C3</th>
+      <th scope="col">C3C1</th>
+      <th scope="col">C3C2</th>
+      <th scope="col">C3C3</th>
+      <th scope="col">C4C1</th>
+      <th scope="col">C4C2</th>
+      <th scope="col">C4C3</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    {% if C1_C1 %}
+    <tr>
+      <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p></td>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if C1_C2 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p></td>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if C1_C3 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p></td>
+      {% else %}
+      <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+      {% endif %}</td>
+
+      {% if C2_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if C2_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if C2_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+        {% if C3_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if C3_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if C3_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+                    {% if C4_C1 %}
+    <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+        {% else %}</td>
+     <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+        {% endif %}</td>
+        {% if C4_C2 %}
+        <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+            {% else %}</td>
+         <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+            {% endif %}</td>
+            {% if C4_C3 %}
+            <td><p style="background-color: rgb(27, 240, 27); color:white">Complété</p>
+                {% else %}</td>
+             <td><p style="background-color: rgb(240, 27, 27); color:white"> Non</p>
+                {% endif %}</td>
+    </tr>
+
+  </tbody>
+</table>
+<h6>Les résultats seront disponibles après avoir rempli la section...</h6>
+<br>
+<table  class="table table-bordered">
+    <h4>Pôle A (Conseiller / Développer)</h4>
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A1</th>
+                <th scope="col">A2</th>
+                <th scope="col">A3</th>
+                <th scope="col">A4</th>
+                 <th scope="col">A5</th>
+                 <th scope="col">A6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td><button><h6><a href="{% url 'resultatsA1' %}" target="_blank">A1</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsA2' %}" target="_blank">A2</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsA3' %}" target="_blank">A3</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsA4' %}">A4</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsA5' %}" target="_blank">A5</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsA6' %}" target="_blank">A6</a></h6></button></td>
+
+            </tr>
+
+            </tbody>
+            </table>
+
+<table  class="table table-bordered">
+    <h4>Pôle B (Concevoir / Innover)</h4>
+        <thead class="table-warning">
+            <tr>
+                <th scope="col">B1</th>
+                <th scope="col">B2</th>
+                <th scope="col">B3</th>
+                <th scope="col">B4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td><button><h6><a href="{% url 'resultatsB1' %}" target="_blank">B1</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsB2' %}" target="_blank">B2</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsB3' %}" target="_blank">B3</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsB4' %}">B4</a></h6></button></td>
+
+            </tr>
+            </tbody>
+            </table>
+
+<table  class="table table-bordered">
+    <h4>parcours C (Piloter / Animer)</h4>
+        <thead class="table-success">
+            <tr>
+                <th scope="col">C1</th>
+                <th scope="col">C2</th>
+                <th scope="col">C3</th>
+                <th scope="col">C4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td><button><h6><a href="{% url 'resultatsC1' %}" target="_blank">C1</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsC2' %}" target="_blank">C2</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsC3' %}" target="_blank">C3</a></h6></button></td>
+                    <td><button><h6><a href="{% url 'resultatsC4' %}">C4</a></h6></button></td>
+
+            </tr>
+            </tbody>
+            </table>
+        <br>
+     </div>
+     <div class='row'>
+         <div class='col'>
+             <h6>Pour générer un PDF de tous les résultats toutes les sections doivent avoir été renseignées</h6>
+              <div class='col'> <div style="margin-left:10px;"><button type="submit" class="fr-btn"><h6><a href="{% url 'generate_All_pdf' %}" target="_blank" style="color:white">Créer un PDF de tous les résultats</a></h6></button></div></div>
+         </div>
+     </div>
+
+{% endblock %}

@@ -1,45 +1,51 @@
 {% extends "base.html" %}
 {% block title %}Question A2 C2{% endblock %}
 {% block content %}
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>A2 :Diagnostic et analyse des besoins territoriaux et/ou sectoriels</h6></dt>
+                <dd> <p class= 'text-center'><strong>A2 C3 :</strong> Produire des notes et documents d’analyse afin de partager les conclusions<br>
+                des diagnostics réalisés en choisissant les moyens de communication adaptés</p></dd>
+              <dd></dl>
 
-
-<div class="container" style="margin-left:10%">
-  <br>
-      <div class="col-md-8 col-md-offset-8">
-        <div >
-          <p><strong>A2-C3 :</strong>Produire des notes et documents d’analyse afin de partager les conclusions des diagnostics réalisés en choisissant les moyens de communication adaptés</p>
-          <br>
-             <div class="row justify-content-md-center">
-         <div class=".col-md-">
-             <form action="{% url 'step3_A2' %}" method="post" class="form-group">
-                  <div class="d-flex justify-content-center">
-              {%csrf_token %}
-              <div style="display: none;">{{ form.created_by }}</div><br>
-              <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A2_C3 }}</p></div>
-              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrer</button></div>
-            </form>
-            </div>
+</div>
+<br>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step3_A2' %}" method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A2_C3 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrement</button></div>
+        </form>
+        </div>
       </div>
   </div>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 col-md-offset-8">
 
               <ul class="list-group" style="font-size: 17px;">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les différents types de note et je connais la structure d’une note ou d’un document d’analyse.
-                  Je sais où me procurer les notes, les documents d’analyse produits par le réseau.
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les différents types de note et je connais la structure d’une note ou d’un document d’analyse.<br>
+                  Je sais où me procurer les notes, les documents d’analyse produits par le réseau.<br>
                   Je maitrise les techniques rédactionnelles et de communication professionnelle.
                   </p></li>
                 <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>
-                  Je repère les éléments de mon diagnostic à intégrer dans une note d’opportunité ou une note d’analyse en vue de partager les résultats.
-                  Je participe dans un collectif de travail à la production d’une note ou je produis une note d’opportunité en m’appuyant sur un projet similaire.
+                  Je repère les éléments de mon diagnostic à intégrer dans une note d’opportunité ou une note d’analyse en vue de partager les résultats.<br>
+                  Je participe dans un collectif de travail à la production d’une note<br> ou je produis une note d’opportunité en m’appuyant sur un projet similaire.
                   Je repère les éléments saillants de ma note qui seront à intégrer dans une présentation écrite (diaporama, carte mentale, …).
                 </p></li>
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>JJe produis régulièrement des notes et des documents d’analyse en toute autonomie.
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je produis régulièrement des notes et des documents d’analyse en toute autonomie.<br>
                     J’utilise le canal de communication adapté.
-                    J’utilise le réseau partagé pour déposer notes et synthèses formalisées.
+                    J’utilise le réseau partagé pour déposer notes et synthèses formalisées.<br>
                     J’argumente auprès des décideurs mon analyse à partir des points saillants.
 
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner des pairs à la production de notes et de documents d’analyse.
-                    Je produis un document d’analyse et une note sur un sujet complexe à destination d’un acteur académique, national, européen.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité d’accompagner des pairs à la production de notes et de documents d’analyse.<br>
+                    Je produis un document d’analyse<br> et une note sur un sujet complexe à destination d’un acteur académique, national, européen.<br>
                     Je contribue à la mise à jour des notes et documents d’analyse au profit du réseau régional voire national.
                     </p></li>
               </ul>
@@ -48,5 +54,5 @@
           </div>
         </div>
 </div>
-
+</div>
 {% endblock %}

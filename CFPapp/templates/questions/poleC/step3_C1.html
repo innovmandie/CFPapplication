@@ -8,7 +8,7 @@
 <div class="row justify-content-md-center">
       <dl class="dl-horizontal">
                 <dt><h6 class= 'text-center'>C1 : Management de projets</h6></dt>
-                <dd> <p class= 'text-center'><strong>C1 C3 :</strong> Évaluer la mise en œuvre des projets afin de pouvoir en rendre compte régulièrement et opérer les régulations<br>
+                <dd> <p class= 'text-center'><strong>C1-C3 :</strong> Évaluer la mise en œuvre des projets afin de pouvoir en rendre compte régulièrement et opérer les régulations<br>
                 nécessaires le cas échant en utilisant des critères et indicateurs prédéfinis</p></dd>
               <dd></dl>
 
@@ -30,72 +30,26 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais les acteurs et les moyens existants de mon organisation (plateaux techniques, offre de formation de l’éducation nationale sur mon territoire…).<br>
-Je connais les partenaires externes mobilisables.
-
+                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais : <br>
+                - les modalités et les indicateurs d’évaluation de projets déjà mis en œuvre. <br>
+                - les acteurs internes et externes, les instances pour rendre compte du suivi du projet.
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je repère les acteurs de mon organisation et les partenaires externes mobilisables pour le projet à partir de l’étude de faisabilité du projet.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’utilise les outils d’évaluation et de suivi/de bilan mis à disposition par ma structure, le réseau académique et le cas échéant par les commanditaires.<br>
+                  Je participe aux réunions de suivi et à la régulation du projet (conventions, bons de commande, plan individuel de formation…)
                     </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>J’estime les moyens humains, matériels, financiers et techniques nécessaires au projet et je m’assure de leur disponibilité.<br>
-Je propose des solutions si possibles innovantes, pour rendre le projet viable.<br>
-Je sollicite les acteurs experts de ma structure et du réseau académique (inspecteurs…).
-Je construis une annexe financière du projet en mobilisant le(s) financement(s) approprié(s).
-
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>J’anime des points d’étape de réalisation du projet afin de mesurer l’état d’avancement, les écarts éventuels et les actions correctives.<br>
+                    J’utilise des outils d’évaluation pour reporter à l’interne et à l’externe. <br>
+                    Si besoin, j’ajuste les indicateurs permettant de suivre et d’évaluer le projet. <br>
+                    J’analyse les résultats et je les communique à l’interne et à l’externe. <br>
+                    Je suis en capacité de conseiller sur l’adaptation des moyens en fonction de l’évolution d’un projet.
                       </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis un acteur ressource pour ma structure, le réseau académique en capacité
-                    d’estimer les moyens disponibles et nécessaires d’un projet d’envergure régionale, nationale, européenne, d’un projet impliquant des partenaires.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis un acteur ressource pour le réseau en capacité de suivre et d’évaluer des projets d’envergure régionale,
+                    nationale, européenne, des projets impliquant des partenaires.
                       </p></li>
               </ul>
           </div>
             </div>
         </div>
         </div>
-
-
-<div class="container-fluid" style="margin-left:10%">
-  <br>
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <p><strong>C1-C3 :</strong> Exploiter les données au sein de l’organisation afin d’alimenter une dynamique<br>
-                 d’évolution ou d’adaptation des pratiques pédagogiques en partageant les informations clés avec les équipes</p>
-      </div>
-    <div class="row justify-content-md-center">
-      <div class="col">
-        <form action="{% url 'step3_C1' %}" method="post" class="form-v5-content ">
-              {%csrf_token %}
-              <p>Utilisateur id : {{ form.created_by }}</p>
-                <p style="border: 2px solid blueviolet;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-list-check" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                </svg>{{ form.C1_C3 }}<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="blueviolet" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708z"/>
-                </svg></p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Enregistrement</button>
-              </div>
-                  </div>
-            </form>
-      </div>
-  </div>
-
-        <div class="container-fluid">
-          <div class="col-md-8 col-md-offset-8">
-            <br>
-              <ul class="list-group">
-                <li><p style="font-size: 12px"><strong>Degré 1 : </strong>Je connais les modalités et les indicateurs d’évaluation de projets déjà mis en œuvre.
-                  Je connais les acteurs internes et externes, les instances pour rendre compte du suivi du projet.
-                  </p></li>
-                  <li><p style="font-size: 12px"><strong>Degré 2 : </strong>J’utilise les outils d’évaluation et de suivi mis à disposition par ma structure, le réseau académique et le cas échéant par les commanditaires.
-                    Je participe aux réunions de suivi et je contribue à la régulation du projet.
-                    </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 3 :</strong>J’anime des points d’étape de réalisation du projet afin de mesurer l’état d’avancement, les écarts éventuels et les actions correctives.
-                      J’utilise des outils d’évaluation pour reporter à l’interne et à l’externe. Si besoin, j’ajuste les indicateurs permettant de suivre et d’évaluer le projet.
-                      J’analyse les résultats et je les communique à l’interne et à l’externe. Je suis en capacité de conseiller sur l’adaptation des moyens en fonction de l’évolution d’un projet.
-                      </p></li>
-                    <li><p style="font-size: 12px"><strong>Degré 4 :</strong>Je suis un acteur ressources pour le réseau en capacité de suivre et d’évaluer des projets d’envergure régionale, nationale, européenne, des projets impliquant des partenaires.
-                      </p></li>
-              </ul>
-          </div>
-        </div>
-</div>
 
 {% endblock %}

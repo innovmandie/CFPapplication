@@ -2,29 +2,21 @@
 {% block title %}Question A2 C1{% endblock %}
 {% block content %}
 
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
       <dl class="dl-horizontal">
-                <dt><h6 class="text-center">A2 : Diagnostic et analyse des besoins territoriaux et/ou sectoriels</h6></dt>
-                <dd> <strong>A2-C1 : </strong>Structurer une démarche de diagnostic afin d’étudier rigoureusement des besoins en<br>
+                <dt><h6 class= 'text-center'>A2 : Diagnostic et analyse des besoins territoriaux et/ou sectoriels</dt>
+                <div class="container" style="margin-left:10%">
+                <dd> <p><strong>A2-C1 : </strong>Structurer une démarche de diagnostic afin d’étudier rigoureusement des besoins en<br>
                 compétences, qu’ils soient territoriaux ou spécifiques à un secteur d’activités en prenant<br>
-                appui sur des sources et des acteurs qualifiés</p></dd>
-              <dd><div class="col-md-8 col-md-offset-8">
-
-                <ul>
-                  <h6>Les niveaux : </h6>
-                  <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-                  <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-                  <li><strong>N S P : </strong>ne se prononce pas</li>
-                  <li>Par defaut la liste indique le Degré 1.</li>
-                </ul></div></dd>
+                appui sur des sources et des acteurs qualifiés</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
               </dl>
-      </div>
-  <div class="row justify-content-md-center">
-         <div class=".col-md-">
              <form action="{% url 'step1_A2' %}" method="post" class="form-group">
                   <div class="d-flex justify-content-center">
               {%csrf_token %}

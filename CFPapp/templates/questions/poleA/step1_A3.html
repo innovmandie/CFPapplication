@@ -1,28 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Step1 A3{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
-      <dl class="dl-horizontal">
-                <dt><h6 class="text-center">A3 : Contribution à la définition de la politique de l’organisation<br>
-                concurrentielle et commerciale</h6></dt>
-                <dd> <p><strong>A3-C1 :</strong> Evaluer le positionnement de l’organisation
-                sur tout ou partie de son marché afin de la situer<br> dans son écosystème en mobilisant des outils d’analyse appropriés.</p></dd>
-              <dd> <div class="col-md-8 col-md-offset-8">
-            <h6>Les niveaux : </h6>
-            <ul class="list-group">
-              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-              <li><strong>N S P : </strong>ne se prononce pas</li>
-              <li>Par defaut la liste indique le Degré 1.</li>
-            </ul></div></dd>
-              </dl>
-      </div>
     <div class="row justify-content-md-center">
       <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>A3 : Contribution à la définition de la politique de l’organisation</dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>A3-C1 :</strong> Evaluer le positionnement de l’organisation
+                sur tout ou partie de son marché afin de la situer<br> dans son écosystème en mobilisant des outils d’analyse appropriés.</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
+              </dl>
         <form action="{% url 'step1_A3' %}" method="post" class="form-group">
         <div class="d-flex justify-content-center">
         {%csrf_token %}
@@ -37,19 +29,20 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><strong>Degré 1 : </strong>Je connais les éléments qui positionne une structure sur le marché de la formation professionnelle : concurrence, prix, public cible, financeurs, commanditaires, avantage concurrentiel.
+                <li class="list-group-item list-group-item-info"><strong>Degré 1 : </strong>Je connais les éléments qui positionnent une structure sur le marché de la formation professionnelle : concurrence, prix, public cible, financeurs, commanditaires, avantage concurrentiel.
                   </p></li>
                   <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je sais positionner mon organisation dans le cadre réglementaire et législatif de la formation professionnelle.<br>
                     Je connais le positionnement de ma structure dans l’écosystème de la formation professionnelle.<br>
                     Je participe dans un collectif de travail, à positionner mon organisation sur le marché en contribuant à la réalisation de tableaux de bord partagés.
                   </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong> J’analyse le positionnement des acteurs du marché.
-                      Je mesure les éléments de positionnement de ma structure à l’aide d’un outil approprié de type grille matricielle.
-                      Je crée des outils d’analyse dynamique.
-                      Je contrôle l’exactitude des éléments d’analyse.  J’intègre les évaluations existantes dans la perception du positionnement de ma structure.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong> Je m’approprie les analyses existantes (diagnostics, notes d’opportunité, plan de développement, …).<br>
+Je crée des outils d’analyse de type grille matricielle pour repérer les forces et les faiblesses de ma structure au regard de la concurrence.<br>
+J’évalue ma structure dans son écosystème pour la positionner sur le marché
+
                       </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>Je suis un acteur ressource du réseau en capacité de former mes pairs sur la méthodologie d’analyse de marchés.<br>
-                      Je m’inscris dans un audit de marketing mix (prix, offre de formation, public, communication) pour le réseau.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je suis un acteur ressource du réseau en capacité de former mes pairs sur la méthodologie d’analyse de marchés.<br>
+Je mène des analyses stratégiques (prix, offre de formation, public, communication) pour ma structure, pour le réseau.
+
                       </p></li>
               </div>
 

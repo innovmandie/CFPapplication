@@ -1,27 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Question B2 C1{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
-      <dl class="dl-horizontal">
-                <dt><h6 class= 'text-center'>B1 : Analyse de demandes</h6></dt>
-                <dd> <p><strong>B1-C1 :</strong> Identifier les besoins en compétences, individuels ou collectifs, afin d’orienter la réponse pédagogique<br>
-                ou d’accompagnement en mobilisant des techniques adaptées (conduite d’entretien, analyse du travail, …)</p></dd>
-              <dd> <div class="col-md-8 col-md-offset-8">
-            <h6>Les niveaux : </h6>
-            <ul class="list-group">
-              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-              <li><strong>N S P : </strong>ne se prononce pas</li>
-              <li>Par defaut la liste indique le Degré 1.</li>
-            </ul></dd>
-              </dl>
-      </div>
     <div class="row justify-content-md-center">
       <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>B2 : Analyse de demandes</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>B2-C1 :</strong> Identifier les besoins en compétences, individuels ou collectifs, afin d’orienter la réponse pédagogique<br>
+                ou d’accompagnement en mobilisant des techniques adaptées (conduite d’entretien, analyse du travail, …)</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
+              </dl>
         <form action="{% url 'step1_B2' %}" method="post" class="form-group">
         <div class="d-flex justify-content-center">
         {%csrf_token %}
@@ -36,21 +29,21 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je connais : <br>
+                <li class="list-group-item list-group-item-info"><p style:" font-weight: 400;"><strong>Degré 1 : </strong>Je connais : <br>
 -	les techniques d’identification des besoins en compétences individuels ou collectifs.<br>
 -	les techniques de conduite d’entretien et d’écoute active pour recueillir toutes les informations utiles à l’analyse de la demande.<br>
 Je repère des éléments constitutifs d’une réponse pédagogique ou d’accompagnement.
 </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je recueille les besoins en compétences en mobilisant les techniques adaptées.<br>
+                  <li class="list-group-item list-group-item-info"><p style:" font-weight: 400;"><strong>Degré 2 : </strong>Je recueille les besoins en compétences en mobilisant les techniques adaptées.<br>
 Je participe et contribue, dans un collectif de travail, à l’analyse des besoins en compétences, individuels ou collectifs, afin d’orienter la réponse pédagogique ou d’accompagnement.
 <br>
 
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je conduis un entretien d’analyse de la demande permettant de clarifier et d’identifier les besoins en compétences.<br>
+                    <li class="list-group-item list-group-item-info"><p style:" font-weight: 400;"><strong>Degré 3 : </strong>Je conduis un entretien d’analyse de la demande permettant de clarifier et d’identifier les besoins en compétences.<br>
 Je mobilise des outils d’analyse du travail pour croiser les informations recueillies.<br>
 Je capitalise dans un document cadre l’ensemble des éléments recueillis permettant la qualification de la demande.
 
                        </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong> Je suis un acteur ressource du réseau en capacité d’accompagner et de former sur les<br> techniques d’identification des besoins (entretien, analyse du poste de travail, etc.).</p></li>
+                    <li class="list-group-item list-group-item-info"><p style:" font-weight: 400;"><strong>Degré 4 :</strong> Je suis un acteur ressource du réseau en capacité d’accompagner et de former sur les<br> techniques d’identification des besoins (entretien, analyse du poste de travail, etc.).</p></li>
               </ul>
           </div>
 

@@ -24,7 +24,7 @@ html {
 
           #box{
               width: 420px;
-              height: 340px;
+              height: 440px;
               font-family: "Marianne";
               font-weight: 400;
               margin-left:11em;
@@ -83,7 +83,7 @@ html {
             padding-top: 7px;
             padding-bottom: 2px;
             text-align: center;
-            background-color: #708090;
+            background-color: #0a0d13;
             color: white;
           }
 

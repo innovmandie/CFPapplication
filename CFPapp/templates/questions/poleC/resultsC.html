@@ -4,11 +4,22 @@
 
 {% block content %}
 <div class="container-fluid">
-
     <br>
-    <h4>Réponses référentiel enregistrées</h4>
+    <h4>Réponses enregistrées</h4>
+    {{ info }}
      <div class="row">
-        <div class='col'> <div style="margin-left:800px"><button><h6><a href="{% url 'generateC_pdf' %}" target="_blank">Créer un PDF</a></h6></button></div></div>
+        <div class="col-md.">
+             <ul>
+            <li><strong>Degré 1 : </strong>Sensibilisation</li>
+            <li><strong>Degré 2 : </strong>Appropriation</li>
+            <li><strong>Degré 3 : </strong>Maitrise</li>
+            <li><strong>Degré 4 : </strong>Expertise</li>
+            <li><strong>Degré 0 : </strong>Ne se prononce pas</li>
+        </ul>
+            </div>
+     <div class="row">
+        <div class='col'> <div style="margin-left:800px"><button type="submit" class="fr-btn"><h6><a href="{% url 'generateC_pdf' %}" target="_blank" style="color:white">Créer un PDF</a></h6></button></div></div>
+        {{ info }}
     </div>
 
     <div class="row">
@@ -18,7 +29,6 @@
         <table  class="table table-bordered table-hover">
         <thead class="table-success">
             <tr>
-                <th scope="col">id_utilisateur</th>
                 <th scope="col">C1_C1</th>
                 <th scope="col">C1_C2</th>
                 <th scope="col">C1_C3</th>
@@ -28,7 +38,7 @@
         <tbody>
             {% for row in resultsC1 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.C1_C1 }}</td>
                     <td>{{ row.C1_C2 }}</td>
                     <td>{{ row.C1_C3 }}</td>
@@ -49,7 +59,7 @@
         <table  class="table table-bordered table-hover">
         <thead class="table-success">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">C2_C1</th>
                 <th scope="col">C2_C2</th>
                 <th scope="col">C2_C3</th>
@@ -59,7 +69,7 @@
         <tbody>
             {% for row in resultsC2 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.C2_C1 }}</td>
                     <td>{{ row.C2_C2 }}</td>
                     <td>{{ row.C2_C3 }}</td>
@@ -84,7 +94,7 @@
         <table  class="table table-bordered table-hover">
         <thead class="table-success">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">C3_C1</th>
                 <th scope="col">C3_C2</th>
                 <th scope="col">C3_C3</th>
@@ -94,7 +104,6 @@
         <tbody>
             {% for row in resultsC3 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
                     <td>{{ row.C3_C1 }}</td>
                     <td>{{ row.C3_C2 }}</td>
                     <td>{{ row.C3_C3 }}</td>
@@ -117,7 +126,7 @@
         <table  class="table table-bordered table-hover">
         <thead class="table-success">
             <tr>
-                <th scope="col">id_utilisateur</th>
+
                 <th scope="col">C4_C1</th>
                 <th scope="col">C4_C2</th>
                 <th scope="col">C4_C3</th>
@@ -127,7 +136,7 @@
         <tbody>
             {% for row in resultsC4 %}
             <tr>
-                 <td>{{ row.created_by_id }}</td>
+
                     <td>{{ row.C4_C1 }}</td>
                     <td>{{ row.C4_C2 }}</td>
                     <td>{{ row.C4_C3 }}</td>

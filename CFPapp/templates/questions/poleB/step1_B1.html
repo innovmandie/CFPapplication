@@ -1,27 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Question B1 C1{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
-      <dl class="dl-horizontal">
-                <dt><h6 class= 'text-center'>B1 : Veille pédagogique et techno-pédagogique</h6></dt>
-                <dd> <p><strong>B1-C1 :</strong> Identifier des sources d’information internes ou externes afin de recenser des évolutions pédagogiques<br>
-                ou techno-pédagogiques significatives en étant attentif à la diversité de ces sources</p></dd>
-              <dd> <div class="col-md-8 col-md-offset-8">
-            <h6>Les niveaux : </h6>
-            <ul class="list-group">
-              <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-              <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-              <li><strong>N S P : </strong>ne se prononce pas</li>
-              <li>Par defaut la liste indique le Degré 1.</li>
-            </ul></dd>
-              </dl>
-      </div>
     <div class="row justify-content-md-center">
       <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle B : CONCEVOIR – INNOVER</h4>
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>B1 : Veille pédagogique et techno-pédagogique</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>B1-C1 :</strong> Identifier des sources d’information internes ou externes afin de recenser des évolutions pédagogiques<br>
+                ou techno-pédagogiques significatives en étant attentif à la diversité de ces sources</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
+              </dl>
         <form action="{% url 'step1_B1' %}" method="post" class="form-group">
         <div class="d-flex justify-content-center">
         {%csrf_token %}
@@ -39,7 +32,7 @@
                 <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je repère les sources d’informations pédagogiques :<br>
 -	Internes (portails de l’éducation nationale, CAFOC) et les acteurs en interne en capacité de transmettre des ressources sur la veille pédagogique et techno-pédagogique (inspecteurs, CFP experts en région ou au niveau national, etc.).<br>
 -	Externes en lien avec la formation professionnelle.</p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie et je sélectionne, avec l’aide d’un collectif de travail de ma structure, ou du réseau académique, les sources d’informations me permettant de recenser des évolutions pédagogiques ou techno-pédagogiques.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie et je sélectionne, avec l’aide d’un collectif de travail de ma structure, ou du réseau académique, les sources d’informations me permettant de recenser des évolutions pédagogiques ou techno-pédagogiques.<br>
 Je suis abonné à des newsletters spécialisées. Je participe à des webinaires, des conférences ou des formations sur les évolutions pédagogiques ou techno pédagogiques.<br>
 
                     <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je réalise ma veille en fonction de mes domaines d’activités.<br>
@@ -49,8 +42,6 @@ J’enrichis ma veille pédagogique et technico-pédagogique en la partageant et
 Je recense à des fins de diffusion (filière, réseau académique, IAGO, …) des évolutions pédagogiques ou techno-pédagogiques significatives en étant attentif à la diversité des sources d’information internes ou externes.</p></li>
               </ul>
           </div>
-
-
             </div>
         </div>
 </div>

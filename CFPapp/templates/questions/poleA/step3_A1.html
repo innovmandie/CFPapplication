@@ -2,26 +2,34 @@
 {% block title %}Question A3 C1{% endblock %}
 
 {% block content %}
-<div class="container" style="margin-left:10%">
-      <div class="col-md-8 col-md-offset-8">
-        <br>
-        <p><strong>A1-C3 :</strong> Exploiter les données collectées afin d’étayer les positions prises et les conseils apportés en mettant en exergue les informations clés</p>
-             <form action="{% url 'step3_A1' %}" method="post" class="form-control">
-              {%csrf_token %}
-              <div style="display: none;">{{ form.created_by }}</div><br>
-              <p style="border: 2px solid blueviolet;">{{ form.A1_C3 }}</p>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="fr-btn">Suivant</button>
-              </div>
-            </form>
-      </div>
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
+      <dl class="dl-horizontal">
+                <dt><h6 class= 'text-center'>A1 : Veille socio-économique, réglementaire, concurrentielle et commerciale</h6></dt>
+                <dd> <p class= 'text-center'><strong>A1-C3 :</strong> Exploiter les données collectées afin d’étayer les positions prises et les conseils<br>
+                apportés en mettant en exergue les informations clés</p></dd>
+              <dd></dl>
+
+</div>
+<br>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step3_A1' %}"  method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A1_C3 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrement</button></div>
+        </form>
+        </div>
       </div>
   </div>
         <div class="container-fluid">
         <div class="row justify-content-md-center">
             <div class="col-md-8 col-md-offset-8">
           <ul class="list-group">
-            <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je consulte les outils et les acteurs ressources au regard de mes besoins et de mes missions.
+            <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : </strong>Je consulte les outils et les acteurs ressources au regard de mes besoins et de mes missions.<br>
                 Je prends connaissance des relevés de conclusion des données collectés.
                 </p>
             </li>
@@ -46,10 +54,9 @@ Je partage mes analyses au niveau académique, au sein de ma structure.
               </p>
             </li>
           </ul>
-        </div>
-
-
+ </div>
             </div>
+        </div>
         </div>
 
 {% endblock %}

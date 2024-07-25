@@ -46,22 +46,23 @@
     <div style="margin-top:7px">
         <div class="row">
             <div class="col-md-auto">
-            <h1 class=fr-h1 >CFP référentiel</h1>
-            <p class="r-text--xl"></p>
-            <a href="{% static '/CFPapp/media/RGPD.pdf' %}">Informations RGPD</a>
+            <h4>Se connecter pour construire votre auto-positionnement des compétences professionnelles du CFP</h4>
+            <p>Aucune donnée personnelle n'est conservée dans l'application, seuls l'identifiant de connexion anonyme et le mot de passe associés sont saisis et restent non accessibles dans le registre légal.  Consulter <strong>les mentions légales</strong> <a href="{% static '/CFPapp/media/RGPDoutilautoposiCFP.pdf' %}">Consulter le document sur la RGPD.</a>pour plus d'informations.<br>
+            Saisir vos données de connexion qui vous ont été envoyées par mail à votre adresse professionnelle</p>
+
             </div>
             <div style="margin-left : 10%">
                 <div class="col">
-                    <div  id="box">
+                    <div  id="box" class="fr-input-group">
                         {% if form.errors %}
                         <p>Le nom d'utilisateur et le mot de passe ne correspondent pas</p>
                         {% else %}
                         {% endif %}
-                    <div class= "modal-body" style="margin-left:40px">
-                        <form method="post" class="form">
+                    <div class= "modal-body" style="margin-left:40px; font:Marianne" class="fr-input-group">
+                        <form method="post" class="">
                             {% csrf_token %}
                         <div class="form-group">
-                            Nom : <br>
+                            Identifiant : <br>
                             {{ form.username}}<br><br>
                             Mot de passe : <br>{{ form.password }}
                         </div>

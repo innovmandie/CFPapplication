@@ -1,10 +1,10 @@
 
-  
+
 html {
               height: 100%;
          }
 
-         
+
           #arrange a{
             color:white;
           }
@@ -16,16 +16,16 @@ html {
             margin: 0;
             padding: 0;
             overflow: visible;
-    
+
           }
 
-    
 
-          
+
+
           #box{
               width: 420px;
-              height: 340px;
-              font-family: "Marianne";
+              height: 410px;
+              font-family: font-family: "Marianne", arial, sans-serif;
               font-weight: 400;
               margin-left:11em;
               margin-top: 2em;
@@ -60,15 +60,15 @@ html {
                 box-shadow: rgba(255,255,255,0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
                 rgba(0,0,0,0.3) 0px 30px 60px -30px;
               }
-      
-          
+
+
             #utilisateurs {
             font-family: "Marianne", arial, sans-serif;
             font-size: 12px;
             border-collapse: collapse;
             text-align: center;
             width:90%;
-          
+
           }
           #utilisateurs td, #utilisateurs th, #utilisateurs tr{
             border: 2px solid #3577a3;
@@ -94,19 +94,19 @@ html {
             border-radius: 2px;
             resize: vertical;
            }
-           
+
            #form_profil label{
             padding: 4px 4px 4px 0;
             display: inline-block;
            }
-  
+
           a {
               text-decoration: none;
               outline-offset: 2px;
               outline-width: 2px;
               outline-color: #0a76f6;
           }
-  
+
           .form-v5-content  {
             font-family: "Marianne", arial, sans-serif;
             display:inline-block;
@@ -243,7 +243,7 @@ html {
               z-index: 500;
               outline-style: solid;
           }
-  
+
           .fr-container {
               width: 100%;
               max-width: 78rem;
@@ -256,7 +256,7 @@ html {
               align-items: center;
               flex: 1;
           }
-  
+
           .fr-grid-row {
               display: flex;
               flex-direction: row;
@@ -264,34 +264,34 @@ html {
               margin: 0;
               padding: 0;
           }
-  
+
           .fr-grid-row--center {
               justify-content: center;
               align-items: center;
           }
-  
+
           .fr-grid-row--gutters {
               margin: -0.5rem;
           }
-  
+
           .fr-grid-row--gutters>[class^=fr-col-],
           .fr-grid-row--gutters>[class*=" fr-col-"] {
               padding: 0.5rem;
           }
-  
+
           .fr-col-12 {
               flex: 0 0 100%;
               width: 100%;
               max-width: 100%;
           }
-  
+
           .fr-btns-group {
               list-style: none;
               padding: 0;
               margin-top: -0.5rem;
               margin-bottom: -0.5rem;
           }
-  
+
           .fr-btns-group--inline {
               display: flex;
               flex-direction: row;
@@ -299,17 +299,17 @@ html {
               margin-left: -0.5rem;
               margin-right: -0.5rem;
           }
-  
+
           .fr-btns-group--inline .fr-btn {
               margin-left: 0.5rem;
               margin-right: 0.5rem;
           }
-  
+
           .fr-btns-group--sm .fr-btn {
               font-size: 0.875rem;
               line-height: 1.5rem;
           }
-  
+
           .fr-btn {
               border-radius: 0;
               padding: 0.25rem 0.75rem;
@@ -324,7 +324,7 @@ html {
               flex-direction: row;
               align-items: center;
           }
-  
+
           .fr-btn svg {
               width: 1rem;
               height: 1rem;
@@ -332,17 +332,17 @@ html {
               margin-right: 0.5rem;
               fill: #000091;
           }
-  
+
           .fr-server__body {
               margin-top: 3.5rem;
               margin-bottom: 3.5rem;
           }
-  
+
           .fr-server__footer {
               margin-top: 3.5rem;
               margin-bottom: 2rem;
           }
-  
+
           .fr-server__image {
               display: flex;
               flex-direction: row;
@@ -350,12 +350,12 @@ html {
               justify-content: center;
               margin-bottom: 3.5rem;
           }
-  
+
           .fr-server__image img {
               width: 13.25rem;
               margin: 0 auto;
           }
-  
+
           .fr-h1 {
               font-size: 2rem;
               line-height: 2.5rem;
@@ -363,66 +363,66 @@ html {
               margin-bottom: 1.5rem;
               font-weight: 700;
           }
-  
+
           .fr-text--xl {
               font-size: 1.25rem;
               line-height: 2rem;
               margin-top: 0;
               margin-bottom: 1.5rem;
           }
-  
+
           .fr-text--sm {
               font-size: 0.875rem;
               line-height: 1.5rem;
               margin-top: 0;
               margin-bottom: 1rem;
           }
-  
+
           .fr-btn--tertiary {
               background-color: transparent;
               box-shadow: inset 0 0 0 1px #e5e5e5;
               color: #000091;
           }
-  
+
           .fr-btn--tertiary:hover {
               background-color: #dcdcfc;
           }
-  
+
           .fr-btn--tertiary:active {
               background-color: #cbcbfa;
           }
-  
+
           @media (min-width: 48em) {
               .fr-container {
                   padding-left: 1.5rem;
                   padding-right: 1.5rem;
               }
-  
+
               .fr-col-offset-md-1 {
                   margin-left: 8.3333333333%;
               }
-  
+
               .fr-col-md-6 {
                   flex: 0 0 50%;
                   width: 50%;
                   max-width: 50%;
               }
-  
+
               .fr-col-md-3 {
                   flex: 0 0 25%;
                   width: 25%;
                   max-width: 25%;
               }
-  
+
               .fr-server__image {
                   margin-top: 3.5rem;
                   margin-bottom: 3.5rem;
               }
-  
+
               .fr-server__image img {
                   width: 100%;
               }
-  
+
               .fr-h1 {
                   font-size: 2.5rem;
                   line-height: 3rem;

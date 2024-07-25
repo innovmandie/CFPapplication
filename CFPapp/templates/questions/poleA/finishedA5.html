@@ -1,0 +1,36 @@
+
+<!-- saved from url=(0114)https://www.pythonanywhere.com/user/lastshadow/files/home/lastshadow/CFPapplication/CFPapp/templates/finished.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base.html" %}
+{% block title %}finished page{% endblock %}
+
+{% block content %}
+
+  <br>
+  <h6>Vous avez terminé l'activité<strong> A5 : </strong>Représentation institutionnelle sur les territoires !</h6>
+   {% if resultsA5 %}
+     <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A5_C1</th>
+                <th scope="col">A5_C2</th>
+                <th scope="col">A5_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA5 %}
+            <tr>
+                    <td>{{ row.A5_C1 }}</td>
+                    <td>{{ row.A5_C2 }}</td>
+                    <td>{{ row.A5_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            </tbody>
+            </table>
+            {% endfor %}
+        {% else %}
+        {% endif %}
+   <h6>Vous pouvez passer à la suivante.</h6>
+</div>
+
+{% endblock %}</body></html>

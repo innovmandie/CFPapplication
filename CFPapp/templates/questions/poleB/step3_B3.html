@@ -2,13 +2,13 @@
 {% block title %}Question B3 C3{% endblock %}
 
 {% block content %}
-
-<div class="container" style="margin-left:10%">
-  <br>
+ <div class="row justify-content-md-center">
+      <div class=".col-md-">
       <dl class="dl-horizontal">
-                <dd> <p><strong>B3-C3 :</strong> Sélectionner des données pertinentes afin de repérer les évolutions pédagogiques<br>
-                ou techno-pédagogiques souhaitables ou indispensables à mettre en œuvre au sein de l’organisation <br>
-                en les situant au regard des pratiques actuelles et des consignes ou exigences règlementaires</p></dd>
+                <dt><h6 class= 'text-center'>B3 : Conception de dispositifs de développement de compétences<br>et d’accompagnement de parcours</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd<p><strong>B3-C3 :</strong> Elaborer un dispositif de développement des compétences afin de répondre de manière efficiente<br>
+                aux besoins en privilégiant des approches innovantes</p></dd>
               <dd>
               </dl>
       </div>
@@ -19,7 +19,7 @@
               {%csrf_token %}
               <div style="display: none;">{{ form.created_by }}</div><br>
               <p style="border: 2px solid blueviolet; width : 810px;">{{ form.B3_C3 }}</p></div>
-              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Enregistrement</button></div>
             </form>
             </div>
       </div>
@@ -28,23 +28,24 @@
             <div class="row justify-content-md-center">
             <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p><strong>Degré 1 : Je connais les étapes de l’ingénierie de formation et les déterminants d’un dispositif de développement des compétences.
+                <li class="list-group-item list-group-item-info"><p style="font-weight: 400;"><strong>Degré 1 : </strong>Je connais les étapes de l’ingénierie de formation et les déterminants d’un dispositif de développement des compétences.
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>Je m’appuie sur des ingénieries existantes et des parcours de formation types pour participer à la conception de dispositifs de formation innovants.<br>
+                  <li class="list-group-item list-group-item-info"><p style="font-weight: 400;"><strong>Degré 2 : </strong>Je m’appuie sur des ingénieries existantes et des parcours de formation types pour participer à la conception de dispositifs de formation innovants.<br>
 Je participe dans un collectif de travail à la conception d’un dispositif de formation.
 
 </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je construis le dispositif à partir des options choisies en m’assurant de répondre aux exigences du client.<br>
+                  <li class="list-group-item list-group-item-info"><p style="font-weight: 400;"><strong>Degré 3 : </strong>Je construis le dispositif à partir des options choisies en m’assurant de répondre aux exigences du client.<br>
 Je me réfère à un collectif de travail d’experts pour optimiser le dispositif de développement des compétences.
 
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>Je modélise ma méthode d’élaboration de dispositifs innovants et je la partage au niveau de ma structure ou au niveau académique.<br>
+                  <li class="list-group-item list-group-item-info"><p style="font-weight: 400;"><strong>Degré 4 : </strong>Je modélise ma méthode d’élaboration de dispositifs innovants et je la partage au niveau de ma structure ou au niveau académique.<br>
 Je suis un acteur ressource pour le réseau en capacité d’accompagner à l’élaboration des dispositifs privilégiant des approches innovantes.
 
                   </p></li>
               </ul>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}

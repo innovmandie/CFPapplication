@@ -5,15 +5,18 @@
 <div class="container-fluid">
   <div style=" margin-left:40px">
     <br><br><br>
-    <h1>Utilisateur information</h1>
+    <h1>Informations utilisateur</h1>
     <h4>renseignez vos données</h4>
-  <form method="post" class="form"  style="margin: 40px">
+    <div style="border-left: 1rem solid red; padding:10px; margin-top:10px"><p><i>Saisissez vos données lors de votre première connexion, et modifiez vos informations en cas de changement.
+Pour rappel l’ensemble de vos données est confidentiel et anonyme y compris aux administrateurs de la plateforme.<br>La finalité de l’application d’auto-évaluation des compétences du CFP
+est de connaitre le niveau de l’ensemble des CFP à un instant donné. Seuls <strong>les résultats globalisés</strong> et anonymes sont accessibles à la direction de la DRFPIC pour permettre d’animer une dynamique de réseau
+(formation, mentorat, CFP ressource avec mission spécifique).</i></p></div>
+ <form method="post" class="form"  style="margin: 40px">
   {% csrf_token %}
-  Edité par: {{ form_user.created_by}}<br>
-  Nom: {{ form_user.nom}}<br>
-  Prénom: {{ form_user.prenom}}<br>
-  Fonction : {{form_user.fonction}}<br>
-  Ancienneté: {{form_user.anciennete}}<br>
+ <div style="display: none;">{{  form_cfpinfos.created_by }}</div>
+  Fonction : {{  form_cfpinfos.fonction}}<br>
+  Ancienneté années: {{  form_cfpinfos.anciennete_annee}}<br>
+  Ancienneté mois: {{  form_cfpinfos.anciennete_mois}}<br>
   <button class="fr-btn" type="submit">Enregistrer</button>
   </form>
 </form>

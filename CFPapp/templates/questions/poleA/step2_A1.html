@@ -2,24 +2,27 @@
 {% block title %}Question A1 C2{% endblock %}
 
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
+<div class="container-fluid" style="margin-left:17px">
+    <br>
+<div class="row justify-content-md-center">
       <dl class="dl-horizontal">
-                <dd> <strong>A1-C2 : </strong>Identifier et sélectionner les sources d’informations afin d’opérationnaliser sa stratégie de<br>
+                <dt><h6 class= 'text-center'>A1 : Veille socio-économique, réglementaire, concurrentielle et commerciale</h6></dt>
+                <dd> <p class= 'text-center'><strong>A1 C2 :</strong> Identifier et sélectionner les sources d’informations afin d’opérationnaliser sa stratégie de<br>
                 veille en étant attentif à leur pertinence et leur fiabilité</p></dd>
-              <dd>
-              </dl>
-      </div>
-  <div class="row justify-content-md-center">
-         <div class=".col-md-">
-             <form action="{% url 'step2_A1' %}" method="post" class="form-group">
-                  <div class="d-flex justify-content-center">
-              {%csrf_token %}
-              <div style="display: none;">{{ form.created_by }}</div><br>
-              <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A1_C2 }}</p></div>
-              <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
-            </form>
-            </div>
+              <dd></dl>
+
+</div>
+<br>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+        <form action="{% url 'step2_A1' %}"  method="post" class="form-group">
+        <div class="d-flex justify-content-center">
+        {%csrf_token %}
+        <div style="display: none;">{{ form.created_by }}</div>
+        <p style="border: 2px solid blueviolet; width : 810px;">{{ form.A1_C2 }}</p></div>
+        <div class="d-flex justify-content-center"><button type="submit" class="fr-btn">Suivant</button></div>
+        </form>
+        </div>
       </div>
   </div>
         <div class="container">

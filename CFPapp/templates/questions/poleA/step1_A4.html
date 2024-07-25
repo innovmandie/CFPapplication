@@ -1,27 +1,20 @@
 {% extends "base.html" %}
-{% block title %}Log-in{% endblock %}
+{% block title %}Page A4{% endblock %}
 {% block content %}
-<div class="container" style="margin-left:10%">
-  <br>
-  <h4>Votre référentiel</h4>
-
-  <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
+    <div class="row justify-content-md-center">
+      <div class=".col-md-">
+            <h4 class= 'text-center'style="font-weight: bold;">Pôle A : Conseiller-Développer</h4>
       <dl class="dl-horizontal">
-                <dt><h6 class="text-center">A4 : Conseil aux décideurs</h6></dt>
-                <dd> <strong>A4-C1 :</strong> Identifier les situations requérant une activité de conseil (problématique repérée, demande exprimée), <br>afin de permettre leur traitement, en appréciant leur périmètre, leur urgence, leur sensibilité et leur impact</p></dd>
-              <dd><div class="col-md-8 col-md-offset-8">
-
-                <ul>
-                  <h6>Les niveaux : </h6>
-                  <li><strong>Degré 1 :</strong> sensibilisation,</li><li><strong>Degré 2 :</strong> appropriation</li>
-                  <li><strong>Degré 3 :</strong> maitrise,</li><li><strong>Degré 4 :</strong> expertise</li>
-                  <li><strong>N S P : </strong>ne se prononce pas</li>
-                  <li>Par defaut la liste indique le Degré 1.</li>
-                </ul></div></dd>
+                <dt><h6 class= 'text-center'>A4 : Conseil aux décideurs</h6></dt>
+                <div class="container" style="margin-left:10%">
+                <dd><p><strong>A4-C1 :</strong> Identifier les situations requérant une activité de conseil (problématique repérée, demande
+                exprimée), <br>afin de permettre leur traitement, en appréciant leur périmètre, leur urgence, leur sensibilité et leur impact</p>
+              <ul class="list-group">
+              <li>Par defaut la liste indique le Degré 1.</li>
+              </ul></div>
+              <dl> <div class="col-md-8 col-md-offset-8">
+            </dd>
               </dl>
-      </div>
-  <div class="row justify-content-md-center">
-         <div class=".col-md-">
              <form action="{% url 'step1_A4' %}" method="post" class="form-group">
                   <div class="d-flex justify-content-center">
               {%csrf_token %}
@@ -36,19 +29,16 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-8 col-md-offset-8">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><p></p><strong>Degré 1 : </strong>Je connais le cahier des charges des commanditaires. Je connais les exigences du référentiel EDUFORM et le système qualité de ma structure, du réseau. Je participe à des bilans avec mon système client.
-                  J’ai identifié les décideurs à partir des organigrammes de l’organisation académique et de ma structure. Je connais le processus décisionnel de ma structure, les instances s’y référant.
+                <li class="list-group-item list-group-item-info"><p></p><strong>Degré 1 : </strong>Je connais les décideurs (à partir des organigrammes de l’organisation académique et de ma structure), le circuit décisionnel de ma structure, les instances s’y référant.<br>
+Dans mon périmètre d’action (portefeuille, territoire, …) je repère les situations qui nécessitent une activité de conseil.
+
                   </p></li>
-                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>
-                    Je repère les éléments observables d’une situation (les demandes exprimées qui ne sont pas traitées, les écarts entre la commande et le réalisé, etc.)
-                    Je m’appuie sur le processus d’écoute client de ma structure.
-                    J’échange dans un collectif de travail sur les situations critiques que j’ai repérées.
-                    </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 3 :</strong>J’exploite les bilans de formation, les relevés de conclusions, les rendez-vous entreprises en capitalisant à l’écrit.
-                      Selon la situation, je caractérise le périmètre, le degré d’urgence et l’impact pour ma structure, le réseau et le système client en utilisant les outils méthodologiques adaptés.
-                      J’identifie les décideurs concernés.
+                  <li class="list-group-item list-group-item-info"><p><strong>Degré 2 : </strong>J’identifie le décideur concerné au regard de la situation requérant un conseil. Je repère les éléments observables de la situation.<br>
+Je sollicite mon collectif de travail sur la situation<br> que j’ai repérée ou sur une demande exprimée par un des décideurs, pour vérifier le besoin de conseil.
+
+                    </p></li><li class="list-group-item list-group-item-info"><p><strong>Degré 3 : </strong>Je m’empare du besoin de conseil, en caractérisant le périmètre, le degré d’urgence et l’impact pour ma structure, le réseau, avec les outils méthodologiques adaptés.
                       </p></li>
-                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 :</strong>J’anticipe des situations qui pourraient être sensibles et impactantes pour le développement de ma structure, du réseau à moyen ou long terme.
+                    <li class="list-group-item list-group-item-info"><p><strong>Degré 4 : </strong>J’anticipe des situations qui pourraient être sensibles et impactantes pour le développement de ma structure, du réseau à moyen ou long terme.<br>
                       J’identifie les situations et les demandes qui pourraient être prises en compte dans le plan de développement de ma structure, du réseau.
                       </p></li>
               </ul>

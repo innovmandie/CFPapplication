@@ -1,0 +1,50 @@
+
+  {% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+        <div class="container-fluid">
+          <br />
+          <div style="margin-left:7%">
+           <div class="row">
+               <div class="col-md-8">
+                   <br /><br />
+               <h1 class=fr-h1 >Utilisateur</h1>
+               <p>Vos informations utilisateur son confidentielles</p>
+               <p></p>
+               </div>
+               <br>
+               </div>
+               <div class="row">
+                 <div class="col-md-8">
+
+      <table  class="table table-bordered table-hover">
+                         <thead class="table-primary">
+                             <tr>
+                       <th>id</th>
+                         <th>Fonction</th>
+                         <th>Ancienneté années</th>
+                         <th>Ancienneté mois</th>
+                         </tr>
+                    </thead>
+
+                     {% for x in cfp_liste %}
+                    <tr>
+                      <td>{{x.id}}</td>
+                     <td>{{ x.fonction}}</td>
+                     <td>{{x.anciennete_annee}}</td>
+                     <td>{{x.anciennete_mois}}</td>
+                    </tr>
+                     {% endfor %}
+                   </table>
+
+
+
+
+                 </div>
+             </div>
+           </div>
+           </div>
+    </div>
+
+{% endblock %}
+

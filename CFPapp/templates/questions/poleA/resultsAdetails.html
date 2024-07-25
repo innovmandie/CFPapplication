@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Data A page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <h4>Réponses référentiel enregistrées</h4>
+    <h4>Pour le pôle A</h4>
+    <p>Si aucun résultat ne s'affiche vous n'avez pas rempli</p>
+    <p>la section correspondante</p>
+    <div class="row">
+      <div class="col">
+        {% if resultsA1 %}
+        <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A1_C1</th>
+                <th scope="col">A1_C2</th>
+                <th scope="col">A1_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA1 %}
+            <tr>
+                    <td>{{ row.A1_C1 }}</td>
+                    <td>{{ row.A1_C2 }}</td>
+                    <td>{{ row.A1_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A1 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsA2 %}
+         <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A2_C1</th>
+                <th scope="col">A2_C2</th>
+                <th scope="col">A2_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA2 %}
+            <tr>
+                    <td>{{ row.A2_C1 }}</td>
+                    <td>{{ row.A2_C2 }}</td>
+                    <td>{{ row.A2_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A2 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsA3 %}
+         <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A3_C1</th>
+                <th scope="col">A3_C2</th>
+                <th scope="col">A3_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA3 %}
+            <tr>
+                    <td>{{ row.A3_C1 }}</td>
+                    <td>{{ row.A3_C2 }}</td>
+                    <td>{{ row.A3_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A3 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsA4 %}
+         <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A4_C1</th>
+                <th scope="col">A4_C2</th>
+                <th scope="col">A4_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA4 %}
+            <tr>
+                    <td>{{ row.A4_C1 }}</td>
+                    <td>{{ row.A4_C2 }}</td>
+                    <td>{{ row.A4_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A4 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsA5 %}
+         <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A5_C1</th>
+                <th scope="col">A5_C2</th>
+                <th scope="col">A5_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA5 %}
+            <tr>
+                    <td>{{ row.A5_C1 }}</td>
+                    <td>{{ row.A5_C2 }}</td>
+                    <td>{{ row.A5_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A5 | safe}}
+        {% else %}
+        {% endif %}
+        {% if resultsA6 %}
+         <table  class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th scope="col">A6_C1</th>
+                <th scope="col">A6_C2</th>
+                <th scope="col">A6_C3</th>
+                 <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in resultsA6 %}
+            <tr>
+                    <td>{{ row.A6_C1 }}</td>
+                    <td>{{ row.A6_C2 }}</td>
+                    <td>{{ row.A6_C3 }}</td>
+                    <td>{{ row.time }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {{ chart_A6 | safe}}
+        {% else %}
+        {% endif %}
+
+
+      </div>
+
+
+{% endblock %}
